@@ -2,7 +2,6 @@ name: Update data
 
 on:
   schedule:
-    # 22:30 UTC on weekdays, after the US market close
     - cron: "30 22 * * 1-5"
   workflow_dispatch:
   push:
