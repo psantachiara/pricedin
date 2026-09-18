@@ -1,7 +1,3 @@
-/* Priced In: Visualizing the Entanglements of AI News and Market Valuations.
-   Reads data/config.json, data/events.json, data/prices.json and
-   data/thumbnails.json, and draws everything with D3 v7. */
-
 (function () {
   'use strict';
 
@@ -67,7 +63,6 @@
     }
   }
 
-  // Light / dark toggle. With no saved choice the page follows the system.
   function setupTheme() {
     const root = document.documentElement;
     const box = document.getElementById('theme-toggle');
@@ -80,7 +75,7 @@
       const b = ev.target.closest('button');
       if (!b) return;
       root.setAttribute('data-theme', b.dataset.themeValue);
-      try { localStorage.setItem('priced-in-theme', b.dataset.themeValue); } catch (e) { /* private mode */ }
+      try { localStorage.setItem('priced-in-theme', b.dataset.themeValue); } catch (e) { }
       sync();
     });
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sync);
@@ -113,9 +108,6 @@
   }
 
   function init(config, rawEvents, prices, thumbs) {
-    // ------------------------------------------------------------------
-    // Data
-    // ------------------------------------------------------------------
     const dates = prices.dates.map(parseDate);
     const N = dates.length;
     const close = prices.close || {};
@@ -171,9 +163,6 @@
       animated: false,
     };
 
-    // ------------------------------------------------------------------
-    // Series maths
-    // ------------------------------------------------------------------
     const memo = new Map();
     const cached = (key, fn) => {
       if (!memo.has(key)) memo.set(key, fn());
@@ -191,8 +180,6 @@
       });
     }
 
-    // Chain-linked index: each day's return uses only companies with
-    // prices on both days, so a missing print never creates a jump.
     function aggIndex(syms, how) {
       return cached(`idx:${how}:${syms.join(',')}`, () => {
         const src = how === 'cap' ? syms.map(capOf).filter(Boolean) : syms.map((s) => close[s]);
@@ -288,9 +275,6 @@
     const valueFmt = (v) => (state.measure === 'value' ? fmtTrillions(v) : fmtPct(v));
     const benchName = () => state.benchmark;
 
-    // ------------------------------------------------------------------
-    // Controls
-    // ------------------------------------------------------------------
     const benchSelect = $('#benchmark');
     for (const b of benchmarks) benchSelect.append(el('option', { value: b.symbol, text: b.name }));
     benchSelect.addEventListener('change', () => { state.benchmark = benchSelect.value; update(); });
@@ -329,7 +313,6 @@
         : `Stems rise when the tagged stocks beat ${benchName()} after an announcement and drop when they lagged. A full-length stem means 8 points or more.`;
     }
 
-    // Company chips double as a live readout.
     const chipWrap = $('#tickers');
     const chipVals = new Map();
     for (const t of tickers) {
@@ -343,13 +326,12 @@
           else if (members().length > 1) state.hidden.add(t.symbol);
           update();
         },
-        onmouseenter: () => emphasiseLine(t.symbol),
-        onmouseleave: () => emphasiseLine(null),
+        onmouseenter: () => emphasizeLine(t.symbol),
+        onmouseleave: () => emphasizeLine(null),
       }, el('span', { class: 'dot' }), el('span', { class: 'sym', text: t.symbol }), val);
       chipWrap.append(chip);
     }
 
-    // Announcement type toggles.
     const catWrap = $('#categories');
     for (const c of cats) {
       catWrap.append(el('button', {
@@ -371,9 +353,6 @@
         b.setAttribute('aria-pressed', String(state.categories.has(b.dataset.cat))));
     }
 
-    // ------------------------------------------------------------------
-    // Main chart
-    // ------------------------------------------------------------------
     const stage = $('#stage');
     const svg = d3.select('#chart');
     const tooltip = $('#tooltip');
@@ -401,7 +380,6 @@
       const [i0, i1] = domainIdx();
       const x = d3.scaleUtc().domain(state.domain).range([M.l, W - M.r]);
 
-      // Series ---------------------------------------------------------
       const list = [];
       if (state.view === 'detailed') {
         for (const s of members()) {
@@ -431,7 +409,6 @@
       svg.append('defs').append('clipPath').attr('id', 'plot-clip')
         .append('rect').attr('x', M.l).attr('y', top - 6).attr('width', W - M.r - M.l).attr('height', chartH + 12);
 
-      // Grid + y axis ----------------------------------------------------
       const yTicks = y.ticks(mobile ? 4 : 6);
       const step = yTicks.length > 1 ? Math.abs(yTicks[1] - yTicks[0]) : 0.1;
       const yLabel = state.measure === 'value'
@@ -448,7 +425,6 @@
       svg.append('g').attr('class', 'x-axis').attr('transform', `translate(0,${bottom})`)
         .call(d3.axisBottom(x).ticks(mobile ? 3 : 8).tickSizeOuter(0).tickSize(5).tickPadding(6));
 
-      // Layers ---------------------------------------------------------
       svg.append('g').attr('class', 'band-layer');
 
       const line = d3.line()
@@ -472,7 +448,6 @@
         })
         .on('pointerleave', () => setCursor(null));
 
-      // Lanes ------------------------------------------------------------
       const gl = svg.append('g').attr('class', 'lanes');
       gl.append('text').attr('class', 'lanes-heading')
         .attr('x', M.l).attr('y', lanesTop - 8)
@@ -500,7 +475,6 @@
           color: catColor(e.category),
           count: 1,
         }));
-        // Nudge same-lane markers that would sit on top of each other.
         const seen = new Map();
         for (const it of items) {
           const k = `${Math.round(it.cx / 6)}:${it.cy}`;
@@ -534,7 +508,6 @@
       }
 
       const stemMax = laneH / 2 - (state.view === 'detailed' ? 3 : 8);
-      // Square-root scale so everyday 1-3 point moves stay visible.
       const stemLen = (v) => (v == null ? 0 : Math.sqrt(Math.min(1, Math.abs(v) / FULL_STEM)) * stemMax);
       const stemY = (d) => (d.score == null ? 0 : (d.score >= 0 ? -1 : 1) * stemLen(d.score));
 
@@ -574,7 +547,6 @@
       highlight();
     }
 
-    // Hover / selection ----------------------------------------------------
     const active = () => state.hover || state.pinned;
 
     function taggedOf(sel) {
@@ -600,7 +572,7 @@
       drawBand(a);
     }
 
-    function emphasiseLine(sym) {
+    function emphasizeLine(sym) {
       if (active()) return;
       svg.selectAll('.lines path')
         .classed('dim', (d) => sym != null && state.view === 'detailed' && d.key !== sym && d.key !== 'BENCH')
@@ -642,7 +614,6 @@
       renderRanking();
     }
 
-    // Cursor readout ---------------------------------------------------------
     function setCursor(i) {
       const g = svg.select('.cursor');
       g.selectAll('*').remove();
@@ -682,7 +653,6 @@
       }
     }
 
-    // Tooltip ----------------------------------------------------------------
     function thumbURL(e) {
       return e.thumbnail || (thumbs[e.url] && thumbs[e.url].image) || null;
     }
@@ -705,8 +675,6 @@
       return wrap;
     }
 
-    // The tooltip always opens below the marker. Markers sit in the rows
-    // under the chart, so the price lines above stay visible.
     function showTooltip(d) {
       const evs = d.ids.map((id) => eventBy.get(id));
       tooltip.innerHTML = '';
@@ -736,9 +704,6 @@
     }
     function hideTooltip() { tooltip.hidden = true; }
 
-    // ------------------------------------------------------------------
-    // Detail panel
-    // ------------------------------------------------------------------
     const detail = $('#detail');
 
     function moveTable(sel) {
@@ -808,9 +773,6 @@
       detail.append(info, el('div', { class: 'detail-moves' }, moveTable(sel)));
     }
 
-    // ------------------------------------------------------------------
-    // Ranking table
-    // ------------------------------------------------------------------
     function renderRanking() {
       const [i0, i1] = domainIdx();
       const vis = visibleEvents().filter((e) => e.t >= i0 && e.t <= i1);
@@ -863,16 +825,12 @@
 
     function focusOn(r) {
       state.pinned = { key: r.ids.join('|'), ids: r.ids, t: r.t };
-      // Make sure the date is visible on the chart.
       const d = dates[r.t];
       if (d < state.domain[0] || d > state.domain[1]) setDomain([dates[0], dates[N - 1]]);
       update();
       document.getElementById('stage').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
     }
 
-    // ------------------------------------------------------------------
-    // Overview + brush
-    // ------------------------------------------------------------------
     const osvg = d3.select('#overview');
     let brushCtl = null;
 
@@ -903,7 +861,6 @@
             gb.call(brush.move, [xo(dates[0]), xo(dates[N - 1])]);
           } else {
             const [a, b] = ev.selection.map(xo.invert);
-            // Keep at least two weeks visible.
             if (b - a < 14 * 864e5) return;
             state.domain = [a, b];
           }
@@ -941,9 +898,6 @@
       });
     }
 
-    // ------------------------------------------------------------------
-    // Update cycle
-    // ------------------------------------------------------------------
     let frame = null;
     function scheduleUpdate() {
       if (frame) return;

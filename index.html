@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;800&display=swap" rel="stylesheet">
   <script>
-    // Apply the saved theme before the page paints, to avoid a flash.
     (function () {
       try {
         var t = localStorage.getItem('priced-in-theme');
@@ -29,7 +28,7 @@
         <p class="subtitle">Visualizing the Entanglements of AI News and Market Valuations</p>
       </div>
       <p class="dek">AI announcements plotted against the stock prices of the companies they touch. Each stem under the chart shows how those stocks moved in the days that followed. Select an announcement on the timeline, or a date in the table below, to see how the stocks moved around it.</p>
-      <div class="seg seg-small theme-toggle" role="group" aria-label="Colour theme" id="theme-toggle">
+      <div class="seg seg-small theme-toggle" role="group" aria-label="Color theme" id="theme-toggle">
         <button type="button" data-theme-value="light">Light</button>
         <button type="button" data-theme-value="dark">Dark</button>
       </div>

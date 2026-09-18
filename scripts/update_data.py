@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the data files behind the Priced In site.
-
-Writes two files into data/:
-  prices.json      daily adjusted closes for every ticker and benchmark in
-                   config.json, plus current shares outstanding (used to
-                   approximate market value).
-  thumbnails.json  the preview image (og:image / twitter:image) of each event
-                   link in events.json, cached so pages are fetched only once.
-
-Usage:
-  python scripts/update_data.py              # prices + new thumbnails
-  python scripts/update_data.py --prices     # prices only
-  python scripts/update_data.py --thumbnails # thumbnails only
-  python scripts/update_data.py --recheck    # re-fetch every thumbnail
-"""
+"""Update data/prices.json and data/thumbnails.json."""
 
 from __future__ import annotations
 
@@ -59,13 +45,8 @@ def save(name: str, obj) -> None:
 
 
 def warn(message: str) -> None:
-    # GitHub renders ::warning:: lines as annotations on the workflow run.
     print(f"::warning::{message}" if IN_ACTIONS else f"warning: {message}")
 
-
-# --------------------------------------------------------------------------
-# Prices
-# --------------------------------------------------------------------------
 
 def clean(value) -> float | None:
     if value is None:
@@ -83,13 +64,13 @@ def shares_outstanding(symbol: str) -> float | None:
         value = ticker.fast_info.get("shares")
         if value:
             return float(value)
-    except Exception:  # noqa: BLE001 - yfinance raises many things
+    except Exception:
         pass
     try:
         value = ticker.info.get("sharesOutstanding")
         if value:
             return float(value)
-    except Exception:  # noqa: BLE001
+    except Exception:
         pass
     return None
 
@@ -114,7 +95,6 @@ def update_prices(config: dict) -> None:
     if not isinstance(closes, pd.DataFrame):
         closes = closes.to_frame(name=symbols[0])
     closes = closes.dropna(how="all").sort_index()
-    # Fill short gaps (a single missing print) but never invent long stretches.
     closes = closes.ffill(limit=3)
 
     missing = [s for s in symbols if s not in closes.columns or closes[s].isna().all()]
@@ -144,10 +124,6 @@ def update_prices(config: dict) -> None:
     save("prices.json", out)
     print(f"Wrote {len(out['dates'])} trading days, {out['dates'][0]} to {out['dates'][-1]}")
 
-
-# --------------------------------------------------------------------------
-# Thumbnails
-# --------------------------------------------------------------------------
 
 META_KEYS = (
     ("property", "og:image"),
@@ -206,7 +182,6 @@ def update_thumbnails(events: list[dict], recheck: bool) -> None:
         elif not entry["image"]:
             print(f"  no preview image on {url}; the site will show a placeholder")
 
-    # Drop cache entries for links that are no longer in events.json.
     cache = {u: v for u, v in cache.items() if u in urls}
     save("thumbnails.json", cache)
 
