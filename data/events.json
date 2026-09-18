@@ -1,0 +1,295 @@
+[
+  {
+    "id": "deepseek-r1",
+    "date": "2025-01-20",
+    "title": "DeepSeek releases R1, an open reasoning model trained at a fraction of rivals' reported cost",
+    "source": "GitHub",
+    "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "org": "deepseek",
+    "category": "model",
+    "tickers": ["NVDA", "AVGO", "TSM", "AMD"]
+  },
+  {
+    "id": "stargate",
+    "date": "2025-01-21",
+    "title": "OpenAI, SoftBank and Oracle announce the $500 billion Stargate project",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/announcing-the-stargate-project/",
+    "org": "openai",
+    "category": "compute",
+    "afterClose": true,
+    "tickers": ["ORCL", "NVDA", "MSFT"]
+  },
+  {
+    "id": "gpt-4-5",
+    "date": "2025-02-27",
+    "title": "OpenAI releases GPT-4.5",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/introducing-gpt-4-5/",
+    "org": "openai",
+    "category": "model",
+    "tickers": ["MSFT"]
+  },
+  {
+    "id": "gemini-2-5",
+    "date": "2025-03-25",
+    "title": "Google releases Gemini 2.5 Pro",
+    "source": "Google",
+    "url": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
+    "org": "google",
+    "category": "model",
+    "tickers": ["GOOGL"]
+  },
+  {
+    "id": "llama-4",
+    "date": "2025-04-05",
+    "title": "Meta releases Llama 4 Scout and Maverick",
+    "source": "Meta",
+    "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+    "org": "meta",
+    "category": "model",
+    "tickers": ["META"]
+  },
+  {
+    "id": "claude-4",
+    "date": "2025-05-22",
+    "title": "Anthropic releases Claude Opus 4 and Claude Sonnet 4",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news/claude-4",
+    "org": "anthropic",
+    "category": "model",
+    "tickers": ["AMZN", "GOOGL"]
+  },
+  {
+    "id": "meta-scale",
+    "date": "2025-06-12",
+    "title": "Meta invests in Scale AI and hires its CEO to lead a new superintelligence group",
+    "source": "Scale AI",
+    "url": "https://scale.com/blog/scale-ai-announces-next-phase-of-company-evolution",
+    "org": "meta",
+    "category": "deals",
+    "tickers": ["META"]
+  },
+  {
+    "id": "gpt-5",
+    "date": "2025-08-07",
+    "title": "OpenAI releases GPT-5",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/introducing-gpt-5/",
+    "org": "openai",
+    "category": "model",
+    "tickers": ["MSFT"]
+  },
+  {
+    "id": "nvidia-openai-10gw",
+    "date": "2025-09-22",
+    "title": "Nvidia plans to invest up to $100 billion in OpenAI alongside 10 GW of Nvidia systems",
+    "source": "Nvidia",
+    "url": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": ["NVDA", "ORCL", "MSFT"]
+  },
+  {
+    "id": "amd-openai",
+    "date": "2025-10-06",
+    "title": "AMD and OpenAI sign a 6 GW GPU agreement that includes warrants for AMD shares",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/openai-amd-strategic-partnership/",
+    "org": "openai",
+    "category": "compute",
+    "tickers": ["AMD", "NVDA"]
+  },
+  {
+    "id": "broadcom-openai",
+    "date": "2025-10-13",
+    "title": "OpenAI and Broadcom agree to build 10 GW of custom AI accelerators",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/",
+    "org": "openai",
+    "category": "compute",
+    "tickers": ["AVGO", "NVDA"]
+  },
+  {
+    "id": "anthropic-tpu",
+    "date": "2025-10-23",
+    "title": "Anthropic expands its use of Google Cloud TPUs to as many as one million chips",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+    "org": "anthropic",
+    "category": "compute",
+    "tickers": ["GOOGL", "AVGO"]
+  },
+  {
+    "id": "msft-openai-restructure",
+    "date": "2025-10-28",
+    "title": "Microsoft and OpenAI sign a new agreement as OpenAI completes its restructuring",
+    "source": "Microsoft",
+    "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+    "org": "microsoft",
+    "category": "deals",
+    "tickers": ["MSFT"]
+  },
+  {
+    "id": "aws-openai",
+    "date": "2025-11-03",
+    "title": "OpenAI signs a $38 billion compute agreement with AWS",
+    "source": "OpenAI",
+    "url": "https://openai.com/index/aws-and-openai-partnership/",
+    "org": "openai",
+    "category": "compute",
+    "tickers": ["AMZN", "NVDA"]
+  },
+  {
+    "id": "gemini-3",
+    "date": "2025-11-18",
+    "title": "Google releases Gemini 3",
+    "source": "Google",
+    "url": "https://blog.google/products/gemini/gemini-3/",
+    "org": "google",
+    "category": "model",
+    "tickers": ["GOOGL", "AVGO"]
+  },
+  {
+    "id": "msft-nvda-anthropic",
+    "date": "2025-11-18",
+    "title": "Microsoft and Nvidia commit up to $15 billion to Anthropic, which commits $30 billion to Azure",
+    "source": "DatacenterDynamics",
+    "url": "https://www.datacenterdynamics.com/en/news/anthropic-to-purchase-30bn-in-microsoft-azure-credits-nvidia-and-microsoft-to-invest-in-ai-company",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": ["MSFT", "NVDA"]
+  },
+  {
+    "id": "claude-opus-4-5",
+    "date": "2025-11-24",
+    "title": "Anthropic releases Claude Opus 4.5",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news/claude-opus-4-5",
+    "org": "anthropic",
+    "category": "model",
+    "tickers": ["AMZN", "GOOGL"]
+  },
+  {
+    "id": "deepseek-paper-2026",
+    "date": "2026-01-02",
+    "title": "AI stocks open 2026 higher after a DeepSeek efficiency paper and two Asian AI listings",
+    "source": "NBC News",
+    "url": "https://www.nbcnews.com/business/markets/ai-stocks-jump-broadly-positive-outlook-2026-markets-rcna251902",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": ["NVDA", "AVGO", "TSM"]
+  },
+  {
+    "id": "amazon-anthropic-25b",
+    "date": "2026-04-20",
+    "title": "Amazon commits up to $25 billion more to Anthropic, which plans $100 billion of AWS spending",
+    "source": "Engadget",
+    "url": "https://engadget.com/ai/amazon-will-invest-up-to-25-billion-in-anthropic-in-a-broad-deal-225239302.html",
+    "org": "anthropic",
+    "category": "deals",
+    "afterClose": true,
+    "tickers": ["AMZN"]
+  },
+  {
+    "id": "google-anthropic-40b",
+    "date": "2026-04-24",
+    "title": "Google commits up to $40 billion to Anthropic, plus 5 GW of TPU capacity",
+    "source": "AI Business",
+    "url": "https://aibusiness.com/generative-ai/google-could-invest-another-40-billion-anthropic",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": ["GOOGL", "AVGO"]
+  },
+  {
+    "id": "anthropic-s1",
+    "date": "2026-06-01",
+    "title": "Anthropic confidentially submits a draft S-1 for an IPO",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": ["AMZN", "GOOGL", "MSFT", "NVDA"]
+  },
+  {
+    "id": "openai-s1",
+    "date": "2026-06-08",
+    "title": "OpenAI says it has confidentially filed for an IPO",
+    "source": "CBS News",
+    "url": "https://www.cbsnews.com/news/openai-files-confidential-initial-public-offering/",
+    "org": "openai",
+    "category": "deals",
+    "tickers": ["MSFT", "NVDA", "ORCL"]
+  },
+  {
+    "id": "mythos-release",
+    "date": "2026-06-09",
+    "title": "Anthropic releases Claude Mythos 5 and Claude Fable 5",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/glasswing",
+    "org": "anthropic",
+    "category": "model",
+    "tickers": ["AMZN", "GOOGL"]
+  },
+  {
+    "id": "mythos-export-controls",
+    "date": "2026-06-12",
+    "title": "U.S. export controls lead Anthropic to suspend access to Mythos 5 and Fable 5",
+    "source": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Claude_Mythos",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": ["AMZN", "GOOGL", "MSFT", "NVDA"]
+  },
+  {
+    "id": "ai-selloff-june",
+    "date": "2026-06-23",
+    "title": "AI and chip stocks sell off over doubts about returns on AI spending",
+    "source": "NPR",
+    "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
+    "org": "market",
+    "category": "markets",
+    "tickers": ["NVDA", "AMD", "AVGO", "TSM"]
+  },
+  {
+    "id": "mythos-restored",
+    "date": "2026-07-01",
+    "title": "Anthropic restores access to Fable 5 and Mythos 5 after export controls are lifted",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news/fable-mythos-access",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": ["AMZN", "GOOGL"]
+  },
+  {
+    "id": "chip-selloff-july",
+    "date": "2026-07-29",
+    "title": "Chip stocks lose more than $1 trillion in a global selloff",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html",
+    "org": "market",
+    "category": "markets",
+    "tickers": ["NVDA", "AMD", "TSM", "AVGO"]
+  },
+  {
+    "id": "nvda-earnings-aug-2026",
+    "date": "2026-08-26",
+    "title": "Nvidia beats estimates and raises guidance, lifting chip stocks",
+    "source": "CNBC",
+    "url": "https://www.cnbc.com/2026/08/26/stock-market-today-live-updates.html",
+    "org": "nvidia",
+    "category": "markets",
+    "afterClose": true,
+    "tickers": ["NVDA", "AMD", "AVGO", "TSM"]
+  },
+  {
+    "id": "nvidia-hugging-face",
+    "date": "2026-09-03",
+    "title": "Nvidia agrees to buy Hugging Face for about $13 billion",
+    "source": "The Hill",
+    "url": "https://thehill.com/policy/technology/6068386-nvidia-acquires-hugging-face/",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": ["NVDA"]
+  }
+]

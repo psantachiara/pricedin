@@ -1,0 +1,38 @@
+{
+  "start": "2025-01-02",
+  "tickers": [
+    { "symbol": "NVDA", "name": "Nvidia", "color": "#4C9A2A" },
+    { "symbol": "MSFT", "name": "Microsoft", "color": "#2F6FD6" },
+    { "symbol": "GOOGL", "name": "Alphabet", "color": "#E0572B" },
+    { "symbol": "AMZN", "name": "Amazon", "color": "#D99A0B" },
+    { "symbol": "META", "name": "Meta", "color": "#7B52D3" },
+    { "symbol": "AMD", "name": "AMD", "color": "#C92B5F" },
+    { "symbol": "AVGO", "name": "Broadcom", "color": "#138A8A" },
+    { "symbol": "TSM", "name": "TSMC", "color": "#8C6B3E" },
+    { "symbol": "ORCL", "name": "Oracle", "color": "#6D7C91" },
+    { "symbol": "PLTR", "name": "Palantir", "color": "#D07AB0" }
+  ],
+  "benchmarks": [
+    { "symbol": "QQQ", "name": "Nasdaq-100 (QQQ)" },
+    { "symbol": "RSP", "name": "S&P 500 equal weight (RSP)" },
+    { "symbol": "SPY", "name": "S&P 500 (SPY)" }
+  ],
+  "defaultBenchmark": { "detailed": "QQQ", "total": "RSP" },
+  "orgs": [
+    { "id": "openai", "name": "OpenAI" },
+    { "id": "anthropic", "name": "Anthropic" },
+    { "id": "google", "name": "Google" },
+    { "id": "meta", "name": "Meta" },
+    { "id": "microsoft", "name": "Microsoft" },
+    { "id": "nvidia", "name": "Nvidia" },
+    { "id": "deepseek", "name": "DeepSeek" },
+    { "id": "market", "name": "Markets" }
+  ],
+  "categories": [
+    { "id": "model", "name": "Model releases", "color": "#2440C8" },
+    { "id": "deals", "name": "Deals, funding and IPOs", "color": "#A66A00" },
+    { "id": "compute", "name": "Chips and compute", "color": "#6A45B5" },
+    { "id": "policy", "name": "Policy and regulation", "color": "#C02D6A" },
+    { "id": "markets", "name": "Earnings and market moves", "color": "#56606B" }
+  ]
+}
