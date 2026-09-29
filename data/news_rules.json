@@ -7,47 +7,293 @@
       "paywall": true
     }
   ],
-  "excludePaths": ["/buyside/", "/opinion/", "/podcasts/", "/livecoverage/", "/cio-journal/", "/cfo-journal/"],
-  "excludeSummaryPrefixes": ["Plus,"],
+  "excludePaths": [
+    "/buyside/",
+    "/opinion/",
+    "/podcasts/",
+    "/livecoverage/",
+    "/cio-journal/",
+    "/cfo-journal/"
+  ],
+  "excludeSummaryPrefixes": [
+    "Plus,"
+  ],
+  "excludeTitlePatterns": [
+    "i tried",
+    "i spent",
+    "i used",
+    "review:",
+    "what to know"
+  ],
   "requireEntityInTitle": true,
   "maxAgeDays": 21,
   "entities": [
-    { "match": ["openai", "chatgpt", "sam altman", "sora"], "org": "openai", "tickers": ["MSFT", "NVDA"] },
-    { "match": ["anthropic", "claude", "dario amodei"], "org": "anthropic", "tickers": ["AMZN", "GOOGL", "MSFT", "NVDA"] },
-    { "match": ["deepseek"], "org": "deepseek", "tickers": ["NVDA", "AVGO", "TSM", "AMD"] },
-    { "match": ["mistral ai", "mistral"], "org": "mistral", "tickers": ["NVDA"] },
-    { "match": ["xai", "x.ai", "grok"], "org": "xai", "tickers": ["NVDA"] },
-    { "match": ["nvidia"], "org": "nvidia", "tickers": ["NVDA"] },
-    { "match": ["google", "alphabet", "gemini", "deepmind", "sundar pichai"], "org": "google", "tickers": ["GOOGL"] },
-    { "match": ["microsoft", "azure", "copilot", "satya nadella"], "org": "microsoft", "tickers": ["MSFT"] },
-    { "match": ["meta platforms", "meta", "llama", "mark zuckerberg"], "org": "meta", "tickers": ["META"] },
-    { "match": ["amazon", "aws", "trainium", "andy jassy"], "org": "amazon", "tickers": ["AMZN"] },
-    { "match": ["amd", "advanced micro devices"], "org": "amd", "tickers": ["AMD"] },
-    { "match": ["broadcom"], "org": "broadcom", "tickers": ["AVGO"] },
-    { "match": ["tsmc", "taiwan semiconductor"], "org": "tsmc", "tickers": ["TSM"] },
-    { "match": ["oracle"], "org": "oracle", "tickers": ["ORCL"] },
-    { "match": ["palantir"], "org": "palantir", "tickers": ["PLTR"] }
+    {
+      "match": [
+        "openai",
+        "chatgpt",
+        "sam altman",
+        "sora"
+      ],
+      "org": "openai",
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ]
+    },
+    {
+      "match": [
+        "anthropic",
+        "claude",
+        "dario amodei"
+      ],
+      "org": "anthropic",
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "MSFT",
+        "NVDA"
+      ]
+    },
+    {
+      "match": [
+        "deepseek"
+      ],
+      "org": "deepseek",
+      "tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM",
+        "AMD"
+      ]
+    },
+    {
+      "match": [
+        "mistral ai",
+        "mistral"
+      ],
+      "org": "mistral",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "match": [
+        "xai",
+        "x.ai",
+        "grok"
+      ],
+      "org": "xai",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "match": [
+        "nvidia"
+      ],
+      "org": "nvidia",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "match": [
+        "google",
+        "alphabet",
+        "gemini",
+        "deepmind",
+        "sundar pichai"
+      ],
+      "org": "google",
+      "tickers": [
+        "GOOGL"
+      ]
+    },
+    {
+      "match": [
+        "microsoft",
+        "azure",
+        "copilot",
+        "satya nadella"
+      ],
+      "org": "microsoft",
+      "tickers": [
+        "MSFT"
+      ]
+    },
+    {
+      "match": [
+        "meta platforms",
+        "meta",
+        "llama",
+        "mark zuckerberg"
+      ],
+      "org": "meta",
+      "tickers": [
+        "META"
+      ]
+    },
+    {
+      "match": [
+        "amazon",
+        "aws",
+        "trainium",
+        "andy jassy"
+      ],
+      "org": "amazon",
+      "tickers": [
+        "AMZN"
+      ]
+    },
+    {
+      "match": [
+        "amd",
+        "advanced micro devices"
+      ],
+      "org": "amd",
+      "tickers": [
+        "AMD"
+      ]
+    },
+    {
+      "match": [
+        "broadcom"
+      ],
+      "org": "broadcom",
+      "tickers": [
+        "AVGO"
+      ]
+    },
+    {
+      "match": [
+        "tsmc",
+        "taiwan semiconductor"
+      ],
+      "org": "tsmc",
+      "tickers": [
+        "TSM"
+      ]
+    },
+    {
+      "match": [
+        "oracle"
+      ],
+      "org": "oracle",
+      "tickers": [
+        "ORCL"
+      ]
+    },
+    {
+      "match": [
+        "palantir"
+      ],
+      "org": "palantir",
+      "tickers": [
+        "PLTR"
+      ]
+    }
   ],
   "categories": [
     {
       "id": "deals",
-      "match": ["acquir", "acquisition", "buys", "to buy", "merger", "invest", "investment", "stake", "funding", "raises", "valuation", "ipo", "s-1", "buyback", "partner", "deal", "billion to"]
+      "match": [
+        "acquir*",
+        "acquisition*",
+        "buys",
+        "to buy",
+        "merger",
+        "invest*",
+        "stake",
+        "funding",
+        "raise*",
+        "valuation",
+        "ipo",
+        "s-1",
+        "buyback",
+        "partner*",
+        "deal",
+        "billion to",
+        "takeover"
+      ]
     },
     {
       "id": "policy",
-      "match": ["regulat", "export control", "lawsuit", "sues", "antitrust", "congress", "senate", "white house", "ban", "tariff", "court", "subpoena", "investigation", "safety rules", "oversight"]
+      "match": [
+        "regulat*",
+        "export control*",
+        "lawsuit",
+        "sue*",
+        "antitrust",
+        "congress",
+        "senate",
+        "white house",
+        "ban",
+        "bans",
+        "tariff*",
+        "court",
+        "subpoena",
+        "investigation",
+        "appeal*",
+        "oversight",
+        "probe",
+        "fine*"
+      ]
     },
     {
       "id": "model",
-      "match": ["releases", "launches", "unveils", "introduces", "debuts", "new model", "gpt-", "gemini", "claude", "llama", "reasoning model", "open-source model", "update to"]
+      "match": [
+        "release*",
+        "launch*",
+        "unveil*",
+        "introduc*",
+        "debut*",
+        "new model",
+        "gpt-",
+        "gemini",
+        "claude",
+        "llama",
+        "reasoning model",
+        "open-source model",
+        "rolls out",
+        "scraps",
+        "delays"
+      ]
     },
     {
       "id": "compute",
-      "match": ["chip", "gpu", "data center", "datacenter", "compute", "gigawatt", "accelerator", "semiconductor", "foundry", "cluster", "tpu", "wafer", "server"]
+      "match": [
+        "chip*",
+        "gpu*",
+        "data cent*",
+        "datacenter*",
+        "compute",
+        "gigawatt*",
+        "accelerator*",
+        "semiconductor*",
+        "foundry",
+        "cluster*",
+        "tpu*",
+        "wafer*",
+        "server*"
+      ]
     },
     {
       "id": "markets",
-      "match": ["earnings", "quarterly results", "shares", "stock", "selloff", "sell-off", "rally", "guidance", "revenue", "profit", "market cap", "investors"]
+      "match": [
+        "earnings",
+        "quarterly results",
+        "shares",
+        "stock",
+        "selloff",
+        "sell-off",
+        "rally",
+        "guidance",
+        "revenue",
+        "profit",
+        "market cap",
+        "investors"
+      ]
     }
   ],
   "defaultCategory": "markets"

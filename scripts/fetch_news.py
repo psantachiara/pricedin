@@ -76,8 +76,13 @@ def slug(text, published, used):
 
 
 def compile_terms(terms):
-    return [re.compile(r"(?<!\w)" + re.escape(t).replace(r"\ ", r"\s+") + r"(?!\w)", re.I)
-            for t in terms]
+    """A term ending in * matches any word that starts with it: acquir* covers acquires."""
+    out = []
+    for term in terms:
+        stem = term.endswith("*")
+        body = re.escape(term[:-1] if stem else term).replace(r"\ ", r"\s+")
+        out.append(re.compile(r"(?<!\w)" + body + ("" if stem else r"(?!\w)"), re.I))
+    return out
 
 
 def after_close(published):
@@ -169,6 +174,7 @@ def main():
     category_res = [(c["id"], compile_terms(c["match"])) for c in rules.get("categories", [])]
     excluded_paths = tuple(rules.get("excludePaths", []))
     excluded_prefixes = tuple(p.lower() for p in rules.get("excludeSummaryPrefixes", []))
+    excluded_titles = compile_terms(rules.get("excludeTitlePatterns", []))
     max_age = timedelta(days=rules.get("maxAgeDays", 21))
     now = datetime.now(timezone.utc)
 
@@ -203,6 +209,8 @@ def main():
             reason = "section excluded"
         elif excluded_prefixes and item["summary"].lower().startswith(excluded_prefixes):
             reason = "newsletter roundup"
+        elif any(p.search(item["title"]) for p in excluded_titles):
+            reason = "column or review"
         elif now - item["published"] > max_age:
             reason = "older than the window"
         else:
