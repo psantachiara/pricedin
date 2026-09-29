@@ -262,7 +262,6 @@ select {
 .lines path.lit { stroke-width: 2.4; }
 
 .band { fill: var(--band); }
-.band-base { fill: var(--band); opacity: 0.45; }
 .guide { stroke: var(--focus); stroke-width: 1; stroke-dasharray: 2 3; }
 
 .cursor line { stroke: var(--muted); stroke-width: 1; }
