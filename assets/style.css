@@ -310,9 +310,35 @@ select {
 .tt-move { margin: 8px 0 0; padding-top: 7px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 10px; font-size: 0.8125rem; color: var(--muted); }
 .tt-move b { color: var(--ink); }
 
+.lock {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 0 6px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
 .up-text { color: var(--up); }
 .down-text { color: var(--down); }
-.tt-move b.up-text { color: var(--up); }
+.tt-move b.lock {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 0 6px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.up-text { color: var(--up); }
 .tt-move b.down-text { color: var(--down); }
 
 .thumb {

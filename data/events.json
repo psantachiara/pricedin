@@ -7,7 +7,13 @@
     "url": "https://github.com/deepseek-ai/DeepSeek-R1",
     "org": "deepseek",
     "category": "model",
-    "tickers": ["NVDA", "AVGO", "TSM", "AMD"]
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "manual": true
   },
   {
     "id": "stargate",
@@ -18,7 +24,12 @@
     "org": "openai",
     "category": "compute",
     "afterClose": true,
-    "tickers": ["ORCL", "NVDA", "MSFT"]
+    "tickers": [
+      "ORCL",
+      "NVDA",
+      "MSFT"
+    ],
+    "manual": true
   },
   {
     "id": "gpt-4-5",
@@ -28,7 +39,10 @@
     "url": "https://openai.com/index/introducing-gpt-4-5/",
     "org": "openai",
     "category": "model",
-    "tickers": ["MSFT"]
+    "tickers": [
+      "MSFT"
+    ],
+    "manual": true
   },
   {
     "id": "gemini-2-5",
@@ -38,7 +52,10 @@
     "url": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
     "org": "google",
     "category": "model",
-    "tickers": ["GOOGL"]
+    "tickers": [
+      "GOOGL"
+    ],
+    "manual": true
   },
   {
     "id": "llama-4",
@@ -48,7 +65,10 @@
     "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
     "org": "meta",
     "category": "model",
-    "tickers": ["META"]
+    "tickers": [
+      "META"
+    ],
+    "manual": true
   },
   {
     "id": "claude-4",
@@ -58,7 +78,11 @@
     "url": "https://www.anthropic.com/news/claude-4",
     "org": "anthropic",
     "category": "model",
-    "tickers": ["AMZN", "GOOGL"]
+    "tickers": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "manual": true
   },
   {
     "id": "meta-scale",
@@ -68,7 +92,10 @@
     "url": "https://scale.com/blog/scale-ai-announces-next-phase-of-company-evolution",
     "org": "meta",
     "category": "deals",
-    "tickers": ["META"]
+    "tickers": [
+      "META"
+    ],
+    "manual": true
   },
   {
     "id": "gpt-5",
@@ -78,7 +105,10 @@
     "url": "https://openai.com/index/introducing-gpt-5/",
     "org": "openai",
     "category": "model",
-    "tickers": ["MSFT"]
+    "tickers": [
+      "MSFT"
+    ],
+    "manual": true
   },
   {
     "id": "nvidia-openai-10gw",
@@ -88,7 +118,12 @@
     "url": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
     "org": "nvidia",
     "category": "deals",
-    "tickers": ["NVDA", "ORCL", "MSFT"]
+    "tickers": [
+      "NVDA",
+      "ORCL",
+      "MSFT"
+    ],
+    "manual": true
   },
   {
     "id": "amd-openai",
@@ -98,7 +133,11 @@
     "url": "https://openai.com/index/openai-amd-strategic-partnership/",
     "org": "openai",
     "category": "compute",
-    "tickers": ["AMD", "NVDA"]
+    "tickers": [
+      "AMD",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "broadcom-openai",
@@ -108,7 +147,11 @@
     "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/",
     "org": "openai",
     "category": "compute",
-    "tickers": ["AVGO", "NVDA"]
+    "tickers": [
+      "AVGO",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "anthropic-tpu",
@@ -118,7 +161,11 @@
     "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
     "org": "anthropic",
     "category": "compute",
-    "tickers": ["GOOGL", "AVGO"]
+    "tickers": [
+      "GOOGL",
+      "AVGO"
+    ],
+    "manual": true
   },
   {
     "id": "msft-openai-restructure",
@@ -128,7 +175,10 @@
     "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
     "org": "microsoft",
     "category": "deals",
-    "tickers": ["MSFT"]
+    "tickers": [
+      "MSFT"
+    ],
+    "manual": true
   },
   {
     "id": "aws-openai",
@@ -138,7 +188,11 @@
     "url": "https://openai.com/index/aws-and-openai-partnership/",
     "org": "openai",
     "category": "compute",
-    "tickers": ["AMZN", "NVDA"]
+    "tickers": [
+      "AMZN",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "gemini-3",
@@ -148,7 +202,11 @@
     "url": "https://blog.google/products/gemini/gemini-3/",
     "org": "google",
     "category": "model",
-    "tickers": ["GOOGL", "AVGO"]
+    "tickers": [
+      "GOOGL",
+      "AVGO"
+    ],
+    "manual": true
   },
   {
     "id": "msft-nvda-anthropic",
@@ -158,7 +216,11 @@
     "url": "https://www.datacenterdynamics.com/en/news/anthropic-to-purchase-30bn-in-microsoft-azure-credits-nvidia-and-microsoft-to-invest-in-ai-company",
     "org": "anthropic",
     "category": "deals",
-    "tickers": ["MSFT", "NVDA"]
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "claude-opus-4-5",
@@ -168,7 +230,11 @@
     "url": "https://www.anthropic.com/news/claude-opus-4-5",
     "org": "anthropic",
     "category": "model",
-    "tickers": ["AMZN", "GOOGL"]
+    "tickers": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "manual": true
   },
   {
     "id": "deepseek-paper-2026",
@@ -178,7 +244,12 @@
     "url": "https://www.nbcnews.com/business/markets/ai-stocks-jump-broadly-positive-outlook-2026-markets-rcna251902",
     "org": "deepseek",
     "category": "markets",
-    "tickers": ["NVDA", "AVGO", "TSM"]
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM"
+    ],
+    "manual": true
   },
   {
     "id": "amazon-anthropic-25b",
@@ -189,7 +260,10 @@
     "org": "anthropic",
     "category": "deals",
     "afterClose": true,
-    "tickers": ["AMZN"]
+    "tickers": [
+      "AMZN"
+    ],
+    "manual": true
   },
   {
     "id": "google-anthropic-40b",
@@ -199,7 +273,11 @@
     "url": "https://aibusiness.com/generative-ai/google-could-invest-another-40-billion-anthropic",
     "org": "anthropic",
     "category": "deals",
-    "tickers": ["GOOGL", "AVGO"]
+    "tickers": [
+      "GOOGL",
+      "AVGO"
+    ],
+    "manual": true
   },
   {
     "id": "anthropic-s1",
@@ -209,7 +287,13 @@
     "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
     "org": "anthropic",
     "category": "deals",
-    "tickers": ["AMZN", "GOOGL", "MSFT", "NVDA"]
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "openai-s1",
@@ -219,7 +303,12 @@
     "url": "https://www.cbsnews.com/news/openai-files-confidential-initial-public-offering/",
     "org": "openai",
     "category": "deals",
-    "tickers": ["MSFT", "NVDA", "ORCL"]
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "ORCL"
+    ],
+    "manual": true
   },
   {
     "id": "mythos-release",
@@ -229,7 +318,11 @@
     "url": "https://www.anthropic.com/glasswing",
     "org": "anthropic",
     "category": "model",
-    "tickers": ["AMZN", "GOOGL"]
+    "tickers": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "manual": true
   },
   {
     "id": "mythos-export-controls",
@@ -239,7 +332,13 @@
     "url": "https://en.wikipedia.org/wiki/Claude_Mythos",
     "org": "anthropic",
     "category": "policy",
-    "tickers": ["AMZN", "GOOGL", "MSFT", "NVDA"]
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "manual": true
   },
   {
     "id": "ai-selloff-june",
@@ -249,7 +348,13 @@
     "url": "https://www.npr.org/2026/06/23/nx-s1-5867633/ai-selloff-tech-stocks-bubble-nasdaq",
     "org": "market",
     "category": "markets",
-    "tickers": ["NVDA", "AMD", "AVGO", "TSM"]
+    "tickers": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "TSM"
+    ],
+    "manual": true
   },
   {
     "id": "mythos-restored",
@@ -259,7 +364,11 @@
     "url": "https://www.anthropic.com/news/fable-mythos-access",
     "org": "anthropic",
     "category": "policy",
-    "tickers": ["AMZN", "GOOGL"]
+    "tickers": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "manual": true
   },
   {
     "id": "chip-selloff-july",
@@ -269,7 +378,13 @@
     "url": "https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html",
     "org": "market",
     "category": "markets",
-    "tickers": ["NVDA", "AMD", "TSM", "AVGO"]
+    "tickers": [
+      "NVDA",
+      "AMD",
+      "TSM",
+      "AVGO"
+    ],
+    "manual": true
   },
   {
     "id": "nvda-earnings-aug-2026",
@@ -280,7 +395,13 @@
     "org": "nvidia",
     "category": "markets",
     "afterClose": true,
-    "tickers": ["NVDA", "AMD", "AVGO", "TSM"]
+    "tickers": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "TSM"
+    ],
+    "manual": true
   },
   {
     "id": "nvidia-hugging-face",
@@ -290,6 +411,9 @@
     "url": "https://thehill.com/policy/technology/6068386-nvidia-acquires-hugging-face/",
     "org": "nvidia",
     "category": "deals",
-    "tickers": ["NVDA"]
+    "tickers": [
+      "NVDA"
+    ],
+    "manual": true
   }
 ]

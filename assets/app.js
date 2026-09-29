@@ -34,6 +34,10 @@
   }
   const signClass = (v) => (v == null ? '' : v >= 0 ? 'up-text' : 'down-text');
 
+  function paywallTag(e) {
+    return e.paywall ? el('span', { class: 'lock', title: 'Subscriber-only article', text: 'subscription' }) : null;
+  }
+
   function hostOf(url) {
     try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
   }
@@ -683,7 +687,8 @@
         tooltip.append(el('div', { class: 'tt-row' }, thumbEl(e),
           el('div', {},
             el('p', { class: 'tt-title', text: e.title }),
-            el('p', { class: 'tt-meta', text: `${e.source || hostOf(e.url)}, ${fmtDate(e.date)}` }))));
+            el('p', { class: 'tt-meta' },
+              el('span', { text: `${e.source || hostOf(e.url)}, ${fmtDate(e.date)}` }), paywallTag(e)))));
       } else {
         const list = el('ul', { class: 'tt-list' });
         evs.slice(0, 4).forEach((e) => list.append(el('li', { text: e.title })));
@@ -751,7 +756,9 @@
         }, thumbEl(e)));
         info.append(
           el('h2', {}, el('a', { href: e.url, target: '_blank', rel: 'noopener', text: e.title })),
-          el('p', { class: 'meta', text: `${e.source || hostOf(e.url)}, ${fmtDate(e.date)}${e.afterClose ? ', after the market closed' : ''}` }),
+          el('p', { class: 'meta' },
+            el('span', { text: `${e.source || hostOf(e.url)}, ${fmtDate(e.date)}${e.afterClose ? ', after the market closed' : ''}` }),
+            paywallTag(e)),
           el('p', { class: 'meta' },
             org ? el('span', { class: 'tag', text: org.name }) : null,
             cat ? el('span', { class: 'tag', style: `--tint:${catColor(cat.id)}`, text: cat.name }) : null),
@@ -763,7 +770,8 @@
         for (const e of evs) {
           ul.append(el('li', {}, thumbEl(e, 'small'),
             el('div', {}, el('a', { href: e.url, target: '_blank', rel: 'noopener', text: e.title }),
-              el('span', { class: 'src', text: `${e.source || hostOf(e.url)}, ${fmtDay(e.date)}` }))));
+              el('span', { class: 'src' },
+                el('span', { text: `${e.source || hostOf(e.url)}, ${fmtDay(e.date)}` }), paywallTag(e)))));
         }
         info.append(
           el('h2', { text: `${evs.length} announcements` }),
