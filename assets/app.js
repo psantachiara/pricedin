@@ -478,21 +478,20 @@
       let items;
       if (state.view === 'detailed') {
         const laneIndex = new Map(lanes.map((l, k) => [l.id, k]));
-        items = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org)).map((e) => ({
-          key: e.id,
-          ids: [e.id],
-          t: e.t,
-          cx: x(dates[e.t]),
-          cy: lanesTop + laneIndex.get(e.org) * laneH + laneH / 2,
-          color: catColor(e.category),
-          count: 1,
-        }));
-        const seen = new Map();
-        for (const it of items) {
-          const k = `${Math.round(it.cx / 6)}:${it.cy}`;
-          const n = seen.get(k) || 0;
-          it.cx += n * 7;
-          seen.set(k, n + 1);
+        const byLane = d3.groups(
+          vis.filter((e) => inRange(e.t) && laneIndex.has(e.org)),
+          (e) => e.org);
+        items = [];
+        for (const [org, evs] of byLane) {
+          const cy = lanesTop + laneIndex.get(org) * laneH + laneH / 2;
+          let row = [];
+          for (const e of evs.slice().sort((a, b) => a.t - b.t)) {
+            const px = x(dates[e.t]);
+            const last = row[row.length - 1];
+            if (last && px - last.cx < 14) last.evs.push(e);
+            else row.push({ t: e.t, cx: px, cy, evs: [e] });
+          }
+          items.push(...row);
         }
       } else {
         items = [];
@@ -503,13 +502,13 @@
           if (last && px - last.cx < 12) last.evs.push(...evs);
           else items.push({ t, cx: px, cy: lanesTop + laneH / 2, evs: [...evs] });
         }
-        for (const it of items) {
-          it.ids = it.evs.map((e) => e.id);
-          it.key = 'c:' + it.ids.join('|');
-          it.count = it.ids.length;
-          const kinds = new Set(it.evs.map((e) => e.category));
-          it.color = kinds.size === 1 ? catColor(it.evs[0].category) : 'var(--ink)';
-        }
+      }
+      for (const it of items) {
+        it.ids = it.evs.map((e) => e.id);
+        it.key = 'c:' + it.ids.join('|');
+        it.count = it.ids.length;
+        const kinds = new Set(it.evs.map((e) => e.category));
+        it.color = kinds.size === 1 ? catColor(it.evs[0].category) : 'var(--ink)';
       }
       for (const it of items) {
         const evs = it.ids.map((id) => eventBy.get(id));
@@ -597,16 +596,23 @@
       if (!a || !geo) return;
       const base = Math.max(0, a.t - 1);
       const end = Math.min(N - 1, a.t + state.window - 1);
-      const x0 = geo.x(dates[base]);
-      const x1 = geo.x(dates[end]);
-      const xt = geo.x(dates[a.t]);
-      const left = Math.max(geo.M.l, x0);
-      const right = Math.min(geo.W - geo.M.r, x1);
-      if (right > left) {
-        g.append('rect').attr('class', 'band')
-          .attr('x', left).attr('width', right - left).attr('y', geo.top).attr('height', geo.chartH);
-      }
-      if (xt >= geo.M.l && xt <= geo.W - geo.M.r) {
+      const L = geo.M.l;
+      const R = geo.W - geo.M.r;
+      const clamp = (v) => Math.max(L, Math.min(R, v));
+      const x0 = clamp(geo.x(dates[base]));
+      const xt = clamp(geo.x(dates[a.t]));
+      const x1 = clamp(geo.x(dates[end]));
+
+      const segment = (from, to, cls) => {
+        if (to - from < 1) return;
+        g.append('rect').attr('class', cls)
+          .attr('x', from).attr('width', to - from)
+          .attr('y', geo.top).attr('height', geo.chartH);
+      };
+      segment(x0, xt, 'band band-base');
+      segment(xt, x1, 'band');
+
+      if (geo.x(dates[a.t]) >= L && geo.x(dates[a.t]) <= R) {
         g.append('line').attr('class', 'guide')
           .attr('x1', xt).attr('x2', xt).attr('y1', geo.top).attr('y2', geo.laneBottom);
       }
@@ -731,7 +737,7 @@
       const base = Math.max(0, sel.t - 1);
       const end = Math.min(N - 1, sel.t + state.window - 1);
       const table = el('table', { class: 'move-table' },
-        el('caption', { text: `From the close on ${fmtDay(dates[base])} to the close on ${fmtDate(dates[end])}.`
+        el('caption', { text: `Measured from the previous close, ${fmtDay(dates[base])}, to the close on ${fmtDate(dates[end])}.`
           + (isPartial(sel.t) ? ' The window is still open; later closes are not in yet.' : '') }));
       table.append(el('thead', {}, el('tr', {},
         el('th', { scope: 'col', text: 'Stock' }),
