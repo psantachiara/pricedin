@@ -415,5 +415,155 @@
       "NVDA"
     ],
     "manual": true
+  },
+  {
+    "id": "20260916-novo-nordisk-will-use-anthropic-s-claude-for-dru",
+    "date": "2026-09-16",
+    "title": "Novo Nordisk Will Use Anthropic’s Claude for Drug Research",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/novo-partners-with-anthropic-to-speed-up-drug-discovery-using-claude-a6000d9f?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-20522663",
+    "paywall": true
+  },
+  {
+    "id": "20260927-openai-agents-used-aggressive-techniques-to-acce",
+    "date": "2026-09-27",
+    "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-agents-used-aggressive-techniques-to-access-u-n-website-522c70ff?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-05745597",
+    "paywall": true
+  },
+  {
+    "id": "20260927-trump-and-anthropic-ceo-dario-amodei-dine-at-the",
+    "date": "2026-09-27",
+    "title": "Trump and Anthropic CEO Dario Amodei Dine at the White House",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/trump-and-anthropic-ceo-dario-amodei-set-for-white-house-dinner-32c2d0ab?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-06326591",
+    "paywall": true
+  },
+  {
+    "id": "20260928-amd-to-acquire-world-labs-for-8-2-billion",
+    "date": "2026-09-28",
+    "title": "AMD to Acquire World Labs for $8.2 Billion",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/amd-to-acquire-world-labs-for-8-2-billion-a8d03d11?mod=rss_Technology",
+    "org": "amd",
+    "category": "deals",
+    "tickers": [
+      "AMD"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-76405660",
+    "paywall": true
+  },
+  {
+    "id": "20260928-meta-seeks-payoff-from-ai-spending-with-new-push",
+    "date": "2026-09-28",
+    "title": "Meta Seeks Payoff From AI Spending With New Push for Business Customers",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/meta-seeks-payoff-from-ai-spending-with-new-push-for-business-customers-8b9ca5bc?mod=rss_Technology",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META"
+    ],
+    "thumbnail": "https://images.wsj.net/im-27298414",
+    "paywall": true
+  },
+  {
+    "id": "20260928-nvidia-adds-record-150-billion-to-stock-buyback",
+    "date": "2026-09-28",
+    "title": "Nvidia Adds Record $150 Billion to Stock Buyback",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-adds-record-150-billion-to-stock-buyback-910f96a8?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-32674163",
+    "paywall": true
+  },
+  {
+    "id": "20260928-nvidia-releases-software-it-says-can-prevent-ai",
+    "date": "2026-09-28",
+    "title": "Nvidia Releases Software It Says Can Prevent AI Agents From Going Rogue",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-releases-software-it-says-can-prevent-ai-agents-from-going-rogue-12fd4ef8?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "model",
+    "tickers": [
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-45438757",
+    "paywall": true
+  },
+  {
+    "id": "20260928-openai-scraps-release-of-new-ai-model-over-safet",
+    "date": "2026-09-28",
+    "title": "OpenAI Scraps Release of New AI Model Over Safety Concerns",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-chatgpt-model-release-cancel-safety-5a2f9f42?mod=rss_Technology",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-33138169",
+    "paywall": true
+  },
+  {
+    "id": "20260929-google-appeals-eu-requests-on-android-ai-access",
+    "date": "2026-09-29",
+    "title": "Google Appeals EU Requests on Android AI Access, Search Data Sharing",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/google-appeals-eu-requests-on-android-ai-access-search-data-sharing-4a281f71?mod=rss_Technology",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "thumbnail": "https://images.wsj.net/im-69983157",
+    "paywall": true
+  },
+  {
+    "id": "20260929-samsung-commits-1-0-billion-to-ai-infrastructure",
+    "date": "2026-09-29",
+    "title": "Samsung Commits $1.0 Billion to AI Infrastructure Firm Backed by KKR, Nvidia",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/samsung-commits-1-billion-to-ai-infrastructure-firm-backed-by-kkr-nvidia-d1039c57?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-28340576",
+    "paywall": true
   }
 ]
