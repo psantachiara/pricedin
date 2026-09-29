@@ -163,6 +163,7 @@
       benchmark: pickBench('detailed'),
       window: 3,
       hidden: new Set(),
+      focus: null,
       categories: new Set(cats.map((c) => c.id)),
       domain: [dates[0], dates[N - 1]],
       pinned: null, // { key, ids, t }
@@ -274,7 +275,33 @@
       return vals.length ? d3.mean(vals) : null;
     }
 
-    const visibleEvents = () => events.filter((e) => state.categories.has(e.category));
+    const visibleEvents = () => events.filter((e) =>
+      state.categories.has(e.category)
+      && (!state.focus || (e.tickers || []).includes(state.focus)));
+
+    function setFocus(sym) {
+      state.focus = sym;
+      if (sym && state.pinned) {
+        const stillShown = state.pinned.ids.some((id) => {
+          const e = eventBy.get(id);
+          return e && (e.tickers || []).includes(sym) && state.categories.has(e.category);
+        });
+        if (!stillShown) state.pinned = null;
+      }
+      update();
+    }
+
+    function renderFocusNote() {
+      const note = $('#focus-note');
+      note.innerHTML = '';
+      const sym = state.view === 'detailed' ? state.focus : null;
+      note.hidden = !sym;
+      if (!sym) return;
+      const n = visibleEvents().length;
+      note.append(
+        el('span', {}, 'Showing the ', el('b', { text: sym }), ` announcements only (${n})`),
+        el('button', { type: 'button', class: 'text-button', text: 'Show all', onclick: () => setFocus(null) }));
+    }
 
     function domainIdx() {
       let i0 = d3.bisectLeft(dates, state.domain[0]);
@@ -302,6 +329,7 @@
         if (key === 'view') {
           state.benchmark = pickBench(value);
           state.pinned = null;
+          state.focus = null;
         }
         update();
       });
@@ -336,6 +364,7 @@
         onclick: () => {
           if (state.hidden.has(t.symbol)) state.hidden.delete(t.symbol);
           else if (members().length > 1) state.hidden.add(t.symbol);
+          if (state.hidden.has(t.symbol) && state.focus === t.symbol) state.focus = null;
           update();
         },
         onmouseenter: () => emphasizeLine(t.symbol),
@@ -359,8 +388,10 @@
     }
 
     function syncChips() {
-      chipWrap.querySelectorAll('.chip').forEach((b) =>
-        b.setAttribute('aria-pressed', String(!state.hidden.has(b.dataset.sym))));
+      chipWrap.querySelectorAll('.chip').forEach((b) => {
+        b.setAttribute('aria-pressed', String(!state.hidden.has(b.dataset.sym)));
+        b.classList.toggle('focused', state.view === 'detailed' && state.focus === b.dataset.sym);
+      });
       catWrap.querySelectorAll('.cat').forEach((b) =>
         b.setAttribute('aria-pressed', String(state.categories.has(b.dataset.cat))));
     }
@@ -458,12 +489,28 @@
           const i = d3.bisector((d) => d).center(dates, x.invert(mx));
           setCursor(Math.max(geo.i0, Math.min(geo.i1, i)));
         })
-        .on('pointerleave', () => setCursor(null));
+        .on('pointerleave', () => setCursor(null))
+        .on('click', (ev) => {
+          if (state.view !== 'detailed') return;
+          const [mx, my] = d3.pointer(ev);
+          const i = Math.max(geo.i0, Math.min(geo.i1, d3.bisector((d) => d).center(dates, x.invert(mx))));
+          let best = null, bestDist = Infinity;
+          for (const sr of current) {
+            if (sr.key === 'BENCH') continue;
+            const v = sr.values[i];
+            if (v == null) continue;
+            const dist = Math.abs(geo.y(v) - my);
+            if (dist < bestDist) { bestDist = dist; best = sr.key; }
+          }
+          const hit = bestDist <= 22 ? best : null;
+          setFocus(hit && hit !== state.focus ? hit : null);
+        });
 
       const gl = svg.append('g').attr('class', 'lanes');
       gl.append('text').attr('class', 'lanes-heading')
         .attr('x', M.l).attr('y', lanesTop - 8)
-        .text(state.view === 'detailed' ? 'Announcements by company' : 'All announcements, grouped by day');
+        .text(state.view !== 'detailed' ? 'All announcements, grouped by day'
+          : state.focus ? `Announcements tagged ${state.focus}` : 'Announcements by company');
 
       lanes.forEach((lane, k) => {
         const cy = lanesTop + k * laneH + laneH / 2;
@@ -567,10 +614,12 @@
     function highlight() {
       const a = active();
       const tagged = taggedOf(a);
+      const focused = state.view === 'detailed' ? state.focus : null;
       const dimming = state.view === 'detailed' && a && tagged.size > 0;
+      const keep = dimming ? tagged : focused ? new Set([focused]) : null;
       svg.selectAll('.lines path')
-        .classed('dim', (d) => dimming && d.key !== 'BENCH' && !tagged.has(d.key))
-        .classed('lit', (d) => dimming && tagged.has(d.key));
+        .classed('dim', (d) => keep != null && d.key !== 'BENCH' && !keep.has(d.key))
+        .classed('lit', (d) => keep != null && keep.has(d.key));
       const pinnedIds = new Set(state.pinned ? state.pinned.ids : []);
       const activeIds = new Set(a ? a.ids : []);
       svg.selectAll('g.marker')
@@ -926,6 +975,7 @@
       state.hover = null;
       render();
       updateReadout(null);
+      renderFocusNote();
       renderDetail();
       renderRanking();
     }
@@ -941,7 +991,9 @@
     }).observe(stage);
 
     document.addEventListener('keydown', (ev) => {
-      if (ev.key === 'Escape' && state.pinned) unpin();
+      if (ev.key !== 'Escape') return;
+      if (state.pinned) unpin();
+      else if (state.focus) setFocus(null);
     });
 
     const status = $('#data-status');
