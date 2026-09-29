@@ -135,7 +135,10 @@
         if (!date) return null;
         let t = d3.bisectLeft(dates, date);
         if (e.afterClose && t < N && +dates[t] === +date) t += 1;
-        if (t >= N) return null; // announced after the last price we have
+        if (t >= N) {
+          if (date - dates[N - 1] > 10 * 864e5) return null;
+          t = N - 1;
+        }
         return {
           ...e,
           id: e.id || `event-${k}`,
@@ -245,14 +248,19 @@
     function reaction(raw, t) {
       if (!raw) return null;
       const base = t - 1;
-      const end = Math.min(t + state.window - 1, N - 1);
+      const wanted = t + state.window - 1;
+      const end = Math.min(wanted, N - 1);
       if (base < 0) return null;
       const a = raw[base], z = raw[end];
       if (a == null || z == null) return null;
       const r = z / a - 1;
       const b = benchRaw();
       const br = b && b[base] != null && b[end] != null ? b[end] / b[base] - 1 : null;
-      return { raw: r, bench: br, abn: br == null ? null : r - br, base, end };
+      return { raw: r, bench: br, abn: br == null ? null : r - br, base, end, partial: wanted > N - 1 };
+    }
+
+    function isPartial(t) {
+      return t + state.window - 1 > N - 1;
     }
 
     function scoreForIds(ids, t) {
@@ -697,8 +705,9 @@
       }
       const who = state.view === 'total' ? 'Industry total' : 'Tagged stocks';
       const days = state.window === 1 ? '1 day' : `${state.window} days`;
+      const so_far = isPartial(d.t) ? ', so far' : '';
       tooltip.append(el('p', { class: 'tt-move' },
-        el('span', { text: `${who} vs ${benchName()}, ${days}` }),
+        el('span', { text: `${who} vs ${benchName()}, ${days}${so_far}` }),
         el('b', { class: signClass(d.score), text: fmtPct(d.score) })));
 
       tooltip.hidden = false;
@@ -722,7 +731,8 @@
       const base = Math.max(0, sel.t - 1);
       const end = Math.min(N - 1, sel.t + state.window - 1);
       const table = el('table', { class: 'move-table' },
-        el('caption', { text: `From the close on ${fmtDay(dates[base])} to the close on ${fmtDate(dates[end])}.` }));
+        el('caption', { text: `From the close on ${fmtDay(dates[base])} to the close on ${fmtDate(dates[end])}.`
+          + (isPartial(sel.t) ? ' The window is still open; later closes are not in yet.' : '') }));
       table.append(el('thead', {}, el('tr', {},
         el('th', { scope: 'col', text: 'Stock' }),
         el('th', { scope: 'col', class: 'num', text: 'Price' }),
