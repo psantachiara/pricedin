@@ -434,6 +434,21 @@
     "paywall": true
   },
   {
+    "id": "20260923-meta-s-new-ai-agent-is-an-instant-hit-and-the-ba",
+    "date": "2026-09-23",
+    "title": "Meta’s New AI Agent Is an Instant Hit—and the Backlash Has Already Begun",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/meta-ai-agent-muse-reactions-5bf236af?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-67009155",
+    "paywall": true
+  },
+  {
     "id": "20260927-openai-agents-used-aggressive-techniques-to-acce",
     "date": "2026-09-27",
     "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
@@ -564,6 +579,23 @@
       "NVDA"
     ],
     "thumbnail": "https://images.wsj.net/im-28340576",
+    "paywall": true
+  },
+  {
+    "id": "20260930-ftc-opens-investigation-of-anthropic-and-openai",
+    "date": "2026-09-30",
+    "title": "FTC Opens Investigation of Anthropic and OpenAI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ftc-opens-investigation-of-anthropic-and-openai-a317b617?mod=rss_Technology",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "thumbnail": "https://images.wsj.net/im-71892715",
     "paywall": true
   }
 ]
