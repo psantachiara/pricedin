@@ -582,6 +582,21 @@
     "paywall": true
   },
   {
+    "id": "20260930-amazon-tries-to-boost-nuclear-power-in-maryland",
+    "date": "2026-09-30",
+    "title": "Amazon Tries to Boost Nuclear Power in Maryland After Scrapping Data Center Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/amazon-tries-to-boost-nuclear-power-in-maryland-after-scrapping-data-center-deal-d551385e?mod=rss_Technology",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-98629845",
+    "paywall": true
+  },
+  {
     "id": "20260930-ftc-opens-investigation-of-anthropic-and-openai",
     "date": "2026-09-30",
     "title": "FTC Opens Investigation of Anthropic and OpenAI",
@@ -596,6 +611,37 @@
       "GOOGL"
     ],
     "thumbnail": "https://images.wsj.net/im-71892715",
+    "paywall": true
+  },
+  {
+    "id": "20261001-inside-google-s-ai-push-into-schools-it-slowed-m",
+    "date": "2026-10-01",
+    "title": "Inside Google’s AI Push Into Schools: ‘It Slowed My Thinking Down’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-ai-gemini-education-schools-1ec0972a?mod=rss_Technology",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-75714205",
+    "paywall": true
+  },
+  {
+    "id": "20261001-openai-president-backs-out-of-pledged-25-million",
+    "date": "2026-10-01",
+    "title": "OpenAI President Backs Out of Pledged $25-Million Donation to AI Super PAC",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-president-backs-out-of-pledged-25-million-donation-to-ai-super-pac-efb31fb4?mod=rss_Technology",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-99186359",
     "paywall": true
   }
 ]
