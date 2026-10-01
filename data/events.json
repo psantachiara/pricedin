@@ -629,6 +629,21 @@
     "paywall": true
   },
   {
+    "id": "20261001-openai-parts-ways-with-researchers-who-allegedly",
+    "date": "2026-10-01",
+    "title": "OpenAI Parts Ways With Researchers Who Allegedly Shared Confidential Information",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-parts-ways-with-researchers-who-allegedly-shared-confidential-information-aebac528?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-79349950",
+    "paywall": true
+  },
+  {
     "id": "20261001-openai-president-backs-out-of-pledged-25-million",
     "date": "2026-10-01",
     "title": "OpenAI President Backs Out of Pledged $25-Million Donation to AI Super PAC",
