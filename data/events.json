@@ -614,6 +614,20 @@
     "paywall": true
   },
   {
+    "id": "20261001-can-ai-run-in-space-google-is-about-to-find-out",
+    "date": "2026-10-01",
+    "title": "Can AI Run in Space? Google Is About to Find Out",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/can-ai-run-in-space-google-is-about-to-find-out-59c4e062?mod=rss_Technology",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "thumbnail": "https://images.wsj.net/im-53801147",
+    "paywall": true
+  },
+  {
     "id": "20261001-inside-google-s-ai-push-into-schools-it-slowed-m",
     "date": "2026-10-01",
     "title": "Inside Google’s AI Push Into Schools: ‘It Slowed My Thinking Down’",
