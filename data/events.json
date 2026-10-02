@@ -672,5 +672,19 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-99186359",
     "paywall": true
+  },
+  {
+    "id": "20261002-amazon-s-new-push-to-get-buy-in-for-data-center",
+    "date": "2026-10-02",
+    "title": "Amazon’s New Push to Get Buy-In for Data Center Build-Out",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazons-new-push-to-get-buy-in-for-data-center-build-out-cc8d3f86?mod=rss_Technology",
+    "org": "amazon",
+    "category": "compute",
+    "tickers": [
+      "AMZN"
+    ],
+    "thumbnail": "https://images.wsj.net/im-14722620",
+    "paywall": true
   }
 ]
