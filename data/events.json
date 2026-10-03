@@ -686,5 +686,20 @@
     ],
     "thumbnail": "https://images.wsj.net/im-14722620",
     "paywall": true
+  },
+  {
+    "id": "20261002-the-mulleted-meme-loving-billionaire-behind-meta",
+    "date": "2026-10-02",
+    "title": "The Mulleted, Meme-Loving Billionaire Behind Meta’s Hit AI App",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/alexandr-wang-muse-meta-efae7659?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-67809820",
+    "paywall": true
   }
 ]
