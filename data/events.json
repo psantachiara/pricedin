@@ -701,5 +701,19 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-67809820",
     "paywall": true
+  },
+  {
+    "id": "20261006-mistral-to-release-new-ai-model-to-better-compet",
+    "date": "2026-10-06",
+    "title": "Mistral to Release New AI Model to Better Compete With U.S. Rivals",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/mistral-to-release-new-ai-model-to-better-compete-with-u-s-rivals-3f7c8a3d?mod=rss_Technology",
+    "org": "mistral",
+    "category": "model",
+    "tickers": [
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-33096038",
+    "paywall": true
   }
 ]
