@@ -46,6 +46,8 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Backfill
+        env:
+          PYTHONUNBUFFERED: "1"
         run: |
           case "${{ inputs.mode }}" in
             probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" ;;
