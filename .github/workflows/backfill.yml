@@ -13,6 +13,8 @@ on:
           - dry-run
           - run
           - undo
+          - reclassify
+          - reclassify-dry-run
       from:
         description: "Earliest date (YYYY-MM-DD)"
         required: false
@@ -75,14 +77,16 @@ jobs:
                        --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
                        $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             undo)    python scripts/backfill_news.py --undo ;;
+            reclassify)         python scripts/reclassify.py --report ;;
+            reclassify-dry-run) python scripts/reclassify.py --dry-run --report ;;
           esac
 
       - name: Fetch prices and thumbnails
-        if: inputs.mode == 'run' || inputs.mode == 'undo'
+        if: inputs.mode == 'run' || inputs.mode == 'undo' || inputs.mode == 'reclassify'
         run: python scripts/update_data.py
 
       - name: Commit updated data
-        if: inputs.mode == 'run' || inputs.mode == 'undo'
+        if: inputs.mode == 'run' || inputs.mode == 'undo' || inputs.mode == 'reclassify'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -90,7 +94,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes."
           else
-            git commit -m "Backfill announcements ($(date -u +%Y-%m-%d))"
+            git commit -m "Update data: ${{ inputs.mode }} ($(date -u +%Y-%m-%d))"
             git pull --rebase
             git push
           fi
