@@ -90,37 +90,53 @@ def get(url, params=None, timeout=60, tries=6, pause=1.5):
     raise RuntimeError(f"gave up on {url}")
 
 
-def captures(url, start, end, per_day, window_days=120):
+def captures(url, start, end, per_day, window_days=120,
+             collapse="timestamp:10", workers=6):
     """List archived snapshots of one feed address, at most per_day each day.
 
     The listing is requested in windows. A busy feed has a very large index,
     and asking for two years at once times out; a window that fails costs
-    only its own slice instead of the whole feed.
+    only its own slice instead of the whole feed. The windows are independent,
+    so they are requested together -- the shared pace still holds the request
+    rate, this only stops each window waiting out the one before it.
+
+    collapse is how coarsely the archive is asked to deduplicate before it
+    answers. The default keeps one row per hour. A caller that only needs to
+    know which days have a snapshot passes timestamp:8, which collapses to one
+    row per day on the server and returns a fraction of the rows.
     """
-    rows, cursor, failures = [], start, []
+    windows, cursor = [], start
     while cursor <= end:
         stop = min(end, cursor + timedelta(days=window_days))
+        windows.append((cursor, stop))
+        cursor = stop + timedelta(days=1)
+
+    def one(window):
+        began, stop = window
         params = {
             "url": url,
             "output": "json",
             "filter": "statuscode:200",
-            "collapse": "timestamp:10",
+            "collapse": collapse,
             "fl": "timestamp,original",
-            "from": cursor.strftime("%Y%m%d"),
+            "from": began.strftime("%Y%m%d"),
             "to": stop.strftime("%Y%m%d"),
         }
-        try:
-            page = get(CDX, params, timeout=180, tries=5).json()
-        except (requests.RequestException, ValueError, RuntimeError) as err:
-            failures.append(f"{cursor:%Y-%m-%d}..{stop:%Y-%m-%d} ({type(err).__name__})")
-            cursor = stop + timedelta(days=1)
-            continue
-        if page and len(page) > 1:
-            rows.extend(page[1:])
-        cursor = stop + timedelta(days=1)
+        page = get(CDX, params, timeout=180, tries=5).json()
+        return page[1:] if page and len(page) > 1 else []
+
+    rows, failures = [], []
+    with ThreadPoolExecutor(max_workers=min(workers, len(windows))) as pool:
+        pending = {pool.submit(one, w): w for w in windows}
+        for future in as_completed(pending):
+            began, stop = pending[future]
+            try:
+                rows.extend(future.result())
+            except (requests.RequestException, ValueError, RuntimeError) as err:
+                failures.append(f"{began:%Y-%m-%d}..{stop:%Y-%m-%d} ({type(err).__name__})")
 
     if failures:
-        warn(f"Could not list {len(failures)} window(s) of {url}: {', '.join(failures)}")
+        warn(f"Could not list {len(failures)} window(s) of {url}: {', '.join(sorted(failures))}")
 
     by_day = {}
     for timestamp, original in rows:
@@ -187,16 +203,27 @@ def months_between(start, end):
 def probe(rules, start, end, per_day):
     """Report, month by month, how many days each feed has snapshots for."""
     months = months_between(start, end)
+    feeds = rules.get("feeds", [])
     grid, totals = {}, {}
-    for feed in rules.get("feeds", []):
+    print(f"Checking {len(feeds)} feeds against the archive's index. Every address is "
+          f"listed in full, which takes a while; progress follows.\n", flush=True)
+    for n, feed in enumerate(feeds, 1):
+        print(f"[{n}/{len(feeds)}] {feed['name']}", flush=True)
         days = set()
         for url in feed_urls(feed):
+            began = time.monotonic()
             try:
-                rows = captures(url, start, end, per_day=99)
+                # Only the set of days matters here, so the archive is asked to
+                # collapse to one row per day rather than one per hour.
+                rows = captures(url, start, end, per_day=1, collapse="timestamp:8")
             except (requests.RequestException, ValueError) as err:
                 warn(f"Could not check {url}: {type(err).__name__}")
                 continue
-            days.update(t[:8] for t, _ in rows)
+            fresh = {t[:8] for t, _ in rows} - days
+            print(f"    {len(rows):>6} captures on {len(fresh):>4} new days "
+                  f"in {time.monotonic() - began:>5.0f}s  {url}", flush=True)
+            days |= fresh
+        print(f"    -> {len(days)} days with a snapshot\n", flush=True)
         grid[feed["name"]] = days
         totals[feed["name"]] = len(days)
 
