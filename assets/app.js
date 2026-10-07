@@ -332,13 +332,31 @@
     function renderFocusNote() {
       const note = $('#focus-note');
       note.innerHTML = '';
+      const shown = members();
+      const hidden = state.hidden.size;
       const sym = state.view === 'detailed' ? state.focus : null;
-      note.hidden = !sym;
-      if (!sym) return;
-      const n = visibleEvents().length;
-      note.append(
-        el('span', {}, 'Showing the ', el('b', { text: sym }), ` news only (${n})`),
-        el('button', { type: 'button', class: 'text-button', text: 'Show all', onclick: () => setFocus(null) }));
+      note.hidden = !hidden && !sym;
+      if (note.hidden) return;
+
+      if (hidden) {
+        note.append(el('span', { class: 'note-part' },
+          shown.length === 1
+            ? el('span', {}, 'Only ', el('b', { text: shown[0] }))
+            : el('span', { text: `${hidden} ${hidden === 1 ? 'company' : 'companies'} hidden` }),
+          el('button', {
+            type: 'button', class: 'text-button', text: 'Show all companies',
+            onclick: () => { state.hidden = new Set(); update(); },
+          })));
+      }
+      if (sym) {
+        const n = visibleEvents().length;
+        note.append(el('span', { class: 'note-part' },
+          el('span', {}, 'Only ', el('b', { text: sym }), ` news (${n})`),
+          el('button', {
+            type: 'button', class: 'text-button', text: 'Show all news',
+            onclick: () => setFocus(null),
+          })));
+      }
     }
 
     function domainIdx() {
@@ -396,11 +414,20 @@
       const val = el('span', { class: 'val' });
       chipVals.set(t.symbol, val);
       const chip = el('button', {
-        type: 'button', class: 'chip', 'data-sym': t.symbol, title: t.name,
+        type: 'button', class: 'chip', 'data-sym': t.symbol,
+        title: `${t.name}. Click to hide. Shift-click to show only this one.`,
         style: `--c:${t.color}`,
-        onclick: () => {
-          if (state.hidden.has(t.symbol)) state.hidden.delete(t.symbol);
-          else if (members().length > 1) state.hidden.add(t.symbol);
+        onclick: (ev) => {
+          const all = tickers.map((x) => x.symbol);
+          if (ev.shiftKey || ev.altKey) {
+            // one company on its own, rather than hiding the other nine
+            const alone = state.hidden.size === all.length - 1 && !state.hidden.has(t.symbol);
+            state.hidden = new Set(alone ? [] : all.filter((x) => x !== t.symbol));
+          } else if (state.hidden.has(t.symbol)) {
+            state.hidden.delete(t.symbol);
+          } else if (members().length > 1) {
+            state.hidden.add(t.symbol);
+          }
           if (state.hidden.has(t.symbol) && state.focus === t.symbol) state.focus = null;
           update();
         },

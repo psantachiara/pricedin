@@ -243,11 +243,14 @@ select {
 .focus-note {
   margin: 0;
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 4px 18px;
   font-size: 0.8125rem;
   color: var(--muted);
 }
+.focus-note .note-part { display: inline-flex; align-items: center; gap: 8px; }
+.focus-note .text-button { margin-top: 0; }
 .focus-note[hidden] { display: none; }
 .focus-note b { color: var(--ink); font-weight: 600; }
 
