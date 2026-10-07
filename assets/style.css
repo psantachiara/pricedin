@@ -288,6 +288,7 @@ select {
 .coverage-base { stroke: var(--grid); stroke-width: 1; }
 .coverage-week { fill: var(--muted); }
 .coverage-week.none { fill: var(--down); opacity: 0.55; }
+.coverage-week.solo { fill: var(--cat-deals); }
 
 .marker { cursor: pointer; outline: none; }
 .marker .stem { stroke-width: 3; stroke-linecap: round; }

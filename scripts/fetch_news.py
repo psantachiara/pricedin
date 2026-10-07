@@ -282,10 +282,21 @@ def main():
     save("events.json", events, indent=2)
     save("news_seen.json", seen)
 
+    # From the day the live job starts, every feed is read on every publishing
+    # day, so the strip can treat that stretch as fully covered by all of them.
     today = now.strftime("%Y-%m-%d")
     coverage = load("coverage.json", {}) or {}
+    names = list(coverage.get("feeds") or [])
+    for feed in live_feeds:
+        if feed["name"] not in names:
+            names.append(feed["name"])
+    changed = names != list(coverage.get("feeds") or [])
     if coverage.get("liveFrom", "9999") > today:
         coverage["liveFrom"] = today
+        changed = True
+    coverage["feeds"] = names
+    coverage["liveFeeds"] = sorted(names.index(f["name"]) for f in live_feeds)
+    if changed or not (DATA / "coverage.json").exists():
         save("coverage.json", coverage)
 
 

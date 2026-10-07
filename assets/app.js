@@ -156,18 +156,36 @@
     // record rather than absence of news.
     const coverWeeks = (() => {
       if (!coverage || !coverage.weeks) return null;
+      const names = coverage.feeds || [];
       const live = coverage.liveFrom ? parseDate(coverage.liveFrom) : null;
+      const liveFeeds = coverage.liveFeeds || names.map((_, i) => i);
       const out = [];
       for (const [key, value] of Object.entries(coverage.weeks)) {
         const from = parseDate(key);
         if (!from) continue;
         const to = new Date(+from + 7 * 864e5);
-        const share = live && to > live ? 1 : Math.max(0, Math.min(1, +value || 0));
-        out.push({ from, to, share });
+        const isLive = live && to > live;
+        // The older format stored a bare number and named no feeds.
+        const raw = typeof value === 'number' ? { share: value, feeds: [] } : (value || {});
+        const share = isLive ? 1 : Math.max(0, Math.min(1, +raw.share || 0));
+        const idx = isLive ? liveFeeds : (raw.feeds || []);
+        out.push({ from, to, share, feeds: idx.map((i) => names[i]).filter(Boolean), total: names.length });
       }
       out.sort((a, b) => a.from - b.from);
       return out.length ? out : null;
     })();
+
+    function coverageTitle(d) {
+      const week = `Week of ${fmtDate(d.from)}`;
+      if (d.share < 0.05) return `${week}: no archived snapshots`;
+      const pct = `${Math.round(d.share * 100)}% of days covered`;
+      if (!d.feeds.length) return `${week}: ${pct}`;
+      const all = d.total && d.feeds.length === d.total;
+      const which = all ? `all ${d.total} feeds`
+        : d.feeds.length === 1 ? `${d.feeds[0]} only`
+        : d.feeds.join(', ');
+      return `${week}: ${pct}, from ${which}`;
+    }
 
     const pickBench = (view) => {
       const want = config.defaultBenchmark && config.defaultBenchmark[view];
@@ -595,15 +613,16 @@
           .attr('y1', stripTop + stripH).attr('y2', stripTop + stripH);
         const visible = coverWeeks.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
         gs.selectAll('rect').data(visible).join('rect')
-          .attr('class', (d) => 'coverage-week' + (d.share < 0.05 ? ' none' : ''))
+          .attr('class', (d) => 'coverage-week'
+            + (d.share < 0.05 ? ' none' : '')
+            + (d.share >= 0.05 && d.total > 1 && d.feeds.length === 1 ? ' solo' : ''))
           .attr('x', (d) => Math.max(L, x(d.from)))
           .attr('width', (d) => Math.max(1, Math.min(R, x(d.to)) - Math.max(L, x(d.from)) - 0.5))
           .attr('y', (d) => stripTop + stripH * (1 - Math.max(d.share, 0.16)))
           .attr('height', (d) => stripH * Math.max(d.share, 0.16))
           .style('opacity', (d) => (d.share < 0.05 ? 1 : 0.35 + 0.65 * d.share))
           .append('title')
-          .text((d) => `Week of ${fmtDate(d.from)}: ${d.share < 0.05 ? 'no archived snapshots'
-            : Math.round(d.share * 100) + '% of days covered by the source'}`);
+          .text(coverageTitle);
       }
 
       const stemMax = laneH / 2 - (state.view === 'detailed' ? 3 : 8);

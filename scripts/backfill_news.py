@@ -37,6 +37,8 @@ from fetch_news import (
     load, save, slug, warn, MEDIA_NS,
 )
 
+LOOKBACK_DAYS = 14   # how far back a snapshot of these feeds still reaches
+
 CDX = "http://web.archive.org/cdx/search/cdx"
 SNAPSHOT = "https://web.archive.org/web/{timestamp}id_/{url}"
 UA = {"User-Agent": "priced-in-backfill/1.0 (github pages site; one-off historical import)"}
@@ -72,21 +74,37 @@ def get(url, params=None, timeout=60, tries=4, pause=1.0):
     raise RuntimeError(f"gave up on {url}")
 
 
-def captures(url, start, end, per_day):
-    """List archived snapshots of one feed address, at most per_day each day."""
-    params = {
-        "url": url,
-        "output": "json",
-        "filter": "statuscode:200",
-        "collapse": "timestamp:10",
-        "fl": "timestamp,original",
-        "from": start.strftime("%Y%m%d"),
-        "to": end.strftime("%Y%m%d"),
-    }
-    rows = get(CDX, params).json()
-    if not rows or len(rows) < 2:
-        return []
-    rows = rows[1:]
+def captures(url, start, end, per_day, window_days=120):
+    """List archived snapshots of one feed address, at most per_day each day.
+
+    The listing is requested in windows. A busy feed has a very large index,
+    and asking for two years at once times out; a window that fails costs
+    only its own slice instead of the whole feed.
+    """
+    rows, cursor, failures = [], start, []
+    while cursor <= end:
+        stop = min(end, cursor + timedelta(days=window_days))
+        params = {
+            "url": url,
+            "output": "json",
+            "filter": "statuscode:200",
+            "collapse": "timestamp:10",
+            "fl": "timestamp,original",
+            "from": cursor.strftime("%Y%m%d"),
+            "to": stop.strftime("%Y%m%d"),
+        }
+        try:
+            page = get(CDX, params, timeout=180, tries=5).json()
+        except (requests.RequestException, ValueError, RuntimeError) as err:
+            failures.append(f"{cursor:%Y-%m-%d}..{stop:%Y-%m-%d} ({type(err).__name__})")
+            cursor = stop + timedelta(days=1)
+            continue
+        if page and len(page) > 1:
+            rows.extend(page[1:])
+        cursor = stop + timedelta(days=1)
+
+    if failures:
+        warn(f"Could not list {len(failures)} window(s) of {url}: {', '.join(failures)}")
 
     by_day = {}
     for timestamp, original in rows:
@@ -186,12 +204,27 @@ def probe(rules, start, end, per_day):
     print(f"A run at --per-day {per_day} would fetch roughly {est} snapshots.")
 
 
-def write_coverage(read_days, start, end, lookback=14):
-    """Record, per week, the share of days an archived snapshot could have captured."""
-    covered = set()
-    for day in read_days:
-        for back in range(lookback + 1):
-            covered.add(day - timedelta(days=back))
+def write_coverage(read_by_feed, start, end, lookback=LOOKBACK_DAYS):
+    """Record, per week, how much of it the source reaches and which feeds did.
+
+    A week covered only by one desk is not the same record as a week covered
+    by all four, so the strip can say which.
+    """
+    def reach(days):
+        out = set()
+        for day in days:
+            for back in range(lookback + 1):
+                out.add(day - timedelta(days=back))
+        return out
+
+    per_feed = {name: reach(days) for name, days in read_by_feed.items()}
+    everything = set().union(*per_feed.values()) if per_feed else set()
+
+    existing = load("coverage.json", {}) or {}
+    names = list(existing.get("feeds") or [])
+    for name in sorted(per_feed):
+        if name not in names:
+            names.append(name)
 
     weeks, cursor = {}, start.date() - timedelta(days=start.weekday())
     last = end.date()
@@ -199,19 +232,39 @@ def write_coverage(read_days, start, end, lookback=14):
         days = [cursor + timedelta(days=i) for i in range(7)]
         in_range = [d for d in days if start.date() <= d <= last]
         if in_range:
-            hit = sum(1 for d in in_range if d in covered)
-            weeks[cursor.isoformat()] = round(hit / len(in_range), 3)
+            share = sum(1 for d in in_range if d in everything) / len(in_range)
+            contributors = [
+                names.index(name) for name in sorted(per_feed)
+                if sum(1 for d in in_range if d in per_feed[name]) / len(in_range) >= 0.5
+            ]
+            weeks[cursor.isoformat()] = {"share": round(share, 3), "feeds": sorted(contributors)}
         cursor += timedelta(days=7)
 
-    existing = load("coverage.json", {}) or {}
+    # A later run may cover only some feeds, so coverage is merged rather than
+    # replaced: a week keeps the best share and the union of contributors.
+    merged = {}
+    for week, value in (existing.get("weeks") or {}).items():
+        merged[week] = ({"share": value, "feeds": []} if isinstance(value, (int, float))
+                        else {"share": value.get("share", 0), "feeds": list(value.get("feeds") or [])})
+    for week, value in weeks.items():
+        old_week = merged.get(week, {"share": 0, "feeds": []})
+        merged[week] = {
+            "share": max(value["share"], old_week["share"]),
+            "feeds": sorted(set(old_week["feeds"]) | set(value["feeds"])),
+        }
+
     existing.update({
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "lookbackDays": lookback,
-        "weeks": weeks,
+        "feeds": names,
+        "weeks": merged,
     })
     save("coverage.json", existing)
-    thin = sum(1 for v in weeks.values() if v < 0.5)
-    print(f"Wrote coverage for {len(weeks)} weeks; {thin} of them are less than half covered.")
+
+    thin = sum(1 for v in merged.values() if v["share"] < 0.5)
+    solo = sum(1 for v in merged.values() if len(v["feeds"]) == 1)
+    print(f"Wrote coverage for {len(merged)} weeks; {thin} less than half covered, "
+          f"{solo} resting on a single feed.")
 
 
 def main():
@@ -285,13 +338,15 @@ def main():
         print(f"Listing archived snapshots for {feed['name']}...", flush=True)
         for url in feed_urls(feed):
             try:
-                found = captures(url, start, end, args.per_day)
+                found = captures(url, start, end + timedelta(days=LOOKBACK_DAYS), args.per_day)
             except (requests.RequestException, ValueError) as err:
                 warn(f"Could not list snapshots of {url}: {type(err).__name__}")
                 continue
             if found:
                 print(f"  {len(found)} snapshots of {url}", flush=True)
                 jobs.extend((feed, t, o) for t, o in found)
+        if not any(j[0] is feed for j in jobs):
+            warn(f"{feed['name']} contributed no snapshots to this run.")
     jobs.sort(key=lambda j: j[1])
     if args.max_snapshots:
         jobs = jobs[:args.max_snapshots]
@@ -301,7 +356,8 @@ def main():
     print(f"\nFetching {len(jobs)} snapshots with {args.workers} workers...", flush=True)
 
     # ---- fetch them in parallel -----------------------------------------
-    pool, read_days, failed, done = {}, set(), 0, 0
+    pool, failed, done = {}, 0, 0
+    read_by_feed = {}
 
     def fetch(job):
         feed, timestamp, original = job
@@ -309,7 +365,7 @@ def main():
             time.sleep(args.pause / max(1, args.workers))
         response = get(SNAPSHOT.format(timestamp=timestamp, url=original),
                        timeout=60, pause=args.pause)
-        return timestamp, parse_snapshot(response.content, feed)
+        return feed["name"], timestamp, parse_snapshot(response.content, feed)
 
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {executor.submit(fetch, job): job for job in jobs}
@@ -318,11 +374,12 @@ def main():
                 done += 1
                 n = done
             try:
-                timestamp, items = future.result()
+                feed_name, timestamp, items = future.result()
             except (requests.RequestException, RuntimeError):
                 failed += 1
                 continue
-            read_days.add(datetime.strptime(timestamp[:8], "%Y%m%d").date())
+            read_by_feed.setdefault(feed_name, set()).add(
+                datetime.strptime(timestamp[:8], "%Y%m%d").date())
             # Workers merge into one pool, so the read and the write must be
             # one step: otherwise a restricted feed can overwrite the broader
             # one that another thread just stored.
@@ -423,7 +480,7 @@ def main():
 
     save("events.json", events, indent=2)
     save("news_seen.json", seen)
-    write_coverage(read_days, start, end)
+    write_coverage(read_by_feed, start, end)
     print(f"events.json now holds {len(events)} announcements.")
 
 

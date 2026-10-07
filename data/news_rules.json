@@ -10,37 +10,19 @@
       "name": "WSJ Markets",
       "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
       "source": "WSJ",
-      "paywall": true,
-      "categories": [
-        "deals",
-        "compute",
-        "model",
-        "policy"
-      ]
+      "paywall": true
     },
     {
       "name": "WSJ US Business",
       "url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness",
       "source": "WSJ",
-      "paywall": true,
-      "categories": [
-        "deals",
-        "compute",
-        "model",
-        "policy"
-      ]
+      "paywall": true
     },
     {
       "name": "WSJ World News",
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "source": "WSJ",
-      "paywall": true,
-      "categories": [
-        "deals",
-        "compute",
-        "model",
-        "policy"
-      ]
+      "paywall": true
     }
   ],
   "excludePaths": [
