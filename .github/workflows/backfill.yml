@@ -21,6 +21,14 @@ on:
         description: "Snapshots to replay per day"
         required: false
         default: "2"
+      feeds:
+        description: "Feeds to use (comma-separated names, blank for all)"
+        required: false
+        default: ""
+      workers:
+        description: "Parallel archive requests"
+        required: false
+        default: "4"
 
 permissions:
   contents: write
@@ -49,10 +57,17 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: |
+          FEEDS=""
+          if [ -n "${{ inputs.feeds }}" ]; then FEEDS='--feeds'; fi
           case "${{ inputs.mode }}" in
-            probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" ;;
-            dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" --per-day "${{ inputs.per_day }}" ;;
-            run)     python scripts/backfill_news.py --from "${{ inputs.from }}" --per-day "${{ inputs.per_day }}" ;;
+            probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+            dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+            run)     python scripts/backfill_news.py --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
             undo)    python scripts/backfill_news.py --undo ;;
           esac
 
