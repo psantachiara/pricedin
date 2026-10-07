@@ -9609,5 +9609,21 @@
     ],
     "thumbnail": "https://images.wsj.net/im-33096038",
     "paywall": true
+  },
+  {
+    "id": "20261007-openai-s-chatgpt-for-teens-poses-unacceptable-ri",
+    "date": "2026-10-07",
+    "title": "OpenAI’s ChatGPT for Teens Poses ‘Unacceptable Risk,’ Nonprofit Says",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openais-chatgpt-for-teens-poses-unacceptable-risk-nonprofit-says-fd95f8fe?mod=rss_Technology",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Common Sense Media’s Youth AI Safety Institute called on the artificial-intelligence lab to restrict usage of ChatGPT after its guardrails for underage users fell short of commitments.",
+    "thumbnail": "https://images.wsj.net/im-54678496",
+    "paywall": true
   }
 ]
