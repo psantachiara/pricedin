@@ -35,9 +35,13 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Fetch announcements
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scripts/fetch_news.py
 
       - name: Fetch prices and thumbnails
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scripts/update_data.py
 
       - name: Commit updated data
