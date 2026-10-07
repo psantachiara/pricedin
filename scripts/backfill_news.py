@@ -353,16 +353,27 @@ def main():
     jobs = []
     for feed in feeds:
         print(f"Listing archived snapshots for {feed['name']}...", flush=True)
+        # The archive's index ignores the scheme, so the http:// and https://
+        # spellings of an address return the same captures. One per timestamp.
+        picked = {}
         for url in feed_urls(feed):
             try:
                 found = captures(url, start, end + timedelta(days=LOOKBACK_DAYS), args.per_day)
             except (requests.RequestException, ValueError) as err:
                 warn(f"Could not list snapshots of {url}: {type(err).__name__}")
                 continue
-            if found:
-                print(f"  {len(found)} snapshots of {url}", flush=True)
-                jobs.extend((feed, t, o) for t, o in found)
-        if not any(j[0] is feed for j in jobs):
+            if not found:
+                continue
+            fresh = [(t, o) for t, o in found if t not in picked]
+            dupes = len(found) - len(fresh)
+            print(f"  {len(found)} snapshots of {url}"
+                  + (f" ({dupes} already listed)" if dupes else ""), flush=True)
+            for t, o in fresh:
+                picked[t] = o
+        if picked:
+            print(f"  -> {len(picked)} distinct captures for {feed['name']}", flush=True)
+            jobs.extend((feed, t, o) for t, o in sorted(picked.items()))
+        else:
             warn(f"{feed['name']} contributed no snapshots to this run.")
     jobs.sort(key=lambda j: j[1])
     if args.max_snapshots:
