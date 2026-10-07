@@ -1,5 +1,53 @@
 [
   {
+    "id": "20250105-amazon-s-prime-video-acquires-melania-trump-film",
+    "date": "2025-01-05",
+    "title": "Amazon's Prime Video Acquires Melania Trump Film",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/amazons-prime-video-acquires-melania-trump-film-8be53280?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The project is expected to be released in the second half of this year.",
+    "thumbnail": "https://images.wsj.net/im-34715111/medium",
+    "paywall": true
+  },
+  {
+    "id": "20250107-microsoft-plans-to-invest-3-billion-on-ai-cloud",
+    "date": "2025-01-07",
+    "title": "Microsoft Plans to Invest $3 Billion on AI, Cloud Infrastructure in India",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/microsoft-plans-to-invest-3-billion-on-ai-cloud-infrastructure-in-india-03a724ba?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "compute",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The company plans to grow the company’s Azure cloud business in India and set up new data centers.",
+    "thumbnail": "https://images.wsj.net/im-97757994/medium",
+    "paywall": true
+  },
+  {
+    "id": "20250114-google-comes-under-u-k-investigation-over-search",
+    "date": "2025-01-14",
+    "title": "Google Comes Under U.K. Investigation Over Search Services",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/google-comes-under-u-k-investigation-over-search-services-56669488?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "It will be the first investigation under a new digital markets competition regime that could force the company to change its conduct.",
+    "thumbnail": "https://images.wsj.net/im-628712/medium",
+    "paywall": true
+  },
+  {
     "id": "deepseek-r1",
     "date": "2025-01-20",
     "title": "DeepSeek releases R1, an open reasoning model trained at a fraction of rivals' reported cost",
@@ -32,6 +80,22 @@
     "manual": true
   },
   {
+    "id": "20250122-u-k-competition-watchdog-chair-replaced-with-ex",
+    "date": "2025-01-22",
+    "title": "U.K. Competition Watchdog Chair Replaced With Ex-Amazon Boss",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/u-k-competition-watchdog-chair-replaced-with-ex-amazon-boss-0ecee8b1?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The government appointed Douglas Gurr as interim chairman of the Competition and Markets Authority after pressuring the regulator to do more to spur investment and economic growth.",
+    "thumbnail": "https://images.wsj.net/im-87227421/medium",
+    "paywall": true
+  },
+  {
     "id": "20250123-nvidia-supplier-sk-hynix-posts-record-profit-on",
     "date": "2025-01-23",
     "title": "Nvidia Supplier SK Hynix Posts Record Profit on AI Boom",
@@ -47,6 +111,22 @@
     "paywall": true
   },
   {
+    "id": "20250124-amazon-willing-to-discuss-quebec-shutdown-with-c",
+    "date": "2025-01-24",
+    "title": "Amazon Willing to Discuss Quebec Shutdown With Canadian Officials",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/amazon-willing-to-discuss-quebec-shutdown-with-canadian-officials-610e5f59?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Amazon.com said it is open to talks with officials from the Canadian and Quebec governments about the decision to shut down operations in the country’s French-speaking province, which would lead to 1,700 people losing their jobs.",
+    "thumbnail": "https://images.wsj.net/im-59141117/medium",
+    "paywall": true
+  },
+  {
     "id": "20250124-canada-to-review-amazon-contracts-after-quebec-l",
     "date": "2025-01-24",
     "title": "Canada to Review Amazon Contracts After Quebec Layoffs",
@@ -59,6 +139,22 @@
     ],
     "backfill": true,
     "afterClose": true,
+    "paywall": true
+  },
+  {
+    "id": "20250124-google-to-put-warnings-on-u-k-businesses-using-f",
+    "date": "2025-01-24",
+    "title": "Google to Put Warnings on U.K. Businesses Using Fake Online Reviews",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/google-to-put-warnings-on-u-k-businesses-using-fake-online-reviews-eb75c038?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The search giant has offered to start punishing British businesses that boost their star ratings with fake reviews and the people that post them, ending the U.K. competition watchdog’s investigation into online reviews.",
+    "thumbnail": "https://images.wsj.net/im-75994181/medium",
     "paywall": true
   },
   {
@@ -232,6 +328,22 @@
     "paywall": true
   },
   {
+    "id": "20250227-google-tweak-creates-crisis-for-product-review-s",
+    "date": "2025-02-27",
+    "title": "Google Tweak Creates Crisis for Product-Review Sites",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/google-search-change-product-recommendation-websites-02394b79?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "New rules for recommendation sites such as Forbes Vetted and CNN Underscored threaten their business models and hurt freelancers.",
+    "thumbnail": "https://images.wsj.net/im-86090565",
+    "paywall": true
+  },
+  {
     "id": "20250227-how-nvidia-adapted-its-chips-to-stay-ahead-of-an",
     "date": "2025-02-27",
     "title": "How Nvidia Adapted Its Chips to Stay Ahead of an AI Industry Shift",
@@ -305,6 +417,40 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-59905392",
+    "paywall": true
+  },
+  {
+    "id": "20250301-warren-buffett-wants-you-to-know-the-unknown-ora",
+    "date": "2025-03-01",
+    "title": "Warren Buffett Wants You to Know the Unknown Oracle of Elkhart",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/warren-buffett-berkshire-letter-rv-pete-liegl-f3519820?mod=pls_whats_news_us_business_f",
+    "org": "oracle",
+    "category": "markets",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "A rock star of the RV industry drove his company to Berkshire Hathaway—and made billions for Buffett’s shareholders.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-45465163",
+    "paywall": true
+  },
+  {
+    "id": "20250318-thanks-to-nvidia-ai-will-soon-take-your-order-at",
+    "date": "2025-03-18",
+    "title": "Thanks to Nvidia, AI Will Soon Take Your Order at Taco Bell and Pizza Hut",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/thanks-to-nvidia-ai-will-soon-take-your-order-at-taco-bell-and-pizza-hut-b03a076a?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Yum Brands, owner of the quick-serve chains, aims for a world where humans never take food orders.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-29030289",
     "paywall": true
   },
   {
@@ -465,6 +611,39 @@
     "manual": true
   },
   {
+    "id": "20250827-nvidia-predicts-cooler-growth-after-sales-record",
+    "date": "2025-08-27",
+    "title": "Nvidia Predicts Cooler Growth After Sales Record",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/nvidia-nvda-q2-earnings-report-2026-2939143b?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The world’s most valuable public company continued to capitalize on strong demand for AI computing, but its lackluster outlook stoked jitters about future demand.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-14104847",
+    "paywall": true
+  },
+  {
+    "id": "20250904-amazon-s-satellite-internet-venture-signs-up-its",
+    "date": "2025-09-04",
+    "title": "Amazon’s Satellite Internet Venture Signs Up Its First Airline",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/telecom/amazons-satellite-internet-venture-signs-up-its-first-airline-42b3264a?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "JetBlue plans to use Kuiper satellite internet on 25% of its fleet, with some passengers gaining access to the service in 2027.",
+    "thumbnail": "https://images.wsj.net/im-98685384",
+    "paywall": true
+  },
+  {
     "id": "nvidia-openai-10gw",
     "date": "2025-09-22",
     "title": "Nvidia plans to invest up to $100 billion in OpenAI alongside 10 GW of Nvidia systems",
@@ -478,6 +657,23 @@
       "MSFT"
     ],
     "manual": true
+  },
+  {
+    "id": "20250925-amazon-reaches-2-5-billion-settlement-over-alleg",
+    "date": "2025-09-25",
+    "title": "Amazon Reaches $2.5 Billion Settlement Over Allegations It Misled Prime Users",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazon-prime-settlement-63b2c735?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The agreement requires the e-commerce giant to give money back to customers and change its subscription practices.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-96048289",
+    "paywall": true
   },
   {
     "id": "20250929-how-to-set-up-chatgpt-s-new-parental-controls",
@@ -573,6 +769,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-70706368",
+    "paywall": true
+  },
+  {
+    "id": "20251002-samsung-sk-hynix-rally-on-partnership-with-opena",
+    "date": "2025-10-02",
+    "title": "Samsung, SK Hynix Rally on Partnership With OpenAI for Stargate Project",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/samsung-sk-hynix-rally-on-partnership-with-openai-for-stargate-project-54937adf?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Shares in Samsung Electronics and SK Hynix surged to multiyear highs, after the South Korean memory-chip makers struck initial agreements with ChatGPT maker OpenAI as part of a global artificial-intelligence push.",
+    "thumbnail": "https://images.wsj.net/im-32215658",
     "paywall": true
   },
   {
@@ -788,6 +1001,24 @@
     "manual": true
   },
   {
+    "id": "20251014-soon-you-ll-be-able-to-shop-walmart-in-chatgpt-h",
+    "date": "2025-10-14",
+    "title": "Soon You’ll Be Able to Shop Walmart in ChatGPT. Here’s Why It Matters.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/chatgpt-walmart-shopping-3e411e83?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The retail giant is signaling that online shopping is about to change.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-960764",
+    "paywall": true
+  },
+  {
     "id": "20251015-oracle-co-ceos-defend-massive-data-center-expans",
     "date": "2025-10-15",
     "title": "Oracle Co-CEOs Defend Massive Data-Center Expansion, Plan to Offer AI Ecosystem",
@@ -896,6 +1127,23 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-19618281",
+    "paywall": true
+  },
+  {
+    "id": "20251021-chatgpt-should-make-retailers-nervous",
+    "date": "2025-10-21",
+    "title": "ChatGPT Should Make Retailers Nervous",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/chatgpt-should-make-retailers-nervous-bad4102a?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Retail companies risk losing control of the online shopping experience.",
+    "thumbnail": "https://images.wsj.net/im-17962520",
     "paywall": true
   },
   {
@@ -1076,6 +1324,23 @@
     "paywall": true
   },
   {
+    "id": "20251024-microsoft-s-xbox-to-remake-original-halo-video-g",
+    "date": "2025-10-24",
+    "title": "Microsoft’s Xbox to Remake Original Halo Video Game",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/microsofts-xbox-to-remake-original-halo-video-game-e64d439e?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The remake, titled Halo: Campaign Evolved, will support multiplayer gaming across several consoles for the first time.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-42000314",
+    "paywall": true
+  },
+  {
     "id": "20251026-openai-s-less-flashy-rival-might-have-a-better-b",
     "date": "2025-10-26",
     "title": "OpenAI’s Less-Flashy Rival Might Have a Better Business Model",
@@ -1089,6 +1354,39 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-97695981",
+    "paywall": true
+  },
+  {
+    "id": "20251027-a-dormant-nuclear-plant-in-iowa-is-poised-to-pow",
+    "date": "2025-10-27",
+    "title": "A Dormant Nuclear Plant in Iowa Is Poised to Power Google’s Energy Needs",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/a-dormant-nuclear-plant-in-iowa-is-poised-to-power-googles-energy-needs-dad26b8d?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant is reviving the Duane Arnold Energy Center, the latest big tech move to fuel expansive artificial intelligence ambitions.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-11741198",
+    "paywall": true
+  },
+  {
+    "id": "20251027-amazon-pledges-more-than-1-6-billion-for-aws-ret",
+    "date": "2025-10-27",
+    "title": "Amazon Pledges More Than $1.6 Billion for AWS, Retail Business in the Netherlands",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazon-pledges-more-than-1-6-billion-for-aws-retail-business-in-the-netherlands-adf9f565?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The tech giant is bolstering its cloud-computing and retail businesses in the country as it continues to expand in Europe.",
+    "thumbnail": "https://images.wsj.net/im-83377065",
     "paywall": true
   },
   {
@@ -1322,6 +1620,23 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-85835193",
+    "paywall": true
+  },
+  {
+    "id": "20251029-microsoft-hit-with-global-outage-to-azure-and-36",
+    "date": "2025-10-29",
+    "title": "Microsoft Hit With Global Outage to Azure and 365",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/microsoft-hit-with-azure-365-outage-b3ac0724?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The disruptions started around 12 p.m. ET, and the company said it is investigating what factors are causing the outage.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-84334148",
     "paywall": true
   },
   {
@@ -1672,6 +1987,23 @@
     "paywall": true
   },
   {
+    "id": "20251104-amd-reports-sharply-higher-profits-sales",
+    "date": "2025-11-04",
+    "title": "AMD Reports Sharply Higher Profits, Sales",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/advanced-micro-devices-amd-q3-earnings-report-2025-9c2eddb8?mod=pls_whats_news_us_business_f",
+    "org": "amd",
+    "category": "compute",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The chip maker reported steep gains in both profit and sales for the third quarter as it moved deeper into AI data centers and increased sales of personal computer processors.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-70906570",
+    "paywall": true
+  },
+  {
     "id": "20251104-nvidia-deutsche-telekom-to-build-ai-factory-in-e",
     "date": "2025-11-04",
     "title": "Nvidia, Deutsche Telekom to Build AI Factory in Europe Under $1.15 Billion Partnership",
@@ -1684,6 +2016,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-22806995",
+    "paywall": true
+  },
+  {
+    "id": "20251104-openai-wants-brands-to-allow-their-mascots-to-ap",
+    "date": "2025-11-04",
+    "title": "OpenAI Wants Brands to Allow Their Mascots to Appear in Gen AI Videos",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/openai-wants-brands-to-allow-their-mascots-to-appear-in-gen-ai-videos-4ef4f80e?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "ChatGPT maker suggests marketers could eventually charge for use of their ‘beloved characters’ in its Sora 2 text-to-video app.",
+    "thumbnail": "https://images.wsj.net/im-26293566",
     "paywall": true
   },
   {
@@ -1700,6 +2049,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-71960336",
+    "paywall": true
+  },
+  {
+    "id": "20251105-palantir-s-market-value-skyrocketed-see-how-its",
+    "date": "2025-11-05",
+    "title": "Palantir’s Market Value Skyrocketed. See How Its Revenue Is Still Catching Up.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/palantir-pltr-stock-value-revenue-charts-c8a7a53e?mod=pls_whats_news_us_business_f",
+    "org": "palantir",
+    "category": "deals",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "No other company currently in the S&P 500 has hit a $490 billion valuation as quickly and with as little in sales.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-80980349",
     "paywall": true
   },
   {
@@ -1869,6 +2235,23 @@
     "paywall": true
   },
   {
+    "id": "20251111-softbank-sells-its-nvidia-stake-for-5-8-billion",
+    "date": "2025-11-11",
+    "title": "SoftBank Sells Its Nvidia Stake for $5.8 Billion to Fund OpenAI Bet",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/softbank-groups-profit-doubles-on-openai-investment-c01d85a4?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company reported its quarterly net profit more than doubled, driven by gains from its investment in the ChatGPT maker.",
+    "thumbnail": "https://images.wsj.net/im-60805340",
+    "paywall": true
+  },
+  {
     "id": "20251112-inside-microsoft-s-new-ai-super-factory",
     "date": "2025-11-12",
     "title": "Inside Microsoft’s New AI ‘Super Factory’",
@@ -1950,6 +2333,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-64186924",
+    "paywall": true
+  },
+  {
+    "id": "20251115-meta-opens-pop-up-stores-to-build-buzz-for-its-a",
+    "date": "2025-11-15",
+    "title": "Meta Opens Pop-Up Stores to Build Buzz for Its AI Glasses",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/meta-store-new-york-city-599ee48c?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The stores, in New York City, Los Angeles and Las Vegas, have coffee stations and full-length mirrors for customers to take selfies in their Ray-Bans.",
+    "thumbnail": "https://images.wsj.net/im-57844409",
     "paywall": true
   },
   {
@@ -2295,6 +2694,22 @@
     "paywall": true
   },
   {
+    "id": "20251125-would-you-like-a-new-car-with-that-8-usb-cable-a",
+    "date": "2025-11-25",
+    "title": "Would You Like a New Car With That $8 USB Cable? Amazon Hopes So",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/would-you-like-a-new-car-with-that-8-usb-cable-amazon-hopes-so-d556550d?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant seeks to prove its shoppers will add big-ticket items to their shopping baskets.",
+    "thumbnail": "https://images.wsj.net/im-64126022",
+    "paywall": true
+  },
+  {
     "id": "20251202-amazon-releases-ai-agents-it-says-can-work-for-d",
     "date": "2025-12-02",
     "title": "Amazon Releases AI Agents It Says Can Work for Days at a Time",
@@ -2406,6 +2821,26 @@
     "paywall": true
   },
   {
+    "id": "20251203-snowflake-strikes-200-million-ai-deal-with-anthr",
+    "date": "2025-12-03",
+    "title": "Snowflake Strikes $200 Million AI Deal With Anthropic, Posts Narrower Third-Quarter Loss",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/snowflake-narrows-loss-as-revenue-climbs-04110886?mod=pls_whats_news_us_business_f",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The deal will make Anthropic’s large models available on Snowflake’s platform and establish a joint go-to-market initiative that aims to deploy AI agents across the world’s largest enterprises.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-84772674",
+    "paywall": true
+  },
+  {
     "id": "20251204-meta-plans-to-shift-spending-away-from-the-metav",
     "date": "2025-12-04",
     "title": "Meta Plans to Shift Spending Away From the Metaverse",
@@ -2486,6 +2921,38 @@
     "paywall": true
   },
   {
+    "id": "20251208-amazon-leads-81-million-financing-for-battery-st",
+    "date": "2025-12-08",
+    "title": "Amazon Leads $81 Million Financing for Battery Startup Blue Current",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/amazon-leads-81-million-financing-for-battery-startup-blue-current-c45c4b7b?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The investment in Blue Current—which makes solid-state batteries as opposed to the combustible lithium-ion variety—comes as Amazon expands its electric van fleet.",
+    "thumbnail": "https://images.wsj.net/im-21529098",
+    "paywall": true
+  },
+  {
+    "id": "20251208-nvidia-takes-top-spot-in-the-list-of-best-manage",
+    "date": "2025-12-08",
+    "title": "Nvidia Takes Top Spot in the List of Best-Managed Companies of 2025",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/c-suite/nvidia-wins-best-managed-companies-ranking-2025-2297969d?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Tech companies continue to dominate in the Drucker Institute’s annual ranking, although Intel and Adobe saw major drops",
+    "thumbnail": "https://images.wsj.net/im-48574520",
+    "paywall": true
+  },
+  {
     "id": "20251209-anthropic-and-accenture-strike-ai-deal-targeting",
     "date": "2025-12-09",
     "title": "Anthropic and Accenture Strike AI Deal Targeting Business Clients",
@@ -2501,6 +2968,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-84916339",
+    "paywall": true
+  },
+  {
+    "id": "20251209-charlie-kirk-s-newest-book-is-a-hit-and-out-of-s",
+    "date": "2025-12-09",
+    "title": "Charlie Kirk’s Newest Book Is a Hit—and Out of Stock on Amazon",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/charlie-kirks-newest-book-is-a-hitand-out-of-stock-on-amazon-e78e14ef?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The late conservative activist’s book, published Tuesday, is about honoring the sabbath.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-34819506",
     "paywall": true
   },
   {
@@ -2615,6 +3099,22 @@
     "paywall": true
   },
   {
+    "id": "20251210-fervo-energy-raises-462-million-lands-google-as",
+    "date": "2025-12-10",
+    "title": "Fervo Energy Raises $462 Million, Lands Google as Investor",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/fervo-energy-raises-462-million-lands-google-as-investor-27a06c13?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The company, also backed by Bill Gates’s Breakthrough Energy Ventures, has emerged as a leader in advanced geothermal energy.",
+    "thumbnail": "https://images.wsj.net/im-02704656",
+    "paywall": true
+  },
+  {
     "id": "20251210-microsoft-amazon-bet-billions-on-india",
     "date": "2025-12-10",
     "title": "Microsoft, Amazon Bet Billions on India",
@@ -2644,6 +3144,58 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-49650116",
+    "paywall": true
+  },
+  {
+    "id": "20251211-disney-to-invest-1-billion-in-openai-and-license",
+    "date": "2025-12-11",
+    "title": "Disney to Invest $1 Billion in OpenAI and License Characters for Use in ChatGPT, Sora",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/disney-to-invest-1-billion-in-openai-license-characters-for-use-in-chatgpt-sora-3a4916e2?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The three-year deal lets users generate videos of Disney, Marvel, Star Wars and Pixar characters; Disney also accused Google of infringing on its copyrights",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-77512112",
+    "paywall": true
+  },
+  {
+    "id": "20251211-palantir-sues-ceo-of-rival-ai-firm-alleges-wides",
+    "date": "2025-12-11",
+    "title": "Palantir Sues CEO of Rival AI Firm, Alleges Widespread Effort to Poach Employees",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/palantir-sues-ceo-of-rival-ai-firm-alleges-widespread-effort-to-poach-employees-9c297986?mod=pls_whats_news_us_business_f",
+    "org": "palantir",
+    "category": "policy",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "The lawsuit says Percepta’s chief executive built a “copycat” company after leaving Palantir last year.",
+    "thumbnail": "https://images.wsj.net/im-40571420",
+    "paywall": true
+  },
+  {
+    "id": "20251212-behind-the-deal-that-took-disney-from-ai-skeptic",
+    "date": "2025-12-12",
+    "title": "Behind the Deal That Took Disney From AI Skeptic to OpenAI Investor",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/behind-the-deal-that-took-disney-from-ai-skeptic-to-openai-investor-798fce13?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Disney’s deal with OpenAI will allow users to generate AI videos based on characters from Marvel, “Star Wars” and other franchises.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-28914981",
     "paywall": true
   },
   {
@@ -2964,6 +3516,56 @@
     "paywall": true
   },
   {
+    "id": "20260106-fusion-startup-gets-an-ai-boost-from-nvidia-siem",
+    "date": "2026-01-06",
+    "title": "Fusion Startup Gets an AI Boost From Nvidia, Siemens",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/fusion-startup-gets-an-ai-boost-from-nvidia-siemens-4c29f78b?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Commonwealth Fusion Systems is developing a simulator with the tech companies to help spur commercial use of the renewable energy source.",
+    "thumbnail": "https://images.wsj.net/im-75432369",
+    "paywall": true
+  },
+  {
+    "id": "20260106-nvidia-ceo-says-he-doesn-t-care-about-california",
+    "date": "2026-01-06",
+    "title": "Nvidia CEO Says He Doesn’t Care About California’s Proposed Billionaire Tax",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/nvidia-jensen-huang-california-wealth-tax-36db6618?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The proposal has sparked outrage from other ultrawealthy residents, who warned of an exodus from the state.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-84021655",
+    "paywall": true
+  },
+  {
+    "id": "20260106-xai-raises-20-billion-in-series-e-funding-round",
+    "date": "2026-01-06",
+    "title": "xAI Raises $20 Billion in Series E Funding Round, Surpassing Initial Target",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/xai-raises-20-billion-in-series-e-funding-round-surpassing-initial-target-d530cc8c?mod=pls_whats_news_us_business_f",
+    "org": "xai",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company behind the Grok large language model said that investors in the funding round included the Qatar Investment Authority, Valor Equity Partners, Stepstone Group, MGX and Baron Capital Group, and Fidelity Management & Research Compa",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-60642325",
+    "paywall": true
+  },
+  {
     "id": "20260107-anthropic-raising-10-billion-at-350-billion-valu",
     "date": "2026-01-07",
     "title": "Anthropic Raising $10 Billion at $350 Billion Value",
@@ -3012,6 +3614,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-21816562",
+    "paywall": true
+  },
+  {
+    "id": "20260108-china-to-review-meta-s-manus-deal",
+    "date": "2026-01-08",
+    "title": "China to Review Meta’s Manus Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/china-to-review-metas-manus-deal-eb1a2c03?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "China’s commerce ministry is reviewing Meta Platforms’ more-than $2 billion acquisition of Manus, a Singapore-based artificial-intelligence startup with Chinese founders.",
+    "thumbnail": "https://images.wsj.net/im-86281421",
     "paywall": true
   },
   {
@@ -3313,6 +3931,38 @@
     "paywall": true
   },
   {
+    "id": "20260116-after-saks-s-collapse-a-bitter-rift-with-amazon",
+    "date": "2026-01-16",
+    "title": "After Saks’s Collapse—a Bitter Rift With Amazon",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/after-sakss-collapsea-bitter-rift-with-amazon-b066eeb9?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The department-store chain’s bankruptcy throws one of Amazon’s biggest bets on luxury retail into doubt",
+    "thumbnail": "https://images.wsj.net/im-69779716",
+    "paywall": true
+  },
+  {
+    "id": "20260116-microsoft-s-activision-blizzard-probed-by-italia",
+    "date": "2026-01-16",
+    "title": "Microsoft’s Activision Blizzard Probed by Italian Regulator Over In-Game Purchases",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/microsofts-activision-blizzard-probed-by-italian-regulator-over-in-game-purchases-bd919fb7?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "policy",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The regulator said the U.S. gaming publisher might have breached consumer protection laws through practices encouraging gamers to play more.",
+    "thumbnail": "https://images.wsj.net/im-04921227",
+    "paywall": true
+  },
+  {
     "id": "20260116-openai-to-begin-testing-ads-in-chatgpt-in-push-f",
     "date": "2026-01-16",
     "title": "OpenAI to Begin Testing Ads in ChatGPT in Push for Fresh Revenue",
@@ -3344,6 +3994,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-66940618",
+    "paywall": true
+  },
+  {
+    "id": "20260119-can-a-1-699-espresso-machine-help-walmart-challe",
+    "date": "2026-01-19",
+    "title": "Can a $1,699 Espresso Machine Help Walmart Challenge Amazon?",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/can-a-1-699-espresso-machine-help-walmart-challenge-amazon-da9e8675?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Walmart is sprucing up its home goods to attract more high-income shoppers and better compete with the e-commerce titan.",
+    "thumbnail": "https://images.wsj.net/im-61313668",
     "paywall": true
   },
   {
@@ -3476,6 +4142,22 @@
     "paywall": true
   },
   {
+    "id": "20260127-amazon-to-shut-down-all-amazon-go-and-amazon-fre",
+    "date": "2026-01-27",
+    "title": "Amazon to Shut Down All Amazon Go and Amazon Fresh Stores",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/amazon-to-shut-down-all-amazon-go-and-amazon-fresh-stores-0301dfb7?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant will convert some locations into Whole Foods Market stores.",
+    "thumbnail": "https://images.wsj.net/im-85148561",
+    "paywall": true
+  },
+  {
     "id": "20260127-google-to-get-eu-instructions-on-sharing-of-sear",
     "date": "2026-01-27",
     "title": "Google to Get EU Instructions on Sharing of Search Data, Android AI Tools",
@@ -3568,6 +4250,22 @@
     "paywall": true
   },
   {
+    "id": "20260128-google-to-pay-135-million-to-settle-lawsuit-over",
+    "date": "2026-01-28",
+    "title": "Google to Pay $135 Million to Settle Lawsuit Over Handling of Cellular Data",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/google-to-pay-135-million-to-settle-lawsuit-over-handling-of-cellular-data-7cb58598?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The settlement requires Google to change its Google Play terms of service and the setup screens for new Android mobile devices.",
+    "thumbnail": "https://images.wsj.net/im-68034564",
+    "paywall": true
+  },
+  {
     "id": "20260128-meta-reports-record-sales-massive-spending-hike",
     "date": "2026-01-28",
     "title": "Meta Reports Record Sales, Massive Spending Hike on AI Buildout",
@@ -3613,6 +4311,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-05465063",
+    "paywall": true
+  },
+  {
+    "id": "20260128-tesla-to-invest-2-billion-in-elon-musk-s-xai-can",
+    "date": "2026-01-28",
+    "title": "Tesla to Invest $2 Billion in Elon Musk’s xAI, Cancel Two EV Models",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/autos/tesla-tsla-q4-earnings-report-2025-191b2aab?mod=pls_whats_news_us_business_f",
+    "org": "xai",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The electric vehicle maker’s fourth-quarter sales and profit dropped, but the company still beat Wall Street’s expectations.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54840487",
     "paywall": true
   },
   {
@@ -3797,6 +4512,39 @@
     "paywall": true
   },
   {
+    "id": "20260202-palantir-achieves-another-revenue-record-with-1",
+    "date": "2026-02-02",
+    "title": "Palantir Achieves Another Revenue Record With $1.41 Billion Quarter",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/ppalantir-earnings-q4-2025-pltr-stock-791cbd24?mod=pls_whats_news_us_business_f",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "The data-analytics company, which has been criticized over its role in the Trump administration’s immigration crackdown, posted a profit of $609 million.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-96676486",
+    "paywall": true
+  },
+  {
+    "id": "20260202-saks-is-shutting-down-its-luxury-partnership-wit",
+    "date": "2026-02-02",
+    "title": "Saks Is Shutting Down Its Luxury Partnership With Amazon",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/saks-is-shutting-down-its-luxury-partnership-with-amazon-a95e30cc?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The fizzled tie-up is a setback for Amazon’s efforts to gain a bigger foothold in high-end sales.",
+    "thumbnail": "https://images.wsj.net/im-19826446",
+    "paywall": true
+  },
+  {
     "id": "20260203-amd-sales-climb-on-help-from-data-center-busines",
     "date": "2026-02-03",
     "title": "AMD Sales Climb on Help From Data-Center Business",
@@ -3847,6 +4595,25 @@
     "paywall": true
   },
   {
+    "id": "20260204-anthropic-takes-aim-at-openai-s-chatgpt-in-super",
+    "date": "2026-02-04",
+    "title": "Anthropic Takes Aim at OpenAI’s ChatGPT in Super Bowl Ad Debut",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/anthropic-takes-aim-at-openais-chatgpt-in-super-bowl-ad-debut-e38d08bb?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Chatbot wars are heating up, with Anthropic’s Claude highlighting the potential frustration of ads in ChatGPT.",
+    "thumbnail": "https://images.wsj.net/im-35444581",
+    "paywall": true
+  },
+  {
     "id": "20260204-google-to-double-spending-as-earnings-beat-wall",
     "date": "2026-02-04",
     "title": "Google to Double Spending as Earnings Beat Wall Street Expectations",
@@ -3876,6 +4643,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-46286652",
+    "paywall": true
+  },
+  {
+    "id": "20260205-gemini-space-station-to-cut-25-of-staff-in-broad",
+    "date": "2026-02-05",
+    "title": "Gemini Space Station to Cut 25% of Staff in Broad Restructuring",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/gemini-space-station-to-cut-25-of-staff-in-broad-restructuring-5c2902e8?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The cryptocurrency exchange founded by Cameron and Tyler Winklevoss said that it would lay off up to 200 employees, including workers in Europe, Singapore, and the U.S.",
+    "thumbnail": "https://images.wsj.net/im-68523721",
     "paywall": true
   },
   {
@@ -4045,6 +4828,23 @@
     "paywall": true
   },
   {
+    "id": "20260212-softbank-loads-up-on-debt-to-pay-for-openai-bet",
+    "date": "2026-02-12",
+    "title": "SoftBank Loads Up On Debt to Pay for OpenAI Bet",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/softbank-group-posts-quarterly-profit-on-tech-funds-gains-5106c0d1?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The investment in the AI company is the largest ever by Masayoshi Son, a Silicon Valley fixture known for his appetite for risk.",
+    "thumbnail": "https://images.wsj.net/im-05463090",
+    "paywall": true
+  },
+  {
     "id": "20260213-anthropic-adds-new-board-member-as-it-eyes-ipo",
     "date": "2026-02-13",
     "title": "Anthropic Adds New Board Member as It Eyes IPO",
@@ -4165,6 +4965,22 @@
     "paywall": true
   },
   {
+    "id": "20260218-microsoft-says-it-has-reached-its-100-renewable",
+    "date": "2026-02-18",
+    "title": "Microsoft Says It Has Reached Its 100% Renewable Electricity Target",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/microsoft-says-it-has-reached-its-100-renewable-electricity-target-2d286469?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Tech giant uses renewable power purchase agreements to offset energy purchases, but critics say it is still burning fossil fuels from the grid.",
+    "thumbnail": "https://images.wsj.net/im-53460248",
+    "paywall": true
+  },
+  {
     "id": "20260218-mistral-ai-to-buy-software-infrastructure-startu",
     "date": "2026-02-18",
     "title": "Mistral AI to Buy Software Infrastructure Startup Koyeb",
@@ -4212,6 +5028,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-53850723",
+    "paywall": true
+  },
+  {
+    "id": "20260220-amazon-is-now-america-s-biggest-company-its-17-y",
+    "date": "2026-02-20",
+    "title": "Amazon Is Now America’s Biggest Company. Its 17-Year Journey to Surpass Walmart.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/amazon-biggest-us-company-walmart-cfd0cac4?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Walmart had held the title as the biggest company by annual revenue since 2009.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-68512821",
     "paywall": true
   },
   {
@@ -4297,6 +5130,22 @@
     "paywall": true
   },
   {
+    "id": "20260223-meta-rakes-it-in-yet-still-borrows-billions-for",
+    "date": "2026-02-23",
+    "title": "Meta Rakes It In, Yet Still Borrows Billions for AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/c-suite/meta-rakes-it-in-yet-still-borrows-billions-for-ai-d4de506d?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The company reports abundant free cash flow, but that skips big cash costs tied to employees’ compensation.",
+    "thumbnail": "https://images.wsj.net/im-75434520",
+    "paywall": true
+  },
+  {
     "id": "20260224-anthropic-pushes-claude-deeper-into-knowledge-wo",
     "date": "2026-02-24",
     "title": "Anthropic Pushes Claude Deeper Into Knowledge Work",
@@ -4347,6 +5196,56 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-94189178",
+    "paywall": true
+  },
+  {
+    "id": "20260225-nvidia-beats-back-bubble-fears-with-record-68-bi",
+    "date": "2026-02-25",
+    "title": "Nvidia Beats Back Bubble Fears With Record $68 Billion in Sales in Fourth Quarter",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/nvidia-earnings-q4-2026-nvda-stock-73bd6dc5?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "“Computing has changed,” CEO Jensen Huang said, citing agentic AI as driver of 94% profit surge.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-88866073",
+    "paywall": true
+  },
+  {
+    "id": "20260225-softbank-backed-wayve-raises-1-2-billion-from-mi",
+    "date": "2026-02-25",
+    "title": "SoftBank-Backed Wayve Raises $1.2 Billion From Microsoft, Nvidia, Automakers",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/autos/softbank-backed-wayve-raises-1-2-billion-from-microsoft-nvidia-automakers-b01d5f7a?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA",
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Wayve said the round, led by venture capital firms Eclipse Capital, Balderton Capital and a SoftBank Group fund, pushes its post-money valuation to $8.6 billion.",
+    "thumbnail": "https://images.wsj.net/im-67325619",
+    "paywall": true
+  },
+  {
+    "id": "20260225-spain-ramps-up-pressure-on-apple-amazon-in-years",
+    "date": "2026-02-25",
+    "title": "Spain Ramps Up Pressure on Apple, Amazon in Yearslong Antitrust Case",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/spain-ramps-up-pressure-on-apple-amazon-in-yearslong-antitrust-case-222a6d2e?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Spanish antitrust officials said the companies failed to quickly comply with an order to change contract clauses linked with Amazon’s role as a reseller of Apple products.",
+    "thumbnail": "https://images.wsj.net/im-06177469",
     "paywall": true
   },
   {
@@ -4600,6 +5499,40 @@
     "paywall": true
   },
   {
+    "id": "20260303-news-corp-meta-in-ai-content-licensing-deal-wort",
+    "date": "2026-03-03",
+    "title": "News Corp, Meta in AI Content Licensing Deal Worth Up to $50 Million a Year",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/news-corp-meta-in-ai-content-licensing-deal-worth-up-to-50-million-a-year-d4fbf244?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The multiyear pact gives Meta access to content for training and to retrieve information for users of its AI tools.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-16086655",
+    "paywall": true
+  },
+  {
+    "id": "20260304-broadcom-sales-rise-as-ai-developers-build-more",
+    "date": "2026-03-04",
+    "title": "Broadcom Sales Rise as AI Developers Build More Products and Agents",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/broadcom-logs-higher-sales-authorizes-10-billion-buyback-amid-climbing-ai-demand-0320a6fc?mod=pls_whats_news_us_business_f",
+    "org": "broadcom",
+    "category": "compute",
+    "tickers": [
+      "AVGO"
+    ],
+    "backfill": true,
+    "summary": "The semiconductor and software maker’s revenue rose 29% as AI demand continues to drive sales.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-16986744",
+    "paywall": true
+  },
+  {
     "id": "20260304-gemini-said-they-could-only-be-together-if-he-ki",
     "date": "2026-03-04",
     "title": "Gemini Said They Could Only Be Together if He Killed Himself. Soon, He Was Dead.",
@@ -4826,6 +5759,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-09800632",
+    "paywall": true
+  },
+  {
+    "id": "20260309-simon-schuster-names-former-amazon-executive-gre",
+    "date": "2026-03-09",
+    "title": "Simon & Schuster Names Former Amazon Executive Greg Greeley as CEO",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/simon-schuster-names-former-amazon-executive-greg-greeley-as-ceo-b273062e?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The publisher is turning to an industry outsider as expanded entertainment options squeeze the book business.",
+    "thumbnail": "https://images.wsj.net/im-20985661",
     "paywall": true
   },
   {
@@ -5164,6 +6113,39 @@
     "paywall": true
   },
   {
+    "id": "20260317-amazon-launches-1-hour-delivery-in-hundreds-of-u",
+    "date": "2026-03-17",
+    "title": "Amazon Launches 1-Hour Delivery in Hundreds of U.S. Cities",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/amazon-launches-1-hour-delivery-in-hundreds-of-u-s-cities-27cf8f55?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "model",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce firm is also rolling out 3-hour delivery for a fee as it fends off a growing threat from Walmart.",
+    "thumbnail": "https://images.wsj.net/im-02971564",
+    "paywall": true
+  },
+  {
+    "id": "20260317-amazon-plans-drastic-cut-in-packages-sent-via-al",
+    "date": "2026-03-17",
+    "title": "Amazon Plans Drastic Cut in Packages Sent Via Already-Struggling Postal Service",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/amazon-usps-package-volume-change-93d0f6db?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant wants to reduce its postal volume by at least two-thirds by this fall.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-246094",
+    "paywall": true
+  },
+  {
     "id": "20260317-microsoft-seeks-more-coherence-in-ai-efforts-wit",
     "date": "2026-03-17",
     "title": "Microsoft Seeks More Coherence in AI Efforts With Copilot Reorganization",
@@ -5289,6 +6271,38 @@
     "paywall": true
   },
   {
+    "id": "20260322-amazon-gets-its-biggest-hit-movie-ever-with-proj",
+    "date": "2026-03-22",
+    "title": "Amazon Gets Its Biggest Hit Movie Ever With ‘Project Hail Mary’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/amazon-project-hail-mary-box-office-55609da6?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The sci-fi adventure starring Ryan Gosling opened with $80.5 million in the U.S. and Canada.",
+    "thumbnail": "https://images.wsj.net/im-84368407",
+    "paywall": true
+  },
+  {
+    "id": "20260322-how-amazon-is-bringing-fast-delivery-to-rural-am",
+    "date": "2026-03-22",
+    "title": "How Amazon Is Bringing Fast Delivery to Rural America",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/logistics/how-amazon-is-bringing-fast-delivery-to-rural-america-25101174?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Amazon is investing $4 billion to push two-day delivery further across its network—and finding it takes a lot to get packages to the wilds of Montana within 48 hours.",
+    "thumbnail": "https://images.wsj.net/im-63226221",
+    "paywall": true
+  },
+  {
     "id": "20260322-mark-zuckerberg-is-building-an-ai-agent-to-help",
     "date": "2026-03-22",
     "title": "Mark Zuckerberg Is Building an AI Agent to Help Him Be CEO",
@@ -5336,6 +6350,40 @@
     "paywall": true
   },
   {
+    "id": "20260324-landmark-verdict-says-meta-harmed-children-allow",
+    "date": "2026-03-24",
+    "title": "Landmark Verdict Says Meta Harmed Children, Allowing Adults to Prey on Them",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/landmark-verdict-says-meta-harmed-children-allowing-adults-to-prey-on-them-cb3ad674?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "With a $375 million penalty, a New Mexico state court case is holding the social-media company responsible for content on its platforms.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-19078242",
+    "paywall": true
+  },
+  {
+    "id": "20260324-nvidia-ceo-s-night-at-the-opera-showcases-role-a",
+    "date": "2026-03-24",
+    "title": "Nvidia CEO’s Night at the Opera Showcases Role as AI Kingmaker",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-ai-market-competition-9db60e4c?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chip giant has invested tens of billions from its fast-growing war chest to become the industry’s most powerful financier.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54170942",
+    "paywall": true
+  },
+  {
     "id": "20260324-openai-scraps-sora-video-platform-months-after-l",
     "date": "2026-03-24",
     "title": "OpenAI Scraps Sora Video Platform Months After Launch",
@@ -5350,6 +6398,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-15403986",
+    "paywall": true
+  },
+  {
+    "id": "20260325-meta-targets-9-trillion-valuation-with-new-execu",
+    "date": "2026-03-25",
+    "title": "Meta Targets $9 Trillion Valuation With New Executive Incentive Program",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/meta-targets-9-trillion-valuation-with-new-executive-incentive-program-64460862?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "New stock option program could pay some executives hundreds of millions of dollars if they reach aggressive growth targets.",
+    "thumbnail": "https://images.wsj.net/im-01187819",
     "paywall": true
   },
   {
@@ -5467,6 +6531,22 @@
     "paywall": true
   },
   {
+    "id": "20260327-meta-agrees-to-fund-local-energy-infrastructure",
+    "date": "2026-03-27",
+    "title": "Meta Agrees to Fund Local Energy Infrastructure for Louisiana Data Center",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/meta-agrees-to-fund-local-energy-infrastructure-for-louisiana-data-center-b795bc96?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "compute",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The company will fund seven new natural gas power plants and other energy infrastructure to support its largest-ever data center project.",
+    "thumbnail": "https://images.wsj.net/im-67779759",
+    "paywall": true
+  },
+  {
     "id": "20260328-the-texas-lawyer-and-part-time-pastor-who-beat-m",
     "date": "2026-03-28",
     "title": "The Texas Lawyer and Part-Time Pastor Who Beat Meta and Google",
@@ -5527,6 +6607,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-51317442",
+    "paywall": true
+  },
+  {
+    "id": "20260331-delta-to-tap-amazon-satellite-internet-service-f",
+    "date": "2026-03-31",
+    "title": "Delta to Tap Amazon Satellite-Internet Service for In-Flight Wi-Fi",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/airlines/delta-to-tap-amazon-satellite-internet-service-for-in-flight-wi-fi-583a3c09?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Amazon’s Leo service will start connecting a portion of Delta’s fleet in 2028; Elon Musk’s Starlink has become a dominant satellite connectivity provider to airlines.",
+    "thumbnail": "https://images.wsj.net/im-03810525",
     "paywall": true
   },
   {
@@ -5623,6 +6719,40 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-92841066",
+    "paywall": true
+  },
+  {
+    "id": "20260402-amazon-to-apply-3-5-fuel-surcharge-to-third-part",
+    "date": "2026-04-02",
+    "title": "Amazon to Apply 3.5% Fuel Surcharge to Third-Party Sellers",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/logistics/amazon-to-apply-3-5-fuel-surcharge-to-third-party-sellers-054eae94?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant is the latest company to impose the temporary fees as the Iran war drives up energy prices.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-44643803",
+    "paywall": true
+  },
+  {
+    "id": "20260402-openai-buys-tech-industry-talk-show-tbpn",
+    "date": "2026-04-02",
+    "title": "OpenAI Buys Tech-Industry Talk Show TBPN",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/cmo-today/openai-buys-tech-industry-talk-show-tbpn-484c01c5?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The maker of ChatGPT said it has acquired TBPN, an online talk show that aims to compete with Bloomberg and CNBC in by-the-minute analysis of technology news and executive interviews.",
+    "thumbnail": "https://images.wsj.net/im-97163248",
     "paywall": true
   },
   {
@@ -5942,6 +7072,22 @@
     "paywall": true
   },
   {
+    "id": "20260413-amazon-s-car-sales-bet-is-getting-bigger-with-ne",
+    "date": "2026-04-13",
+    "title": "Amazon’s Car Sales Bet Is Getting Bigger With New Brands and More Cities",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/autos/amazons-car-sales-bet-is-getting-bigger-with-new-brands-and-more-cities-445ed85b?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant’s program has grown in recent months to include vehicles from Kia, Mazda, Subaru, Chevrolet and Jeep.",
+    "thumbnail": "https://images.wsj.net/im-02964594",
+    "paywall": true
+  },
+  {
     "id": "20260413-meta-expected-to-unseat-google-as-world-s-larges",
     "date": "2026-04-13",
     "title": "Meta Expected to Unseat Google as World’s Largest Digital-Ad Player",
@@ -6022,6 +7168,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-73621378",
+    "paywall": true
+  },
+  {
+    "id": "20260414-why-amazon-is-buying-starlink-rival-globalstar-i",
+    "date": "2026-04-14",
+    "title": "Why Amazon Is Buying Starlink Rival Globalstar in $11 Billion Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazon-to-acquire-globalstar-in-satellite-cellular-connection-push-448d5a16?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Amazon has agreed to acquire Globalstar in a move that allows its Amazon Leo satellite network to offer direct-to-device connections.",
+    "thumbnail": "https://images.wsj.net/im-96988399",
     "paywall": true
   },
   {
@@ -6339,6 +7501,23 @@
     "paywall": true
   },
   {
+    "id": "20260424-x-energy-s-shares-jump-in-ipo-delivering-wins-to",
+    "date": "2026-04-24",
+    "title": "X-Energy’s Shares Jump in IPO, Delivering Wins to Amazon and Ken Griffin",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/x-energy-ipo-xe-stock-6b96c412?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "X-Energy scrapped a public offering less than three years ago, before the artificial-intelligence boom took hold.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-01838573",
+    "paywall": true
+  },
+  {
     "id": "20260427-china-bans-meta-s-acquisition-of-manus-on-nation",
     "date": "2026-04-27",
     "title": "China Bans Meta’s Acquisition of Manus on National Security Grounds",
@@ -6367,6 +7546,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-84712460",
+    "paywall": true
+  },
+  {
+    "id": "20260427-meta-platforms-enters-solar-power-pact",
+    "date": "2026-04-27",
+    "title": "Meta Platforms Enters Solar-Power Pact",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/meta-platforms-enters-solar-power-pact-002dfe42?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "compute",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Facebook parent has agreed to purchase up to a gigawatt of solar power from Overview Energy, a startup that aims to deploy satellites capable of providing power to customers on Earth’s surface.",
+    "thumbnail": "https://images.wsj.net/im-67779759",
     "paywall": true
   },
   {
@@ -6561,6 +7756,23 @@
     "paywall": true
   },
   {
+    "id": "20260430-amazon-discusses-apprentice-reboot-with-don-jr-a",
+    "date": "2026-04-30",
+    "title": "Amazon Discusses ‘Apprentice’ Reboot—With Don Jr. as a Potential Host",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/amazon-discusses-apprentice-rebootwith-don-jr-as-a-potential-host-fe09e885?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Studio executives have held internal discussions about making new episodes of reality TV show.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-78712880",
+    "paywall": true
+  },
+  {
     "id": "20260430-elon-musk-concludes-testimony-in-openai-lawsuit",
     "date": "2026-04-30",
     "title": "Elon Musk Concludes Testimony in OpenAI Lawsuit",
@@ -6710,6 +7922,22 @@
     "paywall": true
   },
   {
+    "id": "20260504-amazon-built-a-massive-supply-chain-for-itself-n",
+    "date": "2026-05-04",
+    "title": "Amazon Built a Massive Supply Chain for Itself. Now It’s for Hire.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/logistics-report/amazon-built-a-massive-supply-chain-for-itself-now-its-for-hire-c7d128b0?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant is opening its global logistics network to all businesses, betting it can turn its supply chain into the next AWS.",
+    "thumbnail": "https://images.wsj.net/im-33800940",
+    "paywall": true
+  },
+  {
     "id": "20260504-anthropic-unveils-1-5-billion-joint-venture-with",
     "date": "2026-05-04",
     "title": "Anthropic Unveils $1.5 Billion Joint Venture With Wall Street Firms",
@@ -6764,6 +7992,90 @@
     "paywall": true
   },
   {
+    "id": "20260504-palantir-beats-forecasts-with-1-63-billion-quart",
+    "date": "2026-05-04",
+    "title": "Palantir Beats Forecasts With $1.63 Billion Quarter as Sales Accelerate",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/palantir-earnings-q1-2026-pltr-stock-4038b5c8?mod=pls_whats_news_us_business_f",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "On a call with analysts, the data company seeks to play down concerns about AI competition that have weighed on the stock.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-83919121",
+    "paywall": true
+  },
+  {
+    "id": "20260505-ai-computing-is-a-memory-hog-an-nvidia-backed-st",
+    "date": "2026-05-05",
+    "title": "AI Computing Is a Memory Hog. An Nvidia-Backed Startup Has an Answer.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-computing-is-a-memory-hog-an-nvidia-backed-startup-has-an-answer-383a5710?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "RadixArk has raised $100 million at a $400 million valuation for a software engine and framework that make inference and training more efficient to run.",
+    "thumbnail": "https://images.wsj.net/im-70986074",
+    "paywall": true
+  },
+  {
+    "id": "20260505-amd-profit-revenue-jump-on-growth-of-data-center",
+    "date": "2026-05-05",
+    "title": "AMD Profit, Revenue Jump on Growth of Data Center Business",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/amd-profit-revenue-jump-on-growth-of-data-center-business-ef0d0632?mod=pls_whats_news_us_business_f",
+    "org": "amd",
+    "category": "compute",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Chip maker said sales in the segment surged 57% as artificial intelligence boosts demand.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-06449904",
+    "paywall": true
+  },
+  {
+    "id": "20260505-ahead-of-race-to-ipo-openai-discussed-spinning-o",
+    "date": "2026-05-05",
+    "title": "Ahead of Race to IPO, OpenAI Discussed Spinning Out Robotics, Hardware Divisions",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ahead-of-race-to-ipo-openai-discussed-spinning-out-robotics-hardware-divisions-18c89706?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company is considering an Alphabet-like structure for its portfolio of products, though no discussions are currently active.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-01044679",
+    "paywall": true
+  },
+  {
+    "id": "20260505-publishers-sue-meta-for-allegedly-using-copyrigh",
+    "date": "2026-05-05",
+    "title": "Publishers Sue Meta for Allegedly Using Copyrighted Works to Train AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/publishers-sue-meta-for-allegedly-using-copyrighted-works-to-train-ai-22d6dfcb?mod=pls_whats_news_us_business_f",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Publishers including Cengage Learning, Hachette, Macmillan, McGraw and Scott Turow are demanding a jury trial to review their claims of copyright infringement.",
+    "thumbnail": "https://images.wsj.net/im-86396333",
+    "paywall": true
+  },
+  {
     "id": "20260506-anthropic-inks-deal-to-use-all-of-spacex-s-colos",
     "date": "2026-05-06",
     "title": "Anthropic Inks Deal to Use All of SpaceX’s Colossus 1 Compute Capacity",
@@ -6814,6 +8126,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-18783460",
+    "paywall": true
+  },
+  {
+    "id": "20260506-nvidia-to-invest-500-million-in-corning-expand-f",
+    "date": "2026-05-06",
+    "title": "Nvidia to Invest $500 Million in Corning, Expand Fiber Optic Manufacturing",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-corning-form-partnership-to-expand-fiber-optic-manufacturing-17f525de?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia is investing $500 million in Corning as part of a partnership with the glassmaker to expand manufacturing of fiber optics for AI infrastructure.",
+    "thumbnail": "https://images.wsj.net/im-72198243",
     "paywall": true
   },
   {
@@ -7032,6 +8360,23 @@
     "paywall": true
   },
   {
+    "id": "20260513-softbank-lands-25-billion-gain-on-openai-bet",
+    "date": "2026-05-13",
+    "title": "SoftBank Lands $25 Billion Gain on OpenAI Bet",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/softbank-more-than-quadruples-annual-profit-on-44-billion-in-openai-gains-d2bab91f?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The Japanese company has issued debt, sold stakes and borrowed to fund bold AI investments.",
+    "thumbnail": "https://images.wsj.net/im-78185059",
+    "paywall": true
+  },
+  {
     "id": "20260513-a-grades-are-suddenly-everywhere-since-the-arriv",
     "date": "2026-05-13",
     "title": "‘A’ Grades Are Suddenly Everywhere Since the Arrival of ChatGPT",
@@ -7097,6 +8442,25 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-62389979",
+    "paywall": true
+  },
+  {
+    "id": "20260515-so-you-think-you-own-shares-in-a-hot-startup-ant",
+    "date": "2026-05-15",
+    "title": "So You Think You Own Shares in a Hot Startup? Anthropic Says Not So Fast.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/so-you-think-you-own-shares-in-a-hot-startup-anthropic-says-not-so-fast-7b60f938?mod=pls_whats_news_us_business_f",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI giant rattled users of secondary-share platforms, which bring investing in hot private companies to the masses.",
+    "thumbnail": "https://images.wsj.net/im-11665182",
     "paywall": true
   },
   {
@@ -7402,6 +8766,22 @@
     "manual": true
   },
   {
+    "id": "20260630-microsoft-s-irish-hub-is-profit-powerhouse",
+    "date": "2026-06-30",
+    "title": "Microsoft’s Irish Hub Is Profit Powerhouse",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/microsofts-irish-hub-is-profit-powerhouse-19f86007?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "A country-by-country EU reporting requirement forces companies to offer additional public tax details.",
+    "thumbnail": "https://images.wsj.net/im-35332810",
+    "paywall": true
+  },
+  {
     "id": "mythos-restored",
     "date": "2026-07-01",
     "title": "Anthropic restores access to Fable 5 and Mythos 5 after export controls are lifted",
@@ -7414,6 +8794,42 @@
       "GOOGL"
     ],
     "manual": true
+  },
+  {
+    "id": "20260715-china-s-deepseek-prepares-to-list-shares-in-shan",
+    "date": "2026-07-15",
+    "title": "China’s DeepSeek Prepares to List Shares in Shanghai Next Year",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/chinas-deepseek-prepares-to-list-shares-in-shanghai-next-year-a85bf00f?mod=pls_whats_news_us_business_f",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "AI developer needs more funds for costly research in race with Anthropic and other U.S. companies.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-93384819",
+    "paywall": true
+  },
+  {
+    "id": "20260716-why-microsoft-s-80-billion-xbox-bet-backfired",
+    "date": "2026-07-16",
+    "title": "Why Microsoft’s $80 Billion Xbox Bet Backfired",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/why-microsofts-80-billion-xbox-bet-backfired-5da21593?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Watch how Microsoft’s bet on the future of gaming led to the biggest restructuring in Xbox history.",
+    "thumbnail": "https://images.wsj.net/im-25111679",
+    "paywall": true
   },
   {
     "id": "20260717-ai-s-wider-availability-is-good-for-china-not-gr",
@@ -7480,6 +8896,23 @@
       "AVGO"
     ],
     "manual": true
+  },
+  {
+    "id": "20260814-berkshire-adds-to-alphabet-stake-buys-home-build",
+    "date": "2026-08-14",
+    "title": "Berkshire Adds to Alphabet Stake, Buys Home Builders and Exits Constellation",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/berkshire-adds-to-alphabet-stake-buys-homebuilders-and-exits-constellation-746a5bdc?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Greg Abel—CEO and top stock picker—reduced the company’s portfolio in financial shares during the second quarter.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-09007315",
+    "paywall": true
   },
   {
     "id": "20260814-deepseek-lifts-ai-model-prices-fourfold",
@@ -7620,6 +9053,22 @@
     "paywall": true
   },
   {
+    "id": "20260826-new-york-mayor-faces-off-against-amazon",
+    "date": "2026-08-26",
+    "title": "New York Mayor Faces Off Against Amazon",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/logistics-report/new-york-mayor-faces-off-against-amazon-d39dc991?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Plus: Canada plans retaliatory tariffs of up to 50% on U.S. imports; Persian Gulf shipping insurance costs surge higher.",
+    "thumbnail": "https://images.wsj.net/im-65484215",
+    "paywall": true
+  },
+  {
     "id": "nvda-earnings-aug-2026",
     "date": "2026-08-26",
     "title": "Nvidia beats estimates and raises guidance, lifting chip stocks",
@@ -7635,6 +9084,91 @@
       "TSM"
     ],
     "manual": true
+  },
+  {
+    "id": "20260827-ai-startup-deepseek-poised-to-reach-74-billion-v",
+    "date": "2026-08-27",
+    "title": "AI Startup DeepSeek Poised to Reach $74 Billion Valuation",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-startup-deepseek-poised-to-reach-74-billion-valuation-1e093592?mod=pls_whats_news_us_business_f",
+    "org": "deepseek",
+    "category": "deals",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The Hangzhou-based company is seeking to raise funding to bankroll research and development, and its expansion into computing infrastructure.",
+    "thumbnail": "https://images.wsj.net/im-17107051",
+    "paywall": true
+  },
+  {
+    "id": "20260828-nvidia-insists-it-can-keep-printing-money-to-fun",
+    "date": "2026-08-28",
+    "title": "Nvidia Insists It Can Keep Printing Money to Fund the AI Boom",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-insists-it-can-keep-printing-money-to-fund-the-ai-boom-195e7d5e?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chip maker says its sales “flywheel” is more than robust enough to fund the financial support it gives frontier AI labs and data-center developers.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-64603882",
+    "paywall": true
+  },
+  {
+    "id": "20260901-sb-energy-files-for-ipo-with-nvidia-backing",
+    "date": "2026-09-01",
+    "title": "SB Energy Files for IPO With Nvidia Backing",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/sb-energy-files-for-ipo-with-nvidia-backing-b17bd1fc?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company, which is majority-owned by Masayoshi Son’s SoftBank, said it plans to trade on Nasdaq under the symbol SBE, and hasn’t yet determined the number or pricing of shares in the proposed offering.",
+    "thumbnail": "https://images.wsj.net/im-07898987",
+    "paywall": true
+  },
+  {
+    "id": "20260902-aig-s-zaffino-stepping-down-as-chairman-joining",
+    "date": "2026-09-02",
+    "title": "AIG’s Zaffino Stepping Down as Chairman, Joining Palantir",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/c-suite/aigs-zaffino-stepping-down-as-chairman-joining-palantir-4ee5b7f6?mod=pls_whats_news_us_business_f",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "Peter Zaffino, who earlier this year retired as AIG’s chief executive, will join Palantir as global head of financial services.",
+    "thumbnail": "https://images.wsj.net/im-49719058",
+    "paywall": true
+  },
+  {
+    "id": "20260902-openai-s-astra-model-can-hack-with-minimal-human",
+    "date": "2026-09-02",
+    "title": "OpenAI’s Astra Model Can Hack With Minimal Human Help",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/pro/cybersecurity/openais-astra-model-can-hack-with-minimal-human-help-e5285d5c?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Honeywell Aerospace settles cyber whistleblower case; CrowdStrike helps law enforcement take down botnet.",
+    "thumbnail": "https://images.wsj.net/im-81634333",
+    "paywall": true
   },
   {
     "id": "nvidia-hugging-face",
@@ -7662,6 +9196,89 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-30599127",
+    "paywall": true
+  },
+  {
+    "id": "20260906-amazon-cargo-plane-overshoots-runway-in-miami-ki",
+    "date": "2026-09-06",
+    "title": "Amazon Cargo Plane Overshoots Runway in Miami, Killing Five People",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/us-news/amazon-cargo-plane-miami-runway-crash-52198128?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "More than 60 Miami-Dade Fire Rescue units rushed to the scene to put out the flames and assess any injuries.",
+    "thumbnail": "https://images.wsj.net/im-73957485",
+    "paywall": true
+  },
+  {
+    "id": "20260907-amazon-plane-crash-probe-examines-aircraft-speed",
+    "date": "2026-09-07",
+    "title": "Amazon Plane Crash Probe Examines Aircraft Speed, Runway Safeguards",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/airlines/amazon-plane-crash-probe-examines-aircraft-speed-runway-safeguards-185a441e?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The NTSB chairwoman said the Boeing jet careened 1,300 feet off the runway, hitting a van with seven people.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-87580587",
+    "paywall": true
+  },
+  {
+    "id": "20260909-amazon-plane-s-systems-weren-t-deployed-to-slow",
+    "date": "2026-09-09",
+    "title": "Amazon Plane’s Systems Weren’t Deployed to Slow Jet Before Crash, Investigators Say",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/airlines/amazon-planes-systems-werent-deployed-to-slow-jet-before-crash-investigators-say-5ce659c7?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The National Transportation Safety Board didn’t find evidence that speed brakes or thrust reversers were deployed.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-38611203",
+    "paywall": true
+  },
+  {
+    "id": "20260910-oracle-posts-higher-profit-revenue-on-continued",
+    "date": "2026-09-10",
+    "title": "Oracle Posts Higher Profit, Revenue on Continued Cloud Infrastructure Strength",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/earnings/oracle-orcl-q1-earnings-report-stock-5158944b?mod=pls_whats_news_us_business_f",
+    "org": "oracle",
+    "category": "markets",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "Gains in the cloud business helped offset falling revenue in the company’s software unit.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-95255829",
+    "paywall": true
+  },
+  {
+    "id": "20260912-the-woman-fixing-a-microsoft-mess-with-brutal-ho",
+    "date": "2026-09-12",
+    "title": "The Woman Fixing a Microsoft Mess With Brutal Honesty",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/xbox-microsoft-asha-sharma-videogame-03eb23ba?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54290107",
     "paywall": true
   },
   {
