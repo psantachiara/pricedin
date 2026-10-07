@@ -254,6 +254,8 @@ def main():
             "category": category,
             "tickers": tickers,
         }
+        if item.get("summary"):
+            event["summary"] = item["summary"][:240]
         if after_close(item["published"]):
             event["afterClose"] = True
         if item["image"]:

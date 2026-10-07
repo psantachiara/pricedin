@@ -337,7 +337,7 @@
       if (!sym) return;
       const n = visibleEvents().length;
       note.append(
-        el('span', {}, 'Showing the ', el('b', { text: sym }), ` announcements only (${n})`),
+        el('span', {}, 'Showing the ', el('b', { text: sym }), ` news only (${n})`),
         el('button', { type: 'button', class: 'text-button', text: 'Show all', onclick: () => setFocus(null) }));
     }
 
@@ -437,6 +437,12 @@
     const svg = d3.select('#chart');
     const lanesSvg = d3.select('#lanes');
     const lanesEl = document.getElementById('lanes');
+
+    // SVG elements have no offsetTop, so measure the gap between the two
+    // drawings from their boxes instead.
+    function lanesOffset() {
+      return lanesEl.getBoundingClientRect().top - stage.getBoundingClientRect().top;
+    }
     const tooltip = $('#tooltip');
     let geo = null;       // geometry of the last render
     let current = null;   // transformed series of the last render
@@ -556,22 +562,23 @@
       const gl = lanesSvg.append('g').attr('class', 'lanes');
       gl.append('text').attr('class', 'lanes-heading')
         .attr('x', M.l).attr('y', lanesTop - 8)
-        .text(state.view !== 'detailed' ? 'All announcements, grouped by day'
-          : state.focus ? `Announcements tagged ${state.focus}`
-          : 'Announcements by the company they are about');
+        .text(state.view !== 'detailed' ? 'All news, grouped by day'
+          : state.focus ? `News tagged ${state.focus}` : 'News by company');
 
       lanes.forEach((lane, k) => {
         const cy = lanesTop + k * laneH + laneH / 2;
         gl.append('line').attr('class', 'lane-rule')
           .attr('x1', M.l).attr('x2', W - M.r).attr('y1', cy).attr('y2', cy);
+        const explain = lane.why || (lane.tickers && lane.tickers.length);
         const label = gl.append('text')
-          .attr('class', 'lane-label' + (lane.why ? ' explained' : ''))
+          .attr('class', 'lane-label' + (explain ? ' explained' : ''))
           .attr('x', M.l - 10).attr('y', cy).attr('dy', '0.32em').attr('text-anchor', 'end')
+          .attr('tabindex', explain ? 0 : null)
           .text(lane.name);
-        if (lane.why || (lane.tickers && lane.tickers.length)) {
-          const which = lane.tickers && lane.tickers.length
-            ? `Tagged to ${lane.tickers.join(', ')}. ` : '';
-          label.append('title').text(which + (lane.why || ''));
+        if (explain) {
+          const show = () => showLaneNote(lane, cy);
+          label.on('pointerenter', show).on('focus', show)
+            .on('pointerleave', hideTooltip).on('blur', hideTooltip);
         }
       });
 
@@ -843,9 +850,30 @@
       const tw = tooltip.offsetWidth;
       const left = Math.max(4, Math.min(d.cx - 24, geo.W - tw - 4));
       tooltip.style.left = `${left}px`;
-      tooltip.style.top = `${lanesEl.offsetTop + d.cy + 16}px`;
+      tooltip.style.top = `${lanesOffset() + d.cy + 16}px`;
     }
     function hideTooltip() { tooltip.hidden = true; }
+
+    // Why a company's news is tagged to the stocks it is. Shown as a real
+    // tooltip rather than an SVG title, which browsers render slowly and only
+    // when it is the element's first child.
+    function showLaneNote(lane, cy) {
+      if (!geo) return;
+      tooltip.innerHTML = '';
+      tooltip.append(el('p', { class: 'tt-title', text: lane.name }));
+      if (lane.tickers && lane.tickers.length) {
+        tooltip.append(el('p', { class: 'tt-meta' },
+          el('span', { text: 'Tagged to ' }),
+          el('b', { text: lane.tickers.join(', ') })));
+      }
+      if (lane.why) tooltip.append(el('p', { class: 'tt-why', text: lane.why }));
+      tooltip.hidden = false;
+      // centred on the row, but never riding up over the filters above
+      const base = lanesOffset();
+      const wanted = base + cy - tooltip.offsetHeight / 2;
+      tooltip.style.left = `${geo.M.l + 6}px`;
+      tooltip.style.top = `${Math.max(base, wanted)}px`;
+    }
 
     const detail = $('#detail');
 
