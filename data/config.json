@@ -97,7 +97,7 @@
       "tickers": [
         "GOOGL"
       ],
-      "why": "Alphabet's own business."
+      "why": ""
     },
     {
       "id": "meta",
@@ -105,7 +105,7 @@
       "tickers": [
         "META"
       ],
-      "why": "Meta's own business."
+      "why": ""
     },
     {
       "id": "microsoft",
@@ -113,7 +113,7 @@
       "tickers": [
         "MSFT"
       ],
-      "why": "Microsoft's own business."
+      "why": ""
     },
     {
       "id": "nvidia",
@@ -121,7 +121,7 @@
       "tickers": [
         "NVDA"
       ],
-      "why": "Nvidia's own business."
+      "why": ""
     },
     {
       "id": "deepseek",
@@ -156,7 +156,7 @@
       "tickers": [
         "AMZN"
       ],
-      "why": "Amazon's own business."
+      "why": ""
     },
     {
       "id": "amd",
@@ -164,7 +164,7 @@
       "tickers": [
         "AMD"
       ],
-      "why": "AMD's own business."
+      "why": ""
     },
     {
       "id": "broadcom",
@@ -172,7 +172,7 @@
       "tickers": [
         "AVGO"
       ],
-      "why": "Broadcom's own business."
+      "why": ""
     },
     {
       "id": "tsmc",
@@ -180,7 +180,7 @@
       "tickers": [
         "TSM"
       ],
-      "why": "TSMC's own business."
+      "why": ""
     },
     {
       "id": "oracle",
@@ -188,7 +188,7 @@
       "tickers": [
         "ORCL"
       ],
-      "why": "Oracle's own business."
+      "why": ""
     },
     {
       "id": "palantir",
@@ -196,7 +196,7 @@
       "tickers": [
         "PLTR"
       ],
-      "why": "Palantir's own business."
+      "why": ""
     },
     {
       "id": "market",
