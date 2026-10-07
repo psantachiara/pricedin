@@ -703,6 +703,21 @@
     "paywall": true
   },
   {
+    "id": "20261006-google-and-constellation-energy-strike-a-sweepin",
+    "date": "2026-10-06",
+    "title": "Google and Constellation Energy Strike a Sweeping Nuclear-Power Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/google-and-constellation-energy-strike-a-sweeping-nuclear-power-deal-4287b372?mod=rss_Technology",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-40540381",
+    "paywall": true
+  },
+  {
     "id": "20261006-mistral-to-release-new-ai-model-to-better-compet",
     "date": "2026-10-06",
     "title": "Mistral to Release New AI Model to Better Compete With U.S. Rivals",
