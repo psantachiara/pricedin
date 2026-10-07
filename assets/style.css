@@ -402,15 +402,28 @@ select {
 .overview .selection { fill: var(--band); stroke: var(--focus); stroke-width: 1; fill-opacity: 1; }
 .overview .handle { fill: var(--focus); rx: 2; }
 
-.cats {
+.cats-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
   align-items: center;
+  gap: 6px 14px;
   padding: 12px 0 10px;
   margin-top: 4px;
   border-top: 1px solid var(--grid);
 }
+
+.cats { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+
+.cat-note {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.cat-note[hidden] { display: none; }
+.cat-note .text-button { margin-top: 0; }
 .cat {
   font: inherit;
   font-size: 0.8125rem;

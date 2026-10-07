@@ -414,14 +414,38 @@
     for (const c of cats) {
       catWrap.append(el('button', {
         type: 'button', class: 'cat', 'data-cat': c.id, style: `--c:${catColor(c.id)}`,
-        onclick: () => {
-          if (state.categories.has(c.id)) {
+        title: `Click to hide. Shift-click to show only ${c.name}.`,
+        onclick: (ev) => {
+          const only = ev.shiftKey || ev.altKey
+            || (state.categories.size === cats.length && ev.detail === 2);
+          if (only) {
+            // showing one type takes one action, rather than hiding the other five
+            state.categories = new Set(
+              state.categories.size === 1 && state.categories.has(c.id)
+                ? cats.map((x) => x.id) : [c.id]);
+          } else if (state.categories.has(c.id)) {
             if (state.categories.size > 1) state.categories.delete(c.id);
           } else state.categories.add(c.id);
           if (state.pinned && !state.pinned.ids.some((id) => state.categories.has(eventBy.get(id).category))) state.pinned = null;
           update();
         },
       }, el('span', { class: 'dot' }), el('span', { text: c.name })));
+    }
+
+    function syncCatNote() {
+      const note = $('#cat-note');
+      if (!note) return;
+      note.innerHTML = '';
+      const off = cats.filter((c) => !state.categories.has(c.id));
+      note.hidden = !off.length;
+      if (!off.length) return;
+      const on = cats.filter((c) => state.categories.has(c.id));
+      note.append(
+        el('span', { text: on.length === 1 ? `Only ${on[0].name}` : `${off.length} hidden` }),
+        el('button', {
+          type: 'button', class: 'text-button', text: 'Show all',
+          onclick: () => { state.categories = new Set(cats.map((c) => c.id)); update(); },
+        }));
     }
 
     function syncChips() {
@@ -1082,6 +1106,7 @@
     function update() {
       syncControls();
       syncChips();
+      syncCatNote();
       hideTooltip();
       state.hover = null;
       render();

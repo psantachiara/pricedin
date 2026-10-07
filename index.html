@@ -84,7 +84,10 @@
 
         <div class="stage" id="stage">
           <svg id="chart" role="img" aria-label="Stock prices over time"></svg>
-          <div class="cats" id="categories" role="group" aria-label="Announcement types"></div>
+          <div class="cats-row">
+            <div class="cats" id="categories" role="group" aria-label="News types"></div>
+            <p class="cat-note" id="cat-note" hidden></p>
+          </div>
           <svg id="lanes" role="img" aria-label="AI news over the same period"></svg>
           <div class="tooltip" id="tooltip" hidden></div>
           <div class="stage-message" id="stage-message" hidden></div>
@@ -129,6 +132,7 @@
         <p>An announcement is placed on the first trading day on or after its date, or the day after if it came out after the market closed. Its move runs from the previous close to the close at the end of the reaction window.</p>
         <p>“Against benchmark” subtracts the benchmark’s move over the same days, a simple way to separate a stock’s reaction from the market’s. Earnings, macro news and other stories still land on the same days, so a move shows what followed an announcement, not what it caused.</p>
         <p>Which stocks an announcement touches is an editorial choice, recorded in <code>data/events.json</code>. Hover a company name beside the rows to see why its news is tagged to the stocks it is. The industry total combines only the companies selected above.</p>
+        <p>Clicking a news type below the prices hides it. Shift-click shows only that type, which is the quicker way in when a type is rare.</p>
         <p>The source coverage strip under the timeline shows how much of each week the news source actually reaches. Where it is short or red, the record is thin or missing, so a quiet stretch there means no coverage rather than no news. An amber week rests on a single feed, which is a narrower view than the rest of the timeline; hover any week to see which feeds it came from.</p>
       </div>
       <p class="data-status" id="data-status"></p>
