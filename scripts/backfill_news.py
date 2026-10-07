@@ -49,25 +49,41 @@ def legacy_urls(url):
     return [f"https://feeds.a.dj.com/rss/{name}.xml", f"http://feeds.a.dj.com/rss/{name}.xml"]
 
 
-_throttle = threading.Semaphore(1)
 _counter_lock = threading.Lock()
 _pool_lock = threading.Lock()
+_pace_lock = threading.Lock()
+_last_request = [0.0]
 
 
-def get(url, params=None, timeout=60, tries=4, pause=1.0):
+def pace(min_interval):
+    """Hold every worker to one shared request rate.
+
+    Workers exist to overlap network latency, not to multiply the request
+    rate: the archive refuses a client that asks too fast, so the interval
+    is between requests in total, not per worker.
+    """
+    with _pace_lock:
+        wait = _last_request[0] + min_interval - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+        _last_request[0] = time.monotonic()
+
+
+def get(url, params=None, timeout=60, tries=6, pause=1.5):
     """archive.org rate-limits; back off and retry rather than giving up."""
     for attempt in range(tries):
+        pace(pause)
         try:
             response = requests.get(url, params=params, headers=UA, timeout=timeout)
         except requests.RequestException:
             if attempt == tries - 1:
                 raise
-            time.sleep(pause * (attempt + 2))
+            time.sleep(pause * 2 ** attempt)
             continue
         if response.status_code == 429 or response.status_code >= 500:
             if attempt == tries - 1:
                 response.raise_for_status()
-            time.sleep(pause * (attempt + 2) * 2)
+            time.sleep(pause * 2 ** (attempt + 1))
             continue
         response.raise_for_status()
         return response
@@ -275,8 +291,9 @@ def main():
     parser.add_argument("--to", dest="end", default=None, help="latest date (default today)")
     parser.add_argument("--per-day", type=int, default=2,
                         help="snapshots to replay per day (default 2)")
-    parser.add_argument("--pause", type=float, default=1.0,
-                        help="seconds between archive requests, per worker (default 1.0)")
+    parser.add_argument("--pause", type=float, default=1.5,
+                        help="seconds between archive requests in total, not per worker "
+                             "(default 1.5; lower it and the archive starts refusing)")
     parser.add_argument("--workers", type=int, default=4,
                         help="parallel archive requests (default 4; raise with care)")
     parser.add_argument("--feeds", default=None,
@@ -361,8 +378,6 @@ def main():
 
     def fetch(job):
         feed, timestamp, original = job
-        with _throttle:
-            time.sleep(args.pause / max(1, args.workers))
         response = get(SNAPSHOT.format(timestamp=timestamp, url=original),
                        timeout=60, pause=args.pause)
         return feed["name"], timestamp, parse_snapshot(response.content, feed)
@@ -392,7 +407,12 @@ def main():
                 print(f"  {n}/{len(jobs)} snapshots, {len(pool)} distinct items so far", flush=True)
 
     if failed:
-        warn(f"{failed} snapshots could not be read and were skipped.")
+        share = failed / len(jobs)
+        warn(f"{failed} of {len(jobs)} snapshots ({share:.0%}) could not be read and were skipped.")
+        if share > 0.2:
+            warn("That is a large share. The archive was probably refusing requests: "
+                 "raise --pause, lower --workers, and run the period again. "
+                 "Re-running only adds what is missing.")
     if not pool:
         print("No archived items were recovered; events.json left unchanged.")
         return

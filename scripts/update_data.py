@@ -86,7 +86,7 @@ def update_prices(config: dict) -> None:
         start=config["start"],
         auto_adjust=True,
         progress=False,
-        threads=True,
+        threads=False,
     )
     if frame is None or frame.empty:
         sys.exit("No price data came back from Yahoo Finance; prices.json left unchanged.")
@@ -98,6 +98,20 @@ def update_prices(config: dict) -> None:
     closes = closes.ffill(limit=3)
 
     missing = [s for s in symbols if s not in closes.columns or closes[s].isna().all()]
+    for symbol in list(missing):
+        try:
+            one = yf.download(symbol, start=config["start"], auto_adjust=True,
+                              progress=False, threads=False)
+        except Exception:  # a retry is best-effort
+            continue
+        if one is not None and not one.empty and "Close" in one:
+            series = one["Close"]
+            if hasattr(series, "columns"):
+                series = series.iloc[:, 0]
+            closes[symbol] = series.reindex(closes.index)
+            if not closes[symbol].isna().all():
+                missing.remove(symbol)
+                print(f"Recovered {symbol} on a second attempt")
     for s in missing:
         warn(f"No prices for {s}; it will be left out of the site.")
 
@@ -161,7 +175,12 @@ def needs_check(entry: dict | None, recheck: bool) -> bool:
 
 def update_thumbnails(events: list[dict], recheck: bool) -> None:
     cache = load("thumbnails.json", {}) or {}
-    urls = {e["url"] for e in events if e.get("url") and not e.get("thumbnail")}
+    urls = {e["url"] for e in events
+            if e.get("url") and not e.get("thumbnail") and not e.get("paywall")}
+    behind = sum(1 for e in events if e.get("paywall") and not e.get("thumbnail"))
+    if behind:
+        print(f"{behind} subscriber-only links have no preview image in the feed; "
+              "those events show a lettered placeholder.")
     todo = [u for u in sorted(urls) if needs_check(cache.get(u), recheck)]
     print(f"Checking {len(todo)} of {len(urls)} event links for preview images")
 
