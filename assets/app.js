@@ -177,6 +177,52 @@
       return out.length ? out : null;
     })();
 
+    // Runs of weeks the archive barely reaches, merged into single stretches so
+    // a three-month hole reads as one gap rather than thirteen stripes. Drawn
+    // behind the lanes, because an empty lane otherwise says "no news" when what
+    // it means is "no record".
+    const THIN = 0.5;   // below this, the week is too sparse to trust
+    const VOID = 0.05;  // below this, there is no archived copy at all
+    const thinSpans = (() => {
+      if (!coverWeeks) return null;
+      const out = [];
+      for (const w of coverWeeks) {
+        if (w.share >= THIN) continue;
+        // A stretch with no record at all is a different claim from one that is
+        // merely patchy, so the two never merge into a single span -- otherwise
+        // a blackout disappears inside a surrounding patchy period.
+        const isVoid = w.share < VOID;
+        const open = out[out.length - 1];
+        if (open && open.isVoid === isVoid && +w.from <= +open.to) {
+          open.to = w.to;
+          open.weeks += 1;
+          open.best = Math.max(open.best, w.share);
+          for (const name of w.feeds) open.feeds.add(name);
+        } else {
+          out.push({ from: w.from, to: w.to, weeks: 1, best: w.share, isVoid,
+                     feeds: new Set(w.feeds) });
+        }
+      }
+      return out.length ? out : null;
+    })();
+
+    const gapNote = $('#gap-note');
+    if (gapNote) gapNote.hidden = !thinSpans;
+
+    function spanTitle(d) {
+      const weeks = d.weeks === 1 ? 'One week' : `${d.weeks} weeks`;
+      const through = fmtDate(new Date(+d.to - 864e5));
+      const when = `${fmtDate(d.from)} to ${through}`;
+      if (d.isVoid) {
+        return `${weeks} with no archived copy of any feed, ${when}. `
+          + 'Announcements from this stretch are missing from the record, not missing from the news.';
+      }
+      const which = d.feeds.size ? ` Only ${[...d.feeds].join(', ')} reached it.` : '';
+      return `${weeks} the archive reaches only patchily, ${when}: `
+        + `at best ${Math.round(d.best * 100)}% of days covered.${which} `
+        + 'Expect announcements to be missing here.';
+    }
+
     function coverageTitle(d) {
       const week = `Week of ${fmtDate(d.from)}`;
       if (d.share < 0.05) return `${week}: no archived snapshots`;
@@ -608,6 +654,39 @@
           const hit = bestDist <= 22 ? best : null;
           setFocus(hit && hit !== state.focus ? hit : null);
         });
+
+      if (thinSpans) {
+        // Two marks, different in kind rather than degree: a patchy stretch is
+        // ruled one way, a stretch with no record at all is crosshatched. The
+        // two make different claims, so they should not look like more and less
+        // of the same thing.
+        const defs = lanesSvg.append('defs');
+        for (const [id, step, cross] of [['gap-hatch', 7, false], ['gap-hatch-void', 5, true]]) {
+          const pat = defs.append('pattern')
+            .attr('id', id)
+            .attr('width', step).attr('height', step)
+            .attr('patternUnits', 'userSpaceOnUse')
+            .attr('patternTransform', 'rotate(45)');
+          const cls = 'gap-hatch-line' + (cross ? ' dense' : '');
+          pat.append('line').attr('class', cls)
+            .attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', step);
+          if (cross) {
+            pat.append('line').attr('class', cls)
+              .attr('x1', 0).attr('y1', 0).attr('x2', step).attr('y2', 0);
+          }
+        }
+
+        const L = M.l, R = W - M.r;
+        const open = thinSpans.filter((s) => s.to >= state.domain[0] && s.from <= state.domain[1]);
+        lanesSvg.append('g').attr('class', 'gaps')
+          .selectAll('rect').data(open).join('rect')
+          .attr('class', (d) => 'gap-span' + (d.isVoid ? ' void' : ''))
+          .attr('x', (d) => Math.max(L, x(d.from)))
+          .attr('width', (d) => Math.max(2, Math.min(R, x(d.to)) - Math.max(L, x(d.from))))
+          .attr('y', lanesTop)
+          .attr('height', Math.max(0, lanesEnd - lanesTop))
+          .append('title').text(spanTitle);
+      }
 
       lanesSvg.append('g').attr('class', 'band-layer');
       const gl = lanesSvg.append('g').attr('class', 'lanes');

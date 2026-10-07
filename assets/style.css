@@ -299,6 +299,11 @@ select {
 #lanes .lane-label.explained:focus-visible { fill: var(--focus); }
 #lanes .band-label, #lanes .count { pointer-events: none; }
 
+.caption.gap-note { font-size: 0.8125rem; margin: 2px 0 0; max-width: 78ch; }
+.gap-hatch-line { stroke: var(--muted); stroke-width: 1; opacity: 0.26; }
+.gap-hatch-line.dense { stroke-width: 1; opacity: 0.38; }
+.gap-span { fill: url(#gap-hatch); }
+.gap-span.void { fill: url(#gap-hatch-void); }
 .coverage-base { stroke: var(--grid); stroke-width: 1; }
 .coverage-week { fill: var(--muted); }
 .coverage-week.none { fill: var(--down); opacity: 0.55; }
