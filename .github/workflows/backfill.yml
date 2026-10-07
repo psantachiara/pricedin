@@ -17,6 +17,10 @@ on:
         description: "Earliest date (YYYY-MM-DD)"
         required: false
         default: "2025-01-01"
+      to:
+        description: "Latest date (YYYY-MM-DD, blank for today)"
+        required: false
+        default: ""
       per_day:
         description: "Snapshots to replay per day"
         required: false
@@ -59,15 +63,17 @@ jobs:
         run: |
           FEEDS=""
           if [ -n "${{ inputs.feeds }}" ]; then FEEDS='--feeds'; fi
+          TO=""
+          if [ -n "${{ inputs.to }}" ]; then TO='--to'; fi
           case "${{ inputs.mode }}" in
             probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" \
-                       --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+                       --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" \
                        --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
-                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             run)     python scripts/backfill_news.py --from "${{ inputs.from }}" \
                        --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
-                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             undo)    python scripts/backfill_news.py --undo ;;
           esac
 
