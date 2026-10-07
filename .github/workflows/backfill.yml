@@ -35,6 +35,10 @@ on:
         description: "Parallel archive requests"
         required: false
         default: "4"
+      pause:
+        description: "Seconds between archive requests, across all workers"
+        required: false
+        default: "1.5"
 
 permissions:
   contents: write
@@ -72,9 +76,11 @@ jobs:
                        --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" \
                        --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       --pause "${{ inputs.pause }}" \
                        $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             run)     python scripts/backfill_news.py --from "${{ inputs.from }}" \
                        --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       --pause "${{ inputs.pause }}" \
                        $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
             undo)    python scripts/backfill_news.py --undo ;;
             reclassify)         python scripts/reclassify.py --report ;;
@@ -90,7 +96,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json data/thumbnails.json data/events.json data/news_seen.json
+          git add data/prices.json data/thumbnails.json data/events.json \
+                  data/news_seen.json data/coverage.json
           if git diff --cached --quiet; then
             echo "No data changes."
           else
