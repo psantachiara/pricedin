@@ -38,7 +38,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/sk-hynix-posts-strong-fourth-quarter-net-profit-on-ai-boom-6f32e38b?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -68,7 +68,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/meta-spending-ai-facebook-data-centers-9452a88f?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "META"
     ],
@@ -103,7 +103,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-jensen-huang-ai-china-deepseek-51217c40?mod=rss_Technology",
     "org": "deepseek",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "NVDA",
       "AVGO",
@@ -138,7 +138,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/the-ai-spending-race-is-still-on-as-google-antes-up-6671401d?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -254,7 +254,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-is-far-from-running-out-of-road-068bb01c?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -327,7 +327,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/personal-tech/google-search-chatgpt-perplexity-gemini-6ac749d9?mod=rss_Technology",
     "org": "google",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -373,7 +373,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/alphabet-backed-isomorphic-labs-raises-600-million-for-ai-drug-development-c5f1857f?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -388,7 +388,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-platforms-head-of-ai-research-to-resign-amid-computing-push-49c280d0?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -486,7 +486,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/personal-tech/chatgpt-openai-parental-controls-guide-3488097e?mod=rss_Technology",
     "org": "openai",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -502,7 +502,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/openai-lets-users-buy-stuff-directly-through-chatgpt-db8a93f9?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -615,7 +615,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-sam-altman-asia-middle-east-7b660809?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -645,7 +645,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/openai-raises-the-stakes-for-amds-race-to-catch-nvidia-e0bde483?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -699,7 +699,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/amd-openai-chip-deal-nvidia-competitor-37692514?mod=rss_Technology",
     "org": "amd",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "AMD"
     ],
@@ -731,7 +731,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/google-labeled-u-k-tech-gatekeeper-under-new-competition-law-9ebef179?mod=rss_Technology",
     "org": "google",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -1051,7 +1051,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-backed-creative-studio-raises-12-million-as-it-eyes-ai-content-drive-cad81e1f?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -1082,7 +1082,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-business-model-ai-9e26b4ef?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -1114,7 +1114,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/microsoft-needs-to-open-up-more-about-its-openai-dealings-59102de8?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -1205,7 +1205,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/telecom/nvidia-takes-1-billion-stake-in-nokia-69f75bb6?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -1220,7 +1220,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/nvidias-new-product-merges-ai-supercomputing-with-quantum-d0864f06?mod=rss_Technology",
     "org": "nvidia",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -1347,7 +1347,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-first-5-trillion-company-market-cap-ae513ff0?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -1567,7 +1567,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/anthropic-lands-cognizant-as-enterprise-ai-customer-af22f359?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -1601,7 +1601,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/microsoft-nvidia-uae-ai-chips-cf8491b6?mod=rss_Technology",
     "org": "microsoft",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "MSFT"
     ],
@@ -1709,7 +1709,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/microsoft-lays-out-ambitious-ai-vision-free-from-openai-297652ff?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -1741,7 +1741,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/anthropic-expands-in-europe-with-new-offices-048c7f51?mod=rss_Technology",
     "org": "anthropic",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -1827,7 +1827,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-ai-pioneer-has-discussed-leaving-to-launch-a-startup-5fce6691?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "model",
     "tickers": [
       "META"
     ],
@@ -1875,7 +1875,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/inside-microsofts-new-ai-super-factory-3144d211?mod=rss_Technology",
     "org": "microsoft",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "MSFT"
     ],
@@ -1906,7 +1906,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/china-ai-nvidia-chip-access-6a4fa63d?mod=rss_Technology",
     "org": "nvidia",
-    "category": "policy",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -1922,7 +1922,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/amazon-and-microsoft-back-effort-that-would-restrict-nvidias-exports-to-china-21e29e01?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA",
       "MSFT",
@@ -2099,7 +2099,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/larry-summers-resigns-openai-boad-jeffrey-epstein-2ff4743e?mod=rss_Technology",
     "org": "openai",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -2115,7 +2115,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/metas-chief-ai-scientist-to-depart-for-new-venture-032256b3?mod=rss_Technology",
     "org": "meta",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -2146,7 +2146,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-earnings-q3-2025-nvda-stock-9c6a40fe?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -2162,7 +2162,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/finance/stocks/nvidias-strong-results-show-ai-fears-are-premature-ed2a7f89?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -2239,7 +2239,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/amazon-to-invest-50-billion-building-data-centers-to-support-u-s-government-cff88140?mod=rss_Technology",
     "org": "amazon",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "AMZN"
     ],
@@ -2268,7 +2268,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-is-in-talks-to-use-googles-chips-in-challenge-to-nvidia-be390a51?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "NVDA",
       "GOOGL",
@@ -2332,7 +2332,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/how-estee-lauder-and-google-taught-ai-to-sell-fragrances-73a8876c?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -2347,7 +2347,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-completed-its-conversion-a-new-ballot-initiative-seeks-to-reverse-it-ab04c339?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -2395,7 +2395,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidias-fat-margins-are-google-and-amds-opportunity-69591c66?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA",
       "GOOGL",
@@ -2445,7 +2445,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/chinese-ai-chip-maker-moore-threads-makes-strong-debut-after-1-billion-ipo-e9a43a13?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "model",
     "tickers": [
       "NVDA"
     ],
@@ -2510,7 +2510,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/eu-opens-antitrust-probe-into-alphabets-google-over-ai-use-89dad783?mod=rss_Technology",
     "org": "google",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -2525,7 +2525,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/china-ai-nvidia-trump-chip-export-ban-lift-c3d457c1?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -2653,7 +2653,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/earnings/broadcom-avgo-q4-earnings-report-2025-d870bcfc?mod=rss_Technology",
     "org": "broadcom",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "AVGO"
     ],
@@ -2702,7 +2702,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/doordash-teams-up-with-openai-to-offer-grocery-shopping-in-chatgpt-359aa0c5?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -2719,7 +2719,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/hut-8-fluidstack-to-build-ai-data-center-for-anthropic-in-louisiana-62dade43?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -2752,7 +2752,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-developing-new-ai-image-and-video-model-code-named-mango-16e785c7?mod=rss_Technology",
     "org": "meta",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -2800,7 +2800,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/italy-watchdog-orders-meta-to-suspend-exclusion-of-rival-ai-chatbots-from-whatsapp-9f1aac96?mod=rss_Technology",
     "org": "meta",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -2815,7 +2815,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-licenses-ai-inference-technology-from-chip-startup-groq-0a405adb?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -2876,7 +2876,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-is-getting-creative-as-options-to-use-its-cash-flood-narrow-3cbe73f1?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -2954,7 +2954,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/furiosa-chip-nvidia-challenge-june-paik-5d3dc304?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -2970,7 +2970,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-raising-10-billion-at-350-billion-value-62af49f4?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -2988,7 +2988,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/google-ai-openai-gemini-chatgpt-b766e160?mod=rss_Technology",
     "org": "openai",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -3036,7 +3036,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/nvidia-hires-google-veteran-as-its-first-chief-marketing-officer-3dc2163f?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA",
       "GOOGL"
@@ -3196,7 +3196,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/trump-and-microsoft-laud-data-center-commitments-as-key-to-addressing-electricity-prices-3961528c?mod=rss_Technology",
     "org": "microsoft",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT"
     ],
@@ -3226,7 +3226,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/california-attorney-general-investigating-xai-over-groks-deepfakes-3db36179?mod=rss_Technology",
     "org": "xai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -3606,7 +3606,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/softbank-in-talks-to-invest-up-to-30-billion-more-in-openai-8585dea3?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -3771,7 +3771,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/the-100-billion-megadeal-between-openai-and-nvidia-is-on-ice-aa3025e3?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -3819,7 +3819,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/energy-oil/google-is-spending-big-to-build-a-lead-in-the-ai-energy-race-a8b5734a?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -3869,7 +3869,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/microsofts-pivotal-ai-product-is-running-into-big-problems-ce235b28?mod=rss_Technology",
     "org": "microsoft",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT"
     ],
@@ -3950,7 +3950,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/trumps-tax-law-sharply-cuts-amazons-corporate-tax-bill-ee94ac24?mod=rss_Technology",
     "org": "amazon",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN"
     ],
@@ -3965,7 +3965,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-amanda-askell-philosopher-ai-3c031883?mod=rss_Technology",
     "org": "anthropic",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -4016,7 +4016,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-executive-who-opposed-adult-mode-fired-for-sexual-discrimination-3159c61b?mod=rss_Technology",
     "org": "openai",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -4069,7 +4069,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-takes-big-step-in-ai-race-to-reshape-college-coding-courses-04c48372?mod=rss_Technology",
     "org": "anthropic",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -4106,7 +4106,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/infosys-anthropic-partner-on-ai-for-telecom-finance-manufacturing-4680fb5d?mod=rss_Technology",
     "org": "anthropic",
-    "category": "policy",
+    "category": "deals",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -4186,7 +4186,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/politics/national-security/woke-ai-spat-escalates-between-pentagon-and-anthropic-433b7c5c?mod=rss_Technology",
     "org": "anthropic",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -4221,7 +4221,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/google-is-exploring-ways-to-use-its-financial-might-to-take-on-nvidia-0fbadc84?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA",
       "GOOGL"
@@ -4237,7 +4237,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/microsofts-head-of-gaming-to-retire-after-38-years-at-company-7ab2459b?mod=rss_Technology",
     "org": "microsoft",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT"
     ],
@@ -4270,7 +4270,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/nvidia-wants-to-be-the-brain-of-consumer-pcs-once-again-9e1e41b3?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -4356,7 +4356,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/cmo-today/sam-altmans-human-verification-startup-leans-on-consumer-brands-787d8d4f?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -4521,7 +4521,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/trump-will-end-government-use-of-anthropics-ai-models-ff3550d9?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -4573,7 +4573,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-to-invest-2-billion-in-both-lumentum-and-coherent-b047f619?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -4606,7 +4606,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/gemini-ai-wrongful-death-lawsuit-cc46c5f7?mod=rss_Technology",
     "org": "google",
-    "category": "policy",
+    "category": "model",
     "tickers": [
       "GOOGL"
     ],
@@ -4636,7 +4636,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/nvidia-swears-off-an-earnings-crutch-putting-pressure-on-other-tech-companies-9624b0a1?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -4651,7 +4651,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-ceo-altman-defends-pentagon-work-to-staff-calls-backlash-really-painful-76d769ec?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -4684,7 +4684,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/broadcoms-ai-business-is-booming-the-rest-is-complicated-eaaba206?mod=rss_Technology",
     "org": "broadcom",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "AVGO"
     ],
@@ -4699,7 +4699,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/meta-to-open-up-whatsapp-to-rival-ai-chatbots-for-a-fee-following-eu-objections-10330fe0?mod=rss_Technology",
     "org": "meta",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -4714,7 +4714,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/sam-altman-wants-elected-officials-not-openai-to-decide-how-military-uses-ai-458910cd?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -4931,7 +4931,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-to-invest-2-billion-in-nebius-to-expand-ai-cloud-infrastructure-a6805d72?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -4946,7 +4946,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/articles/google-tracks-flash-floods-with-a-new-ai-tool-229c95d3?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -5040,7 +5040,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/musk-says-xai-must-be-rebuilt-as-co-founders-exit-47770dfa?mod=rss_Technology",
     "org": "xai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -5075,7 +5075,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/can-nvidias-dominance-survive-the-sea-change-under-way-in-ai-computing-63c3a70d?mod=rss_Technology",
     "org": "nvidia",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "NVDA"
     ],
@@ -5090,7 +5090,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/deals/nebius-meta-agree-to-27-billion-ai-infrastructure-pact-099e9bff?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -5249,7 +5249,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/super-micro-computer-employees-arrested-for-alleged-sales-to-china-45a2bd73?mod=rss_Technology",
     "org": "nvidia",
-    "category": "policy",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -5647,7 +5647,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/openais-top-executive-fidji-simo-to-take-medical-leave-from-company-d6fab97c?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -5680,7 +5680,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/the-smarter-way-to-cash-in-on-metas-vision-for-smartglasses-ce478ecf?mod=rss_Technology",
     "org": "meta",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -5710,7 +5710,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-anthropic-ipo-finances-04b3cfb9?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -5820,7 +5820,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-ai-model-muse-spark-09ceeac5?mod=rss_Technology",
     "org": "meta",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -5836,7 +5836,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/amazon-ceo-andy-jassy-2026-shareholder-letter-10e68a68?mod=rss_Technology",
     "org": "amazon",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN"
     ],
@@ -5898,7 +5898,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/coreweave-anthropic-form-ai-cloud-agreement-13021a5b?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -5916,7 +5916,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/meta-banks-on-ai-to-clear-the-smoke-of-social-media-lawsuits-902263dc?mod=rss_Technology",
     "org": "meta",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -5981,7 +5981,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-adds-novartis-ceo-to-board-6e642bf4?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -6064,7 +6064,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-ceo-lands-white-house-meeting-as-feud-thaws-9de3c1fa?mod=rss_Technology",
     "org": "anthropic",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -6083,7 +6083,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/chatgpt-openai-ipo-altman-029ae6d5?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -6150,7 +6150,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-probes-possible-unauthorized-access-to-mythos-ai-model-3da1ee20?mod=rss_Technology",
     "org": "anthropic",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -6201,7 +6201,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/meta-will-lay-off-8-000-employees-in-may-memo-ce8b97f0?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -6329,7 +6329,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/oracle-ai-demand-debt-04977749?mod=rss_Technology",
     "org": "oracle",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "ORCL"
     ],
@@ -6360,7 +6360,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/elon-musk-is-an-underdog-in-his-180-billion-fight-against-openai-32a74332?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -6392,7 +6392,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/trial-begins-between-elon-musk-and-sam-altman-for-the-future-of-openai-01595967?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -6504,7 +6504,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/earnings/meta-meta-q1-2026-earnings-report-ae021875?mod=rss_Technology",
     "org": "meta",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -6734,7 +6734,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/anthropic-and-fis-are-building-an-ai-agent-to-help-banks-police-financial-crimes-5a0be5a8?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -6842,7 +6842,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/anthropic-openai-ai-krishna-rao-claude-cfo-7960de49?mod=rss_Technology",
     "org": "openai",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -6908,7 +6908,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ais-next-phase-plays-into-tsmcs-hands-3d1f2b60?mod=rss_Technology",
     "org": "tsmc",
-    "category": "compute",
+    "category": "markets",
     "tickers": [
       "TSM"
     ],
@@ -6939,7 +6939,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/microsoft-ceo-takes-stand-in-third-week-of-elon-musk-megatrial-against-openai-04e63c47?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -6972,7 +6972,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-ceo-sam-altman-takes-stand-in-elon-musk-megatrial-19bda33c?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "deals",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -6989,7 +6989,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/sam-altmans-business-dealings-under-gop-scrutiny-ahead-of-openais-ipo-52c1cc4d?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "deals",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -7005,7 +7005,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/spacex-google-in-talks-to-explore-data-centers-in-orbit-7b7799e2?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "GOOGL"
     ],
@@ -7090,7 +7090,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/finance/investing/ackman-says-pershing-square-has-taken-new-stake-in-microsoft-b68120d9?mod=rss_Technology",
     "org": "microsoft",
-    "category": "policy",
+    "category": "deals",
     "tickers": [
       "MSFT"
     ],
@@ -7121,7 +7121,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/how-amazon-went-from-an-ai-also-ran-to-a-real-contender-ed596336?mod=rss_Technology",
     "org": "amazon",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN"
     ],
@@ -7152,7 +7152,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/amazon-web-services-ceo-pushes-back-on-ai-job-apocalypse-warnings-2de3ce13?mod=rss_Technology",
     "org": "amazon",
-    "category": "compute",
+    "category": "apocalyptic",
     "tickers": [
       "AMZN"
     ],
@@ -7186,7 +7186,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/startup-makes-switching-ai-chips-easierand-nvidia-is-a-new-investor-c78e3a54?mod=rss_Technology",
     "org": "nvidia",
-    "category": "deals",
+    "category": "compute",
     "tickers": [
       "NVDA"
     ],
@@ -7201,7 +7201,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/andrej-karpathy-tesla-alum-and-openai-co-founder-joins-anthropic-c665f51f?mod=rss_Technology",
     "org": "openai",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -7236,7 +7236,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/google-and-blackstone-to-create-new-ai-cloud-company-0e35b91f?mod=rss_Technology",
     "org": "google",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -7252,7 +7252,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/jury-sides-with-openai-sam-altman-in-case-brought-by-elon-musk-933240ff?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -7269,7 +7269,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/personal-tech/google-docs-live-test-e4473e07?mod=rss_Technology",
     "org": "google",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -7506,7 +7506,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/claude-dario-amodei-wife-anthropic-e1eeda7d?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "model",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -7577,7 +7577,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/amazon-prime-air-delivery-drone-expansion-d3d1598e?mod=rss_Technology",
     "org": "amazon",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "AMZN"
     ],
@@ -7671,7 +7671,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/novo-partners-with-anthropic-to-speed-up-drug-discovery-using-claude-a6000d9f?mod=rss_Technology",
     "org": "anthropic",
-    "category": "deals",
+    "category": "model",
     "tickers": [
       "AMZN",
       "GOOGL",
@@ -7750,7 +7750,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/meta-seeks-payoff-from-ai-spending-with-new-push-for-business-customers-8b9ca5bc?mod=rss_Technology",
     "org": "meta",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "META"
     ],
@@ -7778,7 +7778,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/nvidia-releases-software-it-says-can-prevent-ai-agents-from-going-rogue-12fd4ef8?mod=rss_Technology",
     "org": "nvidia",
-    "category": "model",
+    "category": "apocalyptic",
     "tickers": [
       "NVDA"
     ],
@@ -7851,7 +7851,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/ftc-opens-investigation-of-anthropic-and-openai-a317b617?mod=rss_Technology",
     "org": "openai",
-    "category": "deals",
+    "category": "policy",
     "tickers": [
       "MSFT",
       "NVDA",
@@ -7868,7 +7868,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/can-ai-run-in-space-google-is-about-to-find-out-59c4e062?mod=rss_Technology",
     "org": "google",
-    "category": "model",
+    "category": "markets",
     "tickers": [
       "GOOGL"
     ],
@@ -7912,7 +7912,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/tech/ai/openai-president-backs-out-of-pledged-25-million-donation-to-ai-super-pac-efb31fb4?mod=rss_Technology",
     "org": "openai",
-    "category": "policy",
+    "category": "markets",
     "tickers": [
       "MSFT",
       "NVDA"
@@ -7957,7 +7957,7 @@
     "source": "WSJ",
     "url": "https://www.wsj.com/business/media/emmy-awards-will-leave-broadcast-tv-for-amazons-prime-video-0c92fad5?mod=pls_whats_news_us_business_f",
     "org": "amazon",
-    "category": "deals",
+    "category": "markets",
     "tickers": [
       "AMZN"
     ],
