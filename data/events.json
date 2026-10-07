@@ -434,6 +434,21 @@
     "paywall": true
   },
   {
+    "id": "20260923-meta-s-new-ai-agent-is-an-instant-hit-and-the-ba",
+    "date": "2026-09-23",
+    "title": "Meta’s New AI Agent Is an Instant Hit—and the Backlash Has Already Begun",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/meta-ai-agent-muse-reactions-5bf236af?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-67009155",
+    "paywall": true
+  },
+  {
     "id": "20260927-openai-agents-used-aggressive-techniques-to-acce",
     "date": "2026-09-27",
     "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
@@ -564,6 +579,156 @@
       "NVDA"
     ],
     "thumbnail": "https://images.wsj.net/im-28340576",
+    "paywall": true
+  },
+  {
+    "id": "20260930-amazon-tries-to-boost-nuclear-power-in-maryland",
+    "date": "2026-09-30",
+    "title": "Amazon Tries to Boost Nuclear Power in Maryland After Scrapping Data Center Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/amazon-tries-to-boost-nuclear-power-in-maryland-after-scrapping-data-center-deal-d551385e?mod=rss_Technology",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-98629845",
+    "paywall": true
+  },
+  {
+    "id": "20260930-ftc-opens-investigation-of-anthropic-and-openai",
+    "date": "2026-09-30",
+    "title": "FTC Opens Investigation of Anthropic and OpenAI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ftc-opens-investigation-of-anthropic-and-openai-a317b617?mod=rss_Technology",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "thumbnail": "https://images.wsj.net/im-71892715",
+    "paywall": true
+  },
+  {
+    "id": "20261001-can-ai-run-in-space-google-is-about-to-find-out",
+    "date": "2026-10-01",
+    "title": "Can AI Run in Space? Google Is About to Find Out",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/can-ai-run-in-space-google-is-about-to-find-out-59c4e062?mod=rss_Technology",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "thumbnail": "https://images.wsj.net/im-53801147",
+    "paywall": true
+  },
+  {
+    "id": "20261001-inside-google-s-ai-push-into-schools-it-slowed-m",
+    "date": "2026-10-01",
+    "title": "Inside Google’s AI Push Into Schools: ‘It Slowed My Thinking Down’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-ai-gemini-education-schools-1ec0972a?mod=rss_Technology",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-75714205",
+    "paywall": true
+  },
+  {
+    "id": "20261001-openai-parts-ways-with-researchers-who-allegedly",
+    "date": "2026-10-01",
+    "title": "OpenAI Parts Ways With Researchers Who Allegedly Shared Confidential Information",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-parts-ways-with-researchers-who-allegedly-shared-confidential-information-aebac528?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-79349950",
+    "paywall": true
+  },
+  {
+    "id": "20261001-openai-president-backs-out-of-pledged-25-million",
+    "date": "2026-10-01",
+    "title": "OpenAI President Backs Out of Pledged $25-Million Donation to AI Super PAC",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-president-backs-out-of-pledged-25-million-donation-to-ai-super-pac-efb31fb4?mod=rss_Technology",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-99186359",
+    "paywall": true
+  },
+  {
+    "id": "20261002-amazon-s-new-push-to-get-buy-in-for-data-center",
+    "date": "2026-10-02",
+    "title": "Amazon’s New Push to Get Buy-In for Data Center Build-Out",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazons-new-push-to-get-buy-in-for-data-center-build-out-cc8d3f86?mod=rss_Technology",
+    "org": "amazon",
+    "category": "compute",
+    "tickers": [
+      "AMZN"
+    ],
+    "thumbnail": "https://images.wsj.net/im-14722620",
+    "paywall": true
+  },
+  {
+    "id": "20261002-the-mulleted-meme-loving-billionaire-behind-meta",
+    "date": "2026-10-02",
+    "title": "The Mulleted, Meme-Loving Billionaire Behind Meta’s Hit AI App",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/alexandr-wang-muse-meta-efae7659?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-67809820",
+    "paywall": true
+  },
+  {
+    "id": "20261006-google-and-constellation-energy-strike-a-sweepin",
+    "date": "2026-10-06",
+    "title": "Google and Constellation Energy Strike a Sweeping Nuclear-Power Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/google-and-constellation-energy-strike-a-sweeping-nuclear-power-deal-4287b372?mod=rss_Technology",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-40540381",
+    "paywall": true
+  },
+  {
+    "id": "20261006-mistral-to-release-new-ai-model-to-better-compet",
+    "date": "2026-10-06",
+    "title": "Mistral to Release New AI Model to Better Compete With U.S. Rivals",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/mistral-to-release-new-ai-model-to-better-compete-with-u-s-rivals-3f7c8a3d?mod=rss_Technology",
+    "org": "mistral",
+    "category": "model",
+    "tickers": [
+      "NVDA"
+    ],
+    "thumbnail": "https://images.wsj.net/im-33096038",
     "paywall": true
   }
 ]

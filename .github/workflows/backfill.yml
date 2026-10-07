@@ -1,0 +1,90 @@
+name: Backfill announcements
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to do"
+        required: true
+        default: probe
+        type: choice
+        options:
+          - probe
+          - dry-run
+          - run
+          - undo
+      from:
+        description: "Earliest date (YYYY-MM-DD)"
+        required: false
+        default: "2025-01-01"
+      per_day:
+        description: "Snapshots to replay per day"
+        required: false
+        default: "2"
+      feeds:
+        description: "Feeds to use (comma-separated names, blank for all)"
+        required: false
+        default: ""
+      workers:
+        description: "Parallel archive requests"
+        required: false
+        default: "4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Backfill
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          FEEDS=""
+          if [ -n "${{ inputs.feeds }}" ]; then FEEDS='--feeds'; fi
+          case "${{ inputs.mode }}" in
+            probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+            dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+            run)     python scripts/backfill_news.py --from "${{ inputs.from }}" \
+                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
+                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} ;;
+            undo)    python scripts/backfill_news.py --undo ;;
+          esac
+
+      - name: Fetch prices and thumbnails
+        if: inputs.mode == 'run' || inputs.mode == 'undo'
+        run: python scripts/update_data.py
+
+      - name: Commit updated data
+        if: inputs.mode == 'run' || inputs.mode == 'undo'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json data/thumbnails.json data/events.json data/news_seen.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Backfill announcements ($(date -u +%Y-%m-%d))"
+            git pull --rebase
+            git push
+          fi
