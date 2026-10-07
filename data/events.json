@@ -703,6 +703,20 @@
     "paywall": true
   },
   {
+    "id": "20261006-emmy-awards-will-leave-broadcast-tv-for-amazon-s",
+    "date": "2026-10-06",
+    "title": "Emmy Awards Will Leave Broadcast TV for Amazon’s Prime Video",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/emmy-awards-will-leave-broadcast-tv-for-amazons-prime-video-0c92fad5?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "thumbnail": "https://images.wsj.net/im-31819541",
+    "paywall": true
+  },
+  {
     "id": "20261006-google-and-constellation-energy-strike-a-sweepin",
     "date": "2026-10-06",
     "title": "Google and Constellation Energy Strike a Sweeping Nuclear-Power Deal",
