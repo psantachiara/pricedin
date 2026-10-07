@@ -11,21 +11,36 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
       "source": "WSJ",
       "paywall": true,
-      "backfillOnly": true
+      "categories": [
+        "deals",
+        "compute",
+        "model",
+        "policy"
+      ]
     },
     {
       "name": "WSJ US Business",
       "url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness",
       "source": "WSJ",
       "paywall": true,
-      "backfillOnly": true
+      "categories": [
+        "deals",
+        "compute",
+        "model",
+        "policy"
+      ]
     },
     {
       "name": "WSJ World News",
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "source": "WSJ",
       "paywall": true,
-      "backfillOnly": true
+      "categories": [
+        "deals",
+        "compute",
+        "model",
+        "policy"
+      ]
     }
   ],
   "excludePaths": [
@@ -217,28 +232,6 @@
   ],
   "categories": [
     {
-      "id": "deals",
-      "match": [
-        "acquir*",
-        "acquisition*",
-        "buys",
-        "to buy",
-        "merger",
-        "invest*",
-        "stake",
-        "funding",
-        "raise*",
-        "valuation",
-        "ipo",
-        "s-1",
-        "buyback",
-        "partner*",
-        "deal",
-        "billion to",
-        "takeover"
-      ]
-    },
-    {
       "id": "policy",
       "match": [
         "regulat*",
@@ -262,23 +255,31 @@
       ]
     },
     {
-      "id": "model",
+      "id": "deals",
       "match": [
-        "release*",
-        "launch*",
-        "unveil*",
-        "introduc*",
-        "debut*",
-        "new model",
-        "gpt-",
-        "gemini",
-        "claude",
-        "llama",
-        "reasoning model",
-        "open-source model",
-        "rolls out",
-        "scraps",
-        "delays"
+        "acquir*",
+        "acquisition*",
+        "buys",
+        "to buy",
+        "merger",
+        "takeover",
+        "invests",
+        "investing",
+        "invested",
+        "investment*",
+        "stake",
+        "funding",
+        "funding round",
+        "valuation",
+        "ipo",
+        "s-1",
+        "buyback",
+        "partner*",
+        "deal",
+        "deals",
+        "commits",
+        "commitment*",
+        "billion to"
       ]
     },
     {
@@ -300,20 +301,46 @@
       ]
     },
     {
+      "id": "model",
+      "match": [
+        "release*",
+        "launch*",
+        "unveil*",
+        "introduc*",
+        "debut*",
+        "new model",
+        "gpt-",
+        "gemini",
+        "claude",
+        "llama",
+        "reasoning model",
+        "open-source model",
+        "rolls out",
+        "scraps",
+        "delays"
+      ]
+    },
+    {
       "id": "markets",
       "match": [
         "earnings",
         "quarterly results",
         "shares",
+        "share price",
         "stock",
+        "stocks",
         "selloff",
         "sell-off",
         "rally",
+        "rallies",
         "guidance",
         "revenue",
         "profit",
         "market cap",
-        "investors"
+        "investors",
+        "premarket",
+        "valuation slide",
+        "beat estimates"
       ]
     }
   ],

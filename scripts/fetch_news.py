@@ -123,8 +123,21 @@ def parse_feed(feed, timeout=30):
             "image": (media.get("url") if media is not None else None),
             "source": feed.get("source") or feed.get("name"),
             "paywall": bool(feed.get("paywall")),
+            "feed": feed.get("name"),
+            "allow": feed.get("categories"),
         })
     return items
+
+
+def merge(batch):
+    """One entry per story. A feed that carries every category wins over a
+    restricted one, so a story both feeds ran is judged by the broader rule."""
+    best = {}
+    for item in batch:
+        current = best.get(item["guid"])
+        if current is None or (current.get("allow") and not item.get("allow")):
+            best[item["guid"]] = item
+    return list(best.values())
 
 
 def classify(item, rules, entity_res, category_res):
@@ -198,6 +211,7 @@ def main():
         print("No feed items were read; events.json left unchanged.")
         return
 
+    batch = merge(batch)
     batch.sort(key=lambda i: i["published"])
     for item in batch:
         key = item["guid"]
@@ -218,6 +232,8 @@ def main():
             tagged = classify(item, rules, entity_res, category_res)
             if not tagged:
                 reason = "no tracked company in the headline"
+            elif item.get("allow") and tagged[2] not in item["allow"]:
+                reason = f"{tagged[2]} not carried by {item.get('feed') or 'this feed'}"
 
         if reason:
             dropped.append((reason, item))

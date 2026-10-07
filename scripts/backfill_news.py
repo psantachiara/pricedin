@@ -49,6 +49,7 @@ def legacy_urls(url):
 
 _throttle = threading.Semaphore(1)
 _counter_lock = threading.Lock()
+_pool_lock = threading.Lock()
 
 
 def get(url, params=None, timeout=60, tries=4, pause=1.0):
@@ -135,6 +136,8 @@ def parse_snapshot(xml, feed):
             "image": (media.get("url") if media is not None else None),
             "source": feed.get("source") or feed.get("name"),
             "paywall": bool(feed.get("paywall")),
+            "feed": feed.get("name"),
+            "allow": feed.get("categories"),
         })
     return items
 
@@ -320,8 +323,14 @@ def main():
                 failed += 1
                 continue
             read_days.add(datetime.strptime(timestamp[:8], "%Y%m%d").date())
-            for item in items:
-                pool.setdefault(item["guid"], item)
+            # Workers merge into one pool, so the read and the write must be
+            # one step: otherwise a restricted feed can overwrite the broader
+            # one that another thread just stored.
+            with _pool_lock:
+                for item in items:
+                    current = pool.get(item["guid"])
+                    if current is None or (current.get("allow") and not item.get("allow")):
+                        pool[item["guid"]] = item
             if n % 50 == 0 or n == len(jobs):
                 print(f"  {n}/{len(jobs)} snapshots, {len(pool)} distinct items so far", flush=True)
 
@@ -351,6 +360,8 @@ def main():
             tagged = classify(item, rules, entity_res, category_res)
             if not tagged:
                 reason = "no tracked company in the headline"
+            elif item.get("allow") and tagged[2] not in item["allow"]:
+                reason = f"{tagged[2]} not carried by {item.get('feed') or 'this feed'}"
 
         if reason:
             dropped.append((reason, item))
