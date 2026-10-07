@@ -73,70 +73,144 @@
   "orgs": [
     {
       "id": "openai",
-      "name": "OpenAI"
+      "name": "OpenAI",
+      "tickers": [
+        "MSFT",
+        "NVDA"
+      ],
+      "why": "Not listed. Microsoft owns about 27% and runs its cloud; Nvidia has committed investment and supplies its chips."
     },
     {
       "id": "anthropic",
-      "name": "Anthropic"
+      "name": "Anthropic",
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "MSFT",
+        "NVDA"
+      ],
+      "why": "Not listed. Amazon and Alphabet are large investors and cloud providers; Microsoft and Nvidia invested in late 2025."
     },
     {
       "id": "google",
-      "name": "Google"
+      "name": "Google",
+      "tickers": [
+        "GOOGL"
+      ],
+      "why": "Alphabet's own business."
     },
     {
       "id": "meta",
-      "name": "Meta"
+      "name": "Meta",
+      "tickers": [
+        "META"
+      ],
+      "why": "Meta's own business."
     },
     {
       "id": "microsoft",
-      "name": "Microsoft"
+      "name": "Microsoft",
+      "tickers": [
+        "MSFT"
+      ],
+      "why": "Microsoft's own business."
     },
     {
       "id": "nvidia",
-      "name": "Nvidia"
+      "name": "Nvidia",
+      "tickers": [
+        "NVDA"
+      ],
+      "why": "Nvidia's own business."
     },
     {
       "id": "deepseek",
-      "name": "DeepSeek"
+      "name": "DeepSeek",
+      "tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM",
+        "AMD"
+      ],
+      "why": "Not listed, and Chinese. Tagged to chip makers because its efficiency claims move expectations for AI hardware demand."
     },
     {
       "id": "mistral",
-      "name": "Mistral"
+      "name": "Mistral",
+      "tickers": [
+        "NVDA"
+      ],
+      "why": "Not listed. Tagged to Nvidia, its chip supplier."
     },
     {
       "id": "xai",
-      "name": "xAI"
+      "name": "xAI",
+      "tickers": [
+        "NVDA"
+      ],
+      "why": "Not listed. Tagged to Nvidia, its chip supplier."
     },
     {
       "id": "amazon",
-      "name": "Amazon"
+      "name": "Amazon",
+      "tickers": [
+        "AMZN"
+      ],
+      "why": "Amazon's own business."
     },
     {
       "id": "amd",
-      "name": "AMD"
+      "name": "AMD",
+      "tickers": [
+        "AMD"
+      ],
+      "why": "AMD's own business."
     },
     {
       "id": "broadcom",
-      "name": "Broadcom"
+      "name": "Broadcom",
+      "tickers": [
+        "AVGO"
+      ],
+      "why": "Broadcom's own business."
     },
     {
       "id": "tsmc",
-      "name": "TSMC"
+      "name": "TSMC",
+      "tickers": [
+        "TSM"
+      ],
+      "why": "TSMC's own business."
     },
     {
       "id": "oracle",
-      "name": "Oracle"
+      "name": "Oracle",
+      "tickers": [
+        "ORCL"
+      ],
+      "why": "Oracle's own business."
     },
     {
       "id": "palantir",
-      "name": "Palantir"
+      "name": "Palantir",
+      "tickers": [
+        "PLTR"
+      ],
+      "why": "Palantir's own business."
     },
     {
       "id": "market",
-      "name": "Markets"
+      "name": "Markets",
+      "tickers": [],
+      "why": "Market-wide stories, tagged to whichever companies they name."
     }
   ],
   "categories": [
+    {
+      "id": "apocalyptic",
+      "name": "AI as danger",
+      "color": "#C2410C"
+    },
     {
       "id": "model",
       "name": "Model releases",

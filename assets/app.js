@@ -61,7 +61,9 @@
     p.innerHTML = html;
     box.append(el('h2', { text: title }), p);
     $('#chart').style.display = 'none';
-    for (const sel of ['.range-row', '#overview', '.legend', '.chips-row', '.controls', '.ranking']) {
+  const lanesNode = $('#lanes');
+  if (lanesNode) lanesNode.style.display = 'none';
+    for (const sel of ['.range-row', '#overview', '.cats', '.chips-row', '.controls', '.ranking']) {
       const n = $(sel);
       if (n) n.style.display = 'none';
     }
@@ -384,9 +386,8 @@
       $('#weighting-control').hidden = state.view !== 'total';
       benchSelect.value = state.benchmark;
       $('#chips-label').textContent = state.view === 'total' ? 'Included in the total' : 'Companies';
-      $('#legend-text').textContent = state.view === 'total'
-        ? `Stems rise when the industry total beat ${benchName()} after an announcement and drop when it lagged. A full-length stem means 8 points or more.`
-        : `Stems rise when the tagged stocks beat ${benchName()} after an announcement and drop when they lagged. A full-length stem means 8 points or more.`;
+      $('#legend-text').textContent =
+        `Stems: up beat ${benchName()}, down lagged; full length is 8 points.`;
     }
 
     const chipWrap = $('#tickers');
@@ -434,6 +435,8 @@
 
     const stage = $('#stage');
     const svg = d3.select('#chart');
+    const lanesSvg = d3.select('#lanes');
+    const lanesEl = document.getElementById('lanes');
     const tooltip = $('#tooltip');
     let geo = null;       // geometry of the last render
     let current = null;   // transformed series of the last render
@@ -450,14 +453,17 @@
         ? orgs.filter((o) => vis.some((e) => e.org === o.id))
         : [{ id: '__all', name: 'All news' }];
       const laneH = state.view === 'detailed' ? 40 : 76;
-      const lanesTop = bottom + 50;
+      const chartH_total = bottom + 26;
+      const lanesTop = 20;
       const lanesEnd = lanesTop + Math.max(1, lanes.length) * laneH;
       const stripH = coverWeeks ? 9 : 0;
       const stripTop = lanesEnd + (coverWeeks ? 14 : 0);
-      const H = stripTop + stripH + 6;
+      const lanesH = stripTop + stripH + 6;
 
-      svg.attr('width', W).attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+      svg.attr('width', W).attr('height', chartH_total).attr('viewBox', `0 0 ${W} ${chartH_total}`);
       svg.selectAll('*').remove();
+      lanesSvg.attr('width', W).attr('height', lanesH).attr('viewBox', `0 0 ${W} ${lanesH}`);
+      lanesSvg.selectAll('*').remove();
 
       const [i0, i1] = domainIdx();
       const x = d3.scaleUtc().domain(state.domain).range([M.l, W - M.r]);
@@ -485,7 +491,8 @@
       if (hi - lo < 1e-9) { hi += 0.01; lo -= 0.01; }
       const y = d3.scaleLinear().domain([lo, hi]).nice(mobile ? 4 : 6).range([bottom, top]);
 
-      geo = { W, M, top, bottom, chartH, x, y, i0, i1, lanesTop, laneH, lanes, laneBottom: lanesEnd };
+      geo = { W, M, top, bottom, chartH, x, y, i0, i1, lanesTop, laneH, lanes,
+              laneBottom: lanesEnd, lanesH };
       current = series;
 
       svg.append('defs').append('clipPath').attr('id', 'plot-clip')
@@ -545,19 +552,27 @@
           setFocus(hit && hit !== state.focus ? hit : null);
         });
 
-      const gl = svg.append('g').attr('class', 'lanes');
+      lanesSvg.append('g').attr('class', 'band-layer');
+      const gl = lanesSvg.append('g').attr('class', 'lanes');
       gl.append('text').attr('class', 'lanes-heading')
         .attr('x', M.l).attr('y', lanesTop - 8)
         .text(state.view !== 'detailed' ? 'All announcements, grouped by day'
-          : state.focus ? `Announcements tagged ${state.focus}` : 'Announcements by company');
+          : state.focus ? `Announcements tagged ${state.focus}`
+          : 'Announcements by the company they are about');
 
       lanes.forEach((lane, k) => {
         const cy = lanesTop + k * laneH + laneH / 2;
         gl.append('line').attr('class', 'lane-rule')
           .attr('x1', M.l).attr('x2', W - M.r).attr('y1', cy).attr('y2', cy);
-        gl.append('text').attr('class', 'lane-label')
+        const label = gl.append('text')
+          .attr('class', 'lane-label' + (lane.why ? ' explained' : ''))
           .attr('x', M.l - 10).attr('y', cy).attr('dy', '0.32em').attr('text-anchor', 'end')
           .text(lane.name);
+        if (lane.why || (lane.tickers && lane.tickers.length)) {
+          const which = lane.tickers && lane.tickers.length
+            ? `Tagged to ${lane.tickers.join(', ')}. ` : '';
+          label.append('title').text(which + (lane.why || ''));
+        }
       });
 
       const inRange = (t) => t >= i0 && t <= i1;
@@ -603,7 +618,7 @@
       }
 
       if (coverWeeks && stripH) {
-        const gs = svg.append('g').attr('class', 'coverage');
+        const gs = lanesSvg.append('g').attr('class', 'coverage');
         const L = M.l, R = W - M.r;
         gs.append('text').attr('class', 'lane-label')
           .attr('x', L - 10).attr('y', stripTop + stripH / 2).attr('dy', '0.32em')
@@ -684,7 +699,7 @@
         .classed('lit', (d) => keep != null && keep.has(d.key));
       const pinnedIds = new Set(state.pinned ? state.pinned.ids : []);
       const activeIds = new Set(a ? a.ids : []);
-      svg.selectAll('g.marker')
+      lanesSvg.selectAll('g.marker')
         .classed('active', (d) => d.ids.some((id) => activeIds.has(id)))
         .classed('pinned', (d) => d.ids.some((id) => pinnedIds.has(id)));
       chipWrap.querySelectorAll('.chip').forEach((c) =>
@@ -700,8 +715,10 @@
     }
 
     function drawBand(a) {
-      const g = svg.select('.band-layer');
-      g.selectAll('*').remove();
+      const top = svg.select('.band-layer');
+      const below = lanesSvg.select('.band-layer');
+      top.selectAll('*').remove();
+      below.selectAll('*').remove();
       if (!a || !geo) return;
       const base = Math.max(0, a.t - 1);
       const end = Math.min(N - 1, a.t + state.window - 1);
@@ -711,12 +728,16 @@
       const left = Math.max(geo.M.l, x0);
       const right = Math.min(geo.W - geo.M.r, x1);
       if (right > left) {
-        g.append('rect').attr('class', 'band')
-          .attr('x', left).attr('width', right - left).attr('y', geo.top).attr('height', geo.chartH);
+        top.append('rect').attr('class', 'band')
+          .attr('x', left).attr('width', right - left)
+          .attr('y', geo.top).attr('height', geo.chartH);
       }
       if (xt >= geo.M.l && xt <= geo.W - geo.M.r) {
-        g.append('line').attr('class', 'guide')
-          .attr('x1', xt).attr('x2', xt).attr('y1', geo.top).attr('y2', geo.laneBottom);
+        // one line through both drawings, so the eye carries across the gap
+        top.append('line').attr('class', 'guide')
+          .attr('x1', xt).attr('x2', xt).attr('y1', geo.top).attr('y2', geo.bottom);
+        below.append('line').attr('class', 'guide')
+          .attr('x1', xt).attr('x2', xt).attr('y1', 0).attr('y2', geo.laneBottom);
       }
     }
 
@@ -822,7 +843,7 @@
       const tw = tooltip.offsetWidth;
       const left = Math.max(4, Math.min(d.cx - 24, geo.W - tw - 4));
       tooltip.style.left = `${left}px`;
-      tooltip.style.top = `${Math.max(d.cy + 16, geo.bottom + 8)}px`;
+      tooltip.style.top = `${lanesEl.offsetTop + d.cy + 16}px`;
     }
     function hideTooltip() { tooltip.hidden = true; }
 

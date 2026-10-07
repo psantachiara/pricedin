@@ -11,6 +11,7 @@
   --band: rgba(36, 64, 200, 0.07);
   --shadow: 0 10px 28px rgba(22, 32, 44, 0.16);
 
+  --cat-apocalyptic: #C2410C;
   --cat-model: #2440C8;
   --cat-deals: #A66A00;
   --cat-compute: #6A45B5;
@@ -35,6 +36,7 @@
     --focus: #8FA3FF;
     --band: rgba(143, 163, 255, 0.11);
     --shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+    --cat-apocalyptic: #FF7A59;
     --cat-model: #8FA3FF;
     --cat-deals: #E3AE4C;
     --cat-compute: #B89CF2;
@@ -56,6 +58,7 @@
   --focus: #8FA3FF;
   --band: rgba(143, 163, 255, 0.11);
   --shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  --cat-apocalyptic: #FF7A59;
   --cat-model: #8FA3FF;
   --cat-deals: #E3AE4C;
   --cat-compute: #B89CF2;
@@ -251,7 +254,7 @@ select {
 .stage { position: relative; }
 .stage svg { display: block; overflow: visible; }
 
-#chart text, .overview text {
+#chart text, #lanes text, .overview text {
   font-family: var(--font);
   font-size: 12px;
   fill: var(--muted);
@@ -282,8 +285,14 @@ select {
 .overlay { fill: transparent; cursor: crosshair; }
 
 .lane-rule { stroke: var(--rule); }
-#chart .lane-label { fill: var(--ink); font-size: 12.5px; }
-#chart .lanes-heading { fill: var(--muted); font-size: 12px; }
+#lanes .lane-label { fill: var(--ink); font-size: 12.5px; }
+#lanes .lanes-heading { fill: var(--muted); font-size: 12px; }
+#lanes .lane-label.explained {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+#lanes .band-label, #lanes .count { pointer-events: none; }
 
 .coverage-base { stroke: var(--grid); stroke-width: 1; }
 .coverage-week { fill: var(--muted); }
@@ -296,7 +305,7 @@ select {
 .marker.down .stem { stroke: var(--down); }
 .marker .dot { stroke: var(--paper); stroke-width: 1.5; }
 .marker .hit { fill: transparent; }
-#chart .marker .count { fill: var(--paper); font-size: 10px; font-weight: 600; pointer-events: none; }
+#lanes .marker .count { fill: var(--paper); font-size: 10px; font-weight: 600; pointer-events: none; }
 .marker.active .dot,
 .marker:focus-visible .dot { stroke: var(--ink); stroke-width: 2; }
 .marker.pinned .dot { stroke: var(--focus); stroke-width: 3; }
@@ -380,6 +389,7 @@ select {
 .thumb.small.is-fallback span { font-size: 1.2rem; }
 
 .range-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; }
+.range-row .legend-note { margin-left: auto; }
 .hint { font-size: 0.8125rem; color: var(--muted); }
 
 .overview { display: block; margin-top: 6px; }
@@ -389,17 +399,15 @@ select {
 .overview .selection { fill: var(--band); stroke: var(--focus); stroke-width: 1; fill-opacity: 1; }
 .overview .handle { fill: var(--focus); rx: 2; }
 
-.legend {
+.cats {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px 28px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--rule);
+  gap: 5px;
+  align-items: center;
+  padding: 12px 0 10px;
+  margin-top: 4px;
+  border-top: 1px solid var(--grid);
 }
-
-.cats { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; align-self: center; }
 .cat {
   font: inherit;
   font-size: 0.8125rem;
@@ -418,11 +426,15 @@ select {
 .legend-note {
   margin: 0;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
-  max-width: 54ch;
   font-size: 0.8125rem;
   color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .range-row .legend-note { margin-left: 0; white-space: normal; }
 }
 .legend-glyph { flex: none; }
 .legend-glyph .g-up { stroke: var(--up); stroke-width: 3; stroke-linecap: round; }

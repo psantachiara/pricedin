@@ -214,6 +214,28 @@
   ],
   "categories": [
     {
+      "id": "apocalyptic",
+      "match": [
+        "doom*",
+        "danger*",
+        "existential",
+        "extinction",
+        "apocalyp*",
+        "catastroph*",
+        "rogue",
+        "wipe out",
+        "end humanity",
+        "humanity",
+        "out of control",
+        "kill us",
+        "terrified",
+        "dire warning",
+        "p(doom)",
+        "safety freakout",
+        "threat to mankind"
+      ]
+    },
+    {
       "id": "policy",
       "match": [
         "regulat*",
