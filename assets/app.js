@@ -98,9 +98,10 @@
         'Opening <code>index.html</code> straight from disk blocks the data requests.');
       return;
     }
-    const [prices, thumbs] = await Promise.all([
+    const [prices, thumbs, coverage] = await Promise.all([
       loadJSON('data/prices.json', true),
       loadJSON('data/thumbnails.json', true),
+      loadJSON('data/coverage.json', true),
     ]);
     if (!prices || !Array.isArray(prices.dates) || prices.dates.length < 2) {
       showMessage('No price data yet',
@@ -108,10 +109,10 @@
         '<code>python scripts/update_data.py</code> locally. The timeline appears once <code>data/prices.json</code> exists.');
       return;
     }
-    init(config, events, prices, thumbs || {});
+    init(config, events, prices, thumbs || {}, coverage);
   }
 
-  function init(config, rawEvents, prices, thumbs) {
+  function init(config, rawEvents, prices, thumbs, coverage) {
     const dates = prices.dates.map(parseDate);
     const N = dates.length;
     const close = prices.close || {};
@@ -150,6 +151,23 @@
       .filter(Boolean)
       .sort((a, b) => a.date - b.date || a.t - b.t);
     const eventBy = new Map(events.map((e) => [e.id, e]));
+
+    // Weeks the source actually covers, so thin stretches read as absence of
+    // record rather than absence of news.
+    const coverWeeks = (() => {
+      if (!coverage || !coverage.weeks) return null;
+      const live = coverage.liveFrom ? parseDate(coverage.liveFrom) : null;
+      const out = [];
+      for (const [key, value] of Object.entries(coverage.weeks)) {
+        const from = parseDate(key);
+        if (!from) continue;
+        const to = new Date(+from + 7 * 864e5);
+        const share = live && to > live ? 1 : Math.max(0, Math.min(1, +value || 0));
+        out.push({ from, to, share });
+      }
+      out.sort((a, b) => a.from - b.from);
+      return out.length ? out : null;
+    })();
 
     const pickBench = (view) => {
       const want = config.defaultBenchmark && config.defaultBenchmark[view];
@@ -415,7 +433,10 @@
         : [{ id: '__all', name: 'All news' }];
       const laneH = state.view === 'detailed' ? 40 : 76;
       const lanesTop = bottom + 50;
-      const H = lanesTop + Math.max(1, lanes.length) * laneH + 6;
+      const lanesEnd = lanesTop + Math.max(1, lanes.length) * laneH;
+      const stripH = coverWeeks ? 9 : 0;
+      const stripTop = lanesEnd + (coverWeeks ? 14 : 0);
+      const H = stripTop + stripH + 6;
 
       svg.attr('width', W).attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
       svg.selectAll('*').remove();
@@ -446,7 +467,7 @@
       if (hi - lo < 1e-9) { hi += 0.01; lo -= 0.01; }
       const y = d3.scaleLinear().domain([lo, hi]).nice(mobile ? 4 : 6).range([bottom, top]);
 
-      geo = { W, M, top, bottom, chartH, x, y, i0, i1, lanesTop, laneH, lanes, laneBottom: H - 6 };
+      geo = { W, M, top, bottom, chartH, x, y, i0, i1, lanesTop, laneH, lanes, laneBottom: lanesEnd };
       current = series;
 
       svg.append('defs').append('clipPath').attr('id', 'plot-clip')
@@ -561,6 +582,28 @@
         it.label = evs.length === 1
           ? `${evs[0].title}, ${fmtDate(evs[0].date)}. Move ${fmtPct(it.score)} against ${benchName()}.`
           : `${evs.length} announcements around ${fmtDate(dates[it.t])}. Move ${fmtPct(it.score)} against ${benchName()}.`;
+      }
+
+      if (coverWeeks && stripH) {
+        const gs = svg.append('g').attr('class', 'coverage');
+        const L = M.l, R = W - M.r;
+        gs.append('text').attr('class', 'lane-label')
+          .attr('x', L - 10).attr('y', stripTop + stripH / 2).attr('dy', '0.32em')
+          .attr('text-anchor', 'end').text('Source coverage');
+        gs.append('line').attr('class', 'coverage-base')
+          .attr('x1', L).attr('x2', R)
+          .attr('y1', stripTop + stripH).attr('y2', stripTop + stripH);
+        const visible = coverWeeks.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
+        gs.selectAll('rect').data(visible).join('rect')
+          .attr('class', (d) => 'coverage-week' + (d.share < 0.05 ? ' none' : ''))
+          .attr('x', (d) => Math.max(L, x(d.from)))
+          .attr('width', (d) => Math.max(1, Math.min(R, x(d.to)) - Math.max(L, x(d.from)) - 0.5))
+          .attr('y', (d) => stripTop + stripH * (1 - Math.max(d.share, 0.16)))
+          .attr('height', (d) => stripH * Math.max(d.share, 0.16))
+          .style('opacity', (d) => (d.share < 0.05 ? 1 : 0.35 + 0.65 * d.share))
+          .append('title')
+          .text((d) => `Week of ${fmtDate(d.from)}: ${d.share < 0.05 ? 'no archived snapshots'
+            : Math.round(d.share * 100) + '% of days covered by the source'}`);
       }
 
       const stemMax = laneH / 2 - (state.view === 'detailed' ? 3 : 8);

@@ -285,6 +285,10 @@ select {
 #chart .lane-label { fill: var(--ink); font-size: 12.5px; }
 #chart .lanes-heading { fill: var(--muted); font-size: 12px; }
 
+.coverage-base { stroke: var(--grid); stroke-width: 1; }
+.coverage-week { fill: var(--muted); }
+.coverage-week.none { fill: var(--down); opacity: 0.55; }
+
 .marker { cursor: pointer; outline: none; }
 .marker .stem { stroke-width: 3; stroke-linecap: round; }
 .marker.up .stem { stroke: var(--up); }

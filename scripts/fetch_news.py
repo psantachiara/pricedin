@@ -186,7 +186,8 @@ def main():
         valid_tickers = {t["symbol"] for t in config.get("tickers", [])}
 
     added, dropped, batch = [], [], []
-    for feed in rules.get("feeds", []):
+    live_feeds = [f for f in rules.get("feeds", []) if not f.get("backfillOnly")]
+    for feed in live_feeds:
         try:
             batch.extend(parse_feed(feed))
         except (requests.RequestException, ElementTree.ParseError) as err:
@@ -264,6 +265,12 @@ def main():
 
     save("events.json", events, indent=2)
     save("news_seen.json", seen)
+
+    today = now.strftime("%Y-%m-%d")
+    coverage = load("coverage.json", {}) or {}
+    if coverage.get("liveFrom", "9999") > today:
+        coverage["liveFrom"] = today
+        save("coverage.json", coverage)
 
 
 if __name__ == "__main__":
