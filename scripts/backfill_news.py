@@ -52,8 +52,25 @@ UA = {"User-Agent": "priced-in-backfill/1.0 (github pages site; one-off historic
 
 # Feed addresses change over time; the archive still holds the old ones.
 def legacy_urls(url):
-    name = url.rstrip("/").rsplit("/", 1)[-1]
-    return [f"https://feeds.a.dj.com/rss/{name}.xml", f"http://feeds.a.dj.com/rss/{name}.xml"]
+    """Other addresses the archive may hold the same feed under.
+
+    Dow Jones moved these feeds from feeds.a.dj.com to feeds.content.dowjones.io
+    and the archive holds captures under both, so both are asked for. Any other
+    publisher gets only the other scheme, because the archive's index keeps
+    http and https as separate records and one spelling often has captures the
+    other is missing.
+    """
+    if "dowjones.io" in url or "dj.com" in url:
+        name = url.rstrip("/").rsplit("/", 1)[-1]
+        if name.endswith(".xml"):
+            name = name[:-4]
+        return [f"https://feeds.a.dj.com/rss/{name}.xml",
+                f"http://feeds.a.dj.com/rss/{name}.xml"]
+    if url.startswith("https://"):
+        return ["http://" + url[len("https://"):]]
+    if url.startswith("http://"):
+        return ["https://" + url[len("http://"):]]
+    return []
 
 
 _counter_lock = threading.Lock()
