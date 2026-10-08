@@ -25,11 +25,6 @@
       "paywall": true
     },
     {
-      "name": "Guardian Technology",
-      "url": "https://www.theguardian.com/technology/rss",
-      "source": "The Guardian"
-    },
-    {
       "name": "BBC Technology",
       "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
       "source": "BBC"
