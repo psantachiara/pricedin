@@ -172,6 +172,60 @@
     "paywall": true
   },
   {
+    "id": "20250127-deepseek-won-t-sink-u-s-ai-titans",
+    "date": "2025-01-27",
+    "title": "DeepSeek Won't Sink U.S. AI Titans",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/deepseek-us-ai-stocks-nvidia-broadcom-6cdfae81?mod=rss_markets_main",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Panic fueling the selloff of Nvidia, Broadcom and other tech giants is overblown.",
+    "paywall": true
+  },
+  {
+    "id": "20250127-stocks-sink-in-broad-ai-rout-sparked-by-china-s",
+    "date": "2025-01-27",
+    "title": "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/nikkei-may-rise-as-weak-yen-raises-earnings-hopes-776a8056?mod=rss_markets_main",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "U.S. stocks were mostly lower, with the Nasdaq leading declines as makers of AI infrastructure suffered steep falls, many in the double digits. Nvidia was down 16%.",
+    "paywall": true
+  },
+  {
+    "id": "20250127-swiss-franc-japanese-yen-rise-as-deepseek-news-b",
+    "date": "2025-01-27",
+    "title": "Swiss franc, Japanese yen Rise as DeepSeek News Boosts Safe Havens",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/safe-haven-currencies-strengthen-amid-fears-over-global-tariffs-9964e17a?mod=rss_markets_main",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The Yen and Swiss Franc were stronger against the dollar as investors sought safe havens after Chinese start-up DeepSeek’s new AI model hit U.S. tech stocks.",
+    "paywall": true
+  },
+  {
     "id": "20250131-chatgpt-vs-claude-vs-deepseek-the-battle-to-be-m",
     "date": "2025-01-31",
     "title": "ChatGPT vs. Claude vs. DeepSeek: The Battle to Be My AI Work Assistant",
@@ -208,6 +262,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-23594330",
+    "paywall": true
+  },
+  {
+    "id": "20250205-eu-merger-watchdog-begins-probe-of-amd-s-5-billi",
+    "date": "2025-02-05",
+    "title": "EU Merger Watchdog Begins Probe of AMD’s $5 Billion ZT Systems Acquisition",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/eu-merger-watchdog-begins-probe-of-amds-5-billion-zt-systems-acquisition-427ff1c3?mod=pls_whats_news_us_business_f",
+    "org": "amd",
+    "category": "policy",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Advanced Micro Devices agreed to buy the designer of data-center equipment last year to challenge Nvidia’s dominance in AI.",
+    "thumbnail": "https://images.wsj.net/im-12320088",
     "paywall": true
   },
   {
@@ -294,6 +364,25 @@
     "paywall": true
   },
   {
+    "id": "20250221-chinese-stocks-rally-on-strong-alibaba-earnings",
+    "date": "2025-02-21",
+    "title": "Chinese Stocks Rally on Strong Alibaba Earnings, DeepSeek Optimism",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/chinese-stocks-rally-on-strong-alibaba-earnings-deepseek-optimism-25abc0eb?mod=rss_markets_main",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Upbeat earnings by big tech companies have added to a recent rally driven by Xi Jinping’s meeting with top corporate executives and the AI hype around DeepSeek.",
+    "thumbnail": "https://images.wsj.net/im-40778981",
+    "paywall": true
+  },
+  {
     "id": "20250225-ai-startup-anthropic-finalizing-3-5-billion-fund",
     "date": "2025-02-25",
     "title": "AI Startup Anthropic Finalizing $3.5 Billion Funding Round",
@@ -310,6 +399,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-06414925",
+    "paywall": true
+  },
+  {
+    "id": "20250225-nvidia-had-a-rough-start-to-2025-investors-still",
+    "date": "2025-02-25",
+    "title": "Nvidia Had a Rough Start to 2025. Investors Still Love the Stock.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-had-a-rough-start-to-2025-investors-still-love-the-stock-d34f5dac?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "A buy-the-dip approach is bolstering the chip maker as individual investors position for its shares to rally.",
+    "thumbnail": "https://images.wsj.net/im-77555891",
     "paywall": true
   },
   {
@@ -417,6 +522,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-59905392",
+    "paywall": true
+  },
+  {
+    "id": "20250228-the-score-home-depot-nvidia-tesla-and-more-stock",
+    "date": "2025-02-28",
+    "title": "The Score: Home Depot, Nvidia, Tesla and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-score-home-depot-nvidia-tesla-stellantis-hpq-b0cf641a?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-93282140",
     "paywall": true
   },
   {
@@ -571,6 +693,38 @@
     "manual": true
   },
   {
+    "id": "20250517-in-a-trade-war-walmart-lacks-some-of-amazon-s-am",
+    "date": "2025-05-17",
+    "title": "In a Trade War, Walmart Lacks Some of Amazon’s Ammunition",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/walmart-amazon-trade-war-660afaa9?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Walmart’s stock is pricier, but Amazon’s growth and profit potential are far greater.",
+    "thumbnail": "https://images.wsj.net/im-53029829",
+    "paywall": true
+  },
+  {
+    "id": "20250519-sanmina-to-acquire-zt-systems-manufacturing-busi",
+    "date": "2025-05-19",
+    "title": "Sanmina to Acquire ZT Systems’ Manufacturing Business from AMD",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/sanmina-to-acquire-zt-systems-manufacturing-business-from-amd-82e957b6?mod=rss_markets_main",
+    "org": "amd",
+    "category": "deals",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Sanmina agreed to acquire ZT Systems’ data center infrastructure manufacturing business from Advanced Micro Devices for up to $3 billion.",
+    "thumbnail": "https://images.wsj.net/im-39972096",
+    "paywall": true
+  },
+  {
     "id": "claude-4",
     "date": "2025-05-22",
     "title": "Anthropic releases Claude Opus 4 and Claude Sonnet 4",
@@ -583,6 +737,56 @@
       "GOOGL"
     ],
     "manual": true
+  },
+  {
+    "id": "20250529-nvidia-s-climb-carries-stocks-through-trade-reve",
+    "date": "2025-05-29",
+    "title": "Nvidia’s Climb Carries Stocks Through Trade Reversals",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-stock-nasdaq-sp-500-tariff-ruling-2d3e860d?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Earnings helped lift the chip maker’s shares 3.2% Thursday.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-20966473",
+    "paywall": true
+  },
+  {
+    "id": "20250530-the-score-e-l-f-beauty-tesla-nvidia-and-more-sto",
+    "date": "2025-05-30",
+    "title": "The Score: E.l.f. Beauty, Tesla, Nvidia, and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-score-e-l-f-beauty-tesla-nvidia-and-more-stocks-that-defined-the-week-c3ef3f9a?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-43876776",
+    "paywall": true
+  },
+  {
+    "id": "20250602-why-nvidia-can-t-just-quit-china",
+    "date": "2025-06-02",
+    "title": "Why Nvidia Can’t Just Quit China",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/why-nvidia-cant-just-quit-china-18e494f0?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Despite booming demand elsewhere, growth would still be hindered without the world’s second-largest economy.",
+    "thumbnail": "https://images.wsj.net/im-16326981",
+    "paywall": true
   },
   {
     "id": "meta-scale",
@@ -673,6 +877,22 @@
     "summary": "The agreement requires the e-commerce giant to give money back to customers and change its subscription practices.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-96048289",
+    "paywall": true
+  },
+  {
+    "id": "20250928-why-microsoft-has-lower-borrowing-costs-than-the",
+    "date": "2025-09-28",
+    "title": "Why Microsoft Has Lower Borrowing Costs Than the U.S.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/why-microsoft-has-lower-borrowing-costs-than-the-u-s-de841633?mod=rss_markets_main",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "There are several theories for why anyone would pay more for a bond from Microsoft or Johnson & Johnson than for a Treasury.",
+    "thumbnail": "https://images.wsj.net/im-32645963",
     "paywall": true
   },
   {
@@ -769,6 +989,24 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-70706368",
+    "paywall": true
+  },
+  {
+    "id": "20251002-openai-s-latest-funding-deal-returns-focus-to-ai",
+    "date": "2025-10-02",
+    "title": "OpenAI’s Latest Funding Deal Returns Focus to AI Economy, Lifting U.S. Stocks",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/openais-latest-funding-deal-returns-focus-to-ai-economy-lifting-u-s-stocks-87460af0?mod=rss_markets_main",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The Dow industrials, S&P 500 and Nasdaq composite all closed at record highs.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-69886166",
     "paywall": true
   },
   {
@@ -987,6 +1225,71 @@
     "paywall": true
   },
   {
+    "id": "20251010-the-score-delta-amd-tesla-and-more-stocks-that-d",
+    "date": "2025-10-10",
+    "title": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/delta-amd-tesla-pepsi-ford-serve-robotics-0991e881?mod=rss_markets_main",
+    "org": "amd",
+    "category": "markets",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-21417652",
+    "paywall": true
+  },
+  {
+    "id": "20251011-how-google-is-walking-the-ai-tightrope",
+    "date": "2025-10-11",
+    "title": "How Google Is Walking the AI Tightrope",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-search-ai-business-48e13735?mod=rss_Technology",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant is trying to have it both ways in regard to how its search business will fare.",
+    "thumbnail": "https://images.wsj.net/im-54913843",
+    "paywall": true
+  },
+  {
+    "id": "20251011-thinking-machines-lab-co-founder-departs-for-met",
+    "date": "2025-10-11",
+    "title": "Thinking Machines Lab Co-Founder Departs for Meta",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/thinking-machines-lab-co-founder-departs-for-meta-442d7461?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Andrew Tulloch is the latest big-name AI researcher to join the social-media giant.",
+    "thumbnail": "https://images.wsj.net/im-29647062",
+    "paywall": true
+  },
+  {
+    "id": "20251012-amd-amps-up-chip-war",
+    "date": "2025-10-12",
+    "title": "AMD Amps Up Chip War",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/amd-amps-up-chip-war-274560d5?mod=rss_Technology",
+    "org": "amd",
+    "category": "compute",
+    "tickers": [
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Plus. the “cobot” revolution, Musk’s xAI supercomputer bonanza and how AI is complicating career advice, in this edition of the Technology newsletter.",
+    "thumbnail": "https://images.wsj.net/im-36443879",
+    "paywall": true
+  },
+  {
     "id": "broadcom-openai",
     "date": "2025-10-13",
     "title": "OpenAI and Broadcom agree to build 10 GW of custom AI accelerators",
@@ -999,6 +1302,57 @@
       "NVDA"
     ],
     "manual": true
+  },
+  {
+    "id": "20251013-openai-broadcom-forge-multibillion-dollar-chip-d",
+    "date": "2025-10-13",
+    "title": "OpenAI, Broadcom Forge Multibillion-Dollar Chip-Development Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-broadcom-forge-multibillion-dollar-chip-development-deal-58d930d1?mod=rss_Technology",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AVGO"
+    ],
+    "backfill": true,
+    "summary": "The companies plan to deploy 10 gigawatts of custom AI chips over the next four years.",
+    "thumbnail": "https://images.wsj.net/im-35730563",
+    "paywall": true
+  },
+  {
+    "id": "20251014-google-to-invest-24-billion-in-ai-in-u-s-india",
+    "date": "2025-10-14",
+    "title": "Google to Invest $24 Billion in AI in U.S., India",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-plans-to-invest-9-billion-to-expand-ai-infrastructure-b0a88e0f?mod=rss_Technology",
+    "org": "google",
+    "category": "compute",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The company plans to establish its first AI hub in India, which will feature a purpose-built data center campus.",
+    "thumbnail": "https://images.wsj.net/im-21803276",
+    "paywall": true
+  },
+  {
+    "id": "20251014-oracle-amd-partner-on-new-ai-chip-deal",
+    "date": "2025-10-14",
+    "title": "Oracle, AMD Partner on New AI Chip Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/oracle-amd-partner-on-new-ai-chip-deal-56f4f96c?mod=rss_Technology",
+    "org": "amd",
+    "category": "deals",
+    "tickers": [
+      "AMD",
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "The data-center cluster will use tens of thousands of AMD’s newest artificial-intelligence chips.",
+    "thumbnail": "https://images.wsj.net/im-92489404",
+    "paywall": true
   },
   {
     "id": "20251014-soon-you-ll-be-able-to-shop-walmart-in-chatgpt-h",
@@ -1016,6 +1370,24 @@
     "summary": "The retail giant is signaling that online shopping is about to change.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-960764",
+    "paywall": true
+  },
+  {
+    "id": "20251014-why-broadcom-s-bet-on-openai-is-a-big-risk",
+    "date": "2025-10-14",
+    "title": "Why Broadcom’s Bet on OpenAI Is a Big Risk",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/why-broadcoms-bet-on-openai-is-a-big-gamble-f6631ced?mod=rss_markets_main",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AVGO"
+    ],
+    "backfill": true,
+    "summary": "Broadcom is hitching its future to Sam Altman’s vision.",
+    "thumbnail": "https://images.wsj.net/im-16543091",
     "paywall": true
   },
   {
@@ -1080,6 +1452,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-25957115",
+    "paywall": true
+  },
+  {
+    "id": "20251017-the-score-morgan-stanley-porsche-broadcom-walmar",
+    "date": "2025-10-17",
+    "title": "The Score: Morgan Stanley, Porsche, Broadcom, Walmart and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-score-morgan-stanley-porsche-broadcom-walmart-and-more-stocks-that-defined-the-week-2d979bb4?mod=rss_markets_main",
+    "org": "broadcom",
+    "category": "markets",
+    "tickers": [
+      "AVGO"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-52863509",
     "paywall": true
   },
   {
@@ -1338,6 +1727,23 @@
     "summary": "The remake, titled Halo: Campaign Evolved, will support multiplayer gaming across several consoles for the first time.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-42000314",
+    "paywall": true
+  },
+  {
+    "id": "20251024-the-score-netflix-amazon-com-six-flags-and-more",
+    "date": "2025-10-24",
+    "title": "The Score: Netflix, Amazon.com, Six Flags and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/netflix-amazon-six-flags-warner-mattel-and-more-stocks-that-defined-the-week-11effd7b?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-32411849",
     "paywall": true
   },
   {
