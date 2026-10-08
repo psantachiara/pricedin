@@ -1,5 +1,19 @@
 [
   {
+    "id": "20250103-nick-clegg-leaves-meta-ahead-of-trump-s-return-a",
+    "date": "2025-01-03",
+    "title": "Nick Clegg leaves Meta ahead of Trump's return as US president",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cgrw785585wo",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "He will be replaced by Republican Joel Kaplan, a former White House deputy chief of staff under President Bush."
+  },
+  {
     "id": "20250105-amazon-s-prime-video-acquires-melania-trump-film",
     "date": "2025-01-05",
     "title": "Amazon's Prime Video Acquires Melania Trump Film",
@@ -32,6 +46,66 @@
     "paywall": true
   },
   {
+    "id": "20250107-nvidia-unveils-robot-ambitions-and-powerful-new",
+    "date": "2025-01-07",
+    "title": "Nvidia unveils robot ambitions and powerful new gaming chips",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0q0jl8pl9ko",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The announcement was part of Mr Huang's address at CES, an annual technology show in Las Vegas."
+  },
+  {
+    "id": "20250107-ufc-boss-to-join-board-of-facebook-owner-meta",
+    "date": "2025-01-07",
+    "title": "UFC boss to join board of Facebook owner Meta",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c627p8leww1o",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "It comes days after former UK deputy PM Sir Nick Clegg left his top job at the social media giant.",
+    "afterClose": true
+  },
+  {
+    "id": "20250108-chatgpt-creator-denies-sister-s-childhood-rape-c",
+    "date": "2025-01-08",
+    "title": "ChatGPT creator denies sister's childhood rape claim",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cz6lq6x2gd9o",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Ann Altman filed a lawsuit alleging her brother sexually abused her between 1997 and 2006."
+  },
+  {
+    "id": "20250111-meta-and-amazon-scale-back-diversity-initiatives",
+    "date": "2025-01-11",
+    "title": "Meta and Amazon scale back diversity initiatives",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cgmy7xpw3pyo",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META",
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The companies are among the latest major corporations to alter their diversity programmes since Trump's re-election.",
+    "afterClose": true
+  },
+  {
     "id": "20250114-google-comes-under-u-k-investigation-over-search",
     "date": "2025-01-14",
     "title": "Google Comes Under U.K. Investigation Over Search Services",
@@ -46,6 +120,20 @@
     "summary": "It will be the first investigation under a new digital markets competition regime that could force the company to change its conduct.",
     "thumbnail": "https://images.wsj.net/im-628712/medium",
     "paywall": true
+  },
+  {
+    "id": "20250114-google-faces-uk-investigation-over-search-domina",
+    "date": "2025-01-14",
+    "title": "Google faces UK investigation over search dominance",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5y6x45w6ejo",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant accounts for 90% of web searches in the UK - the regulator will probe whether that harms consumers and rivals."
   },
   {
     "id": "deepseek-r1",
@@ -94,6 +182,21 @@
     "summary": "The government appointed Douglas Gurr as interim chairman of the Competition and Markets Authority after pressuring the regulator to do more to spur investment and economic growth.",
     "thumbnail": "https://images.wsj.net/im-87227421/medium",
     "paywall": true
+  },
+  {
+    "id": "20250123-chatgpt-back-online-after-outage-which-hit-thous",
+    "date": "2025-01-23",
+    "title": "ChatGPT back online after outage which hit thousands worldwide",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c30d80lg579o",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "It comes a day after owner OpenAI announced a massive investment in artificial intelligence (AI)."
   },
   {
     "id": "20250123-nvidia-supplier-sk-hynix-posts-record-profit-on",
@@ -190,6 +293,38 @@
     "paywall": true
   },
   {
+    "id": "20250127-is-china-s-ai-tool-deepseek-as-good-as-it-seems",
+    "date": "2025-01-27",
+    "title": "Is China's AI tool DeepSeek as good as it seems?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx2jxvn0r51o",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The artificial intelligence (AI) tool has shocked US markets after bursting onto the scene."
+  },
+  {
+    "id": "20250127-nvidia-shares-sink-as-chinese-ai-app-spooks-mark",
+    "date": "2025-01-27",
+    "title": "Nvidia shares sink as Chinese AI app spooks markets",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0qw7z2v1pgo",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Share prices in US and European firms fall as the Chinese technology threatens to disrupt the AI industry.",
+    "afterClose": true
+  },
+  {
     "id": "20250127-stocks-sink-in-broad-ai-rout-sparked-by-china-s",
     "date": "2025-01-27",
     "title": "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
@@ -224,6 +359,134 @@
     "backfill": true,
     "summary": "The Yen and Swiss Franc were stronger against the dollar as investors sought safe havens after Chinese start-up DeepSeek’s new AI model hit U.S. tech stocks.",
     "paywall": true
+  },
+  {
+    "id": "20250128-china-s-deepseek-ai-shakes-industry-and-dents-am",
+    "date": "2025-01-28",
+    "title": "China's DeepSeek AI shakes industry and dents America's swagger",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cd643wx888qo",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The app spooked the markets as well as the bullish sense of American superiority in AI development."
+  },
+  {
+    "id": "20250128-deepseek-vs-chatgpt-how-do-they-compare",
+    "date": "2025-01-28",
+    "title": "DeepSeek vs ChatGPT - how do they compare?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cqx9zn27700o",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The Chinese AI app has raced to the top of the download charts - does it perform as well as its US rivals?"
+  },
+  {
+    "id": "20250128-microsoft-in-talks-to-buy-tiktok-trump-says",
+    "date": "2025-01-28",
+    "title": "Microsoft in talks to buy TikTok, Trump says",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4g3z55zz7xo",
+    "org": "microsoft",
+    "category": "deals",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The US President says he would like to see a \"bidding war\" over the sale of the social media app.",
+    "afterClose": true
+  },
+  {
+    "id": "20250128-us-tech-stocks-steady-after-deepseek-ai-app-shoc",
+    "date": "2025-01-28",
+    "title": "US tech stocks steady after DeepSeek AI app shock",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4gpq01rvd4o",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "DeepSeek's claim that its model was made at a fraction of the cost of its rivals has rocked the AI industry."
+  },
+  {
+    "id": "20250129-be-careful-with-deepseek-australia-says-so-is-it",
+    "date": "2025-01-29",
+    "title": "Be careful with DeepSeek, Australia says - so is it safe to use?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx2k7r5nrvpo",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Ed Husic is the first member of a Western government to raise privacy concerns about the Chinese chatbot."
+  },
+  {
+    "id": "20250129-openai-says-chinese-rivals-using-its-work-for-th",
+    "date": "2025-01-29",
+    "title": "OpenAI says Chinese rivals using its work for their AI apps",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c9vm1m8wpr9o",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "ChatGPT maker says it will need extra protection from US government, following emergence of Chinese rival, DeepSeek."
+  },
+  {
+    "id": "20250130-meta-to-pay-25m-to-settle-trump-lawsuit-over-ban",
+    "date": "2025-01-30",
+    "title": "Meta to pay $25m to settle Trump lawsuit over ban",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c79d74nppvpo",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The president sued the firm in 2021 over the suspension of his accounts after the 6 January Capitol riots.",
+    "afterClose": true
+  },
+  {
+    "id": "20250130-mexico-asks-google-maps-not-to-rename-gulf-of-me",
+    "date": "2025-01-30",
+    "title": "Mexico asks Google Maps not to rename Gulf of Mexico",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyn1rgngn8o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "US President Donald Trump has ordered that the body of water be renamed the Gulf of America."
   },
   {
     "id": "20250131-chatgpt-vs-claude-vs-deepseek-the-battle-to-be-m",
@@ -263,6 +526,37 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-23594330",
     "paywall": true
+  },
+  {
+    "id": "20250204-australia-bans-deepseek-on-government-devices-ov",
+    "date": "2025-02-04",
+    "title": "Australia bans DeepSeek on government devices over security risk",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8d95v0nr1yo",
+    "org": "deepseek",
+    "category": "policy",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "The Australian government says the Chinese AI app is a threat to it and its assets."
+  },
+  {
+    "id": "20250205-concern-over-google-ending-ban-on-ai-weapons",
+    "date": "2025-02-05",
+    "title": "Concern over Google ending ban on AI weapons",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy081nqx2zjo",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant previously ruled out applications that were \"likely to cause harm\"."
   },
   {
     "id": "20250205-eu-merger-watchdog-begins-probe-of-amd-s-5-billi",
@@ -328,6 +622,20 @@
     "paywall": true
   },
   {
+    "id": "20250206-google-remakes-super-bowl-ad-after-ai-cheese-gaf",
+    "date": "2025-02-06",
+    "title": "Google remakes Super Bowl ad after AI cheese gaffe",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx2j15r1g09o",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Its Gemini tool wildly overestimated global gouda consumption in ad that was meant to show off its capabilities."
+  },
+  {
     "id": "20250206-lawmakers-push-to-ban-deepseek-app-from-u-s-gove",
     "date": "2025-02-06",
     "title": "Lawmakers Push to Ban DeepSeek App From U.S. Government Devices",
@@ -362,6 +670,169 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-77747343",
     "paywall": true
+  },
+  {
+    "id": "20250211-we-are-not-for-sale-chatgpt-boss-says-after-musk",
+    "date": "2025-02-11",
+    "title": "'We are not for sale,' ChatGPT boss says after Musk bid",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cpdx75zgg88o",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Musk's attorney confirmed he had submitted the bid for \"all assets\" of the company on Monday."
+  },
+  {
+    "id": "20250211-watch-why-google-maps-renamed-the-gulf-of-mexico",
+    "date": "2025-02-11",
+    "title": "Watch: Why Google Maps renamed the Gulf of Mexico",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/videos/cy7gzk8d2r0o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The Gulf of Mexico has been renamed the Gulf of America on Google Maps in the US. BBC Verify explains why Google made the change."
+  },
+  {
+    "id": "20250213-ex-google-boss-fears-for-ai-bin-laden-scenario",
+    "date": "2025-02-13",
+    "title": "Ex-Google boss fears for AI 'Bin Laden scenario'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5y6eq2zxlno",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Eric Schmidt says AI technology could \"harm innocent people\" if it ends up in the wrong hands."
+  },
+  {
+    "id": "20250213-google-maps-blocks-gulf-of-america-reviews-after",
+    "date": "2025-02-13",
+    "title": "Google Maps blocks Gulf of America reviews after rename criticism",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/crlky380wd7o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "It controversially updated the Gulf's name for US users after President Trump ordered it to be changed."
+  },
+  {
+    "id": "20250214-tiktok-returns-to-apple-and-google-app-stores-in",
+    "date": "2025-02-14",
+    "title": "TikTok returns to Apple and Google app stores in the US",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4g91kyjw07o",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "TikTok is again available on app stores in the US after President Donald Trump delayed a ban on the app.",
+    "afterClose": true
+  },
+  {
+    "id": "20250216-critics-say-new-google-rules-put-profits-over-pr",
+    "date": "2025-02-16",
+    "title": "Critics say new Google rules put profits over privacy",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cm21g0052dno",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Google is allowing advertisers to collect more personal information, which is harder for users to control."
+  },
+  {
+    "id": "20250217-meta-plans-globe-spanning-sub-sea-internet-cable",
+    "date": "2025-02-17",
+    "title": "Meta plans globe-spanning sub-sea internet cable",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ckgrgz8271go",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "It is the latest move from Meta to invest more in global connectivity rather than its apps."
+  },
+  {
+    "id": "20250217-musk-v-altman-what-might-really-be-behind-failed",
+    "date": "2025-02-17",
+    "title": "Musk v Altman: What might really be behind failed bid for OpenAI",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ce8yl47p4k3o",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Elon Musk's goal might be hindering the growth potential of the AI firm of his rival Sam Altman, experts say."
+  },
+  {
+    "id": "20250217-s-korea-removes-deepseek-from-app-stores-over-pr",
+    "date": "2025-02-17",
+    "title": "S Korea removes Deepseek from app stores over privacy concerns",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyzym0vn8go",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "App stores in South Korea have removed DeepSeek over concerns about how it manages users' data."
+  },
+  {
+    "id": "20250218-deepseek-shared-user-data-with-tiktok-owner-byte",
+    "date": "2025-02-18",
+    "title": "DeepSeek 'shared user data' with TikTok owner ByteDance",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4gex0x87g4o",
+    "org": "deepseek",
+    "category": "policy",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "South Korea's data protection regulator says user data was sent to the Chinese owner of TikTok."
+  },
+  {
+    "id": "20250219-powerful-quantum-computers-in-years-not-decades",
+    "date": "2025-02-19",
+    "title": "Powerful quantum computers in years not decades, says Microsoft",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cj3e3252gj8o",
+    "org": "microsoft",
+    "category": "compute",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "It says a new chip it has created could end up being as important a breakthrough as the semiconductor."
   },
   {
     "id": "20250221-chinese-stocks-rally-on-strong-alibaba-earnings",
@@ -433,6 +904,20 @@
     "paywall": true
   },
   {
+    "id": "20250227-amazon-joins-quantum-race-with-cat-qubit-powered",
+    "date": "2025-02-27",
+    "title": "Amazon joins quantum race with 'cat qubit' powered chip",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cly331r4p48o",
+    "org": "amazon",
+    "category": "compute",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The prototype chip it dubs Ocelot follows similar announcements by Microsoft and Google"
+  },
+  {
     "id": "20250227-google-tweak-creates-crisis-for-product-review-s",
     "date": "2025-02-27",
     "title": "Google Tweak Creates Crisis for Product-Review Sites",
@@ -492,6 +977,20 @@
       "MSFT"
     ],
     "manual": true
+  },
+  {
+    "id": "20250228-microsoft-announces-skype-will-close-in-may",
+    "date": "2025-02-28",
+    "title": "Microsoft announces Skype will close in May",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cn7vxlrvxyeo",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The internet chat and phone service, which is owned by Microsoft, made the announcement on X."
   },
   {
     "id": "20250228-microsoft-to-close-skype-shift-users-to-teams",
@@ -559,6 +1058,35 @@
     "paywall": true
   },
   {
+    "id": "20250305-uk-competition-watchdog-drops-microsoft-openai-p",
+    "date": "2025-03-05",
+    "title": "UK competition watchdog drops Microsoft-OpenAI probe",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyd87dxezvo",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Digital rights campaigners say it shows the regulator has given into Big Tech and been \"defanged.\""
+  },
+  {
+    "id": "20250311-google-chromecast-users-fury-at-second-day-of-tv",
+    "date": "2025-03-11",
+    "title": "Google Chromecast users' fury at second day of TV streaming issue",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ckgzm1lgv22o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Google says it is aware of an issue impacting some Chromecast devices and is working to fix."
+  },
+  {
     "id": "20250318-thanks-to-nvidia-ai-will-soon-take-your-order-at",
     "date": "2025-03-18",
     "title": "Thanks to Nvidia, AI Will Soon Take Your Order at Taco Bell and Pizza Hut",
@@ -574,6 +1102,64 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-29030289",
     "paywall": true
+  },
+  {
+    "id": "20250319-google-agrees-to-pay-28m-in-racial-bias-lawsuit",
+    "date": "2025-03-19",
+    "title": "Google agrees to pay $28m in racial bias lawsuit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c39v2ykwgdno",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant confirmed it had \"reached a resolution\" but rejected the allegations made against it."
+  },
+  {
+    "id": "20250320-why-elon-musk-s-grok-is-kicking-up-a-storm-in-in",
+    "date": "2025-03-20",
+    "title": "Why Elon Musk's Grok is kicking up a storm in India",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cd65p1pv8pdo",
+    "org": "xai",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chatbot has become an \"unfiltered and unhinged\" digital sensation in India.",
+    "afterClose": true
+  },
+  {
+    "id": "20250321-man-files-complaint-after-chatgpt-said-he-killed",
+    "date": "2025-03-21",
+    "title": "Man files complaint after ChatGPT said he killed his children",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0kgydkr516o",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The Norwegian man says the chatbot's maker OpenAI should be fined over the completely inaccurate information."
+  },
+  {
+    "id": "20250324-meta-considers-charging-for-ad-free-facebook-and",
+    "date": "2025-03-24",
+    "title": "Meta considers charging for ad-free Facebook and Instagram in the UK",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0kglle0p3vo",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The firm is considering asking people to pay to remove ads if they do not want their data to be tracked."
   },
   {
     "id": "gemini-2-5",
@@ -602,6 +1188,21 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-47237081",
     "paywall": true
+  },
+  {
+    "id": "20250329-musk-s-xai-buys-his-social-media-platform-x",
+    "date": "2025-03-29",
+    "title": "Musk's xAI buys his social media platform X",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ceqjq11202ro",
+    "org": "xai",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The move could be aimed at protecting investors, who helped him buy purchase X, from losing money.",
+    "afterClose": true
   },
   {
     "id": "20250330-the-five-things-you-shouldn-t-tell-chatgpt",
@@ -665,6 +1266,20 @@
     "paywall": true
   },
   {
+    "id": "20250403-google-ai-presented-my-april-fools-story-as-real",
+    "date": "2025-04-03",
+    "title": "'Google AI presented my April Fools' story as real news'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cly12egqq5ko",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Journalist Ben Black was \"shocked\" to discover his fake news from five years ago used by AI."
+  },
+  {
     "id": "20250403-apple-and-amazon-promised-us-revolutionary-ai-we",
     "date": "2025-04-03",
     "title": "Apple and Amazon Promised Us Revolutionary AI. We’re Still Waiting.",
@@ -680,6 +1295,21 @@
     "paywall": true
   },
   {
+    "id": "20250404-meta-and-pinterest-make-secret-donation-to-molly",
+    "date": "2025-04-04",
+    "title": "Meta and Pinterest make secret donation to Molly Russell charity",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx208nkvw83o",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta and Pinterest have agreed to donate to a charity set up in the name of schoolgirl Molly Russell.",
+    "afterClose": true
+  },
+  {
     "id": "llama-4",
     "date": "2025-04-05",
     "title": "Meta releases Llama 4 Scout and Maverick",
@@ -691,6 +1321,78 @@
       "META"
     ],
     "manual": true
+  },
+  {
+    "id": "20250408-meta-expands-restrictions-for-teen-users-to-face",
+    "date": "2025-04-08",
+    "title": "Meta expands restrictions for teen users to Facebook and Messenger",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cvgqe6yv0yzo",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The system imposes more restricted settings on younger users - though campaigners say it's unclear what difference they make."
+  },
+  {
+    "id": "20250411-microsoft-rolls-out-ai-screenshot-tool-dubbed-pr",
+    "date": "2025-04-11",
+    "title": "Microsoft rolls out AI screenshot tool dubbed 'privacy nightmare'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cj3xjrj7v78o",
+    "org": "microsoft",
+    "category": "model",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Recall had been dubbed a \"privacy nightmare\" but has made changes since its original launch was pulled."
+  },
+  {
+    "id": "20250411-openai-sues-elon-musk-claiming-bad-faith-tactics",
+    "date": "2025-04-11",
+    "title": "OpenAI sues Elon Musk claiming 'bad-faith tactics'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cg4114271x2o",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Claim follows Mr Musk's own lawsuit earlier this year against OpenAI's Sam Altman."
+  },
+  {
+    "id": "20250417-google-has-illegal-advertising-monopoly-judge-ru",
+    "date": "2025-04-17",
+    "title": "Google has illegal advertising monopoly, judge rules",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3674nl7g74o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "It is the second major case Google has lost in a year, after it was found to have a monopoly on online search.",
+    "afterClose": true
+  },
+  {
+    "id": "20250418-nvidia-the-ai-chip-giant-caught-between-us-and-c",
+    "date": "2025-04-18",
+    "title": "Nvidia: The AI chip giant caught between US and China",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cedy6gl99eno",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Led by Jensen Huang, dubbed the 'Taylor Swift of tech', the chip giant has become pivotal in the race for AI supremacy."
   },
   {
     "id": "20250517-in-a-trade-war-walmart-lacks-some-of-amazon-s-am",
@@ -802,6 +1504,108 @@
     "manual": true
   },
   {
+    "id": "20250715-meta-to-spend-hundreds-of-billions-to-build-ai-d",
+    "date": "2025-07-15",
+    "title": "Meta to spend hundreds of billions to build AI data centres",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1e02vx55wpo?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "compute",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The founder of the social media giant said one of the sites would cover an area nearly the size of Manhattan.",
+    "afterClose": true
+  },
+  {
+    "id": "20250715-nvidia-says-it-will-restart-ai-chip-sales-to-chi",
+    "date": "2025-07-15",
+    "title": "Nvidia says it will restart AI chip sales to China",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy8g22n32d0o?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The move would reverse a US ban on sales of the high-end chip to the world's second largest economy."
+  },
+  {
+    "id": "20250717-meta-investors-settle-8bn-lawsuit-with-zuckerber",
+    "date": "2025-07-17",
+    "title": "Meta investors settle $8bn lawsuit with Zuckerberg over Facebook privacy",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx2jmledvr3o?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Shareholders accused Meta leaders of damaging the company by allowing repeat violations of Facebook users' privacy.",
+    "afterClose": true
+  },
+  {
+    "id": "20250722-openai-and-uk-sign-deal-to-use-ai-in-public-serv",
+    "date": "2025-07-22",
+    "title": "OpenAI and UK sign deal to use AI in public services",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/czdv68gejm7o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The US tech firm behind ChatGPT say it will work with the UK government to 'deliver prosperity for all'."
+  },
+  {
+    "id": "20250727-google-failed-to-warn-10-million-of-turkey-earth",
+    "date": "2025-07-27",
+    "title": "Google failed to warn 10 million of Turkey earthquake severity",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c77v2kx304go?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The tech giant said only 469 serious warnings were sent out ahead of the 7.8 magnitude quake."
+  },
+  {
+    "id": "20250729-google-launches-new-ai-search-feature-in-uk",
+    "date": "2025-07-29",
+    "title": "Google launches new AI search feature in UK",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyj4zky4zwo?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The new tool marks a significant change for the search giant but raises questions for advertisers."
+  },
+  {
+    "id": "20250731-meta-profits-surge-helps-drive-zuckerberg-s-ai-a",
+    "date": "2025-07-31",
+    "title": "Meta profits surge helps drive Zuckerberg’s AI ambitions",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cqlernrw62yo?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Facebook, Instagram and WhatsApp-owner is pumping billions of dollars into artificial intelligence projects.",
+    "afterClose": true
+  },
+  {
     "id": "gpt-5",
     "date": "2025-08-07",
     "title": "OpenAI releases GPT-5",
@@ -813,6 +1617,21 @@
       "MSFT"
     ],
     "manual": true
+  },
+  {
+    "id": "20250825-musk-firms-sue-apple-and-openai-alleging-they-hu",
+    "date": "2025-08-25",
+    "title": "Musk firms sue Apple and OpenAI, alleging they hurt competition",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cly6xjg9nnyo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The lawsuit takes aim at Apple's decision to integrate ChatGPT into the operating systems of its smartphones."
   },
   {
     "id": "20250827-nvidia-predicts-cooler-growth-after-sales-record",
@@ -832,6 +1651,78 @@
     "paywall": true
   },
   {
+    "id": "20250828-ai-boom-boosts-nvidia-despite-geopolitical-issue",
+    "date": "2025-08-28",
+    "title": "AI boom boosts Nvidia despite 'geopolitical issues'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3wnj8611y7o?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia remains exposed to geopolitical tensions between the US and China."
+  },
+  {
+    "id": "20250901-meta-to-stop-its-ai-chatbots-from-talking-to-tee",
+    "date": "2025-09-01",
+    "title": "Meta to stop its AI chatbots from talking to teens about suicide",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c2kzl79jv15o?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The firm says it will add more guardrails \"as an extra precaution\" and temporarily limit chatbots teens can use."
+  },
+  {
+    "id": "20250902-google-avoids-break-up-but-must-share-data-with",
+    "date": "2025-09-02",
+    "title": "Google avoids break-up but must share data with rivals",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cp8zdrenm1zo?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "A case over the US tech giant's dominance in search allows it to hang on to its Chrome web browser.",
+    "afterClose": true
+  },
+  {
+    "id": "20250903-a-let-off-or-tougher-than-it-looks-what-the-goog",
+    "date": "2025-09-03",
+    "title": "A let-off or tougher than it looks? What the Google monopoly ruling means",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx2q2kkdedno?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The search giant is not being broken up -so how much will it be affected by the remedies a judge has instead ordered?"
+  },
+  {
+    "id": "20250903-family-of-dead-teen-say-chatgpt-s-new-parental-c",
+    "date": "2025-09-03",
+    "title": "Family of dead teen say ChatGPT's new parental controls not enough",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cg505mn84ydo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "OpenAI has introduced new rules in the wake of the family's allegations that ChatGPT encouraged their child to take his own life."
+  },
+  {
     "id": "20250904-amazon-s-satellite-internet-venture-signs-up-its",
     "date": "2025-09-04",
     "title": "Amazon’s Satellite Internet Venture Signs Up Its First Airline",
@@ -846,6 +1737,135 @@
     "summary": "JetBlue plans to use Kuiper satellite internet on 25% of its fleet, with some passengers gaining access to the service in 2027.",
     "thumbnail": "https://images.wsj.net/im-98685384",
     "paywall": true
+  },
+  {
+    "id": "20250904-google-told-to-pay-425m-in-privacy-lawsuit",
+    "date": "2025-09-04",
+    "title": "Google told to pay $425m in privacy lawsuit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3dr91z0g4zo?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Google says the decision misunderstands how its products work, and it will appeal the ruling."
+  },
+  {
+    "id": "20250905-google-fined-2-95bn-by-eu-for-abusing-advertisin",
+    "date": "2025-09-05",
+    "title": "Google fined €2.95bn by EU for abusing advertising dominance",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1wgn3lre14o?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The Commission said competitors faced higher costs and reduced revenues as a result."
+  },
+  {
+    "id": "20250907-microsoft-cloud-services-disrupted-by-red-sea-ca",
+    "date": "2025-09-07",
+    "title": "Microsoft cloud services disrupted by Red Sea cable cuts",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3rvx470yg8o?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "model",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Unexplained damage to the cables is causing delays in traffic going through the Middle East, the tech giant says."
+  },
+  {
+    "id": "20250910-meta-covered-up-potential-child-harms-whistleblo",
+    "date": "2025-09-10",
+    "title": "Meta covered up potential child harms, whistleblowers claim",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5y8x3md05no?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta denies the allegations and described the \"claims at the heart\" of the Senate hearing as \"nonsense\".",
+    "afterClose": true
+  },
+  {
+    "id": "20250915-ai-challenges-the-dominance-of-google-search",
+    "date": "2025-09-15",
+    "title": "AI challenges the dominance of Google search",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1dx9qy1eeno?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The popularity of ChatGPT has raised questions about the future of traditional Google searches.",
+    "afterClose": true
+  },
+  {
+    "id": "20250916-google-owner-reveals-5bn-ai-investment-in-uk-ahe",
+    "date": "2025-09-16",
+    "title": "Google owner reveals £5bn AI investment in UK ahead of Trump visit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/crmek723dz9o?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Google's president and chief investment officer Ruth Porat tells the BBC there are \"profound opportunities in the UK\"."
+  },
+  {
+    "id": "20250917-ai-could-boost-uk-economy-by-10-in-five-years-sa",
+    "date": "2025-09-17",
+    "title": "AI could boost UK economy by 10% in five years, says Microsoft boss",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c7016ljre03o?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "deals",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Boss Satya Nadella said it was the biggest investment the firm had made outside of the US.",
+    "afterClose": true
+  },
+  {
+    "id": "20250917-nvidia-boss-disappointed-by-reported-china-chip",
+    "date": "2025-09-17",
+    "title": "Nvidia boss 'disappointed' by reported China chip ban",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cqxz29pe1v0o?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Jensen Huang said the US needs \"to make sure that that people can access this technology from all over the world\"."
+  },
+  {
+    "id": "20250918-chipmaker-nvidia-to-invest-5bn-in-rival-intel",
+    "date": "2025-09-18",
+    "title": "Chipmaker Nvidia to invest $5bn in rival Intel",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4gjd1mnjpyo?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The two American chipmakers will partner to make personal computer and data centre chips, in a lifeline for Intel as it struggles to profit from the AI boom."
   },
   {
     "id": "nvidia-openai-10gw",
@@ -878,6 +1898,21 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-96048289",
     "paywall": true
+  },
+  {
+    "id": "20250925-microsoft-cuts-off-some-services-used-by-israeli",
+    "date": "2025-09-25",
+    "title": "Microsoft cuts off some services used by Israeli military unit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cvgjx0zve2no?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The tech giant said its products were not intended to be used for mass surveillance of civilians.",
+    "afterClose": true
   },
   {
     "id": "20250928-why-microsoft-has-lower-borrowing-costs-than-the",
@@ -1076,6 +2111,20 @@
     "paywall": true
   },
   {
+    "id": "20251005-how-china-is-challenging-nvidia-s-ai-chip-domina",
+    "date": "2025-10-05",
+    "title": "How China is challenging Nvidia's AI chip dominance",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cgmz2vm3yv8o?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Beijing has urged local firms to use homemade chips. But is China ready to turn away from Nvidia?"
+  },
+  {
     "id": "amd-openai",
     "date": "2025-10-06",
     "title": "AMD and OpenAI sign a 6 GW GPU agreement that includes warrants for AMD shares",
@@ -1176,6 +2225,22 @@
     "paywall": true
   },
   {
+    "id": "20251009-chatgpt-image-snares-suspect-in-deadly-pacific-p",
+    "date": "2025-10-09",
+    "title": "ChatGPT image snares suspect in deadly Pacific Palisades fire",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8exz5yg14ko?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Investigators say evidence collected from the 29-year-old's devices showed an AI image of a burning city.",
+    "afterClose": true
+  },
+  {
     "id": "20251010-google-labeled-u-k-tech-gatekeeper-under-new-com",
     "date": "2025-10-10",
     "title": "Google Labeled U.K. Tech Gatekeeper Under New Competition Law",
@@ -1189,6 +2254,20 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-90418563",
     "paywall": true
+  },
+  {
+    "id": "20251010-google-may-be-forced-to-make-changes-to-search-e",
+    "date": "2025-10-10",
+    "title": "Google may be forced to make changes to search engine in UK",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c98d7p8l9pro?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The regulator has given it \"strategic market status\", opening the door to what it calls \"proportionate interventions.\""
   },
   {
     "id": "20251010-microsoft-anthropic-hire-former-british-prime-mi",
@@ -1207,6 +2286,21 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-27422350",
     "paywall": true
+  },
+  {
+    "id": "20251010-openai-video-app-sora-hits-1-million-downloads-f",
+    "date": "2025-10-10",
+    "title": "OpenAI video app Sora hits 1 million downloads faster than ChatGPT",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/crkjgrvg6z4o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The popular AI tool generates ten second long realistic-looking videos from simple text prompts."
   },
   {
     "id": "20251010-the-old-school-tech-ceo-leading-nvidia-s-main-ri",
@@ -1274,6 +2368,20 @@
     "paywall": true
   },
   {
+    "id": "20251011-windows-10-users-urged-to-prepare-for-microsoft",
+    "date": "2025-10-11",
+    "title": "Windows 10 users urged to prepare for Microsoft pulling support",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy0vzegkqweo?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Microsoft is ending support for Windows 10, which could make users vulnerable - here's how to get Windows 11."
+  },
+  {
     "id": "20251012-amd-amps-up-chip-war",
     "date": "2025-10-12",
     "title": "AMD Amps Up Chip War",
@@ -1320,6 +2428,22 @@
     "summary": "The companies plan to deploy 10 gigawatts of custom AI chips over the next four years.",
     "thumbnail": "https://images.wsj.net/im-35730563",
     "paywall": true
+  },
+  {
+    "id": "20251014-chatgpt-will-soon-allow-erotica-for-verified-adu",
+    "date": "2025-10-14",
+    "title": "ChatGPT will soon allow erotica for verified adults, says OpenAI boss",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cpd2qv58yl5o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "CEO Sam Altman says upcoming versions of the popular chatbot would enable it to behave in a more human-like way - \"but only if you want it\".",
+    "afterClose": true
   },
   {
     "id": "20251014-google-to-invest-24-billion-in-ai-in-u-s-india",
@@ -1391,6 +2515,21 @@
     "paywall": true
   },
   {
+    "id": "20251015-is-microsoft-s-first-ever-handheld-xbox-console",
+    "date": "2025-10-15",
+    "title": "Is Microsoft's first ever handheld Xbox console worth the wait?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cqjwlnvx9jpo?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The ROG Xbox Ally works with Game Pass out of the box, meaning gamers start off with hundreds of games.",
+    "afterClose": true
+  },
+  {
     "id": "20251015-oracle-co-ceos-defend-massive-data-center-expans",
     "date": "2025-10-15",
     "title": "Oracle Co-CEOs Defend Massive Data-Center Expansion, Plan to Offer AI Ecosystem",
@@ -1421,6 +2560,21 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-54336010",
     "paywall": true
+  },
+  {
+    "id": "20251017-openai-stops-disrespectful-martin-luther-king-jr",
+    "date": "2025-10-17",
+    "title": "OpenAI stops 'disrespectful' Martin Luther King Jr deepfakes",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5y0g79xevxo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The intervention has not stopped Sora users generating and sharing fake clips of other historical figures."
   },
   {
     "id": "20251017-openai-s-chip-strategy-pair-nvidia-s-chocolate-w",
@@ -1503,6 +2657,35 @@
     "paywall": true
   },
   {
+    "id": "20251021-aws-outage-are-we-relying-too-much-on-us-big-tec",
+    "date": "2025-10-21",
+    "title": "AWS outage: Are we relying too much on US big tech?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0jdgp6n45po?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Monday's enormous outage has sharpened the debate over whether the world is too reliant on a few US firms."
+  },
+  {
+    "id": "20251021-amazon-outage-resolved-as-snapchat-and-banks-amo",
+    "date": "2025-10-21",
+    "title": "Amazon outage 'resolved' as Snapchat and banks among sites impacted",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c20pgp3nx07o?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Platform outage checker Downdetector said the issues have impacted more than 1,000 different businesses.",
+    "afterClose": true
+  },
+  {
     "id": "20251021-blackrock-among-biggest-investors-in-meta-s-gian",
     "date": "2025-10-21",
     "title": "BlackRock Among Biggest Investors in Meta’s Giant Data-Center Debt Deal",
@@ -1569,6 +2752,20 @@
     "paywall": true
   },
   {
+    "id": "20251021-what-caused-the-aws-outage-and-why-did-it-make-t",
+    "date": "2025-10-21",
+    "title": "What caused the AWS outage - and why did it make the internet fall apart?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cev1en9077ro?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The outage at Amazon services has impacted over 1,000 companies and affected millions of internet users."
+  },
+  {
     "id": "20251022-activist-robby-starbuck-sues-google-over-claims",
     "date": "2025-10-22",
     "title": "Activist Robby Starbuck Sues Google Over Claims of False AI Info",
@@ -1598,6 +2795,23 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-12602384",
     "paywall": true
+  },
+  {
+    "id": "20251022-chatgpt-maker-openai-releases-browser-in-attempt",
+    "date": "2025-10-22",
+    "title": "ChatGPT-maker OpenAI releases browser in attempt to rival Google",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c07mz10m1k9o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "ChatGPT Atlas was unveiled as the company seeks new ways to corral users to its online offerings.",
+    "afterClose": true
   },
   {
     "id": "20251022-meta-cuts-600-jobs-in-ai-division",
@@ -1647,6 +2861,35 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-30245706",
     "paywall": true
+  },
+  {
+    "id": "20251023-amazon-apologises-to-customers-impacted-by-huge",
+    "date": "2025-10-23",
+    "title": "Amazon apologises to customers impacted by huge AWS outage",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cvgvnp77dy9o?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "A \"faulty automation\" was at the core of the issues that caused knock-on effects for more than one thousand sites on Monday, an expert told the BBC."
+  },
+  {
+    "id": "20251023-amazon-unveils-prototype-ai-smart-glasses-for-it",
+    "date": "2025-10-23",
+    "title": "Amazon unveils prototype AI smart glasses for its delivery drivers",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0rpzrrgqvlo?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "model",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The tech giant also announced a new robotic arm and an AI tool to improve efficiency at its warehouses.",
+    "afterClose": true
   },
   {
     "id": "20251023-anthropic-expands-google-cloud-partnership-to-ac",
@@ -1747,6 +2990,21 @@
     "paywall": true
   },
   {
+    "id": "20251025-chatgpt-s-new-browser-has-potential-if-you-re-wi",
+    "date": "2025-10-25",
+    "title": "ChatGPT's new browser has potential, if you're willing to pay",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c20pdy1exxvo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "OpenAI hopes to upend the browser market currently dominated by Google Chrome, but it depends on paid users."
+  },
+  {
     "id": "20251026-openai-s-less-flashy-rival-might-have-a-better-b",
     "date": "2025-10-26",
     "title": "OpenAI’s Less-Flashy Rival Might Have a Better Business Model",
@@ -1812,6 +3070,22 @@
     "paywall": true
   },
   {
+    "id": "20251027-chatgpt-shares-data-on-how-many-users-exhibit-ps",
+    "date": "2025-10-27",
+    "title": "ChatGPT shares data on how many users exhibit psychosis or suicidal thoughts",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5yd90g0q43o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The figure could mean potentially hundreds of thousands of users show signs of mental health distress weekly.",
+    "afterClose": true
+  },
+  {
     "id": "20251027-microsoft-needs-to-open-up-more-about-its-openai",
     "date": "2025-10-27",
     "title": "Microsoft Needs to Open Up More About Its OpenAI Dealings",
@@ -1857,6 +3131,20 @@
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-72652651",
     "paywall": true
+  },
+  {
+    "id": "20251028-amazon-confirms-14-000-job-losses-in-corporate-d",
+    "date": "2025-10-28",
+    "title": "Amazon confirms 14,000 job losses in corporate division",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1m3zm9jnl1o?at_medium=RSS&at_campaign=rss",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The company says the opportunities provided by AI means it needs to be \"organised more leanly.\""
   },
   {
     "id": "20251028-eli-lilly-partners-with-nvidia-to-build-ai-super",
@@ -1948,6 +3236,21 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-59917721",
     "paywall": true
+  },
+  {
+    "id": "20251028-openai-completes-shift-to-becoming-for-profit",
+    "date": "2025-10-28",
+    "title": "OpenAI completes shift to becoming for-profit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cvgv38py7ewo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The deal will see long term investor Microsoft retain a 27% stake in the ChatGPT-maker."
   },
   {
     "id": "20251029-amazon-web-services-plans-additional-5-billion-a",
@@ -2108,6 +3411,21 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-69680311",
     "paywall": true
+  },
+  {
+    "id": "20251029-websites-disabled-in-microsoft-global-outage-com",
+    "date": "2025-10-29",
+    "title": "Websites disabled in Microsoft global outage come back online",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3rj45n4x5eo?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "Microsoft 365 and its Azure cloud computing platform were hit with DNS issues, similar to the recent AWS outage.",
+    "afterClose": true
   },
   {
     "id": "20251030-amazon-shares-surge-on-13-revenue-jump-strong-cl",
