@@ -1395,6 +1395,96 @@
     "summary": "Led by Jensen Huang, dubbed the 'Taylor Swift of tech', the chip giant has become pivotal in the race for AI supremacy."
   },
   {
+    "id": "20250423-apple-and-meta-attack-unfair-700m-eu-fines",
+    "date": "2025-04-23",
+    "title": "Apple and Meta attack 'unfair' €700m EU fines",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cm248vzg9jwo",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The tech giants have reacted with fury, accusing the EU of unfairly pursuing US companies."
+  },
+  {
+    "id": "20250423-chatgpt-maker-wants-to-buy-google-chrome",
+    "date": "2025-04-23",
+    "title": "ChatGPT-maker wants to buy Google Chrome",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1dr6neg766o",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "An OpenAI executive told a US judge the company would be interested in buying the popular browser."
+  },
+  {
+    "id": "20250430-update-that-made-chatgpt-dangerously-sycophantic",
+    "date": "2025-04-30",
+    "title": "Update that made ChatGPT 'dangerously' sycophantic pulled",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cn4jnwdvg9qo",
+    "org": "openai",
+    "category": "apocalyptic",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Users said the chatbot endorsed ideas including stopping medication and getting angry at strangers"
+  },
+  {
+    "id": "20250501-meta-warns-of-worse-experience-for-european-user",
+    "date": "2025-05-01",
+    "title": "Meta warns of 'worse' experience for European users",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/czd3mey1ej2o",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta said the negative impact could kick in as soon as the third quarter of this year."
+  },
+  {
+    "id": "20250505-openai-says-non-profit-will-remain-in-control-af",
+    "date": "2025-05-05",
+    "title": "OpenAI says non-profit will remain in control after backlash",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cwy603eg0w8o",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The move follows a bitter power struggle over the business.",
+    "afterClose": true
+  },
+  {
+    "id": "20250515-uk-needs-more-nuclear-to-power-ai-says-amazon-bo",
+    "date": "2025-05-15",
+    "title": "UK needs more nuclear to power AI, says Amazon boss",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cewd5014wpno",
+    "org": "amazon",
+    "category": "compute",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The world's largest cloud computing company plans to spend £8bn on new data centres in the UK over the next four years.",
+    "afterClose": true
+  },
+  {
     "id": "20250517-in-a-trade-war-walmart-lacks-some-of-amazon-s-am",
     "date": "2025-05-17",
     "title": "In a Trade War, Walmart Lacks Some of Amazon’s Ammunition",
@@ -1427,6 +1517,36 @@
     "paywall": true
   },
   {
+    "id": "20250520-ai-chatbot-to-be-embedded-in-google-search",
+    "date": "2025-05-20",
+    "title": "AI chatbot to be embedded in Google search",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cpw77qwd117o",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The new option in its marquee search engine comes as the firm is facing competition from AI firms.",
+    "afterClose": true
+  },
+  {
+    "id": "20250522-world-s-greatest-designer-jony-ive-joins-openai",
+    "date": "2025-05-22",
+    "title": "'World's greatest designer' Jony Ive joins OpenAI to 'reimagine' computers",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5y66yemjdmo",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The man who designed the iPad, iMac and iPhone will try to come up with a new generation of products for the AI era."
+  },
+  {
     "id": "claude-4",
     "date": "2025-05-22",
     "title": "Anthropic releases Claude Opus 4 and Claude Sonnet 4",
@@ -1439,6 +1559,34 @@
       "GOOGL"
     ],
     "manual": true
+  },
+  {
+    "id": "20250528-telegram-announces-partnership-with-musk-s-xai",
+    "date": "2025-05-28",
+    "title": "Telegram announces partnership with Musk's xAI",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cdxvr3n7wlxo",
+    "org": "xai",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The $300m deal, which will last one year, will see xAI's assistant Grok integrated into Telegram."
+  },
+  {
+    "id": "20250529-nvidia-revenues-surge-despite-tariff-uncertainty",
+    "date": "2025-05-29",
+    "title": "Nvidia revenues surge despite tariff uncertainty",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c1j59dry4dpo",
+    "org": "nvidia",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia's share price rose by more than 5% in pre-market trading on Thursday after it beat Wall Street expectations."
   },
   {
     "id": "20250529-nvidia-s-climb-carries-stocks-through-trade-reve",
@@ -1491,6 +1639,20 @@
     "paywall": true
   },
   {
+    "id": "20250603-apple-and-google-clash-with-police-and-mps-over",
+    "date": "2025-06-03",
+    "title": "Apple and Google clash with police and MPs over phone thefts",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4ge8k5dn7go",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The police told MPs that a big proportion of violent crime is related to mobile phone theft."
+  },
+  {
     "id": "meta-scale",
     "date": "2025-06-12",
     "title": "Meta invests in Scale AI and hires its CEO to lead a new superintelligence group",
@@ -1502,6 +1664,93 @@
       "META"
     ],
     "manual": true
+  },
+  {
+    "id": "20250612-meta-urged-to-go-further-in-crackdown-on-nudify",
+    "date": "2025-06-12",
+    "title": "Meta urged to go further in crackdown on 'nudify' apps",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cgr58dlnne5o",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The apps use artificial intelligence to create fake nude images of people without their consent."
+  },
+  {
+    "id": "20250613-meta-ai-searches-made-public-but-do-all-its-user",
+    "date": "2025-06-13",
+    "title": "Meta AI searches made public - but do all its users realise?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0573lj172jo",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta AI users may be inadvertently making their searches public without realising it."
+  },
+  {
+    "id": "20250617-amazon-boss-says-ai-will-replace-jobs-at-tech-gi",
+    "date": "2025-06-17",
+    "title": "Amazon boss says AI will replace jobs at tech giant",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cn0q2v851k9o",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Andy Jassy tells staff to embrace artificial intelligence (AI) as he warns the workforce will get smaller.",
+    "afterClose": true
+  },
+  {
+    "id": "20250618-openai-boss-meta-offering-100m-plus-to-poach-my",
+    "date": "2025-06-18",
+    "title": "OpenAI boss: Meta offering $100m plus to poach my staff",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8730088e5do",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Sam Altman said so far none of his \"best people\" had jumped ship to his big tech rival."
+  },
+  {
+    "id": "20250624-google-may-be-forced-to-link-to-rival-search-pla",
+    "date": "2025-06-24",
+    "title": "Google may be forced to link to rival search platforms in the UK",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy4ym77rkgeo",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The Competition and Markets Authority says it wants to open up the UK search market."
+  },
+  {
+    "id": "20250626-meta-admits-wrongly-suspending-facebook-groups-b",
+    "date": "2025-06-26",
+    "title": "Meta admits wrongly suspending Facebook Groups but denies wider problem",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3r9nwgvwy3o",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Group administrators have reported receiving automated messages which incorrectly say they have violated the rules."
   },
   {
     "id": "20250715-meta-to-spend-hundreds-of-billions-to-build-ai-d",
