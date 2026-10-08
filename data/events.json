@@ -13328,6 +13328,36 @@
     "paywall": true
   },
   {
+    "id": "20261008-amazon-introduces-new-lineup-of-pricier-tablets",
+    "date": "2026-10-08",
+    "title": "Amazon Introduces New Lineup of Pricier Tablets",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/amazon-introduces-new-lineup-of-pricier-tablets-4d73c7f2?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "model",
+    "tickers": [
+      "AMZN"
+    ],
+    "summary": "The three new Alexa-branded tablets are priced below what Apple and Samsung charge for similar tablets, but they are higher than Amazon’s existing, budget-friendly lineup of Fire tablets.",
+    "thumbnail": "https://images.wsj.net/im-34205116",
+    "paywall": true
+  },
+  {
+    "id": "20261008-microsoft-forms-new-xbox-unit-focused-on-film-tv",
+    "date": "2026-10-08",
+    "title": "Microsoft Forms New Xbox Unit Focused on Film, TV in Turnaround Effort",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/media/microsoft-forms-new-xbox-unit-focused-on-film-tv-in-turnaround-effort-ead1c2a1?mod=pls_whats_news_us_business_f",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "summary": "The new division, dubbed XP, aims to help Xbox’s roster of video games grow their fan bases, and connect with them more deeply, Microsoft said.",
+    "thumbnail": "https://images.wsj.net/im-79033808",
+    "paywall": true
+  },
+  {
     "id": "20261008-openai-used-ai-to-help-write-email-warning-austr",
     "date": "2026-10-08",
     "title": "OpenAI used AI to help write email warning Australian government AI had hacked its websites",
@@ -13361,5 +13391,18 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-18959482",
     "paywall": true
+  },
+  {
+    "id": "20261008-white-house-blocks-microsoft-from-foreign-worker",
+    "date": "2026-10-08",
+    "title": "White House blocks Microsoft from foreign worker hiring program",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/ck5yngl2y4gpo?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "policy",
+    "tickers": [
+      "MSFT"
+    ],
+    "summary": "An international visa program has for years allowed US tech companies to hire highly skilled workers from abroad."
   }
 ]
