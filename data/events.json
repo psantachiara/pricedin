@@ -10017,6 +10017,23 @@
     "paywall": true
   },
   {
+    "id": "20261007-fired-openai-researchers-ask-company-to-preserve",
+    "date": "2026-10-07",
+    "title": "Fired OpenAI Researchers Ask Company to Preserve Visibility Into AI Reasoning",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/fired-openai-researchers-ask-company-to-preserve-visibility-into-ai-reasoning-987c8c94?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "In a letter to the board, recently terminated employees ask the industry not to move forward with work that would degrade the ability to monitor AI.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-29219928",
+    "paywall": true
+  },
+  {
     "id": "20261007-openai-s-chatgpt-for-teens-poses-unacceptable-ri",
     "date": "2026-10-07",
     "title": "OpenAI’s ChatGPT for Teens Poses ‘Unacceptable Risk,’ Nonprofit Says",
@@ -10030,6 +10047,42 @@
     ],
     "summary": "Common Sense Media’s Youth AI Safety Institute called on the artificial-intelligence lab to restrict usage of ChatGPT after its guardrails for underage users fell short of commitments.",
     "thumbnail": "https://images.wsj.net/im-54678496",
+    "paywall": true
+  },
+  {
+    "id": "20261007-oracle-broadcom-and-spacex-seek-blockbuster-debt",
+    "date": "2026-10-07",
+    "title": "Oracle, Broadcom and SpaceX Seek Blockbuster Debt Deals to Pay for AI Chips",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/oracle-broadcom-and-spacex-seek-blockbuster-debt-deals-to-pay-for-ai-chips-848e8032?mod=rss_Technology",
+    "org": "broadcom",
+    "category": "deals",
+    "tickers": [
+      "AVGO",
+      "ORCL"
+    ],
+    "summary": "Apollo, Blackstone and Goldman Sachs are among the lenders in talks to finance megadeals worth tens of billions of dollars apiece.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-35580720",
+    "paywall": true
+  },
+  {
+    "id": "20261008-the-ai-price-war-is-heating-up-and-openai-is-gai",
+    "date": "2026-10-08",
+    "title": "The AI Price War Is Heating Up—and OpenAI Is Gaining Ground on Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/the-ai-price-war-is-heating-upand-openai-is-gaining-ground-on-anthropic-48b8525b?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "summary": "Both companies need to show Wall Street they have sustainable businesses ahead of planned IPOs.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-18959482",
     "paywall": true
   }
 ]
