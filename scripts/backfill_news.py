@@ -37,7 +37,14 @@ from fetch_news import (
     load, save, slug, warn, MEDIA_NS,
 )
 
-LOOKBACK_DAYS = 14   # how far back a snapshot of these feeds still reaches
+LOOKBACK_DAYS = 14   # how far apart captures can be before the record has holes
+BRIDGE_DAYS = 3      # a run of items may skip this many days and still count as continuous
+
+# How coverage was measured. Stored in data/coverage.json so a file written by
+# an older rule is recognised and recomputed rather than merged with: 1 assumed
+# every snapshot reached 14 days back, 2 took the hull from a snapshot's oldest
+# item to its newest, and 3 counts the days a snapshot actually holds items for.
+COVERAGE_METHOD = 3
 
 CDX = "http://web.archive.org/cdx/search/cdx"
 SNAPSHOT = "https://web.archive.org/web/{timestamp}id_/{url}"
@@ -253,22 +260,46 @@ def write_coverage(read_by_feed, start, end, reset=False):
     A week covered only by one desk is not the same record as a week covered
     by all four, so the strip can say which.
 
-    Coverage is measured, not assumed. Each snapshot contributes exactly the
-    span of dates its own items run across, so a copy holding two days of a
-    busy feed counts for two days. An earlier version credited every snapshot
-    with a flat fourteen days, which marked months as covered on the strength
-    of one capture.
+    Coverage is measured, not assumed. A snapshot counts for the days it holds
+    items for, and for gaps of up to BRIDGE_DAYS between them, so a quiet
+    weekend inside an otherwise continuous run still counts while a lone
+    re-dated entry from months earlier does not drag the whole interval in
+    with it.
     """
-    def reach(spans):
-        out = set()
-        for first, last in spans:
-            day = first
-            while day <= last:
-                out.add(day)
-                day += timedelta(days=1)
+    def reach(records):
+        # Bridging is done across everything the feed yielded, not inside each
+        # capture: these desks publish on weekdays, so no single snapshot ever
+        # holds both a Friday and the Monday after it, and a gap the feed
+        # simply had no news for should not read as a gap in the record.
+        days = sorted({day for held in records for day in held})
+        out, previous = set(), None
+        for day in days:
+            out.add(day)
+            if previous is not None and (day - previous).days <= BRIDGE_DAYS + 1:
+                filler = previous + timedelta(days=1)
+                while filler < day:
+                    out.add(filler)
+                    filler += timedelta(days=1)
+            previous = day
         return out
 
-    per_feed = {name: reach(spans) for name, spans in read_by_feed.items()}
+    # How far a snapshot reaches is the assumption this whole measure rests on,
+    # so it is reported rather than trusted. A healthy run is mostly short
+    # reaches; a tail of very long ones means stale entries are still inflating
+    # the record.
+    lengths = sorted(len(h) for records in read_by_feed.values() for h in records)
+    if lengths:
+        buckets = [(1, 1), (2, 3), (4, 7), (8, 14), (15, 10 ** 6)]
+        print("\nDays of items per snapshot:")
+        for low, high in buckets:
+            n = sum(1 for v in lengths if low <= v <= high)
+            if not n:
+                continue
+            label = f"{low}" if low == high else (f"{low}+" if high > 10 ** 5 else f"{low}-{high}")
+            print(f"  {label:>5} days  {n:5d}  {'#' * round(n / len(lengths) * 40)}")
+        print(f"  median {lengths[len(lengths) // 2]} days across {len(lengths)} snapshots")
+
+    per_feed = {name: reach(records) for name, records in read_by_feed.items()}
     everything = set().union(*per_feed.values()) if per_feed else set()
 
     existing = load("coverage.json", {}) or {}
@@ -303,7 +334,7 @@ def write_coverage(read_by_feed, start, end, reset=False):
     # the max. A file without "measured" predates the change, so the weeks this
     # run recomputed are replaced outright; weeks outside its range are left
     # alone, and say so in the report.
-    stale = reset or not existing.get("measured")
+    stale = reset or existing.get("measured") != COVERAGE_METHOD
     merged = {}
     for week, value in (existing.get("weeks") or {}).items():
         merged[week] = ({"share": value, "feeds": []} if isinstance(value, (int, float))
@@ -322,7 +353,7 @@ def write_coverage(read_by_feed, start, end, reset=False):
     existing.pop("lookbackDays", None)   # the reach is measured now, not assumed
     existing.update({
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
-        "measured": True,
+        "measured": COVERAGE_METHOD,
         "feeds": names,
         "weeks": merged,
     })
@@ -335,7 +366,7 @@ def write_coverage(read_by_feed, start, end, reset=False):
     if stale and carried:
         print(f"Coverage for the {len(weeks)} weeks in this run was recomputed from the "
               f"span of each snapshot. {carried} week(s) outside it still carry the older "
-              f"estimate, which assumed every snapshot reached 14 days back; re-run those "
+              f"estimate from a superseded rule; re-run those "
               f"periods to bring them onto the same footing.")
 
 
@@ -463,14 +494,16 @@ def main():
             except (requests.RequestException, RuntimeError):
                 failed += 1
                 continue
-            # What a snapshot actually reaches is the span of the items in it,
-            # not a fixed number of days: a feed carries a set number of
-            # entries, so a busy desk's copy may only go back a day or two. A
-            # snapshot that parsed to nothing reaches nothing and is recorded
-            # as such.
-            if items:
-                days = [i["published"].date() for i in items]
-                read_by_feed.setdefault(feed_name, []).append((min(days), max(days)))
+            # What a snapshot reaches is the days it actually holds items for,
+            # not the hull from its oldest entry to its newest: feeds carry the
+            # occasional re-dated or pinned entry, and one of those would let a
+            # single capture claim months. Items dated after the capture cannot
+            # be evidence of anything and are dropped.
+            snap = datetime.strptime(timestamp[:8], "%Y%m%d").date()
+            held = sorted({i["published"].date() for i in items
+                           if i["published"].date() <= snap + timedelta(days=1)})
+            if held:
+                read_by_feed.setdefault(feed_name, []).append(held)
             # Workers merge into one pool, so the read and the write must be
             # one step: otherwise a restricted feed can overwrite the broader
             # one that another thread just stored.
