@@ -9720,6 +9720,21 @@
     "paywall": true
   },
   {
+    "id": "20260925-openai-hack-on-australian-government-reveals-anx",
+    "date": "2026-09-25",
+    "title": "OpenAI hack on Australian government reveals anxiety at heart of global artificial intelligence dilemma",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/26/openai-hack-australian-government-anxiety-global-dilemma-artificial-intelligence",
+    "org": "openai",
+    "category": "apocalyptic",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "As the UN warns traditional safeguards are ‘unravelling’, Donald Trump says he will encourage, not restrain, the AI race When the Australian prime minister, Anthony Albanese, sat down for an interview in the heart of Silicon Valley at the w",
+    "thumbnail": "https://i.guim.co.uk/img/media/591b29c15ba606604fba069a81f2b12fb4d0bb4f/1208_0_6633_5307/master/6633.jpg?width=140&quality=85&auto=format&fit=max&s=94eb8a5328fd5e84a7c7275fa32edd5e"
+  },
+  {
     "id": "20260927-openai-agents-used-aggressive-techniques-to-acce",
     "date": "2026-09-27",
     "title": "OpenAI Agents Used Aggressive Techniques to Access U.N. Website",
@@ -9959,6 +9974,20 @@
     "paywall": true
   },
   {
+    "id": "20261002-openai-fires-workers-for-mishandling-sensitive-i",
+    "date": "2026-10-02",
+    "title": "OpenAI fires workers for 'mishandling sensitive information'",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The former employees were investigated for sharing data with an outside AI evaluation group."
+  },
+  {
     "id": "20261002-the-mulleted-meme-loving-billionaire-behind-meta",
     "date": "2026-10-02",
     "title": "The Mulleted, Meme-Loving Billionaire Behind Meta’s Hit AI App",
@@ -9974,6 +10003,37 @@
     "paywall": true
   },
   {
+    "id": "20261005-pentagon-stops-using-anthropic-ai-tools-after-bl",
+    "date": "2026-10-05",
+    "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "It labelled Anthropic a \"supply chain risk\" in February after the firm refused to remove safety guardrails from its tools."
+  },
+  {
+    "id": "20261006-artificial-review-luca-guadagnino-takes-on-opena",
+    "date": "2026-10-06",
+    "title": "Artificial review – Luca Guadagnino takes on OpenAI in muddled tech satire",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/film/2026/oct/06/artificial-sam-altman-ai-movie-review",
+    "org": "openai",
+    "category": "apocalyptic",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "New York film festival: The origin story of Sam Altman’s company is reimagined as a campy comedy starring Andrew Garfield On the day that Luca Guadagnino ’s film about Sam Altman and OpenAI premiered, Vanity Fair released a cover story on A",
+    "thumbnail": "https://i.guim.co.uk/img/media/c5fe55c10e9da0c76467aa89bcec10ee4cb195a6/600_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=3818df75be56f0592d22cb50d5215241"
+  },
+  {
     "id": "20261006-emmy-awards-will-leave-broadcast-tv-for-amazon-s",
     "date": "2026-10-06",
     "title": "Emmy Awards Will Leave Broadcast TV for Amazon’s Prime Video",
@@ -9986,6 +10046,19 @@
     ],
     "thumbnail": "https://images.wsj.net/im-31819541",
     "paywall": true
+  },
+  {
+    "id": "20261006-finland-orders-halt-to-work-on-two-google-data-c",
+    "date": "2026-10-06",
+    "title": "Finland orders halt to work on two Google data centres",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/cvj6jkx6g1r0o?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "compute",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "The order affecting two planned data centres follows concerns over forest clearance."
   },
   {
     "id": "20261006-google-and-constellation-energy-strike-a-sweepin",
@@ -10003,6 +10076,20 @@
     "paywall": true
   },
   {
+    "id": "20261006-google-told-to-halt-work-on-datacentres-in-finla",
+    "date": "2026-10-06",
+    "title": "Google told to halt work on datacentres in Finland over environmental concerns",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "Order on two construction sites comes after Google failed to carry out environmental impact assessments Google has been ordered to temporarily stop work on two datacentres in Finland after failing to carry out the necessary environmental im",
+    "thumbnail": "https://i.guim.co.uk/img/media/5a426a4caa58ecb7baabf8e19319bb4ee7c46a53/669_0_3162_2531/master/3162.jpg?width=140&quality=85&auto=format&fit=max&s=94737ebde78cf77bb6f11a8127225101"
+  },
+  {
     "id": "20261006-mistral-to-release-new-ai-model-to-better-compet",
     "date": "2026-10-06",
     "title": "Mistral to Release New AI Model to Better Compete With U.S. Rivals",
@@ -10015,6 +10102,33 @@
     ],
     "thumbnail": "https://images.wsj.net/im-33096038",
     "paywall": true
+  },
+  {
+    "id": "20261006-ofcom-investigates-meta-over-instagram-instants",
+    "date": "2026-10-06",
+    "title": "Ofcom investigates Meta over Instagram Instants feature",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/cq8jzyey8e2ro?at_medium=RSS&at_campaign=rss",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "summary": "The regulator said Instagram had not fully assessed risks posed by its Instants feature prior to launching it."
+  },
+  {
+    "id": "20261007-dyson-breville-apple-the-59-best-amazon-prime-da",
+    "date": "2026-10-07",
+    "title": "Dyson, Breville, Apple: the 59 best Amazon Prime Day deals actually worth it, obsessively vetted by us",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/thefilter-us/2026/oct/07/best-amazon-prime-day-deals-october",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "summary": "From Ugg and Ninja to KitchenAid and Shark – we researched the best sales to get your hands on for Prime Day The best deals from Amazon’s rivals and sales on home essentials Sign up for the Filter US newsletter, your weekly guide to buying ",
+    "thumbnail": "https://i.guim.co.uk/img/media/1c8a85937e664d8ab435611ee65fd43aa149bd77/0_0_3000_2400/master/3000.jpg?width=140&quality=85&auto=format&fit=max&s=deaf6cf2f8f5abcdb1cf4b67455eb9b7"
   },
   {
     "id": "20261007-fired-openai-researchers-ask-company-to-preserve",
@@ -10034,6 +10148,35 @@
     "paywall": true
   },
   {
+    "id": "20261007-fuel-prices-added-to-google-maps-as-petrol-and-d",
+    "date": "2026-10-07",
+    "title": "Fuel prices added to Google Maps as petrol and diesel costs soar",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/ckx2d4ddjn2eo?at_medium=RSS&at_campaign=rss",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "A search for forecourts will now display their pricing, using the government's Fuel Finder scheme.",
+    "afterClose": true
+  },
+  {
+    "id": "20261007-openai-says-teen-chatgpt-use-limited-but-researc",
+    "date": "2026-10-07",
+    "title": "OpenAI says teen ChatGPT use limited but research finds it an 'unacceptable risk'",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/cwz0vrmxkvy4o?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The research found that important guardrails for teens using ChatGPT often failed.",
+    "afterClose": true
+  },
+  {
     "id": "20261007-openai-s-chatgpt-for-teens-poses-unacceptable-ri",
     "date": "2026-10-07",
     "title": "OpenAI’s ChatGPT for Teens Poses ‘Unacceptable Risk,’ Nonprofit Says",
@@ -10048,6 +10191,21 @@
     "summary": "Common Sense Media’s Youth AI Safety Institute called on the artificial-intelligence lab to restrict usage of ChatGPT after its guardrails for underage users fell short of commitments.",
     "thumbnail": "https://images.wsj.net/im-54678496",
     "paywall": true
+  },
+  {
+    "id": "20261007-openai-s-release-of-mathematical-findings-draws",
+    "date": "2026-10-07",
+    "title": "OpenAI’s release of mathematical findings draws concerns from experts",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/07/openai-mathematical-findings-concerns",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Leaders worry OpenAI is not doing due diligence to vet results and that AI models aren’t accessible to broader field of mathematicians OpenAI has astounded mathematicians after releasing hundreds of new mathematical findings on Tuesday. The",
+    "thumbnail": "https://i.guim.co.uk/img/media/01ef491cddca9dbad5f1f62da12fa75e84a55605/1065_0_6464_5172/master/6464.jpg?width=140&quality=85&auto=format&fit=max&s=485084568f75ff81ca91f79d9fb6c04a"
   },
   {
     "id": "20261007-oracle-broadcom-and-spacex-seek-blockbuster-debt",
@@ -10065,6 +10223,22 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-35580720",
     "paywall": true
+  },
+  {
+    "id": "20261008-openai-used-ai-to-help-write-email-warning-austr",
+    "date": "2026-10-08",
+    "title": "OpenAI used AI to help write email warning Australian government AI had hacked its websites",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/australia-news/2026/oct/08/openai-used-ai-to-help-write-email-warning-australian-government-ai-had-hacked-its-websites",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Exclusive: Revelation comes after executive told parliamentary inquiry he did not believe AI had been used to write message, but was ‘happy to go and confirm’ Get our breaking news email , free app or daily news podcast OpenAI used AI to he",
+    "afterClose": true,
+    "thumbnail": "https://i.guim.co.uk/img/media/f7b7610deee5298cd737b0ca57b710d183a27320/187_0_4240_3392/master/4240.jpg?width=140&quality=85&auto=format&fit=max&s=50815842a160dd830d367cfa50990eb1"
   },
   {
     "id": "20261008-the-ai-price-war-is-heating-up-and-openai-is-gai",
