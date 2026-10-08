@@ -247,20 +247,28 @@ def probe(rules, start, end, per_day):
     print(f"A run at --per-day {per_day} would fetch roughly {est} snapshots.")
 
 
-def write_coverage(read_by_feed, start, end, lookback=LOOKBACK_DAYS):
+def write_coverage(read_by_feed, start, end, reset=False):
     """Record, per week, how much of it the source reaches and which feeds did.
 
     A week covered only by one desk is not the same record as a week covered
     by all four, so the strip can say which.
+
+    Coverage is measured, not assumed. Each snapshot contributes exactly the
+    span of dates its own items run across, so a copy holding two days of a
+    busy feed counts for two days. An earlier version credited every snapshot
+    with a flat fourteen days, which marked months as covered on the strength
+    of one capture.
     """
-    def reach(days):
+    def reach(spans):
         out = set()
-        for day in days:
-            for back in range(lookback + 1):
-                out.add(day - timedelta(days=back))
+        for first, last in spans:
+            day = first
+            while day <= last:
+                out.add(day)
+                day += timedelta(days=1)
         return out
 
-    per_feed = {name: reach(days) for name, days in read_by_feed.items()}
+    per_feed = {name: reach(spans) for name, spans in read_by_feed.items()}
     everything = set().union(*per_feed.values()) if per_feed else set()
 
     existing = load("coverage.json", {}) or {}
@@ -276,29 +284,45 @@ def write_coverage(read_by_feed, start, end, lookback=LOOKBACK_DAYS):
         in_range = [d for d in days if start.date() <= d <= last]
         if in_range:
             share = sum(1 for d in in_range if d in everything) / len(in_range)
+            # Any day a feed reached counts it as a contributor. Under the old
+            # assumed reach a half-week threshold was meaningful; against
+            # measured spans it would leave most weeks crediting nobody, and
+            # "which desks is this week resting on" is the question the strip
+            # is there to answer.
             contributors = [
                 names.index(name) for name in sorted(per_feed)
-                if sum(1 for d in in_range if d in per_feed[name]) / len(in_range) >= 0.5
+                if any(d in per_feed[name] for d in in_range)
             ]
             weeks[cursor.isoformat()] = {"share": round(share, 3), "feeds": sorted(contributors)}
         cursor += timedelta(days=7)
 
-    # A later run may cover only some feeds, so coverage is merged rather than
-    # replaced: a week keeps the best share and the union of contributors.
+    # A later run may cover only some feeds, so coverage is normally merged
+    # rather than replaced: a week keeps the best share and the union of
+    # contributors. That is wrong when the stored numbers came from the old
+    # assumed-reach measure, because those are inflated and would always win
+    # the max. A file without "measured" predates the change, so the weeks this
+    # run recomputed are replaced outright; weeks outside its range are left
+    # alone, and say so in the report.
+    stale = reset or not existing.get("measured")
     merged = {}
     for week, value in (existing.get("weeks") or {}).items():
         merged[week] = ({"share": value, "feeds": []} if isinstance(value, (int, float))
                         else {"share": value.get("share", 0), "feeds": list(value.get("feeds") or [])})
+    carried = sum(1 for w in merged if w not in weeks)
     for week, value in weeks.items():
+        if stale:
+            merged[week] = value
+            continue
         old_week = merged.get(week, {"share": 0, "feeds": []})
         merged[week] = {
             "share": max(value["share"], old_week["share"]),
             "feeds": sorted(set(old_week["feeds"]) | set(value["feeds"])),
         }
 
+    existing.pop("lookbackDays", None)   # the reach is measured now, not assumed
     existing.update({
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
-        "lookbackDays": lookback,
+        "measured": True,
         "feeds": names,
         "weeks": merged,
     })
@@ -308,6 +332,11 @@ def write_coverage(read_by_feed, start, end, lookback=LOOKBACK_DAYS):
     solo = sum(1 for v in merged.values() if len(v["feeds"]) == 1)
     print(f"Wrote coverage for {len(merged)} weeks; {thin} less than half covered, "
           f"{solo} resting on a single feed.")
+    if stale and carried:
+        print(f"Coverage for the {len(weeks)} weeks in this run was recomputed from the "
+              f"span of each snapshot. {carried} week(s) outside it still carry the older "
+              f"estimate, which assumed every snapshot reached 14 days back; re-run those "
+              f"periods to bring them onto the same footing.")
 
 
 def main():
@@ -330,6 +359,9 @@ def main():
     parser.add_argument("--report", action="store_true", help="also list what was filtered out")
     parser.add_argument("--max-snapshots", type=int, default=0, help="stop after this many (0 = no limit)")
     parser.add_argument("--undo", action="store_true", help="remove every event added by a backfill")
+    parser.add_argument("--reset-coverage", action="store_true",
+                        help="recompute coverage for this period from scratch instead of "
+                             "keeping the best of it and what is already stored")
     args = parser.parse_args()
 
     rules = load("news_rules.json")
@@ -431,8 +463,14 @@ def main():
             except (requests.RequestException, RuntimeError):
                 failed += 1
                 continue
-            read_by_feed.setdefault(feed_name, set()).add(
-                datetime.strptime(timestamp[:8], "%Y%m%d").date())
+            # What a snapshot actually reaches is the span of the items in it,
+            # not a fixed number of days: a feed carries a set number of
+            # entries, so a busy desk's copy may only go back a day or two. A
+            # snapshot that parsed to nothing reaches nothing and is recorded
+            # as such.
+            if items:
+                days = [i["published"].date() for i in items]
+                read_by_feed.setdefault(feed_name, []).append((min(days), max(days)))
             # Workers merge into one pool, so the read and the write must be
             # one step: otherwise a restricted feed can overwrite the broader
             # one that another thread just stored.
@@ -540,7 +578,7 @@ def main():
 
     save("events.json", events, indent=2)
     save("news_seen.json", seen)
-    write_coverage(read_by_feed, start, end)
+    write_coverage(read_by_feed, start, end, reset=args.reset_coverage)
     print(f"events.json now holds {len(events)} announcements.")
 
 
