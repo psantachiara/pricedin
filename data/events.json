@@ -510,6 +510,25 @@
     "paywall": true
   },
   {
+    "id": "20250131-deepseek-s-breakthrough-sparks-national-pride-in",
+    "date": "2025-01-31",
+    "title": "DeepSeek’s Breakthrough Sparks National Pride in China",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/china/deepseeks-breakthrough-sparks-national-pride-in-china-4479804b",
+    "org": "deepseek",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Emojis of “DeepSeek pride,” often with smiling cats or dogs, flooded Chinese social media, adding to the festive Lunar New Year atmosphere.",
+    "thumbnail": "https://images.wsj.net/im-28360971",
+    "paywall": true
+  },
+  {
     "id": "20250203-everyone-s-rattled-by-the-rise-of-deepseek-excep",
     "date": "2025-02-03",
     "title": "Everyone’s Rattled by the Rise of DeepSeek—Except Nvidia, Which Enabled It",
@@ -3818,6 +3837,24 @@
     "paywall": true
   },
   {
+    "id": "20251031-the-score-caterpillar-nvidia-meta-and-more-stock",
+    "date": "2025-10-31",
+    "title": "The Score: Caterpillar, Nvidia, Meta and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-score-caterpillar-nvidia-meta-and-more-stocks-that-defined-the-week-4a1a0f38?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-78867156",
+    "paywall": true
+  },
+  {
     "id": "20251102-is-openai-becoming-too-big-to-fail",
     "date": "2025-11-02",
     "title": "Is OpenAI Becoming Too Big to Fail?",
@@ -4009,6 +4046,22 @@
     "paywall": true
   },
   {
+    "id": "20251105-brazil-is-developing-a-weapon-for-trade-wars-fer",
+    "date": "2025-11-05",
+    "title": "Brazil Is Developing a Weapon for Trade Wars: Fertilizer in the Amazon",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/economy/trade/brazil-is-developing-a-weapon-for-trade-wars-fertilizer-in-the-amazon-951925f5",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "A planned $2.5 billion potash mine in the rainforest is billed as key to Brazil’s expanding agricultural exports and to the economic security of the indigenous population.",
+    "thumbnail": "https://images.wsj.net/im-89629881",
+    "paywall": true
+  },
+  {
     "id": "20251105-openai-isn-t-yet-working-toward-an-ipo-cfo-says",
     "date": "2025-11-05",
     "title": "OpenAI Isn’t Yet Working Toward an IPO, CFO Says",
@@ -4122,6 +4175,23 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-94253894",
+    "paywall": true
+  },
+  {
+    "id": "20251107-the-score-gm-tesla-palantir-american-airlines-an",
+    "date": "2025-11-07",
+    "title": "The Score: GM, Tesla, Palantir, American Airlines and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/gm-tesla-palantir-expedia-american-airlines-a49b0d2c?mod=rss_markets_main",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-05172663",
     "paywall": true
   },
   {
@@ -4290,6 +4360,23 @@
     "paywall": true
   },
   {
+    "id": "20251114-berkshire-buys-shares-of-alphabet-and-further-pa",
+    "date": "2025-11-14",
+    "title": "Berkshire Buys Shares of Alphabet and Further Pares Apple Stake",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/berkshire-buys-shares-of-alphabet-and-pares-apple-stake-b8325f16?mod=rss_markets_main",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Warren Buffett’s conglomerate was a net seller of stocks during the third quarter, but it did add a position in Google’s parent company.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-48998697",
+    "paywall": true
+  },
+  {
     "id": "20251114-chinese-hackers-used-anthropic-s-ai-to-automate",
     "date": "2025-11-14",
     "title": "Chinese Hackers Used Anthropic’s AI to Automate Cyberattacks",
@@ -4322,6 +4409,22 @@
     "backfill": true,
     "summary": "The stores, in New York City, Los Angeles and Las Vegas, have coffee stations and full-length mirrors for customers to take selfies in their Ray-Bans.",
     "thumbnail": "https://images.wsj.net/im-57844409",
+    "paywall": true
+  },
+  {
+    "id": "20251117-u-s-futures-rise-global-markets-mixed-nvidia-ear",
+    "date": "2025-11-17",
+    "title": "U.S. Futures Rise, Global Markets Mixed, Nvidia Earnings Eyed",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/u-s-futures-rise-global-markets-mixed-nvidia-earnings-eyed-c56317cd?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Futures for the major U.S. indexes were up after last week’s tech selloff on valuation concerns and artificial-intelligence spending.",
+    "thumbnail": "https://images.wsj.net/im-34496425",
     "paywall": true
   },
   {
@@ -4528,6 +4631,39 @@
     "paywall": true
   },
   {
+    "id": "20251119-nvidia-results-and-delayed-jobs-data-set-up-crit",
+    "date": "2025-11-19",
+    "title": "Nvidia Results and Delayed Jobs Data Set Up Critical Test for Wall Street",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-results-and-delayed-jobs-data-set-up-critical-test-for-wall-street-4e14ffca?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "model",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The releases will provide key signals for investors after a significant market pullback.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-11535118",
+    "paywall": true
+  },
+  {
+    "id": "20251120-asian-tech-stocks-get-a-lift-from-record-nvidia",
+    "date": "2025-11-20",
+    "title": "Asian Tech Stocks Get a Lift From Record Nvidia Sales",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/asian-stocks-get-a-lift-from-record-nvidia-sales-e1f51574?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Technology stocks in Asia rallied after Nvidia’s record sales and strong guidance soothed investor concerns about an AI bubble.",
+    "thumbnail": "https://images.wsj.net/im-68670174",
+    "paywall": true
+  },
+  {
     "id": "20251120-nvidia-s-strong-results-show-ai-fears-are-premat",
     "date": "2025-11-20",
     "title": "Nvidia’s Strong Results Show AI Fears Are Premature",
@@ -4560,6 +4696,23 @@
     "paywall": true
   },
   {
+    "id": "20251121-nvidia-s-best-wasn-t-enough-to-prop-up-a-wobbly",
+    "date": "2025-11-21",
+    "title": "Nvidia’s Best Wasn’t Enough to Prop Up a Wobbly Stock Market",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-earnings-ai-stock-market-af933127?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The tech juggernaut’s results sparked a furious rally, and then a slump.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54176609",
+    "paywall": true
+  },
+  {
     "id": "20251121-the-chip-ceo-staring-down-nvidia-and-talk-of-an",
     "date": "2025-11-21",
     "title": "The Chip CEO Staring Down Nvidia and Talk of an AI Bubble",
@@ -4572,6 +4725,40 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-30021775",
+    "paywall": true
+  },
+  {
+    "id": "20251121-the-score-nvidia-constellation-eli-lilly-gap-and",
+    "date": "2025-11-21",
+    "title": "The Score: Nvidia, Constellation, Eli Lilly, Gap and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-constellation-eli-lilly-gap-target-lowes-home-depot-stock-1916e192?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The Score is a weekly review of the biggest stock moves and the news that drove them.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-66364928",
+    "paywall": true
+  },
+  {
+    "id": "20251121-they-held-a-climate-summit-in-the-amazon-they-di",
+    "date": "2025-11-21",
+    "title": "They Held a Climate Summit in the Amazon. They Didn’t Account for the Rain.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/us-news/climate-environment/they-held-a-climate-summit-in-the-amazon-they-didnt-account-for-the-rain-19373680",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Heavy rain and intense heat have been among the disruptions at an annual United Nations climate conference being held this year in Belém, Brazil.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-24048356",
     "paywall": true
   },
   {
@@ -4605,6 +4792,23 @@
     "paywall": true
   },
   {
+    "id": "20251124-alphabet-chip-stocks-lead-tech-fueled-market-reb",
+    "date": "2025-11-24",
+    "title": "Alphabet, Chip Stocks Lead Tech-Fueled Market Rebound",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/global-stocks-markets-dow-news-11-12-2025-3f865d22?mod=rss_markets_main",
+    "org": "google",
+    "category": "compute",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The Nasdaq gains 2.7%, its best day since May.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-05148461",
+    "paywall": true
+  },
+  {
     "id": "20251124-amazon-to-invest-50-billion-building-data-center",
     "date": "2025-11-24",
     "title": "Amazon to Invest $50 Billion Building Data Centers to Support U.S. Government",
@@ -4632,6 +4836,24 @@
       "GOOGL"
     ],
     "manual": true
+  },
+  {
+    "id": "20251125-ai-trade-splinters-as-google-challenges-nvidia-s",
+    "date": "2025-11-25",
+    "title": "AI Trade Splinters as Google Challenges Nvidia’s Dominance",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/ai-trade-splinters-as-google-challenges-nvidias-dominance-b1ce018d?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Dow industrials add more than 600 points, biggest gain since August.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-32143070",
+    "paywall": true
   },
   {
     "id": "20251125-meta-is-in-talks-to-use-google-s-chips-in-challe",
@@ -4680,6 +4902,22 @@
     "backfill": true,
     "summary": "The e-commerce giant seeks to prove its shoppers will add big-ticket items to their shopping baskets.",
     "thumbnail": "https://images.wsj.net/im-64126022",
+    "paywall": true
+  },
+  {
+    "id": "20251128-the-score-campbell-s-kohl-s-alphabet-and-more-st",
+    "date": "2025-11-28",
+    "title": "The Score: Campbell’s, Kohl’s, Alphabet and More Stocks That Defined the Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-score-campbells-kohls-alphabet-deere-and-more-stocks-that-defined-the-week-5aacc1b8?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Here are some of the major companies whose stocks moved on the week’s news.",
+    "thumbnail": "https://images.wsj.net/im-79953942",
     "paywall": true
   },
   {
@@ -4891,6 +5129,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-11392447",
+    "paywall": true
+  },
+  {
+    "id": "20251207-why-nvidia-and-other-ai-stocks-have-lost-their-q",
+    "date": "2025-12-07",
+    "title": "Why Nvidia and Other AI Stocks Have Lost Their ‘Quality’ Status",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/why-nvidia-and-other-ai-stocks-have-lost-their-quality-status-84180ff2?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "A popular ETF dropped Big Tech stocks, which gets at an important issue: Is the bet on artificial intelligence a vast potential profit pool, or a money pit?",
+    "thumbnail": "https://images.wsj.net/im-95737756",
     "paywall": true
   },
   {
@@ -5138,6 +5392,57 @@
     "paywall": true
   },
   {
+    "id": "20251211-global-markets-fall-as-oracle-selloff-drags-tech",
+    "date": "2025-12-11",
+    "title": "Global Markets Fall as Oracle Selloff Drags Tech Stocks",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/global-markets-fall-as-oracle-selloff-drags-tech-stocks-2249dd39?mod=rss_markets_main",
+    "org": "oracle",
+    "category": "markets",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "A slump in Oracle’s shares aftermarket returned investors’ focus to the sustainability of the AI-led boom, dragging down markets in Asia and Europe.",
+    "thumbnail": "https://images.wsj.net/im-95918980",
+    "paywall": true
+  },
+  {
+    "id": "20251211-oracle-can-t-escape-openai-s-shadow",
+    "date": "2025-12-11",
+    "title": "Oracle Can’t Escape OpenAI’s Shadow",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/oracle-cant-escape-openais-shadow-ed90ae19?mod=rss_markets_main",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "The ChatGPT parent still accounts for most of the software company’s revenue backlog.",
+    "thumbnail": "https://images.wsj.net/im-65562100",
+    "paywall": true
+  },
+  {
+    "id": "20251211-oracle-shares-tumble-on-ai-spending-worries",
+    "date": "2025-12-11",
+    "title": "Oracle Shares Tumble on AI Spending Worries",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/oracle-shares-tumble-thursday-weighing-on-market-c60649a4?mod=rss_markets_main",
+    "org": "oracle",
+    "category": "markets",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "Oracle shares fell sharply on Thursday, a stark display of investors’ concerns about tech companies overspending on artificial-intelligence infrastructure.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-72438237",
+    "paywall": true
+  },
+  {
     "id": "20251211-palantir-sues-ceo-of-rival-ai-firm-alleges-wides",
     "date": "2025-12-11",
     "title": "Palantir Sues CEO of Rival AI Firm, Alleges Widespread Effort to Poach Employees",
@@ -5218,6 +5523,22 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-87452324",
+    "paywall": true
+  },
+  {
+    "id": "20251216-breach-at-south-korea-s-equivalent-of-amazon-exp",
+    "date": "2025-12-16",
+    "title": "Breach at South Korea’s Equivalent of Amazon Exposed Data of Almost Every Adult",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/asia/breach-at-south-koreas-equivalent-of-amazon-exposed-data-of-almost-every-adult-ba8d9ebd",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Tens of millions of names, phone numbers and other sensitive information were leaked in a breach that went undetected for months.",
+    "thumbnail": "https://images.wsj.net/im-47851633",
     "paywall": true
   },
   {
@@ -6666,6 +6987,22 @@
     "paywall": true
   },
   {
+    "id": "20260205-tsmc-to-make-more-advanced-chips-in-japan-as-par",
+    "date": "2026-02-05",
+    "title": "TSMC to Make More-Advanced Chips in Japan as Part of AI Push",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/tsmc-to-make-more-advanced-chips-in-japan-as-part-of-ai-push-7fbee6ab",
+    "org": "tsmc",
+    "category": "compute",
+    "tickers": [
+      "TSM"
+    ],
+    "backfill": true,
+    "summary": "Taiwan Semiconductor Manufacturing’s 3-nanometer technology represents a major leap for Japan, which doesn’t have capacity to mass produce advanced chips essential for artificial intelligence.",
+    "thumbnail": "https://images.wsj.net/im-18445803",
+    "paywall": true
+  },
+  {
     "id": "20260206-amazon-shares-sink-as-company-boosts-ai-spending",
     "date": "2026-02-06",
     "title": "Amazon Shares Sink as Company Boosts AI Spending by Nearly 60%",
@@ -6747,6 +7084,39 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-32734651",
+    "paywall": true
+  },
+  {
+    "id": "20260211-alphabet-s-rare-100-year-bond-tells-us-that-mone",
+    "date": "2026-02-11",
+    "title": "Alphabet’s Rare 100-Year Bond Tells Us That Money Is Easy",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/alphabets-rare-100-year-bond-tells-us-that-money-is-easy-779117ed?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "This is a great time for companies to borrow. It isn’t obviously a great time to lend to them.",
+    "thumbnail": "https://images.wsj.net/im-62229138",
+    "paywall": true
+  },
+  {
+    "id": "20260211-bill-ackman-makes-a-big-bet-on-meta",
+    "date": "2026-02-11",
+    "title": "Bill Ackman Makes a Big Bet on Meta",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/bill-ackman-makes-a-big-bet-on-meta-e4f4b2cf?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Pershing Square has disclosed a roughly $2 billion position in Facebook’s parent.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-55692144",
     "paywall": true
   },
   {
@@ -7153,6 +7523,24 @@
     "paywall": true
   },
   {
+    "id": "20260224-nasdaq-bounces-back-after-amd-meta-deal-on-ai-ch",
+    "date": "2026-02-24",
+    "title": "Nasdaq Bounces Back After AMD-Meta Deal on AI Chips",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nasdaq-bounces-back-after-amd-meta-deal-on-ai-chips-a30ef666?mod=rss_markets_main",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "Investors look for more clarity on tech shifts.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-72823292",
+    "paywall": true
+  },
+  {
     "id": "20260224-pentagon-gives-anthropic-ultimatum-and-deadline",
     "date": "2026-02-24",
     "title": "Pentagon Gives Anthropic Ultimatum and Deadline in AI Use Standoff",
@@ -7219,6 +7607,40 @@
     "backfill": true,
     "summary": "Spanish antitrust officials said the companies failed to quickly comply with an order to change contract clauses linked with Amazon’s role as a reseller of Apple products.",
     "thumbnail": "https://images.wsj.net/im-06177469",
+    "paywall": true
+  },
+  {
+    "id": "20260225-tech-stocks-rally-in-front-of-nvidia-results",
+    "date": "2026-02-25",
+    "title": "Tech Stocks Rally in Front of Nvidia Results",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/global-stocks-markets-dow-news-02-25-2026-55e95209?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chipmaker’s earnings arrive in a market still shaky with AI jitters.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-51425789",
+    "paywall": true
+  },
+  {
+    "id": "20260226-nvidia-slide-shows-investors-lukewarm-reception",
+    "date": "2026-02-26",
+    "title": "Nvidia Slide Shows Investors’ Lukewarm Reception of Strong Earnings",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-slide-shows-investors-lukewarm-reception-of-strong-earnings-9c1f18fb?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Chip maker’s post-earnings drop caps a season in which better-than-expected results have done little to lift indexes.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-79549793",
     "paywall": true
   },
   {
@@ -7683,6 +8105,22 @@
     "paywall": true
   },
   {
+    "id": "20260306-google-s-rush-to-get-1-000-of-its-people-out-of",
+    "date": "2026-03-06",
+    "title": "Google’s Rush to Get 1,000 of Its People Out of Dubai When War Erupted",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/googles-rush-to-get-1-000-of-its-people-out-of-dubai-when-war-erupted-da60caa3",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The glut of stranded staff was a notable example of outsize evacuations by large companies from Gulf states.",
+    "thumbnail": "https://images.wsj.net/im-68108663",
+    "paywall": true
+  },
+  {
     "id": "20260307-how-the-openai-anthropic-feud-could-warp-the-fut",
     "date": "2026-03-07",
     "title": "How the OpenAI-Anthropic Feud Could Warp the Future of AI",
@@ -7812,6 +8250,24 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-58170209",
+    "paywall": true
+  },
+  {
+    "id": "20260310-openai-faces-lawsuit-over-safety-protocols-ahead",
+    "date": "2026-03-10",
+    "title": "OpenAI Faces Lawsuit Over Safety Protocols Ahead of Canada School Shooting",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/openai-faces-lawsuit-over-safety-protocols-ahead-of-canada-school-shooting-65293e39",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The mother of a girl injured after a fatal school shooting last month in Canada launched a lawsuit against OpenAI for its decision not to inform police of the suspect’s interactions with its ChatGPT chatbot.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-12394345",
     "paywall": true
   },
   {
@@ -8371,6 +8827,38 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-15403986",
+    "paywall": true
+  },
+  {
+    "id": "20260324-super-micro-s-fate-lies-in-nvidia-s-hands",
+    "date": "2026-03-24",
+    "title": "Super Micro’s Fate Lies in Nvidia’s Hands",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/super-micros-fate-lies-in-nvidias-hands-ac3157ab?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The troubled maker of artificial-intelligence servers needs chip allocations, but Nvidia doesn’t need more scrutiny over China.",
+    "thumbnail": "https://images.wsj.net/im-23224894",
+    "paywall": true
+  },
+  {
+    "id": "20260325-leaders-of-ai-firm-bought-by-meta-are-restricted",
+    "date": "2026-03-25",
+    "title": "Leaders of AI Firm Bought by Meta Are Restricted From Leaving China",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/leaders-of-ai-firm-bought-by-meta-are-restricted-from-leaving-china-6b79da34",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Beijing is weighing penalties for key figures at Manus, a Singapore startup with Chinese origins.",
+    "thumbnail": "https://images.wsj.net/im-49578597",
     "paywall": true
   },
   {
@@ -9077,6 +9565,22 @@
     "paywall": true
   },
   {
+    "id": "20260413-philippines-orders-meta-to-tighten-measures-agai",
+    "date": "2026-04-13",
+    "title": "Philippines Orders Meta to Tighten Measures Against ‘Panic-Inducing’ Fake News",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/philippines-orders-meta-to-tighten-measures-against-panic-inducing-fake-news-7514a5c5",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Philippines government has ordered Facebook’s parent company to curb the spread of false, “panic-inducing” content on its platforms.",
+    "thumbnail": "https://images.wsj.net/im-56728711",
+    "paywall": true
+  },
+  {
     "id": "20260413-sam-altman-attack-suspect-had-anti-ai-document-w",
     "date": "2026-04-13",
     "title": "Sam Altman Attack Suspect Had ‘Anti-AI’ Document with CEO Names, Authorities Say",
@@ -9259,6 +9763,23 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-61845977",
+    "paywall": true
+  },
+  {
+    "id": "20260421-new-york-sues-coinbase-gemini-over-crypto-exchan",
+    "date": "2026-04-21",
+    "title": "New York Sues Coinbase, Gemini Over Crypto Exchanges’ Prediction Markets",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/politics/policy/new-york-sues-coinbase-gemini-over-crypto-exchanges-prediction-markets-d6d007bc?mod=rss_markets_main",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Federal and state regulators have been sparring over who has oversight of the platforms, which have surged in popularity",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-96309431",
     "paywall": true
   },
   {
@@ -9474,6 +9995,22 @@
     "paywall": true
   },
   {
+    "id": "20260424-tsmc-shares-rise-after-taiwan-eases-limits-on-fu",
+    "date": "2026-04-24",
+    "title": "TSMC Shares Rise After Taiwan Eases Limits on Funds’ Investments",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/tsmc-shares-rise-after-taiwan-eases-limits-on-funds-investments-c28b25b6?mod=rss_markets_main",
+    "org": "tsmc",
+    "category": "policy",
+    "tickers": [
+      "TSM"
+    ],
+    "backfill": true,
+    "summary": "Taiwan’s regulators eased the limit on how much funds can invest in a single stock, allowing fund managers to pile in the world’s largest contract chip maker.",
+    "thumbnail": "https://images.wsj.net/im-37763933",
+    "paywall": true
+  },
+  {
     "id": "20260424-x-energy-s-shares-jump-in-ipo-delivering-wins-to",
     "date": "2026-04-24",
     "title": "X-Energy’s Shares Jump in IPO, Delivering Wins to Amazon and Ken Griffin",
@@ -9551,6 +10088,55 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-48019034",
+    "paywall": true
+  },
+  {
+    "id": "20260427-stocks-inch-to-new-records-as-nvidia-strength-ov",
+    "date": "2026-04-27",
+    "title": "Stocks Inch to New Records as Nvidia Strength Overcomes Consumer Weakness",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/global-stocks-markets-dow-news-04-27-2026-a3cc163f?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Shares in the consumer-staples and consumer-discretionary sectors slumped. Wall Street has a big week of earnings ahead.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-93107355",
+    "paywall": true
+  },
+  {
+    "id": "20260427-taiwan-court-hands-down-prison-sentences-over-le",
+    "date": "2026-04-27",
+    "title": "Taiwan Court Hands Down Prison Sentences Over Leaks of TSMC Trade Secrets",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/taiwan-court-hands-down-prison-sentences-over-leaks-of-tsmc-trade-secrets-55d5bdf9",
+    "org": "tsmc",
+    "category": "policy",
+    "tickers": [
+      "TSM"
+    ],
+    "backfill": true,
+    "summary": "A Taiwanese court on Monday sentenced a former Taiwan Semiconductor Manufacturing employee to 10 years in prison over the theft of trade secrets.",
+    "thumbnail": "https://images.wsj.net/im-64052214",
+    "paywall": true
+  },
+  {
+    "id": "20260428-china-s-ban-on-meta-manus-deal-shows-strains-in",
+    "date": "2026-04-28",
+    "title": "China’s Ban on Meta-Manus Deal Shows Strains in U.S.-China Business Ties",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/china/chinas-ban-on-meta-manus-deal-shows-strains-in-u-s-china-business-ties-3f58f0d7",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "China’s move to force Meta to unwind its acquisition of the AI startup demonstrates Beijing’s willingness to use economic weapons to safeguard key interests.",
+    "thumbnail": "https://images.wsj.net/im-01368844",
     "paywall": true
   },
   {
@@ -9763,6 +10349,23 @@
     "paywall": true
   },
   {
+    "id": "20260430-investors-ride-google-caterpillar-to-market-s-be",
+    "date": "2026-04-30",
+    "title": "Investors Ride Google, Caterpillar to Market’s Best Month Since 2020",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/investors-ride-google-caterpillar-to-markets-best-month-since-2020-ca0fc08a?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "U.S. stock indexes rise on Thursday, with the Nasdaq composite closing at a record high.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-63996660",
+    "paywall": true
+  },
+  {
     "id": "20260430-mark-zuckerberg-blames-slower-sales-on-war-layof",
     "date": "2026-04-30",
     "title": "Mark Zuckerberg Blames Slower Sales on War, Layoffs on AI Costs in Meeting",
@@ -9876,6 +10479,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-74533361",
+    "paywall": true
+  },
+  {
+    "id": "20260503-stock-indexes-are-contorting-themselves-to-inclu",
+    "date": "2026-05-03",
+    "title": "Stock Indexes Are Contorting Themselves to Include SpaceX and OpenAI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/stock-indexes-are-contorting-themselves-to-include-spacex-and-openai-92136b13?mod=rss_markets_main",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Index funds holding trillions of dollars of 401(k)s and other investments are rushing to change their rules as the IPOs of SpaceX, OpenAI and Anthropic draw closer.",
+    "thumbnail": "https://images.wsj.net/im-19464033",
     "paywall": true
   },
   {
@@ -10030,6 +10650,39 @@
     "summary": "The company is considering an Alphabet-like structure for its portfolio of products, though no discussions are currently active.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-01044679",
+    "paywall": true
+  },
+  {
+    "id": "20260505-i-asked-chatgpt-to-manage-a-stock-portfolio-here",
+    "date": "2026-05-05",
+    "title": "I Asked ChatGPT to Manage a Stock Portfolio. Here’s How It Did.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/i-asked-chatgpt-to-manage-a-stock-portfolio-heres-how-it-did-0d62900b?mod=rss_markets_main",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "I planned to test it for a few weeks. What followed was a monthslong back-and-forth on everything from tariffs to leveraged funds.",
+    "thumbnail": "https://images.wsj.net/im-72657234",
+    "paywall": true
+  },
+  {
+    "id": "20260505-meta-s-cheap-stock-is-an-investor-trap",
+    "date": "2026-05-05",
+    "title": "Meta’s Cheap Stock Is an Investor Trap",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/metas-cheap-stock-is-an-investor-trap-2eca5dc6?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The company’s advertising business is booming, but deep problems loom pretty much everywhere else.",
+    "thumbnail": "https://images.wsj.net/im-32580717",
     "paywall": true
   },
   {
@@ -10333,6 +10986,23 @@
     "paywall": true
   },
   {
+    "id": "20260513-nvidia-rally-propels-stocks-to-new-records",
+    "date": "2026-05-13",
+    "title": "Nvidia Rally Propels Stocks to New Records",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-rally-propels-stocks-to-new-records-84148f1d?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI chip giant becomes the first company to reach a market value of $5.5 trillion.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-00821427",
+    "paywall": true
+  },
+  {
     "id": "20260513-softbank-lands-25-billion-gain-on-openai-bet",
     "date": "2026-05-13",
     "title": "SoftBank Lands $25 Billion Gain on OpenAI Bet",
@@ -10616,6 +11286,39 @@
     "paywall": true
   },
   {
+    "id": "20260520-the-furious-chip-rally-was-petering-out-now-wall",
+    "date": "2026-05-20",
+    "title": "The Furious Chip Rally Was Petering Out. Now Wall Street Turns to Nvidia.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/the-furious-chip-rally-was-petering-out-here-come-nvidias-results-e2c3d916?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Semiconductor stocks just muddled through their worst two-day stretch since March.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-69533695",
+    "paywall": true
+  },
+  {
+    "id": "20260521-even-at-5-trillion-nvidia-is-underappreciated",
+    "date": "2026-05-21",
+    "title": "Even at $5 Trillion, Nvidia Is Underappreciated",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/even-at-5-trillion-nvidia-is-underappreciated-bdfd936c?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Competition is growing, but the AI chip maker’s sluggish stock doesn’t give enough credit for its strong position.",
+    "thumbnail": "https://images.wsj.net/im-44706970",
+    "paywall": true
+  },
+  {
     "id": "20260525-meet-mark-zuckerberg-s-right-hand-man-who-s-unle",
     "date": "2026-05-25",
     "title": "Meet Mark Zuckerberg’s Right-Hand Man Who’s Unleashing AI at Meta",
@@ -10628,6 +11331,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-48042626",
+    "paywall": true
+  },
+  {
+    "id": "20260526-apple-google-warn-encryption-services-at-risk-wi",
+    "date": "2026-05-26",
+    "title": "Apple, Google Warn Encryption Services at Risk With Canada Bill",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/americas/apple-google-warn-encryption-services-at-risk-with-canada-bill-244f7478",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Executives from the technology companies warned that lawmakers risk putting their citizens’ privacy and security at risk under a government proposal to give police access to information on their digital devices.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-32616363",
     "paywall": true
   },
   {
@@ -10662,6 +11382,22 @@
     "paywall": true
   },
   {
+    "id": "20260528-how-online-sleuthing-helped-catch-the-google-ins",
+    "date": "2026-05-28",
+    "title": "How Online Sleuthing Helped Catch the ‘Google Insider’ on Polymarket",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/currencies/how-online-sleuthing-helped-catch-the-google-polymarket-trader-b6ccebb0?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Amateur observers spot suspicious trades on the crypto-based betting platform.",
+    "thumbnail": "https://images.wsj.net/im-35734127",
+    "paywall": true
+  },
+  {
     "id": "anthropic-s1",
     "date": "2026-06-01",
     "title": "Anthropic confidentially submits a draft S-1 for an IPO",
@@ -10676,6 +11412,89 @@
       "NVDA"
     ],
     "manual": true
+  },
+  {
+    "id": "20260601-why-it-matters-if-openai-or-anthropic-wins-the-i",
+    "date": "2026-06-01",
+    "title": "Why It Matters if OpenAI or Anthropic Wins the IPO Race",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/openai-anthropic-ipo-race-0cf0ed36?mod=rss_markets_main",
+    "org": "openai",
+    "category": "deals",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "There is much to gain for the company that moves faster.",
+    "thumbnail": "https://images.wsj.net/im-54856427",
+    "paywall": true
+  },
+  {
+    "id": "20260602-alphabet-s-mega-fundraising-shows-the-value-of-b",
+    "date": "2026-06-02",
+    "title": "Alphabet’s Mega Fundraising Shows the Value of Being a Public Company",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/alphabet-google-stock-fundraising-33aeaa9c?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "In AI, money talks. The ability to tap stock market capital is important again, after a quarter of a century of being all but irrelevant.",
+    "thumbnail": "https://images.wsj.net/im-15950204",
+    "paywall": true
+  },
+  {
+    "id": "20260602-why-nvidia-inside-can-work-in-the-pc-market",
+    "date": "2026-06-02",
+    "title": "Why ‘Nvidia Inside’ Can Work in the PC Market",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/why-nvidia-inside-can-work-in-the-pc-market-c5ab3111?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The world’s only $5 trillion company can sell the concept that AI computing won’t be confined to data centers.",
+    "thumbnail": "https://images.wsj.net/im-99730209",
+    "paywall": true
+  },
+  {
+    "id": "20260604-dow-surges-while-broadcom-drags-tech-stocks-lowe",
+    "date": "2026-06-04",
+    "title": "Dow Surges While Broadcom Drags Tech Stocks Lower",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/u-s-tech-futures-slip-while-oil-falls-on-lebanon-ceasefire-89ef4b13?mod=rss_markets_main",
+    "org": "broadcom",
+    "category": "markets",
+    "tickers": [
+      "AVGO"
+    ],
+    "backfill": true,
+    "summary": "Healthcare and financial stocks helped push the Dow Jones Industrial Average higher while tech stocks lagged behind.",
+    "thumbnail": "https://images.wsj.net/im-64131485",
+    "paywall": true
+  },
+  {
+    "id": "20260608-nvidia-takes-the-top-spot-in-the-2026-list-of-be",
+    "date": "2026-06-08",
+    "title": "Nvidia Takes the Top Spot in the 2026 List of Best Companies for the Future",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/lifestyle/careers/2026-best-companies-future-nvidia-f6744e03?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "This new ranking also showcases tech giants Alphabet, Microsoft, Meta and Cisco, propelled by high scores for innovation, financial strength and AI readiness.",
+    "thumbnail": "https://images.wsj.net/im-71220546",
+    "paywall": true
   },
   {
     "id": "openai-s1",
@@ -10707,6 +11526,38 @@
     "manual": true
   },
   {
+    "id": "20260610-anti-nvidia-data-center-startup-is-valued-at-1-5",
+    "date": "2026-06-10",
+    "title": "Anti-Nvidia Data-Center Startup Is Valued at $1.55 Billion in New Funding Round",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anti-nvidia-data-center-startup-is-valued-at-1-55-billion-in-new-funding-round-e58b2aec?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "TensorWave will use a fresh $350 million to fill more data centers with chips from AMD, an investor.",
+    "thumbnail": "https://images.wsj.net/im-52301753",
+    "paywall": true
+  },
+  {
+    "id": "20260611-meta-s-subscription-push-exposes-its-weak-hand-i",
+    "date": "2026-06-11",
+    "title": "Meta’s Subscription Push Exposes Its Weak Hand in AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/metas-subscription-push-exposes-its-weak-hand-in-ai-2fad4680?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Charging users is the latest idea to expand beyond ads—a pickle Meta isn’t likely to get out of soon.",
+    "thumbnail": "https://images.wsj.net/im-69307046",
+    "paywall": true
+  },
+  {
     "id": "mythos-export-controls",
     "date": "2026-06-12",
     "title": "U.S. export controls lead Anthropic to suspend access to Mythos 5 and Fable 5",
@@ -10723,6 +11574,25 @@
     "manual": true
   },
   {
+    "id": "20260618-the-13-billion-ai-startup-betting-on-cheaper-alt",
+    "date": "2026-06-18",
+    "title": "The $13 Billion AI Startup Betting on Cheaper Alternatives to OpenAI, Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/the-13-billion-ai-startup-betting-on-cheaper-alternatives-to-openai-anthropic-b9679603?mod=rss_markets_main",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "Baseten, part of a growing Silicon Valley ecosystem offering services to enable low-cost AI models, is raising $1.5 billion in a new round.",
+    "thumbnail": "https://images.wsj.net/im-97768264",
+    "paywall": true
+  },
+  {
     "id": "ai-selloff-june",
     "date": "2026-06-23",
     "title": "AI and chip stocks sell off over doubts about returns on AI spending",
@@ -10737,6 +11607,40 @@
       "TSM"
     ],
     "manual": true
+  },
+  {
+    "id": "20260623-google-parent-alphabet-to-replace-verizon-in-dow",
+    "date": "2026-06-23",
+    "title": "Google-Parent Alphabet to Replace Verizon in Dow Jones Industrial Average",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/google-parent-alphabet-to-replace-verizon-in-dow-jones-industrial-average-d8dfe852?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The change will take effect before the market opens on June 29, said S&P Dow Jones Indices, which manages the index.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-36122340",
+    "paywall": true
+  },
+  {
+    "id": "20260624-as-ai-companies-race-for-power-amazon-and-google",
+    "date": "2026-06-24",
+    "title": "As AI Companies Race for Power, Amazon and Google Have the Lead",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/as-ai-companies-race-for-power-amazon-and-google-have-the-lead-1d97af9a?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL",
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Amazon has an incumbent advantage, and Google stands out for some innovative approaches.",
+    "thumbnail": "https://images.wsj.net/im-16464624",
+    "paywall": true
   },
   {
     "id": "20260630-microsoft-s-irish-hub-is-profit-powerhouse",
@@ -10769,6 +11673,25 @@
     "manual": true
   },
   {
+    "id": "20260708-anthropic-s-political-risks-are-real-but-openai",
+    "date": "2026-07-08",
+    "title": "Anthropic’s Political Risks Are Real, but OpenAI’s Loom Even Larger",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropics-political-risks-are-real-but-openais-loom-even-larger-9751791d?mod=rss_markets_main",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The U.S. government’s targeting of Anthropic might not last—especially if political winds shift.",
+    "thumbnail": "https://images.wsj.net/im-35523887",
+    "paywall": true
+  },
+  {
     "id": "20260715-china-s-deepseek-prepares-to-list-shares-in-shan",
     "date": "2026-07-15",
     "title": "China’s DeepSeek Prepares to List Shares in Shanghai Next Year",
@@ -10786,6 +11709,22 @@
     "summary": "AI developer needs more funds for costly research in race with Anthropic and other U.S. companies.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-93384819",
+    "paywall": true
+  },
+  {
+    "id": "20260716-japan-to-buy-nvidia-chips-to-power-its-ai-push",
+    "date": "2026-07-16",
+    "title": "Japan to Buy Nvidia Chips to Power Its AI Push",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-noetra-to-build-ai-factory-to-power-japans-ai-ambitions-95e74210",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia chips are set to power Japan’s artificial-intelligence push, with the government planning to buy thousands of the company’s next-generation semiconductors to build an AI ecosystem on its own soil.",
+    "thumbnail": "https://images.wsj.net/im-67877976",
     "paywall": true
   },
   {
@@ -10855,6 +11794,136 @@
     "paywall": true
   },
   {
+    "id": "20260719-ukraine-escalates-air-war-with-deadly-strikes-on",
+    "date": "2026-07-19",
+    "title": "Ukraine Escalates Air War With Deadly Strikes on Russia’s ‘Amazon’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/ukraine-escalates-air-war-with-deadly-strikes-on-russias-amazon-163ba241",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Drone attacks on warehouses belonging to Wildberries, Russia’s largest online retailer, killed at least eight people and injured dozens. In response, Russia fired some 50 ballistic missiles at Kyiv.",
+    "thumbnail": "https://images.wsj.net/im-63261609",
+    "paywall": true
+  },
+  {
+    "id": "20260720-blackrock-leads-12-billion-financing-for-new-met",
+    "date": "2026-07-20",
+    "title": "BlackRock Leads $12 Billion Financing for New Meta Data Centers in Texas",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/blackrock-leads-12-billion-financing-for-new-meta-data-centers-in-texas-e1c3d42c?mod=rss_markets_main",
+    "org": "meta",
+    "category": "compute",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The asset manager’s infrastructure and private-credit arms are leading the jumbo project.",
+    "thumbnail": "https://images.wsj.net/im-25894244",
+    "paywall": true
+  },
+  {
+    "id": "20260722-nasdaq-slips-ahead-of-earnings-from-tesla-alphab",
+    "date": "2026-07-22",
+    "title": "Nasdaq Slips Ahead of Earnings From Tesla, Alphabet",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/ai-stock-rally-loses-steam-ahead-of-key-big-tech-earnings-ac4b72ac?mod=rss_markets_main",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "U.S. stock market moves were muted, with the Nasdaq composite slipping and the Dow industrials edging higher.",
+    "thumbnail": "https://images.wsj.net/im-43403622",
+    "paywall": true
+  },
+  {
+    "id": "20260723-google-discloses-94-1-billion-in-spacex-stock-ma",
+    "date": "2026-07-23",
+    "title": "Google Discloses $94.1 Billion in SpaceX Stock, Marking 6% Stake",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c?mod=rss_markets_main",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The company said its marketable equity securities include $80 billion in short-term restricted shares and $14.1 billion restricted through 2027.",
+    "thumbnail": "https://images.wsj.net/im-87329261",
+    "paywall": true
+  },
+  {
+    "id": "20260723-google-has-the-muscle-to-overpower-spending-worr",
+    "date": "2026-07-23",
+    "title": "Google Has the Muscle to Overpower Spending Worries",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-has-the-muscle-to-overpower-spending-worries-725a92e4?mod=rss_markets_main",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "AI investment and delays are concerns, but the company’s core businesses look strong.",
+    "thumbnail": "https://images.wsj.net/im-88692251",
+    "paywall": true
+  },
+  {
+    "id": "20260726-nvidia-in-talks-with-openai-to-guarantee-250-bil",
+    "date": "2026-07-26",
+    "title": "Nvidia in Talks With OpenAI to Guarantee $250 Billion Financing for Data Center",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-3dd6eae3?mod=rss_markets_main",
+    "org": "openai",
+    "category": "compute",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Project would be one of the largest AI computing hubs and involve power controlled by the U.S. government.",
+    "thumbnail": "https://images.wsj.net/im-18973403",
+    "paywall": true
+  },
+  {
+    "id": "20260727-nvidia-falls-behind-apple-in-mixed-day-for-stock",
+    "date": "2026-07-27",
+    "title": "Nvidia Falls Behind Apple in Mixed Day for Stocks",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/global-stocks-markets-dow-news-07-27-2026-f8e6f1a5?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Chip stocks declined, with a big week of tech earnings looming. The Nasdaq composite fell 0.2%, while the Dow industrials rose 0.5%.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-92758001",
+    "paywall": true
+  },
+  {
+    "id": "20260728-the-price-to-finance-the-ai-data-center-boom-is",
+    "date": "2026-07-28",
+    "title": "The Price to Finance the AI Data Center Boom Is Rising, Just Ask Meta",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/the-price-to-finance-the-ai-data-center-boom-is-rising-just-ask-meta-7894d503?mod=rss_markets_main",
+    "org": "meta",
+    "category": "deals",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta’s data-center project priced a $12.5 billion offering with a higher interest rate than a similar deal last year, as AI companies flood the market with new debt.",
+    "thumbnail": "https://images.wsj.net/im-29595526",
+    "paywall": true
+  },
+  {
     "id": "chip-selloff-july",
     "date": "2026-07-29",
     "title": "Chip stocks lose more than $1 trillion in a global selloff",
@@ -10869,6 +11938,126 @@
       "AVGO"
     ],
     "manual": true
+  },
+  {
+    "id": "20260730-meta-s-case-for-its-ai-spending-keeps-getting-we",
+    "date": "2026-07-30",
+    "title": "Meta’s Case for Its AI Spending Keeps Getting Weaker",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/metas-case-for-its-ai-spending-keeps-getting-weaker-aa4b9a5c?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The company’s all-out splurge is running into higher costs, borrowing constraints and investor pushback.",
+    "thumbnail": "https://images.wsj.net/im-71547068",
+    "paywall": true
+  },
+  {
+    "id": "20260730-microsoft-posts-biggest-one-day-market-cap-gain",
+    "date": "2026-07-30",
+    "title": "Microsoft Posts Biggest One-Day Market-Cap Gain for Any U.S. Company",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/microsoft-posts-biggest-one-day-market-cap-gain-for-any-u-s-company-b8713761?mod=rss_markets_main",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "While the software company gained $450 billion in market value, Meta shares plunged.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-09227283",
+    "paywall": true
+  },
+  {
+    "id": "20260731-amazon-and-apple-deliver-the-drama-to-close-a-tu",
+    "date": "2026-07-31",
+    "title": "Amazon and Apple Deliver the Drama to Close a Turbulent Month",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/amazon-and-apple-deliver-the-drama-to-close-a-turbulent-month-41d82dc9?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Record market-cap moves for the tech giants end in a 1% Nasdaq gain.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-99570298",
+    "paywall": true
+  },
+  {
+    "id": "20260731-apple-falls-but-amazon-other-stocks-push-nasdaq",
+    "date": "2026-07-31",
+    "title": "Apple Falls, But Amazon, Other Stocks Push Nasdaq Composite Higher",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/u-s-stock-futures-higher-as-ai-rebound-continues-1de16735?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "markets",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The Nasdaq composite climbed, with Apple’s decline offset by Amazon’s rise following its report of accelerating cloud-computing sales.",
+    "thumbnail": "https://images.wsj.net/im-948172",
+    "paywall": true
+  },
+  {
+    "id": "20260731-u-s-stocks-rise-as-amazon-earnings-offset-apple",
+    "date": "2026-07-31",
+    "title": "U.S. Stocks Rise as Amazon Earnings Offset Apple Chip Woes",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/u-s-stocks-rise-as-amazon-earnings-offset-apple-chip-woes-21a670dc?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "compute",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "U.S. stocks settled higher as Amazon kept the artificial-intelligence recovery rolling.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-90530299",
+    "paywall": true
+  },
+  {
+    "id": "20260810-nvidia-wall-street-firms-strike-ai-financing-dea",
+    "date": "2026-08-10",
+    "title": "Nvidia, Wall Street Firms Strike AI Financing Deal Targeting $500 Billion",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/nvidia-wall-street-firms-strike-ai-financing-deal-targeting-500-billion-c50377db?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Apollo, Blackstone and BlackRock were among the firms that committed to the deal.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-13521010",
+    "paywall": true
+  },
+  {
+    "id": "20260811-anthropic-tries-to-shore-up-investor-confidence",
+    "date": "2026-08-11",
+    "title": "Anthropic Tries to Shore Up Investor Confidence Ahead of Blockbuster IPO",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-tries-to-shore-up-investor-confidence-ahead-of-blockbuster-ipo-0ff736ad?mod=rss_markets_main",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI giant is racing to public markets this fall and has fielded tough investor questions on Chinese rivals, Trump-era tensions, and the artificial-intelligence infrastructure boom.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-50714106",
+    "paywall": true
   },
   {
     "id": "20260814-berkshire-adds-to-alphabet-stake-buys-home-build",
@@ -10939,6 +12128,22 @@
     "backfill": true,
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-47127562",
+    "paywall": true
+  },
+  {
+    "id": "20260818-a-21-billion-kids-in-chips-startup-is-scooping-u",
+    "date": "2026-08-18",
+    "title": "A $21 Billion ‘Kids in Chips’ Startup Is Scooping Up Nvidia Talent",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/a-21-billion-kids-in-chips-startup-is-scooping-up-nvidia-talent-4d099f12?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Etched, founded by Harvard dropouts, has its own in-office data center and has signed quant-trading firm Jane Street as its first customer.",
+    "thumbnail": "https://images.wsj.net/im-03627216",
     "paywall": true
   },
   {
@@ -11026,6 +12231,90 @@
     "paywall": true
   },
   {
+    "id": "20260824-wall-street-is-counting-on-nvidia-to-keep-the-ai",
+    "date": "2026-08-24",
+    "title": "Wall Street Is Counting on Nvidia to Keep the AI Party Going",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/wall-street-is-counting-on-nvidia-to-keep-the-ai-party-going-7e7caf0c?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia’s results could send shock waves through the tech sector—and the broader stock market.",
+    "thumbnail": "https://images.wsj.net/im-56641862",
+    "paywall": true
+  },
+  {
+    "id": "20260825-anthropic-expected-to-tell-investors-it-sees-ove",
+    "date": "2026-08-25",
+    "title": "Anthropic Expected to Tell Investors It Sees Over $30 Trillion in Potential Revenue",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-expected-to-tell-investors-it-sees-over-30-trillion-in-potential-revenue-a611efea?mod=rss_markets_main",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI startup is likely to top SpaceX’s eye-popping potential revenue estimate.",
+    "thumbnail": "https://images.wsj.net/im-84285152",
+    "paywall": true
+  },
+  {
+    "id": "20260825-nvidia-has-become-a-banker-to-the-ai-boom-puttin",
+    "date": "2026-08-25",
+    "title": "Nvidia Has Become a Banker to the AI Boom, Putting It on Dangerous Ground",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-has-become-a-banker-to-the-ai-boom-putting-it-on-dangerous-ground-94c03545?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "apocalyptic",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The financial engineering the company is using to keep revenue growing introduces risks that could eventually cause real pain.",
+    "thumbnail": "https://images.wsj.net/im-23084908",
+    "paywall": true
+  },
+  {
+    "id": "20260826-investors-brace-for-less-than-perfect-nvidia-res",
+    "date": "2026-08-26",
+    "title": "Investors Brace for Less-Than-Perfect Nvidia Results, Pull Stocks Lower",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/investors-brace-for-less-than-perfect-nvidia-results-pull-stocks-lower-2ef52443?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The major stock indexes edge lower on Wednesday in light trading.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-37847409",
+    "paywall": true
+  },
+  {
+    "id": "20260826-microsoft-is-leaving-investors-flying-blind-on-i",
+    "date": "2026-08-26",
+    "title": "Microsoft Is Leaving Investors Flying Blind on Its AI Businesses",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/microsoft-is-leaving-investors-flying-blind-on-its-ai-businesses-3607360a?mod=rss_markets_main",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "From capex to its flagship cloud platform, Microsoft stands out for its lack of transparency.",
+    "thumbnail": "https://images.wsj.net/im-47548795",
+    "paywall": true
+  },
+  {
     "id": "20260826-new-york-mayor-faces-off-against-amazon",
     "date": "2026-08-26",
     "title": "New York Mayor Faces Off Against Amazon",
@@ -11039,6 +12328,23 @@
     "backfill": true,
     "summary": "Plus: Canada plans retaliatory tariffs of up to 50% on U.S. imports; Persian Gulf shipping insurance costs surge higher.",
     "thumbnail": "https://images.wsj.net/im-65484215",
+    "paywall": true
+  },
+  {
+    "id": "20260826-nvidia-reports-blowout-quarter-says-demand-for-a",
+    "date": "2026-08-26",
+    "title": "Nvidia Reports Blowout Quarter, Says Demand for AI Chips Is Getting Even Hotter",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-earnings-q2-2027-nvda-stock-8983c8d1?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Shares rallied as the chip giant forecast 70% revenue growth next year and defended its financial support of AI companies.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-13301787",
     "paywall": true
   },
   {
@@ -11078,6 +12384,86 @@
     "paywall": true
   },
   {
+    "id": "20260827-asian-stocks-mixed-after-nvidia-earnings",
+    "date": "2026-08-27",
+    "title": "Asian Stocks Mixed After Nvidia Earnings",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/asian-stocks-mixed-after-nvidia-earnings-25af2b68?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Nvidia’s earnings and guidance helped set the tone for trading in Asia on Thursday.",
+    "thumbnail": "https://images.wsj.net/im-12058947",
+    "paywall": true
+  },
+  {
+    "id": "20260827-european-chip-stocks-rise-after-nvidia-results-g",
+    "date": "2026-08-27",
+    "title": "European Chip Stocks Rise After Nvidia Results, Guidance",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nikkei-rises-0-7-led-by-chip-stocks-1cae7bf0?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Shares of European semiconductor companies edged higher after Nvidia’s blowout results.",
+    "paywall": true
+  },
+  {
+    "id": "20260827-nvidia-s-279-billion-supply-chain-gamble",
+    "date": "2026-08-27",
+    "title": "Nvidia’s $279 Billion Supply-Chain Gamble",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidias-279-billion-supply-chain-gamble-cbe316d2?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI chip leader is using its financial muscle to win the supply battle, but it comes with downsides.",
+    "thumbnail": "https://images.wsj.net/im-87935236",
+    "paywall": true
+  },
+  {
+    "id": "20260827-stocks-climb-as-nvidia-s-bullish-forecast-lifts",
+    "date": "2026-08-27",
+    "title": "Stocks Climb as Nvidia’s Bullish Forecast Lifts Investors’ Spirits",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nasdaq-futures-buoyed-by-nvidia-earnings-software-as-oil-falls-ff5cea2d?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Stocks make gains as a blockbuster revenue forecast from Nvidia is bringing some much-needed relief to investors who have been anxious about the AI boom.",
+    "thumbnail": "https://images.wsj.net/im-09924062",
+    "paywall": true
+  },
+  {
+    "id": "20260827-u-s-stocks-rise-after-rosy-nvidia-view",
+    "date": "2026-08-27",
+    "title": "U.S. Stocks Rise After Rosy Nvidia View",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/u-s-stocks-rise-after-rosy-nvidia-view-98fa71ea?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "U.S. stocks gained as a rosy growth projection from Nvidia mitigated fears about the sustainability of the artificial-intelligence boom.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-96088705",
+    "paywall": true
+  },
+  {
     "id": "20260828-nvidia-insists-it-can-keep-printing-money-to-fun",
     "date": "2026-08-28",
     "title": "Nvidia Insists It Can Keep Printing Money to Fund the AI Boom",
@@ -11108,6 +12494,22 @@
     "backfill": true,
     "summary": "The company, which is majority-owned by Masayoshi Son’s SoftBank, said it plans to trade on Nasdaq under the symbol SBE, and hasn’t yet determined the number or pricing of shares in the proposed offering.",
     "thumbnail": "https://images.wsj.net/im-07898987",
+    "paywall": true
+  },
+  {
+    "id": "20260901-the-morning-risk-report-ftc-files-lawsuit-allegi",
+    "date": "2026-09-01",
+    "title": "The Morning Risk Report: FTC Files Lawsuit Alleging Amazon Deceived Advertisers",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-ftc-files-lawsuit-alleging-amazon-deceived-advertisers-0a812550?mod=rss_markets_main",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "Plus: George Santos gets Kalshi ban and G-20 warned of AI cyber threats.",
+    "thumbnail": "https://images.wsj.net/im-24341369",
     "paywall": true
   },
   {
@@ -11169,6 +12571,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-30599127",
+    "paywall": true
+  },
+  {
+    "id": "20260904-u-s-used-promise-of-nvidia-chips-to-broker-armen",
+    "date": "2026-09-04",
+    "title": "U.S. Used Promise of Nvidia Chips to Broker Armenia-Azerbaijan Peace Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/world/u-s-used-promise-of-nvidia-chips-to-broker-armenia-azerbaijan-peace-deal-b6c7cb6e?mod=rss_worldnews",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Negotiators offered access to advanced AI hardware to help secure a preliminary agreement last year to end decades of conflict, the latest example of chip diplomacy.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-30699123",
     "paywall": true
   },
   {
@@ -11239,6 +12658,22 @@
     "paywall": true
   },
   {
+    "id": "20260912-larry-ellison-scraps-plan-to-sell-up-to-7-5-bill",
+    "date": "2026-09-12",
+    "title": "Larry Ellison Scraps Plan to Sell Up to $7.5 Billion Worth of Oracle Stock",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/larry-ellison-scraps-plan-to-sell-up-to-7-5-billion-worth-of-oracle-stock-9f41edd2?mod=rss_markets_main",
+    "org": "oracle",
+    "category": "model",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "The billionaire said that no stock was sold, and that he canceled a plan to unload 50 million shares.",
+    "thumbnail": "https://images.wsj.net/im-80025367",
+    "paywall": true
+  },
+  {
     "id": "20260912-the-woman-fixing-a-microsoft-mess-with-brutal-ho",
     "date": "2026-09-12",
     "title": "The Woman Fixing a Microsoft Mess With Brutal Honesty",
@@ -11272,6 +12707,91 @@
     "paywall": true
   },
   {
+    "id": "20260918-meta-s-ai-agent-has-a-trust-problem",
+    "date": "2026-09-18",
+    "title": "Meta’s AI Agent Has a Trust Problem",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/metas-ai-agent-has-a-trust-problem-5ee5882c?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The company’s Muse AI agent needs user data to be useful, but users might be wary.",
+    "thumbnail": "https://images.wsj.net/im-06088131",
+    "paywall": true
+  },
+  {
+    "id": "20260918-nvidia-backed-cloud-startup-nscale-files-for-ipo",
+    "date": "2026-09-18",
+    "title": "Nvidia-Backed Cloud Startup Nscale Files for IPO",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/nvidia-backed-cloud-startup-nscale-files-for-ipo-2622ca12?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The U.K.-based company didn’t say how many shares it would offer, or at what price, but intends to list shares on the New York Stock Exchange under the symbol NSCL.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-60820115",
+    "paywall": true
+  },
+  {
+    "id": "20260921-british-columbia-sues-openai-alleging-chatgpt-ai",
+    "date": "2026-09-21",
+    "title": "British Columbia Sues OpenAI, Alleging ChatGPT Aided Mass School Shooting",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/british-columbia-sues-openai-alleging-chatgpt-aided-mass-school-shooting-aac66568?mod=rss_worldnews",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The lawsuit alleges that the AI company failed to notify law enforcement and calls out product safety gaps.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-57554777",
+    "paywall": true
+  },
+  {
+    "id": "20260921-the-magnificent-seven-is-roaring-back-fueled-by",
+    "date": "2026-09-21",
+    "title": "The Magnificent Seven Is Roaring Back, Fueled by Meta’s Rally",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/meta-magnificent-seven-tech-stock-5a793174?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Surging tech shares lifted the Nasdaq composite to a record close, and left AI safety fears in the dust.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-57235896",
+    "paywall": true
+  },
+  {
+    "id": "20260922-meta-s-muse-comes-for-financial-stocks",
+    "date": "2026-09-22",
+    "title": "Meta’s Muse Comes for Financial Stocks",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/metas-muse-comes-for-financial-stocks-17bdf11a?mod=rss_markets_main",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The rapid adoption of the new artificial-intelligence agent threatens to disrupt wealth managers, brokerages and insurers.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-05973138",
+    "paywall": true
+  },
+  {
     "id": "20260923-meta-s-new-ai-agent-is-an-instant-hit-and-the-ba",
     "date": "2026-09-23",
     "title": "Meta’s New AI Agent Is an Instant Hit—and the Backlash Has Already Begun",
@@ -11284,6 +12804,22 @@
     ],
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-67009155",
+    "paywall": true
+  },
+  {
+    "id": "20260925-cracks-in-oracle-s-ai-data-center-build-out-appe",
+    "date": "2026-09-25",
+    "title": "Cracks in Oracle’s AI Data-Center Build-Out Appear in Massive New Mexico Project",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/cracks-in-oracles-ai-data-center-build-out-appear-in-massive-new-mexico-project-effb51c2?mod=rss_markets_main",
+    "org": "oracle",
+    "category": "deals",
+    "tickers": [
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "Oracle sent a force majeure notice to the developer, has removed one key development partner and faced local resistance in Project Jupiter.",
+    "thumbnail": "https://images.wsj.net/im-44974345",
     "paywall": true
   },
   {
