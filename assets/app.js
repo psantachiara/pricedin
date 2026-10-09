@@ -253,15 +253,19 @@
       });
       if (!ids.length) return null;      // nothing selected that makes a claim
       return coverWeeks.map((w) => {
-        let share = 0;
-        const reached = [];
-        for (const id of ids) {
-          const value = sourceShare(id, w.from, w.to);
-          if (value == null) continue;
-          if (value > share) share = value;
-          if (value > 0.05) reached.push((sourceById.get(id) || {}).name || id);
-        }
-        return { from: w.from, to: w.to, share, feeds: reached, total: ids.length };
+        // Each source answers for itself. A source with no entry for a week
+        // has not been read there, which is a different thing from having been
+        // read and found nothing, and the two must not look alike.
+        const parts = ids.map((id) => ({
+          name: (sourceById.get(id) || {}).name || id,
+          share: sourceShare(id, w.from, w.to),
+        }));
+        const measured = parts.filter((p) => p.share != null);
+        return {
+          from: w.from, to: w.to, parts,
+          known: measured.length > 0,
+          share: measured.length ? Math.max(...measured.map((p) => p.share)) : 0,
+        };
       });
     }
 
@@ -315,17 +319,20 @@
 
     function coverageTitle(d) {
       const week = `Week of ${fmtDate(d.from)}`;
-      if (d.total != null) {
-        if (d.share < 0.05) {
-          return `${week}: nothing from the sources you have selected. Not a quiet week `
-            + 'in the news — a week the record does not reach.';
-        }
-        const pct = `${Math.round(d.share * 100)}% of days covered`;
-        if (!d.feeds.length) return `${week}: ${pct}`;
-        const which = d.feeds.length === d.total
-          ? (d.total === 1 ? d.feeds[0] : d.total === 2 ? 'both sources' : `all ${d.total} sources`)
-          : d.feeds.length === 1 ? `${d.feeds[0]} only` : d.feeds.join(' and ');
-        return `${week}: ${pct}, from ${which}`;
+      if (d.parts) {
+        // One line per selected source, so the reader sees the split rather
+        // than a single number standing in for all of them.
+        const lines = d.parts.map((p) => p.share == null
+          ? `  ${p.name}: not read for this week`
+          : p.share < 0.005 ? `  ${p.name}: nothing`
+          : `  ${p.name}: ${Math.round(p.share * 100)}%`);
+        const head = !d.known
+          ? `${week}: none of these sources has been read here yet`
+          : d.share < 0.05
+            ? `${week}: nothing from these sources — a gap in the record, `
+              + 'not a quiet week in the news'
+            : `${week}: ${Math.round(d.share * 100)}% of days covered at best`;
+        return `${head}\n${lines.join('\n')}`;
       }
       if (d.share < 0.05) return `${week}: no archived snapshots`;
       const pct = `${Math.round(d.share * 100)}% of days covered`;
@@ -924,14 +931,18 @@
           .attr('y1', stripTop + stripH).attr('y2', stripTop + stripH);
         const visible = strip.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
         gs.selectAll('rect').data(visible).join('rect')
-          .attr('class', (d) => 'coverage-week'
-            + (d.share < 0.05 ? ' none' : '')
-            + (d.share >= 0.05 && d.total > 1 && d.feeds.length === 1 ? ' solo' : ''))
+          .attr('class', (d) => {
+            if (!d.known) return 'coverage-week unread';
+            const reaching = d.parts.filter((p) => p.share > 0.05).length;
+            return 'coverage-week'
+              + (d.share < 0.05 ? ' none' : '')
+              + (d.share >= 0.05 && d.parts.length > 1 && reaching === 1 ? ' solo' : '');
+          })
           .attr('x', (d) => Math.max(L, x(d.from)))
           .attr('width', (d) => Math.max(1, Math.min(R, x(d.to)) - Math.max(L, x(d.from)) - 0.5))
-          .attr('y', (d) => stripTop + stripH * (1 - Math.max(d.share, 0.16)))
-          .attr('height', (d) => stripH * Math.max(d.share, 0.16))
-          .style('opacity', (d) => (d.share < 0.05 ? 1 : 0.35 + 0.65 * d.share))
+          .attr('y', (d) => stripTop + stripH * (1 - (d.known ? Math.max(d.share, 0.16) : 1)))
+          .attr('height', (d) => stripH * (d.known ? Math.max(d.share, 0.16) : 1))
+          .style('opacity', (d) => (!d.known ? 1 : d.share < 0.05 ? 1 : 0.35 + 0.65 * d.share))
           .append('title')
           .text(coverageTitle);
       }
