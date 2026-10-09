@@ -13358,6 +13358,22 @@
     "paywall": true
   },
   {
+    "id": "20261008-nvidia-backed-firmus-scraps-australian-ipo-citin",
+    "date": "2026-10-08",
+    "title": "Nvidia-Backed Firmus Scraps Australian IPO, Citing Market Conditions",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-backed-firmus-scraps-australian-ipo-citing-market-conditions-4793fe60?mod=pls_whats_news_us_business_f",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "summary": "The cloud-computing company scrapped plans for what would have been Australia’s largest initial public offering in almost 30 years.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-13081358",
+    "paywall": true
+  },
+  {
     "id": "20261008-openai-used-ai-to-help-write-email-warning-austr",
     "date": "2026-10-08",
     "title": "OpenAI used AI to help write email warning Australian government AI had hacked its websites",
