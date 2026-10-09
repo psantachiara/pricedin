@@ -12943,6 +12943,71 @@
     "paywall": true
   },
   {
+    "id": "20260929-a-new-a-i-agent-enters-the-marketplace-openai-s",
+    "date": "2026-09-29",
+    "title": "A New A.I. Agent Enters the Marketplace: OpenAI’s Dots",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/29/technology/openai-dots-ai-agents.html",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The ChatGPT maker unveiled agents that act as assistants, just weeks after Meta released Muse, as it faces scrutiny over incidents involving its technology.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/29/29visualUploader-2432-cover/29visualUploader-2432-cover-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260929-anthropic-warns-of-ai-existential-risk-as-concer",
+    "date": "2026-09-29",
+    "title": "Anthropic warns of AI ‘existential risk’ as concerns emerge over Meta’s Muse and OpenAI’s model | First Thing",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/us-news/2026/sep/29/first-thing-anthropic-ai-existential-risk-meta-muse-openai",
+    "org": "openai",
+    "category": "apocalyptic",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL",
+      "META"
+    ],
+    "summary": "Anthropic’s prospectus makes chilling claim as new revelations emerge about Muse and Astra models",
+    "thumbnail": "https://media.guim.co.uk/9f9d6eba8a617bac477ef893a08eb4ec2a44ebf9/7_166_3539_2832/500.jpg"
+  },
+  {
+    "id": "20260929-anthropic-warns-of-existential-ai-risks-to-human",
+    "date": "2026-09-29",
+    "title": "Anthropic ‘warns of existential AI risks to humanity’ in IPO document",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/29/anthropic-warns-existential-ai-risks-humanity-ipo-document-claude",
+    "org": "anthropic",
+    "category": "apocalyptic",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Reported admission to investors of AI’s ‘self-preserving behaviours’ comes as company prepares for a potential $2tn flotation",
+    "thumbnail": "https://media.guim.co.uk/8d923f6c4bc1f85ed36638ae242779b53f685b0a/76_0_4169_3335/500.jpg"
+  },
+  {
+    "id": "20260929-don-t-knock-palantir-it-provides-highly-skilled",
+    "date": "2026-09-29",
+    "title": "Don’t knock Palantir – it provides highly skilled, well-paid British jobs | Letter",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/29/dont-knock-palantir-it-provides-highly-skilled-well-paid-british-jobs",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "summary": "Letters: Tom Watson responds to an article by Clive Lewis about the former Labour deputy leader’s new job at the technology company",
+    "thumbnail": "https://media.guim.co.uk/62f0bbd9e8f26d37d352c0d11035de4a93eb45d5/502_0_4302_3441/500.jpg"
+  },
+  {
     "id": "20260929-google-appeals-eu-requests-on-android-ai-access",
     "date": "2026-09-29",
     "title": "Google Appeals EU Requests on Android AI Access, Search Data Sharing",
@@ -12957,6 +13022,117 @@
     "paywall": true
   },
   {
+    "id": "20260929-meta-s-ai-agent-muse-gives-out-user-s-home-addre",
+    "date": "2026-09-29",
+    "title": "Meta’s AI agent Muse gives out user’s home address without permission, sending buyer to his house",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/28/metas-ai-agent-muse-home-address",
+    "org": "meta",
+    "category": "model",
+    "tickers": [
+      "META"
+    ],
+    "summary": "The new AI agent, Muse, was released last week and has been downloaded by 3 million users",
+    "thumbnail": "https://media.guim.co.uk/a9bae6c7cb1d2826925b462c9ba772f70992534e/543_0_5428_4342/500.jpg"
+  },
+  {
+    "id": "20260929-openai-ignored-employees-who-warned-it-wasn-t-do",
+    "date": "2026-09-29",
+    "title": "OpenAI Ignored Employees Who Warned It Wasn’t Doing Enough About Security",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/29/technology/openai-warnings-security.html",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Employees and security researchers said that they had cautioned the company on safely testing its A.I. models and strengthening its corporate infrastructure, but that OpenAI did not listen.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/29/multimedia/29biz-openai-security-sam-promo-hpcz/29biz-openai-security-sam-promo-hpcz-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260929-openai-says-it-will-not-release-newest-a-i-model",
+    "date": "2026-09-29",
+    "title": "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The company’s researchers raised questions about the security of the model, known as GPT-6.1 Astra.",
+    "afterClose": true,
+    "thumbnail": "https://static01.nyt.com/images/2026/09/28/multimedia/28biz-openai-astra-vbgk/28biz-openai-astra-vbgk-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260929-openai-announces-dots-agent-after-scrapping-laun",
+    "date": "2026-09-29",
+    "title": "OpenAI announces ‘dots’ agent after scrapping launch of new AI model over safety concerns",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/29/openai-announces-dots-agent-safety-concerns",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Company’s product comes weeks after Meta introduced its own artificial intelligence agent Muse",
+    "afterClose": true,
+    "thumbnail": "https://media.guim.co.uk/574125f5ec0bf8c27cdf6cdc227a4cf62416512a/583_0_5827_4663/500.jpg"
+  },
+  {
+    "id": "20260929-openai-scraps-release-of-new-model-over-safety-c",
+    "date": "2026-09-29",
+    "title": "OpenAI scraps release of new model over safety concerns in internal testing",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafe",
+    "thumbnail": "https://media.guim.co.uk/888177c732f90802c4408241d5ffe34e0afa610d/701_0_4167_3335/500.jpg"
+  },
+  {
+    "id": "20260929-religious-scholars-met-with-anthropic-what-they",
+    "date": "2026-09-29",
+    "title": "Religious Scholars Met With Anthropic. What They Heard Stunned Them.",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
+    "org": "anthropic",
+    "category": "model",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "In a series of private meetings, the company consulted religious scholars to help instill morality into its A.I. models — and make the case that Claude could be conscious.",
+    "thumbnail": "https://static01.nyt.com/images/2026/06/30/multimedia/30nat-pope-anthropic-wfkz/30nat-pope-anthropic-wfkz-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260929-revealed-the-five-paragraph-email-openai-used-to",
+    "date": "2026-09-29",
+    "title": "Revealed: the five-paragraph email OpenAI used to inform Australia about agent attack",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/29/openai-apology-rogue-agent-hacked-medicare-australian-government-websites",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Executive to front parliamentary committee on AI as ministers reveal how brief message telling them about hack was signed off ‘best’",
+    "thumbnail": "https://media.guim.co.uk/382f5ce9a99ca59f0295e666583b6b694b2ebb34/0_0_5000_4000/500.jpg"
+  },
+  {
     "id": "20260929-samsung-commits-1-0-billion-to-ai-infrastructure",
     "date": "2026-09-29",
     "title": "Samsung Commits $1.0 Billion to AI Infrastructure Firm Backed by KKR, Nvidia",
@@ -12968,6 +13144,40 @@
       "NVDA"
     ],
     "thumbnail": "https://images.wsj.net/im-28340576",
+    "paywall": true
+  },
+  {
+    "id": "20260929-what-s-in-anthropic-s-i-p-o-filing",
+    "date": "2026-09-29",
+    "title": "What’s in Anthropic’s I.P.O. Filing",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/29/business/dealbook/anthropic-ipo-filing-s1.html",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The artificial intelligence giant reportedly believes that it’s on track for a record-breaking stock market listing, according to a prospectus seen by Reuters.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/29/multimedia/29db-amodei-bzvk/29db-amodei-bzvk-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260929-a-new-kind-of-cyber-incident-openai-apologizes-f",
+    "date": "2026-09-29",
+    "title": "‘A New Kind of Cyber Incident’: OpenAI Apologizes for Australia Medicare Hack",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/29/world/asia/openai-australia-government-hack-apology.html",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The company detailed how A.I. agents gained access to four government websites and acknowledged mishandling its response.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/29/multimedia/29int-oz-openai-htkq/29int-oz-openai-htkq-articleLarge.jpg",
     "paywall": true
   },
   {
@@ -12986,6 +13196,24 @@
     "paywall": true
   },
   {
+    "id": "20260930-f-t-c-investigates-openai-and-anthropic-over-pot",
+    "date": "2026-09-30",
+    "title": "F.T.C. Investigates OpenAI and Anthropic Over Potential Consumer Harms",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/technology/ftc-openai-anthropic-investigation.html",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "summary": "The agency will examine whether A.I. labs have broken federal laws prohibiting companies from unfair and deceptive practices.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/30/multimedia/30biz-ftc-ai-investigation-tkwg/30biz-ftc-ai-investigation-tkwg-articleLarge.jpg",
+    "paywall": true
+  },
+  {
     "id": "20260930-ftc-opens-investigation-of-anthropic-and-openai",
     "date": "2026-09-30",
     "title": "FTC Opens Investigation of Anthropic and OpenAI",
@@ -13000,6 +13228,113 @@
       "GOOGL"
     ],
     "thumbnail": "https://images.wsj.net/im-71892715",
+    "paywall": true
+  },
+  {
+    "id": "20260930-google-releases-new-gemini-model-with-guardrails",
+    "date": "2026-09-30",
+    "title": "Google Releases New Gemini Model With Guardrails Amid A.I. Safety Debate",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/technology/google-gemini-4-argon-ai-safety.html",
+    "org": "google",
+    "category": "model",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "For safety reasons, Gemini 4 Argon will initially be available only to some companies and organizations focused on cybersecurity defense before it is more widely released, Google said.",
+    "afterClose": true,
+    "thumbnail": "https://static01.nyt.com/images/2026/09/30/multimedia/30BIZ-GEMINI-1-cqhb/30BIZ-GEMINI-1-cqhb-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260930-google-wants-hollywood-to-stop-being-so-afraid-o",
+    "date": "2026-09-30",
+    "title": "Google Wants Hollywood to Stop Being So Afraid of Technology",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/business/media/google-hollywood-krya-sedgwick.html",
+    "org": "google",
+    "category": "deals",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "100 Zeros, a collaboration between Google and Range Media Partners, aims to give the tech giant a foothold in movies, TV and emerging forms of entertainment.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/28/business/28biz-google-hollywood-02/28biz-google-hollywood-02-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260930-how-meta-uses-a-i-data-centers-to-avoid-billions",
+    "date": "2026-09-30",
+    "title": "How Meta Uses A.I. Data Centers to Avoid Billions in Federal Taxes",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
+    "org": "meta",
+    "category": "compute",
+    "tickers": [
+      "META"
+    ],
+    "summary": "Meta is exploiting a lucrative tax break intended to support research and experimentation. Its own accountants say the gambit is risky.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/23/business/00rd-tax/00rd-tax-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260930-leading-chinese-tech-firms-target-nvidia-s-a-i-d",
+    "date": "2026-09-30",
+    "title": "Leading Chinese Tech Firms Target Nvidia’s A.I. Dominance",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/business/china-ai-deepseek-huawei.html",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "summary": "In China’s push for self-reliance in artificial intelligence, DeepSeek and Huawei have teamed up to develop software tools for advanced chips.",
+    "thumbnail": "https://static01.nyt.com/images/2026/09/30/world/30biz-china-ai-DeepSeek/30biz-china-ai-DeepSeek-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260930-more-than-44-000-file-legal-objections-to-palant",
+    "date": "2026-09-30",
+    "title": "More than 44,000 file legal objections to Palantir NHS platform handling their data",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/30/legal-objections-palantir-nhs-platform-handling-data",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "summary": "Exclusive: Campaign comes amid backlash against tech company’s involvement with Israeli military and Trump’s ICE crackdown",
+    "thumbnail": "https://media.guim.co.uk/ed060329a91fc7880904c6696c790bf114840c32/1119_334_4888_3911/500.jpg"
+  },
+  {
+    "id": "20260930-openai-executive-backs-out-of-second-25-million",
+    "date": "2026-09-30",
+    "title": "OpenAI Executive Backs Out of Second $25 Million Donation to A.I. Super PAC",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/09/30/technology/openai-brockman-super-pac-leading-the-future.html",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Greg Brockman, OpenAI’s president and co-founder, said internally that the super PAC, Leading the Future, had become a “distraction” for the A.I. company.",
+    "afterClose": true,
+    "thumbnail": "https://static01.nyt.com/images/2026/09/30/multimedia/30biz-openai-pac-mclh/30biz-openai-pac-mclh-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20261001-amazon-settles-lawsuit-over-claims-of-slow-deliv",
+    "date": "2026-10-01",
+    "title": "Amazon Settles Lawsuit Over Claims of Slow Deliveries to Low-Income Areas",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/10/01/technology/amazon-slow-deliveries-dc.html",
+    "org": "amazon",
+    "category": "policy",
+    "tickers": [
+      "AMZN"
+    ],
+    "summary": "The tech giant will refund $7.25 million in Prime membership fees to affected customers and pay an additional $1 million to settle the suit brought by the District of Columbia.",
+    "thumbnail": "https://static01.nyt.com/images/2026/10/01/multimedia/01biz-amazon-settlement-ktpc/01biz-amazon-settlement-ktpc-articleLarge.jpg",
     "paywall": true
   },
   {
@@ -13030,6 +13365,20 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-75714205",
     "paywall": true
+  },
+  {
+    "id": "20261001-new-google-maps-images-reveal-massive-scale-of-d",
+    "date": "2026-10-01",
+    "title": "New Google Maps images reveal massive scale of devastation in Gaza",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/world/2026/oct/01/new-google-maps-images-reveal-massive-scale-of-devastation-in-gaza",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "summary": "Satellite imagery shows further destruction of homes, businesses and places of worship since fragile ceasefire",
+    "thumbnail": "https://media.guim.co.uk/81273432abf8c05689eb694989b893b4ec991c30/0_0_5000_4000/500.jpg"
   },
   {
     "id": "20261001-openai-parts-ways-with-researchers-who-allegedly",
@@ -13063,6 +13412,21 @@
     "paywall": true
   },
   {
+    "id": "20261002-amazon-promises-more-local-funding-and-less-secr",
+    "date": "2026-10-02",
+    "title": "Amazon Promises More Local Funding and Less Secrecy Around Data Centers",
+    "source": "NYT",
+    "url": "https://www.nytimes.com/2026/10/02/technology/amazon-data-centers-funding.html",
+    "org": "amazon",
+    "category": "deals",
+    "tickers": [
+      "AMZN"
+    ],
+    "summary": "The internet giant is the latest technology company trying to address increasingly hostile local sentiment toward data center projects.",
+    "thumbnail": "https://static01.nyt.com/images/2026/10/02/multimedia/02biz-amazon-datacenters-1-zkmh/02biz-amazon-datacenters-1-zkmh-articleLarge.jpg",
+    "paywall": true
+  },
+  {
     "id": "20261002-amazon-s-new-push-to-get-buy-in-for-data-center",
     "date": "2026-10-02",
     "title": "Amazon’s New Push to Get Buy-In for Data Center Build-Out",
@@ -13075,6 +13439,21 @@
     ],
     "thumbnail": "https://images.wsj.net/im-14722620",
     "paywall": true
+  },
+  {
+    "id": "20261002-openai-disclose-another-hack-on-government-depar",
+    "date": "2026-10-02",
+    "title": "OpenAI disclose another hack on government department in Australia",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/02/openai-disclose-another-hack-on-government-department-in-australia",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Attack accessing historical data on bushfires occurred in June but not disclosed by the tech company until Thursday",
+    "thumbnail": "https://media.guim.co.uk/66aff84926bf65680291f10a84a66ea9f7cd0be6/992_0_5033_4024/500.jpg"
   },
   {
     "id": "20261002-openai-fires-workers-for-mishandling-sensitive-i",
@@ -13091,6 +13470,20 @@
     "summary": "The former employees were investigated for sharing data with an outside AI evaluation group."
   },
   {
+    "id": "20261002-recent-lobbyist-for-palantir-had-key-role-in-hel",
+    "date": "2026-10-02",
+    "title": "Recent lobbyist for Palantir had key role in helping Andy Burnham become PM",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/02/lobbyist-palantir-martha-dalton-andy-burnham",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "summary": "Exclusive: Martha Dalton worked closely with Burnham’s team on byelection that secured his return to parliament",
+    "thumbnail": "https://media.guim.co.uk/10167f357c01529ef8a89f5df87de38cb63c0769/5_13_388_310/master/388.jpg"
+  },
+  {
     "id": "20261002-the-mulleted-meme-loving-billionaire-behind-meta",
     "date": "2026-10-02",
     "title": "The Mulleted, Meme-Loving Billionaire Behind Meta’s Hit AI App",
@@ -13104,6 +13497,51 @@
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-67809820",
     "paywall": true
+  },
+  {
+    "id": "20261003-openai-says-its-review-into-hacks-including-on-a",
+    "date": "2026-10-03",
+    "title": "OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Company says it is reviewing 50 petabytes of data after its agents accessed websites including Medicare without authorisation",
+    "thumbnail": "https://media.guim.co.uk/34037c70168080edcdfe41a93dfbb4139efd2e83/626_0_6259_5010/500.jpg"
+  },
+  {
+    "id": "20261004-openai-safety-leader-quits-warning-ai-company-s",
+    "date": "2026-10-04",
+    "title": "OpenAI safety leader quits, warning AI company’s culture is ‘broken’",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "David Robinson joins other insiders in urging industry to take more care over rapidly developing technology",
+    "thumbnail": "https://media.guim.co.uk/77b3a6702fa4e94c36e292a72e438fa40eb19184/625_0_6261_5010/500.jpg"
+  },
+  {
+    "id": "20261005-accept-bad-things-in-return-for-benefits-of-ai-s",
+    "date": "2026-10-05",
+    "title": "Accept ‘bad things’ in return for benefits of AI, says Sam Altman",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/05/sam-altman-open-ai-chatgpt-benefits-risks",
+    "org": "openai",
+    "category": "policy",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Boss of OpenAI calls for a regulatory light touch because of the ‘good stuff’ the technology can deliver",
+    "thumbnail": "https://media.guim.co.uk/25a7b311b78477fb430906540593c2693953f97f/1129_0_7005_5604/500.jpg"
   },
   {
     "id": "20261005-pentagon-stops-using-anthropic-ai-tools-after-bl",
@@ -13220,6 +13658,20 @@
     "summary": "The regulator said Instagram had not fully assessed risks posed by its Instants feature prior to launching it."
   },
   {
+    "id": "20261006-ofcom-investigates-meta-over-instagram-instants-2",
+    "date": "2026-10-06",
+    "title": "Ofcom investigates Meta over Instagram Instants safety checks",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/06/ofcom-investigates-meta-instagram-instants-safety-checks",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "summary": "Watchdog examining whether company carried out adequate risk assessment as required by Online Safety Act",
+    "thumbnail": "https://media.guim.co.uk/d32935eb8fe684c5df9e554c9ba560f753b0e08e/504_0_3795_3037/500.jpg"
+  },
+  {
     "id": "20261007-dyson-breville-apple-the-59-best-amazon-prime-da",
     "date": "2026-10-07",
     "title": "Dyson, Breville, Apple: the 59 best Amazon Prime Day deals actually worth it, obsessively vetted by us",
@@ -13328,6 +13780,23 @@
     "paywall": true
   },
   {
+    "id": "20261008-a-teen-tried-to-navigate-canadian-mountains-with",
+    "date": "2026-10-08",
+    "title": "A teen tried to navigate Canadian mountains with Claude. His trek ended in an emergency rescue",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/world/2026/oct/08/teen-hike-claude-ai-directions-rescue-canada-mountain",
+    "org": "anthropic",
+    "category": "model",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The incident is the latest to raise questions about the growing reliance on digital maps for wilderness navigation",
+    "thumbnail": "https://media.guim.co.uk/cb686b8afe11249d8cc44a7737f323e0f832f1ee/0_290_1080_864/500.jpg"
+  },
+  {
     "id": "20261008-amazon-introduces-new-lineup-of-pricier-tablets",
     "date": "2026-10-08",
     "title": "Amazon Introduces New Lineup of Pricier Tablets",
@@ -13356,6 +13825,20 @@
     "summary": "The new division, dubbed XP, aims to help Xbox’s roster of video games grow their fan bases, and connect with them more deeply, Microsoft said.",
     "thumbnail": "https://images.wsj.net/im-79033808",
     "paywall": true
+  },
+  {
+    "id": "20261008-microsoft-suspended-from-applying-for-green-card",
+    "date": "2026-10-08",
+    "title": "Microsoft suspended from applying for green cards for H-1B workers, JD Vance says",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/08/jd-vance-microsoft-visa-workers-green-card-suspension",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "summary": "Vice-president also says Adobe is barred from visa program that allows high-skilled workers to apply for US residency",
+    "thumbnail": "https://media.guim.co.uk/0a5876855694163b01d022271607a1f87c8c496a/758_255_3012_2410/500.jpg"
   },
   {
     "id": "20261008-nvidia-backed-firmus-scraps-australian-ipo-citin",
@@ -13420,5 +13903,23 @@
       "MSFT"
     ],
     "summary": "An international visa program has for years allowed US tech companies to hire highly skilled workers from abroad."
+  },
+  {
+    "id": "20261009-anthropic-bans-users-from-needless-abusive-or-cr",
+    "date": "2026-10-09",
+    "title": "Anthropic bans users from ‘needless abusive or cruel behavior’ towards Claude",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/08/anthropic-bans-abusive-behavior-claude",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "A spokesperson behind the tech company’s AI chatbot has not yet specified what counts as abusive or cruel content",
+    "afterClose": true,
+    "thumbnail": "https://media.guim.co.uk/6e190063ccfe8ce226fbe77ca8498af1a2fd082b/9_0_2975_2380/500.jpg"
   }
 ]
