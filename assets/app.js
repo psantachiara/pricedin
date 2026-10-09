@@ -195,6 +195,16 @@
       return sourceLookup.get(event.source) || curatedId || (sources[0] || {}).id;
     }
 
+    // Open on the sources whose record is even, so the first thing anyone sees
+    // is a timeline that can be read straight. The archive-sampled material is
+    // a deliberate addition rather than something to notice and discount. If
+    // no complete source has arrived yet, fall back to whatever is there.
+    function defaultSources() {
+      const here = sources.filter((s) => events.some((e) => sourceOf(e) === s.id));
+      const complete = here.filter((s) => s.kind === 'index');
+      return (complete.length ? complete : here).map((s) => s.id);
+    }
+
     // How complete each source's record is, week by week. A source read from a
     // publisher's own index is complete over the range that was read, so it
     // carries a range rather than weekly shares; one rebuilt from archived
@@ -306,7 +316,7 @@
       hidden: new Set(),
       focus: null,
       categories: new Set(cats.map((c) => c.id)),
-      sources: new Set(sources.map((s) => s.id)),
+      sources: new Set(defaultSources()),
       domain: [dates[0], dates[N - 1]],
       pinned: null, // { key, ids, t }
       hover: null,
@@ -564,38 +574,36 @@
       }, el('span', { class: 'dot' }), el('span', { text: c.name })));
     }
 
+    // Sources get checkboxes rather than the chips used for categories and
+    // companies, because they are a different kind of control: those filter
+    // what you look at within the record, these decide what the record is.
     const sourceWrap = $('#sources');
     const present = new Set(events.map(sourceOf));
     for (const s of sources) {
       if (!present.has(s.id)) continue;   // nothing to filter yet
       const archived = s.kind === 'archive';
-      sourceWrap.append(el('button', {
-        type: 'button', class: 'cat source' + (archived ? ' archived' : ''),
-        'data-source': s.id,
-        title: `${s.note || ''}\n\nClick to hide. Shift-click to show only ${s.name}.`.trim(),
-        onclick: (ev) => {
-          const shown = sources.filter((x) => present.has(x.id));
-          const only = ev.shiftKey || ev.altKey
-            || (state.sources.size === shown.length && ev.detail === 2);
-          if (only) {
-            state.sources = new Set(
-              state.sources.size === 1 && state.sources.has(s.id)
-                ? shown.map((x) => x.id) : [s.id]);
-          } else if (state.sources.has(s.id)) {
-            if (state.sources.size > 1) state.sources.delete(s.id);
-          } else state.sources.add(s.id);
-          if (state.pinned && !state.pinned.ids.some((id) => state.sources.has(sourceOf(eventBy.get(id))))) {
-            state.pinned = null;
-          }
+      const box = el('input', {
+        type: 'checkbox', 'data-source': s.id,
+        onchange: () => {
+          if (box.checked) state.sources.add(s.id);
+          else if (state.sources.size > 1) state.sources.delete(s.id);
+          else box.checked = true;        // never leave nothing selected
+          if (state.pinned && !state.pinned.ids.some(
+            (id) => state.sources.has(sourceOf(eventBy.get(id))))) state.pinned = null;
           update();
         },
-      }, el('span', { class: 'dot' }), el('span', { text: s.name }),
+      });
+      sourceWrap.append(el('label', {
+        class: 'src' + (archived ? ' archived' : ''),
+        title: s.note || '',
+      }, box, el('span', { class: 'name', text: s.name }),
          archived ? el('span', { class: 'via', text: 'archived' }) : null));
     }
 
     function syncSourceChips() {
-      sourceWrap.querySelectorAll('.source').forEach((b) =>
-        b.setAttribute('aria-pressed', String(state.sources.has(b.dataset.source))));
+      sourceWrap.querySelectorAll('input[data-source]').forEach((b) => {
+        b.checked = state.sources.has(b.dataset.source);
+      });
       const legend = $('#source-legend');
       if (!legend) return;
       const chosen = sources.filter((s) => present.has(s.id) && state.sources.has(s.id));

@@ -451,20 +451,38 @@ select {
   display: flex; flex-wrap: wrap; align-items: baseline;
   gap: 8px 14px; margin-top: 8px;
 }
-.cat.source .dot { background: var(--muted); }
-.cat.source[aria-pressed="false"] .dot { background: transparent; box-shadow: inset 0 0 0 1.5px var(--muted); }
-/* A source rebuilt from archived copies is marked on the chip itself, in the
-   same ruling the chart uses for a thin stretch, so the difference is legible
-   before anything is clicked. */
-.cat.source.archived .dot {
-  border-radius: 2px;
-  background: repeating-linear-gradient(45deg, var(--muted) 0 1.5px, transparent 1.5px 3.5px);
+/* Checkboxes, not chips: choosing sources is choosing what the record is,
+   which is a different act from filtering within it, and should not look the
+   same. */
+.sources { gap: 2px 18px; }
+.src {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.8125rem; color: var(--ink);
+  padding: 3px 0; cursor: pointer; user-select: none;
 }
-.cat.source.archived[aria-pressed="false"] .dot { background: none; }
-.cat.source .via {
-  font-size: 0.6875rem; letter-spacing: 0.02em;
-  color: var(--muted); border-left: 1px solid var(--rule);
-  padding-left: 6px; margin-left: 1px;
+.src input {
+  appearance: none; -webkit-appearance: none;
+  width: 14px; height: 14px; margin: 0; flex: none;
+  border: 1px solid var(--muted); border-radius: 3px;
+  background: var(--paper); cursor: pointer; position: relative;
+}
+.src input:checked { background: var(--ink); border-color: var(--ink); }
+.src input:checked::after {
+  content: ""; position: absolute; left: 4px; top: 1px;
+  width: 4px; height: 8px;
+  border: solid var(--paper); border-width: 0 1.75px 1.75px 0;
+  transform: rotate(42deg);
+}
+.src input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.src:has(input:not(:checked)) .name { color: var(--muted); }
+/* A source rebuilt from archived copies is ruled the way the chart rules a
+   thin stretch, so the mark on the control and the mark on the timeline are
+   recognisably the same claim. */
+.src.archived .via {
+  font-size: 0.6875rem; letter-spacing: 0.02em; color: var(--muted);
+  padding: 1px 5px; border-radius: 3px;
+  background: repeating-linear-gradient(45deg,
+    color-mix(in srgb, var(--muted) 22%, transparent) 0 2px, transparent 2px 5px);
 }
 .source-legend {
   margin: 0; font-size: 0.8125rem; color: var(--muted);
