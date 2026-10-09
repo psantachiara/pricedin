@@ -242,6 +242,29 @@
     // nothing to mark; ask for WSJ and the summer the archive missed comes
     // back. Marking the union would hold every reader to the worst source they
     // did not ask for.
+    // The strip answers for the sources on screen, not for all of them. Which
+    // means it can only be drawn once the selection is known, so it is built
+    // per draw rather than once.
+    function coverageFor(chosen) {
+      if (!coverWeeks) return null;
+      const ids = [...chosen].filter((id) => {
+        const kind = ((sourceCoverage[id] || {}).kind) || (sourceById.get(id) || {}).kind;
+        return kind === 'index' || kind === 'archive';
+      });
+      if (!ids.length) return null;      // nothing selected that makes a claim
+      return coverWeeks.map((w) => {
+        let share = 0;
+        const reached = [];
+        for (const id of ids) {
+          const value = sourceShare(id, w.from, w.to);
+          if (value == null) continue;
+          if (value > share) share = value;
+          if (value > 0.05) reached.push((sourceById.get(id) || {}).name || id);
+        }
+        return { from: w.from, to: w.to, share, feeds: reached, total: ids.length };
+      });
+    }
+
     function thinSpansFor(chosen) {
       if (!coverWeeks) return null;
       const ids = [...chosen].filter((id) => sourceShare(id, new Date(0), new Date(0)) !== null
@@ -292,6 +315,18 @@
 
     function coverageTitle(d) {
       const week = `Week of ${fmtDate(d.from)}`;
+      if (d.total != null) {
+        if (d.share < 0.05) {
+          return `${week}: nothing from the sources you have selected. Not a quiet week `
+            + 'in the news — a week the record does not reach.';
+        }
+        const pct = `${Math.round(d.share * 100)}% of days covered`;
+        if (!d.feeds.length) return `${week}: ${pct}`;
+        const which = d.feeds.length === d.total
+          ? (d.total === 1 ? d.feeds[0] : d.total === 2 ? 'both sources' : `all ${d.total} sources`)
+          : d.feeds.length === 1 ? `${d.feeds[0]} only` : d.feeds.join(' and ');
+        return `${week}: ${pct}, from ${which}`;
+      }
       if (d.share < 0.05) return `${week}: no archived snapshots`;
       const pct = `${Math.round(d.share * 100)}% of days covered`;
       if (!d.feeds.length) return `${week}: ${pct}`;
@@ -680,8 +715,9 @@
       const chartH_total = bottom + 26;
       const lanesTop = 20;
       const lanesEnd = lanesTop + Math.max(1, lanes.length) * laneH;
-      const stripH = coverWeeks ? 9 : 0;
-      const stripTop = lanesEnd + (coverWeeks ? 14 : 0);
+      const strip = coverageFor(state.sources);
+      const stripH = strip ? 9 : 0;
+      const stripTop = lanesEnd + (strip ? 14 : 0);
       const lanesH = stripTop + stripH + 6;
 
       svg.attr('width', W).attr('height', chartH_total).attr('viewBox', `0 0 ${W} ${chartH_total}`);
@@ -877,7 +913,7 @@
           : `${evs.length} announcements around ${fmtDate(dates[it.t])}. Move ${fmtPct(it.score)} against ${benchName()}.`;
       }
 
-      if (coverWeeks && stripH) {
+      if (strip && stripH) {
         const gs = lanesSvg.append('g').attr('class', 'coverage');
         const L = M.l, R = W - M.r;
         gs.append('text').attr('class', 'lane-label')
@@ -886,7 +922,7 @@
         gs.append('line').attr('class', 'coverage-base')
           .attr('x1', L).attr('x2', R)
           .attr('y1', stripTop + stripH).attr('y2', stripTop + stripH);
-        const visible = coverWeeks.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
+        const visible = strip.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
         gs.selectAll('rect').data(visible).join('rect')
           .attr('class', (d) => 'coverage-week'
             + (d.share < 0.05 ? ' none' : '')
