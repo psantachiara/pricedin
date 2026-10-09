@@ -239,7 +239,9 @@ select {
   font: inherit;
   font-size: 0.78125rem;
   display: inline-grid;
-  grid-template-columns: auto auto;
+  /* The text column takes the slack, so widening the chip never shifts the
+     dot: every chip's marker and label start at the same offset. */
+  grid-template-columns: auto 1fr;
   grid-template-areas: "dot sym" "dot val";
   align-items: center;
   justify-items: start;
@@ -253,6 +255,10 @@ select {
   cursor: pointer;
   text-align: left;
   line-height: 1.25;
+  /* A floor rather than a fixed width, so the row reads as even columns while
+     a long symbol can still push its own chip wider. In em so it follows the
+     chip's type if the reader scales text up. */
+  min-width: 7em;
 }
 .chip .dot { grid-area: dot; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
 .chip .sym { grid-area: sym; font-weight: 600; letter-spacing: 0.01em; }
