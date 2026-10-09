@@ -39,6 +39,25 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python scripts/fetch_news.py
 
+      # The publishers' own indexes are read on the same schedule as the live
+      # feeds, over a window wide enough to absorb a few missed runs. Reading
+      # them daily and historically through the same code is what keeps the
+      # record from having a seam where the backfill stopped.
+      - name: Fetch from publisher APIs
+        env:
+          PYTHONUNBUFFERED: "1"
+          NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
+          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+        run: |
+          # Whichever keys are configured; skip quietly when neither is, so the
+          # daily job keeps working before the keys are added.
+          if [ -n "$NYT_API_KEY" ] && [ -n "$GUARDIAN_API_KEY" ]; then SOURCE=both
+          elif [ -n "$NYT_API_KEY" ]; then SOURCE=nyt
+          elif [ -n "$GUARDIAN_API_KEY" ]; then SOURCE=guardian
+          else echo "No publisher API keys configured; skipping."; exit 0; fi
+          python scripts/fetch_api.py --source "$SOURCE" \
+            --from "$(date -u -d '10 days ago' +%Y-%m-%d)"
+
       - name: Fetch prices and thumbnails
         env:
           PYTHONUNBUFFERED: "1"
