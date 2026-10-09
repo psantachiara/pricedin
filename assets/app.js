@@ -931,18 +931,20 @@
           .attr('y1', stripTop + stripH).attr('y2', stripTop + stripH);
         const visible = strip.filter((w) => w.to >= state.domain[0] && w.from <= state.domain[1]);
         gs.selectAll('rect').data(visible).join('rect')
+          // Height is the best coverage among the selected sources; colour is
+          // which of three states that best amounts to. Full means at least
+          // one selected source has the complete week, so the record can be
+          // read straight; partial means the best of them still has holes;
+          // empty means they were read and reached nothing.
           .attr('class', (d) => {
             if (!d.known) return 'coverage-week unread';
-            const reaching = d.parts.filter((p) => p.share > 0.05).length;
-            return 'coverage-week'
-              + (d.share < 0.05 ? ' none' : '')
-              + (d.share >= 0.05 && d.parts.length > 1 && reaching === 1 ? ' solo' : '');
+            if (d.share >= 0.995) return 'coverage-week full';
+            return 'coverage-week ' + (d.share < 0.005 ? 'empty' : 'partial');
           })
           .attr('x', (d) => Math.max(L, x(d.from)))
           .attr('width', (d) => Math.max(1, Math.min(R, x(d.to)) - Math.max(L, x(d.from)) - 0.5))
-          .attr('y', (d) => stripTop + stripH * (1 - (d.known ? Math.max(d.share, 0.16) : 1)))
-          .attr('height', (d) => stripH * (d.known ? Math.max(d.share, 0.16) : 1))
-          .style('opacity', (d) => (!d.known ? 1 : d.share < 0.05 ? 1 : 0.35 + 0.65 * d.share))
+          .attr('y', (d) => stripTop + stripH * (1 - (d.known ? Math.max(d.share, 0.14) : 1)))
+          .attr('height', (d) => stripH * (d.known ? Math.max(d.share, 0.14) : 1))
           .append('title')
           .text(coverageTitle);
       }
