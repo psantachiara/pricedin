@@ -14504,6 +14504,22 @@
     "paywall": true
   },
   {
+    "id": "20251113-eu-investigates-alphabet-s-google-over-publisher",
+    "date": "2025-11-13",
+    "title": "EU Investigates Alphabet’s Google over Publishers’ Ranking Policy",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/eu-opens-new-digital-markets-act-investigation-into-alphabets-google-f40ef557?mod=pls_whats_news_us_business_f",
+    "org": "google",
+    "category": "policy",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The European Commission opened a new investigation into how the tech giant ranks news publishers in search results.",
+    "thumbnail": "https://images.wsj.net/im-38706314",
+    "paywall": true
+  },
+  {
     "id": "20251113-eu-investigates-google-over-demotion-of-commerci",
     "date": "2025-11-13",
     "title": "EU investigates Google over ‘demotion’ of commercial content from news media",
@@ -16650,6 +16666,23 @@
     ],
     "summary": "Rolling coverage of the latest economic and financial news",
     "thumbnail": "https://media.guim.co.uk/841cd8169f2ed7354358a9aabe7f4a2d2a9d5f74/496_0_6827_5464/500.jpg"
+  },
+  {
+    "id": "20251211-he-blames-chatgpt-for-the-murder-suicide-that-sh",
+    "date": "2025-12-11",
+    "title": "He Blames ChatGPT for the Murder-Suicide That Shattered His Family",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/chatgpt-murder-suicide-greenwich-openai-fd14fac2?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The estate of victim Suzanne Eberson Adams is suing OpenAI for wrongful death, and her grandson is speaking out for the first time.",
+    "thumbnail": "https://images.wsj.net/im-56483547",
+    "paywall": true
   },
   {
     "id": "20251211-openai-makes-1bn-deal-to-bring-disney-characters",
