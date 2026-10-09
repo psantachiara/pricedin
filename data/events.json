@@ -38655,6 +38655,22 @@
     "summary": "An international visa program has for years allowed US tech companies to hire highly skilled workers from abroad."
   },
   {
+    "id": "20261009-anthropic-bans-users-from-being-cruel-to-its-ai",
+    "date": "2026-10-09",
+    "title": "Anthropic bans users from being 'cruel' to its AI systems",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/c6j9k1l72wkgo?at_medium=RSS&at_campaign=rss",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The firm said users can no longer engage in \"sustained and needless\" abusive behaviour towards the tech."
+  },
+  {
     "id": "20261009-anthropic-bans-users-from-needless-abusive-or-cr",
     "date": "2026-10-09",
     "title": "Anthropic bans users from ‘needless abusive or cruel behavior’ towards Claude",
@@ -38671,5 +38687,109 @@
     "summary": "A spokesperson behind the tech company’s AI chatbot has not yet specified what counts as abusive or cruel content",
     "afterClose": true,
     "thumbnail": "https://media.guim.co.uk/6e190063ccfe8ce226fbe77ca8498af1a2fd082b/9_0_2975_2380/500.jpg"
+  },
+  {
+    "id": "20261009-fired-openai-researchers-say-they-were-let-go-fo",
+    "date": "2026-10-09",
+    "title": "Fired OpenAI researchers say they were let go for 'prioritising safety'",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/cvlydn8d3lkjo?at_medium=RSS&at_campaign=rss",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The AI firm instead claims the researchers were fired for mishandling sensitive information."
+  },
+  {
+    "id": "20261009-nvidia-backed-data-centre-firm-scraps-ipo-as-ai",
+    "date": "2026-10-09",
+    "title": "Nvidia-backed data centre firm scraps IPO as AI valuation concerns deepen",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/ck9dzpw4ll8po?at_medium=RSS&at_campaign=rss",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "summary": "Firmus said it had made the decision due to \"recent market volatility and prevailing market conditions\"."
+  },
+  {
+    "id": "20261009-nvidia-s-subtle-change-to-how-it-counts-cash-flo",
+    "date": "2026-10-09",
+    "title": "Nvidia’s Subtle Change to How It Counts Cash Flow Has Big Implications for Buybacks",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/investing/nvidias-subtle-change-to-how-it-counts-cash-flow-has-big-implications-for-buybacks-8fb1fc0e?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "summary": "The chip maker quietly signaled a new way of thinking about the competing demands of capital returns and building its AI ecosystem.",
+    "thumbnail": "https://images.wsj.net/im-60372325",
+    "paywall": true
+  },
+  {
+    "id": "20261009-openai-projected-to-bring-in-20bn-less-in-revenu",
+    "date": "2026-10-09",
+    "title": "OpenAI projected to bring in $20bn less in revenue than expected",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/09/openai-forecast-revenue-gap",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Questions raised over AI growth as ChatGPT maker forecasts this year’s revenue at $50bn, way below the $70bn signalled before",
+    "thumbnail": "https://media.guim.co.uk/3433ad629edc6fc8336d5bdd159016ad273ae9f8/1094_240_6444_5155/500.jpg"
+  },
+  {
+    "id": "20261009-palantir-s-tom-watson-says-mob-rule-must-not-dic",
+    "date": "2026-10-09",
+    "title": "Palantir’s Tom Watson says ‘mob rule’ must not dictate awarding of government contracts",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/09/palantir-tom-watson-mob-rule-government-contracts",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "summary": "Former Labour deputy leader says tech firm would work with a Reform UK government on immigration crackdowns",
+    "thumbnail": "https://media.guim.co.uk/feaa93bb4c00e44a655ff9ed1d226f783dc7d75c/0_0_2750_2200/500.jpg"
+  },
+  {
+    "id": "20261009-scrapped-ipo-of-nvidia-backed-company-points-to",
+    "date": "2026-10-09",
+    "title": "Scrapped IPO of Nvidia-Backed Company Points to Limits of AI Boom",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/scrapped-ipo-of-nvidia-backed-company-points-to-limits-of-ai-boom-a8d57067?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "summary": "Australian cloud-computing firm Firmus Grid had sought a $30 billion valuation despite having only two operational data centers.",
+    "thumbnail": "https://images.wsj.net/im-38308239",
+    "paywall": true
+  },
+  {
+    "id": "20261009-the-other-anthropic-founder-trying-to-fix-the-co",
+    "date": "2026-10-09",
+    "title": "The Other Anthropic Founder Trying to Fix the Company’s ‘Woke’ Reputation",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/tom-brown-athropic-669005ad?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Tom Brown is leveraging his Republican ties and business savvy to win over Washington and secure the computing power Anthropic needs.",
+    "thumbnail": "https://images.wsj.net/im-56078428",
+    "paywall": true
   }
 ]
