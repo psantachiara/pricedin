@@ -271,7 +271,7 @@ def probe(rules, start, end, per_day):
     print(f"A run at --per-day {per_day} would fetch roughly {est} snapshots.")
 
 
-def write_coverage(read_by_feed, start, end, reset=False):
+def write_coverage(read_by_feed, start, end, reset=False, feed_source=None):
     """Record, per week, how much of it the source reaches and which feeds did.
 
     A week covered only by one desk is not the same record as a week covered
@@ -319,13 +319,23 @@ def write_coverage(read_by_feed, start, end, reset=False):
     per_feed = {name: reach(records) for name, records in read_by_feed.items()}
     everything = set().union(*per_feed.values()) if per_feed else set()
 
+    # The same days again, pooled by publisher rather than by feed. The page
+    # lets a reader choose which sources to look at, and a week that WSJ barely
+    # reached is not thin for a reader who has only asked for the BBC, so the
+    # strip has to be able to answer per source and not only in aggregate.
+    per_source = {}
+    for name, days in per_feed.items():
+        source = (feed_source or {}).get(name, name)
+        per_source.setdefault(source, set()).update(days)
+
     existing = load("coverage.json", {}) or {}
     names = list(existing.get("feeds") or [])
     for name in sorted(per_feed):
         if name not in names:
             names.append(name)
 
-    weeks, cursor = {}, start.date() - timedelta(days=start.weekday())
+    weeks, by_source = {}, {}
+    cursor = start.date() - timedelta(days=start.weekday())
     last = end.date()
     while cursor <= last:
         days = [cursor + timedelta(days=i) for i in range(7)]
@@ -342,6 +352,9 @@ def write_coverage(read_by_feed, start, end, reset=False):
                 if any(d in per_feed[name] for d in in_range)
             ]
             weeks[cursor.isoformat()] = {"share": round(share, 3), "feeds": sorted(contributors)}
+            for source, days_hit in per_source.items():
+                by_source.setdefault(source, {})[cursor.isoformat()] = round(
+                    sum(1 for d in in_range if d in days_hit) / len(in_range), 3)
         cursor += timedelta(days=7)
 
     # A later run may cover only some feeds, so coverage is normally merged
@@ -366,6 +379,17 @@ def write_coverage(read_by_feed, start, end, reset=False):
             "share": max(value["share"], old_week["share"]),
             "feeds": sorted(set(old_week["feeds"]) | set(value["feeds"])),
         }
+
+    # Per-source shares merge on the same terms as the aggregate: replaced for
+    # the weeks this run recomputed when the stored numbers came from a
+    # superseded rule, otherwise kept at whichever run reached furthest.
+    sources = existing.setdefault("sources", {})
+    for source, shares in by_source.items():
+        entry = sources.setdefault(source, {"kind": "archive", "weeks": {}})
+        entry["kind"] = "archive"
+        held = entry.setdefault("weeks", {})
+        for week, share in shares.items():
+            held[week] = share if stale else max(share, held.get(week, 0))
 
     existing.pop("lookbackDays", None)   # the reach is measured now, not assumed
     existing.update({
@@ -628,7 +652,9 @@ def main():
 
     save("events.json", events, indent=2)
     save("news_seen.json", seen)
-    write_coverage(read_by_feed, start, end, reset=args.reset_coverage)
+    write_coverage(read_by_feed, start, end, reset=args.reset_coverage,
+                   feed_source={f["name"]: f.get("source", f["name"])
+                                for f in rules.get("feeds", [])})
     print(f"events.json now holds {len(events)} announcements.")
 
 

@@ -177,37 +177,94 @@
       return out.length ? out : null;
     })();
 
+    // Which chip an announcement belongs under. Anything added by hand is
+    // hand-picked whatever outlet it came from, so that is checked first: a
+    // Guardian piece someone chose themselves is not evidence that the
+    // Guardian's whole archive was read.
+    const sources = (config.sources || []).filter((s) => s && s.id);
+    const sourceById = new Map(sources.map((s) => [s.id, s]));
+    const curatedId = (sources.find((s) => s.manual || s.kind === 'curated') || {}).id;
+    const sourceLookup = new Map();
+    for (const s of sources) {
+      if (s.manual || s.kind === 'curated') continue;
+      sourceLookup.set(s.id, s.id);
+      for (const name of s.match || []) sourceLookup.set(name, s.id);
+    }
+    function sourceOf(event) {
+      if (event.manual && curatedId) return curatedId;
+      return sourceLookup.get(event.source) || curatedId || (sources[0] || {}).id;
+    }
+
+    // How complete each source's record is, week by week. A source read from a
+    // publisher's own index is complete over the range that was read, so it
+    // carries a range rather than weekly shares; one rebuilt from archived
+    // copies carries what was measured.
+    const sourceCoverage = (coverage && coverage.sources) || {};
+    function sourceShare(id, from, to) {
+      const entry = sourceCoverage[id];
+      const declared = sourceById.get(id) || {};
+      const kind = (entry && entry.kind) || declared.kind;
+      if (kind === 'curated') return null;          // not a sample; makes no claim
+      if (kind === 'index') {
+        if (!entry) return null;
+        const begins = entry.from ? parseDate(entry.from) : null;
+        const ends = entry.to ? parseDate(entry.to) : null;
+        if (begins && to < begins) return 0;
+        if (ends && from > new Date(+ends + 864e5)) return 0;
+        return 1;
+      }
+      if (!entry || !entry.weeks) return null;
+      const value = entry.weeks[isoDay(from)];
+      return value == null ? null : Math.max(0, Math.min(1, +value));
+    }
+
+    const isoDay = (d) => `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1)
+      .padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+
     // Runs of weeks the archive barely reaches, merged into single stretches so
     // a three-month hole reads as one gap rather than thirteen stripes. Drawn
     // behind the lanes, because an empty lane otherwise says "no news" when what
     // it means is "no record".
     const THIN = 0.5;   // below this, the week is too sparse to trust
     const VOID = 0.05;  // below this, there is no archived copy at all
-    const thinSpans = (() => {
+    // Thin stretches for the sources currently chosen, not for all of them at
+    // once: ask for the Times alone and the record is complete, so there is
+    // nothing to mark; ask for WSJ and the summer the archive missed comes
+    // back. Marking the union would hold every reader to the worst source they
+    // did not ask for.
+    function thinSpansFor(chosen) {
       if (!coverWeeks) return null;
+      const ids = [...chosen].filter((id) => sourceShare(id, new Date(0), new Date(0)) !== null
+        || (sourceCoverage[id] && sourceCoverage[id].kind !== 'curated'));
+      if (!ids.length) return null;        // only hand-picked items: claims nothing
       const out = [];
       for (const w of coverWeeks) {
-        if (w.share >= THIN) continue;
+        let best = null;
+        for (const id of ids) {
+          const share = sourceShare(id, w.from, w.to);
+          if (share == null) continue;
+          best = best == null ? share : Math.max(best, share);
+        }
+        if (best == null || best >= THIN) continue;
         // A stretch with no record at all is a different claim from one that is
         // merely patchy, so the two never merge into a single span -- otherwise
         // a blackout disappears inside a surrounding patchy period.
-        const isVoid = w.share < VOID;
+        const isVoid = best < VOID;
         const open = out[out.length - 1];
         if (open && open.isVoid === isVoid && +w.from <= +open.to) {
           open.to = w.to;
           open.weeks += 1;
-          open.best = Math.max(open.best, w.share);
+          open.best = Math.max(open.best, best);
           for (const name of w.feeds) open.feeds.add(name);
         } else {
-          out.push({ from: w.from, to: w.to, weeks: 1, best: w.share, isVoid,
+          out.push({ from: w.from, to: w.to, weeks: 1, best, isVoid,
                      feeds: new Set(w.feeds) });
         }
       }
       return out.length ? out : null;
-    })();
+    }
 
     const gapNote = $('#gap-note');
-    if (gapNote) gapNote.hidden = !thinSpans;
 
     function spanTitle(d) {
       const weeks = d.weeks === 1 ? 'One week' : `${d.weeks} weeks`;
@@ -249,6 +306,7 @@
       hidden: new Set(),
       focus: null,
       categories: new Set(cats.map((c) => c.id)),
+      sources: new Set(sources.map((s) => s.id)),
       domain: [dates[0], dates[N - 1]],
       pinned: null, // { key, ids, t }
       hover: null,
@@ -361,6 +419,7 @@
 
     const visibleEvents = () => events.filter((e) =>
       state.categories.has(e.category)
+      && state.sources.has(sourceOf(e))
       && (!state.focus || (e.tickers || []).includes(state.focus)));
 
     function setFocus(sym) {
@@ -503,6 +562,60 @@
           update();
         },
       }, el('span', { class: 'dot' }), el('span', { text: c.name })));
+    }
+
+    const sourceWrap = $('#sources');
+    const present = new Set(events.map(sourceOf));
+    for (const s of sources) {
+      if (!present.has(s.id)) continue;   // nothing to filter yet
+      const archived = s.kind === 'archive';
+      sourceWrap.append(el('button', {
+        type: 'button', class: 'cat source' + (archived ? ' archived' : ''),
+        'data-source': s.id,
+        title: `${s.note || ''}\n\nClick to hide. Shift-click to show only ${s.name}.`.trim(),
+        onclick: (ev) => {
+          const shown = sources.filter((x) => present.has(x.id));
+          const only = ev.shiftKey || ev.altKey
+            || (state.sources.size === shown.length && ev.detail === 2);
+          if (only) {
+            state.sources = new Set(
+              state.sources.size === 1 && state.sources.has(s.id)
+                ? shown.map((x) => x.id) : [s.id]);
+          } else if (state.sources.has(s.id)) {
+            if (state.sources.size > 1) state.sources.delete(s.id);
+          } else state.sources.add(s.id);
+          if (state.pinned && !state.pinned.ids.some((id) => state.sources.has(sourceOf(eventBy.get(id))))) {
+            state.pinned = null;
+          }
+          update();
+        },
+      }, el('span', { class: 'dot' }), el('span', { text: s.name }),
+         archived ? el('span', { class: 'via', text: 'archived' }) : null));
+    }
+
+    function syncSourceChips() {
+      sourceWrap.querySelectorAll('.source').forEach((b) =>
+        b.setAttribute('aria-pressed', String(state.sources.has(b.dataset.source))));
+      const legend = $('#source-legend');
+      if (!legend) return;
+      const chosen = sources.filter((s) => present.has(s.id) && state.sources.has(s.id));
+      const archived = chosen.filter((s) => s.kind === 'archive');
+      const indexed = chosen.filter((s) => s.kind === 'index');
+      if (archived.length) {
+        const names = archived.map((s) => s.name);
+        const list = names.length > 1
+          ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
+          : names[0];
+        legend.textContent = `${list} ${names.length > 1 ? 'were' : 'was'} rebuilt from `
+          + `archived copies of ${names.length > 1 ? 'their feeds' : 'its feed'}, so hatched `
+          + 'stretches below are where that record is thin rather than where the news was.';
+      } else if (indexed.length) {
+        legend.textContent = 'Read from the publishers’ own archives, so this is everything '
+          + 'they published on the subject — the record is even across the whole period.';
+      } else {
+        legend.textContent = 'Announcements added by hand, including from company blogs. '
+          + 'A deliberate selection, not a sample of anything.';
+      }
     }
 
     function syncCatNote() {
@@ -655,6 +768,8 @@
           setFocus(hit && hit !== state.focus ? hit : null);
         });
 
+      const thinSpans = thinSpansFor(state.sources);
+      if (gapNote) gapNote.hidden = !thinSpans;
       if (thinSpans) {
         // Two marks, different in kind rather than degree: a patchy stretch is
         // ruled one way, a stretch with no record at all is crosshatched. The
@@ -1213,6 +1328,7 @@
       syncControls();
       syncChips();
       syncCatNote();
+      syncSourceChips();
       hideTooltip();
       state.hover = null;
       render();

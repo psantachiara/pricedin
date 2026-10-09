@@ -205,6 +205,43 @@
       "why": "Market-wide stories, tagged to whichever companies they name."
     }
   ],
+  "sources": [
+    {
+      "id": "NYT",
+      "name": "New York Times",
+      "kind": "index",
+      "note": "Every article the paper published, read from its own archive."
+    },
+    {
+      "id": "Guardian",
+      "name": "The Guardian",
+      "kind": "index",
+      "match": [
+        "Guardian",
+        "The Guardian"
+      ],
+      "note": "Every article the paper published, read from its own archive."
+    },
+    {
+      "id": "WSJ",
+      "name": "WSJ",
+      "kind": "archive",
+      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it."
+    },
+    {
+      "id": "BBC",
+      "name": "BBC",
+      "kind": "archive",
+      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it."
+    },
+    {
+      "id": "curated",
+      "name": "Hand-picked",
+      "kind": "curated",
+      "manual": true,
+      "note": "Individual announcements added by hand, including company blogs. Not a systematic sample of anything."
+    }
+  ],
   "categories": [
     {
       "id": "apocalyptic",
