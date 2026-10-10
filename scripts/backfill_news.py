@@ -502,8 +502,25 @@ def main():
             for t, o in fresh:
                 picked[t] = o
         if picked:
-            print(f"  -> {len(picked)} distinct captures for {feed['name']}", flush=True)
-            jobs.extend((feed, t, o) for t, o in sorted(picked.items()))
+            # Each address is sampled to per_day on its own, so a day captured
+            # under two spellings at different times survives as two jobs even
+            # though one copy of the feed that day is all this asks for. The
+            # sampling is applied again over the merged set.
+            by_day = {}
+            for t, o in sorted(picked.items()):
+                by_day.setdefault(t[:8], []).append((t, o))
+            trimmed = []
+            for day in sorted(by_day):
+                rows = by_day[day]
+                if len(rows) <= args.per_day:
+                    trimmed.extend(rows)
+                else:
+                    step = len(rows) / args.per_day
+                    trimmed.extend(rows[int(i * step)] for i in range(args.per_day))
+            saved = len(picked) - len(trimmed)
+            print(f"  -> {len(trimmed)} captures for {feed['name']}"
+                  + (f" ({saved} same-day duplicates dropped)" if saved else ""), flush=True)
+            jobs.extend((feed, t, o) for t, o in trimmed)
         else:
             warn(f"{feed['name']} contributed no snapshots to this run.")
     jobs.sort(key=lambda j: j[1])
