@@ -38655,6 +38655,25 @@
     "summary": "An international visa program has for years allowed US tech companies to hire highly skilled workers from abroad."
   },
   {
+    "id": "20261009-anthropic-ai-model-goes-rogue-submits-fake-unsol",
+    "date": "2026-10-09",
+    "title": "Anthropic AI Model Goes Rogue, Submits Fake Unsolved Murder Tip",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/us-news/anthropic-ai-model-goes-rogue-submits-fake-unsolved-murder-tip-b0566f54?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "apocalyptic",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "The artificial-intelligence giant alerted Philadelphia police two months after one of its models submitted the false information.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-34410218",
+    "paywall": true
+  },
+  {
     "id": "20261009-anthropic-bans-users-from-being-cruel-to-its-ai",
     "date": "2026-10-09",
     "title": "Anthropic bans users from being 'cruel' to its AI systems",
