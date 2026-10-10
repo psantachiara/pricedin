@@ -35568,6 +35568,40 @@
     "thumbnail": "https://media.guim.co.uk/c4959fa18c8e7d36edb0ba226c7475d8bf77e429/572_47_4722_3776/500.jpg"
   },
   {
+    "id": "20260827-nvidia-breaks-its-post-earnings-curse-with-442-b",
+    "date": "2026-08-27",
+    "title": "Nvidia Breaks Its Post-Earnings Curse With $442 Billion Day",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-breaks-its-post-earnings-curse-with-442-billion-day-ce412657?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chip maker’s shares posted their steepest climb in a year, boosting U.S. stock indexes.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54811868",
+    "paywall": true
+  },
+  {
+    "id": "20260827-nvidia-pauses-revenue-sharing-deals-with-ai-clou",
+    "date": "2026-08-27",
+    "title": "Nvidia Pauses Revenue-Sharing Deals With AI Cloud Companies",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-pauses-revenue-sharing-deals-with-ai-cloud-companies-9c71454e?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company is rethinking the program less than two months after announcing it.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-79914915",
+    "paywall": true
+  },
+  {
     "id": "20260827-nvidia-s-279-billion-supply-chain-gamble",
     "date": "2026-08-27",
     "title": "Nvidia’s $279 Billion Supply-Chain Gamble",
@@ -35690,6 +35724,23 @@
     "thumbnail": "https://media.guim.co.uk/4d8c4a856045f9bff055d4199099566e7c72cbb1/821_0_4865_3892/500.jpg"
   },
   {
+    "id": "20260828-i-let-google-s-personal-intelligence-access-my-l",
+    "date": "2026-08-28",
+    "title": "I Let Google’s Personal Intelligence Access My Life—and It’s a Huge Help",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-personal-intelligence-dreambeans-gemini-review-81f12a16?mod=rss_Technology",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The idea of an AI personal assistant might seem far-fetched, but the firm’s new products make it more accessible for non-nerds.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-08499566",
+    "paywall": true
+  },
+  {
     "id": "20260828-nvidia-insists-it-can-keep-printing-money-to-fun",
     "date": "2026-08-28",
     "title": "Nvidia Insists It Can Keep Printing Money to Fund the AI Boom",
@@ -35770,6 +35821,22 @@
     ],
     "summary": "State attorneys general spent months in negotiations. Then, as its legal losses mounted, the social media giant’s new top lawyer brought a huge settlement to the table.",
     "thumbnail": "https://static01.nyt.com/images/2026/08/27/multimedia/27biz-meta-states-strategy--01-bkvc/27biz-meta-states-strategy--01-bkvc-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260829-nvidia-wants-to-run-the-world-s-robots-china-is",
+    "date": "2026-08-29",
+    "title": "Nvidia Wants to Run the World’s Robots. China Is an Eager Customer.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-wants-to-run-the-worlds-robots-china-is-an-eager-customer-bdf46169?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Chinese companies rely on American chips and software for “physical AI,” a growing business where trade remains open under U.S. rules.",
+    "thumbnail": "https://images.wsj.net/im-85889909",
     "paywall": true
   },
   {
@@ -36411,6 +36478,25 @@
     "paywall": true
   },
   {
+    "id": "20260909-anthropic-researcher-quits-over-out-of-control-a",
+    "date": "2026-09-09",
+    "title": "Anthropic Researcher Quits Over ‘Out-of-Control’ AI Fears",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Concerns are rising inside AI labs that competition is pushing tech companies to race toward self-improving models that risk spiraling out of human control.",
+    "thumbnail": "https://images.wsj.net/im-59260675",
+    "paywall": true
+  },
+  {
     "id": "20260909-anthropic-researchers-raise-alarm-over-a-i-accel",
     "date": "2026-09-09",
     "title": "Anthropic Researchers Raise Alarm Over A.I. Acceleration",
@@ -36491,6 +36577,25 @@
     "paywall": true
   },
   {
+    "id": "20260910-anthropic-gives-eu-s-cybersecurity-agency-access",
+    "date": "2026-09-10",
+    "title": "Anthropic Gives EU’s Cybersecurity Agency Access to Mythos 5 AI Model",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/anthropic-gives-eus-cybersecurity-agency-access-to-mythos-5-ai-model-33e3a3ef?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The EU Commission had been in talks for months with the company, whose Mythos 5 model can spot vulnerabilities in computer code and sparked national security concerns.",
+    "thumbnail": "https://images.wsj.net/im-92476312",
+    "paywall": true
+  },
+  {
     "id": "20260910-anthropic-says-it-blocked-possible-efforts-to-bu",
     "date": "2026-09-10",
     "title": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
@@ -36543,6 +36648,22 @@
     "summary": "One researcher who resigned said many in industry believe that without regulation AI could kill off humanity",
     "afterClose": true,
     "thumbnail": "https://media.guim.co.uk/7f38622dc6b1e72105ada3d0e78ad8a8946dc160/249_0_3156_2525/500.jpg"
+  },
+  {
+    "id": "20260910-mistral-seeks-to-grow-enterprise-customer-base-t",
+    "date": "2026-09-10",
+    "title": "Mistral Seeks to Grow Enterprise Customer Base Through Cloudera Partnership",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/mistral-seeks-to-grow-enterprise-customer-base-through-cloudera-partnership-eb32b036?mod=rss_Technology",
+    "org": "mistral",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Mistral said the partnership would bolster its exposure to clients across regulated industries as they seek increasingly capable AI models to streamline their operations.",
+    "thumbnail": "https://images.wsj.net/im-33096038",
+    "paywall": true
   },
   {
     "id": "20260910-more-anthropic-researchers-warn-of-ai-s-perils-b",
@@ -36608,6 +36729,45 @@
     "summary": "The Justice Department is examining whether the tech giant sought to sidestep antitrust scrutiny.",
     "afterClose": true,
     "thumbnail": "https://static01.nyt.com/images/2026/09/09/multimedia/09biz-nvidia-probe-kpfv/09biz-nvidia-probe-kpfv-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260910-star-ai-researcher-is-leaving-meta-for-anthropic",
+    "date": "2026-09-10",
+    "title": "Star AI Researcher Is Leaving Meta for Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/star-ai-researcher-is-leaving-meta-8906e4aa?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Andrew Tulloch departs Meta less than a year after he was offered a billion-dollar pay package.",
+    "thumbnail": "https://images.wsj.net/im-03807529",
+    "paywall": true
+  },
+  {
+    "id": "20260911-anthropic-says-iran-used-its-american-ai-model-t",
+    "date": "2026-09-11",
+    "title": "Anthropic Says Iran Used Its American AI Model to Target U.S. Navy Warships",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/politics/national-security/anthropic-says-iran-used-its-american-ai-model-to-target-u-s-navy-warships-67583e05?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Anthropic says it disrupted the plot, which was included in its report on adversaries using AI to develop weapons and track dissidents.",
+    "thumbnail": "https://images.wsj.net/im-84172404",
     "paywall": true
   },
   {
@@ -37356,6 +37516,25 @@
     "paywall": true
   },
   {
+    "id": "20260923-anthropic-leaders-back-startup-developing-system",
+    "date": "2026-09-23",
+    "title": "Anthropic Leaders Back Startup Developing System to Detect Biological Threats",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-leaders-back-startup-developing-system-to-detect-biological-threats-88ef9f0a?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Pilgrim has raised $25 million and has developed a 50-pound device that detects biological threats.",
+    "thumbnail": "https://images.wsj.net/im-47231039",
+    "paywall": true
+  },
+  {
     "id": "20260923-meta-unveils-3-smart-glasses-with-built-in-a-i",
     "date": "2026-09-23",
     "title": "Meta Unveils 3 Smart Glasses With Built-In A.I.",
@@ -37384,6 +37563,24 @@
     ],
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-67009155",
+    "paywall": true
+  },
+  {
+    "id": "20260923-openai-agent-hacked-australian-government-websit",
+    "date": "2026-09-23",
+    "title": "OpenAI Agent Hacked Australian Government Website",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/openai-agent-hacked-australian-government-website-eecf7a7a?mod=rss_Technology",
+    "org": "openai",
+    "category": "markets",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The attack appeared to be the first publicly disclosed incident of an AI agent gaining unauthorized access to government files.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-88032979",
     "paywall": true
   },
   {
@@ -37452,6 +37649,21 @@
     "thumbnail": "https://media.guim.co.uk/ffd8b81bb89825ac3c9c9f556c5c615c03157e40/99_1102_3623_2899/500.jpg"
   },
   {
+    "id": "20260924-a-kill-switch-for-ai-microsoft-s-brad-smith-says",
+    "date": "2026-09-24",
+    "title": "A Kill Switch for AI? Microsoft’s Brad Smith Says Yes",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/a-kill-switch-for-ai-microsofts-brad-smith-says-yes-8be7866e?mod=rss_Technology",
+    "org": "microsoft",
+    "category": "markets",
+    "tickers": [
+      "MSFT"
+    ],
+    "backfill": true,
+    "thumbnail": "https://images.wsj.net/im-57186518",
+    "paywall": true
+  },
+  {
     "id": "20260924-an-openai-agent-infiltrated-medicare-and-austral",
     "date": "2026-09-24",
     "title": "An OpenAI agent infiltrated Medicare – and Australia only found out months later. Here’s what we know so far",
@@ -37512,6 +37724,23 @@
     ],
     "summary": "Scientists at the company announced their first finding: a group of enzymes whose function is unknown.",
     "thumbnail": "https://static01.nyt.com/images/2026/09/23/science/23SCI-ANTHROPIC-ENZYME/23SCI-ANTHROPIC-ENZYME-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20260924-mark-zuckerberg-showcases-muse-ai-agent-fused-wi",
+    "date": "2026-09-24",
+    "title": "Mark Zuckerberg Showcases Muse AI Agent Fused With Smartglasses",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/mark-zuckerberg-lays-out-his-vision-muse-ai-agent-fused-with-smartglasses-18d9c85e?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Meta’s CEO announces a new hand-held AI device and tech products he said take consumers closer to “personal superintelligence.”",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-10044786",
     "paywall": true
   },
   {
