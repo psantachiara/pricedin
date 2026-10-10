@@ -17545,6 +17545,39 @@
     "summary": "Grok is being used to digitally remove women's clothing - something victims describe as \"dehumanising\"."
   },
   {
+    "id": "20260106-meta-pauses-european-rollout-of-smart-ray-bans-a",
+    "date": "2026-01-06",
+    "title": "Meta Pauses European Rollout of Smart Ray-Bans as Americans Lap Up Supply",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/meta-pauses-european-rollout-of-smart-ray-bans-as-americans-lap-up-supply-dd74f868?mod=rss_Technology",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Ray-Ban Display smartglasses, developed in partnership with Franco-Italian eyewear group EssilorLuxottica, had been planned to be made available for sale in Canada, France, the U.K. and Italy early this year.",
+    "thumbnail": "https://images.wsj.net/im-51356414",
+    "paywall": true
+  },
+  {
+    "id": "20260106-nvidia-ceo-says-chinese-demand-for-its-ai-chips",
+    "date": "2026-01-06",
+    "title": "Nvidia CEO Says Chinese Demand for Its AI Chips Is ‘Quite High’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-ceo-says-chinese-demand-for-its-ai-chips-is-quite-high-05c8d680?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "“H200s are flowing” since the company won White House approval to sell the processor in China, Jensen Huang said.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-44278770",
+    "paywall": true
+  },
+  {
     "id": "20260106-nvidia-ceo-says-he-doesn-t-care-about-california",
     "date": "2026-01-06",
     "title": "Nvidia CEO Says He Doesn’t Care About California’s Proposed Billionaire Tax",
@@ -17574,6 +17607,23 @@
     ],
     "summary": "Jensen Huang also announces at CES new, more powerful Vera Rubin chips that will arrive later this year",
     "thumbnail": "https://media.guim.co.uk/09e8ebedefc1bb9bac94ec3c7c55104f1079452e/991_0_5000_4000/500.jpg"
+  },
+  {
+    "id": "20260106-nvidia-unveils-faster-ai-chips-sooner-than-expec",
+    "date": "2026-01-06",
+    "title": "Nvidia Unveils Faster AI Chips Sooner Than Expected",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-unveils-faster-ai-chips-sooner-than-expected-626154a5?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "At the Consumer Electronics Show in Las Vegas, CEO Jensen Huang said more powerful chips will enable training of models in simulated environments.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-62495369",
+    "paywall": true
   },
   {
     "id": "20260106-nvidia-unveils-self-driving-car-tech-as-it-seeks",
@@ -17618,6 +17668,22 @@
     "summary": "The company behind the Grok large language model said that investors in the funding round included the Qatar Investment Authority, Valor Equity Partners, Stepstone Group, MGX and Baron Capital Group, and Fidelity Management & Research Compa",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-60642325",
+    "paywall": true
+  },
+  {
+    "id": "20260107-ai-chatbot-startup-google-to-settle-lawsuits-ove",
+    "date": "2026-01-07",
+    "title": "AI Chatbot Startup, Google to Settle Lawsuits Over Teen Suicides",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-chatbot-startup-google-to-settle-lawsuits-over-teen-suicides-fb41a063?mod=rss_Technology",
+    "org": "google",
+    "category": "markets",
+    "tickers": [
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The cases involving Character.AI’s virtual companions highlighted concerns about artificial intelligence and mental health.",
+    "thumbnail": "https://images.wsj.net/im-03662136",
     "paywall": true
   },
   {
@@ -18742,6 +18808,23 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-28507595",
+    "paywall": true
+  },
+  {
+    "id": "20260121-amazon-joins-the-big-box-league-with-its-largest",
+    "date": "2026-01-21",
+    "title": "Amazon Joins the Big-Box League With Its Largest-Ever Store",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/retail/amazon-orland-park-illinois-opening-13362c97?mod=pls_whats_news_us_business_f",
+    "org": "amazon",
+    "category": "model",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "The e-commerce giant is launching a megastore outside of Chicago that will be big enough to nearly fit two Target stores.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-12711362",
     "paywall": true
   },
   {
@@ -21270,6 +21353,26 @@
     "afterClose": true
   },
   {
+    "id": "20260225-anthropic-dials-back-ai-safety-commitments",
+    "date": "2026-02-25",
+    "title": "Anthropic Dials Back AI Safety Commitments",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-dials-back-ai-safety-commitments-38257540?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company said competitive pressure prompted it to pivot away from the previous, more-cautious stance.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-96056271",
+    "paywall": true
+  },
+  {
     "id": "20260225-chip-giant-nvidia-flouts-ai-scepticism-with-reco",
     "date": "2026-02-25",
     "title": "Chip giant Nvidia flouts AI scepticism with record revenue",
@@ -21466,6 +21569,22 @@
     ],
     "summary": "A handful of companies monopolise the web, with unprecedented access to our data. But there are many more ethical – and often distinctively European – alternatives",
     "thumbnail": "https://media.guim.co.uk/65a4b5a5c1675103f0dba423ac466d11cb4bd40d/0_0_5000_4000/500.jpg"
+  },
+  {
+    "id": "20260226-mistral-ai-lands-accenture-as-latest-big-client",
+    "date": "2026-02-26",
+    "title": "Mistral AI Lands Accenture as Latest Big Client",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/mistral-ai-lands-accenture-as-latest-big-client-7c5a0ca4?mod=rss_Technology",
+    "org": "mistral",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The agreement is a boost for the French artificial-intelligence startup as it seeks to expand its network of alliances.",
+    "thumbnail": "https://images.wsj.net/im-67908484",
+    "paywall": true
   },
   {
     "id": "20260226-nvidia-slide-shows-investors-lukewarm-reception",
@@ -22021,6 +22140,26 @@
     ],
     "backfill": true,
     "thumbnail": "https://images.wsj.net/im-72198243",
+    "paywall": true
+  },
+  {
+    "id": "20260303-a-fight-about-vibes-drove-the-pentagon-s-breakup",
+    "date": "2026-03-03",
+    "title": "A ‘Fight About Vibes’ Drove the Pentagon’s Breakup with Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-amodei-hegseth-ai-c12ee0df?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI giant’s CEO Dario Amodei and Defense Secretary Pete Hegseth have contrasting personalities and worldviews.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-45563269",
     "paywall": true
   },
   {
@@ -24003,6 +24142,23 @@
     "paywall": true
   },
   {
+    "id": "20260324-anduril-palantir-are-developing-golden-dome-miss",
+    "date": "2026-03-24",
+    "title": "Anduril, Palantir Are Developing Golden Dome Missile Shield’s Software",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/politics/national-security/anduril-palantir-are-developing-golden-dome-missile-shields-software-63c36db4?mod=rss_Technology",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "The firms are part of a consortium working on the $185 billion project’s operating system.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-17173101",
+    "paywall": true
+  },
+  {
     "id": "20260324-anthropic-and-pentagon-face-off-in-court-over-ba",
     "date": "2026-03-24",
     "title": "Anthropic and Pentagon face off in court over ban on company’s AI model",
@@ -24050,6 +24206,25 @@
     "thumbnail": "https://media.guim.co.uk/8ddeb93c00f9b029c2da4d2ed4aca1d86619dd15/1_0_4935_3950/500.jpg"
   },
   {
+    "id": "20260324-chatgpt-claude-and-gemini-entered-the-wsj-bracke",
+    "date": "2026-03-24",
+    "title": "ChatGPT, Claude and Gemini Entered the WSJ Bracket Pool. One Might Actually Win.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/sports/basketball/ncaa-bracket-ai-chatgpt-claude-gemini-82d997f1?mod=rss_Technology",
+    "org": "openai",
+    "category": "model",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL"
+    ],
+    "backfill": true,
+    "summary": "The AI ringers struggled at first. But soon, they were calling upsets, picking against the crowd—and beating the humans.",
+    "thumbnail": "https://images.wsj.net/im-09261278",
+    "paywall": true
+  },
+  {
     "id": "20260324-landmark-verdict-says-meta-harmed-children-allow",
     "date": "2026-03-24",
     "title": "Landmark Verdict Says Meta Harmed Children, Allowing Adults to Prey on Them",
@@ -24064,6 +24239,22 @@
     "summary": "With a $375 million penalty, a New Mexico state court case is holding the social-media company responsible for content on its platforms.",
     "afterClose": true,
     "thumbnail": "https://images.wsj.net/im-19078242",
+    "paywall": true
+  },
+  {
+    "id": "20260324-meta-executive-will-spearhead-push-to-get-employ",
+    "date": "2026-03-24",
+    "title": "Meta Executive Will Spearhead Push to Get Employees Using More AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/meta-names-new-leader-of-companys-efforts-to-become-ai-native-8d7fe912?mod=rss_Technology",
+    "org": "meta",
+    "category": "markets",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Andrew Bosworth, Meta’s chief technology officer, will oversee the company’s “AI For Work” initiatives as focus shifts away from the metaverse.",
+    "thumbnail": "https://images.wsj.net/im-03971473",
     "paywall": true
   },
   {
@@ -24193,6 +24384,26 @@
     "backfill": true,
     "summary": "The troubled maker of artificial-intelligence servers needs chip allocations, but Nvidia doesn’t need more scrutiny over China.",
     "thumbnail": "https://images.wsj.net/im-23224894",
+    "paywall": true
+  },
+  {
+    "id": "20260324-u-s-government-s-ban-on-anthropic-looks-like-pun",
+    "date": "2026-03-24",
+    "title": "U.S. Government’s Ban on Anthropic Looks Like Punishment, Judge Says",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/u-s-governments-ban-on-anthropic-looks-like-punishment-attempt-judge-says-2ff98fe3?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "policy",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI company is challenging its designation as a national security risk by the Pentagon.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-53330125",
     "paywall": true
   },
   {
@@ -24332,6 +24543,22 @@
     ],
     "backfill": true,
     "summary": "The move comes less two years after the launch of the AI video app sent shockwaves through the media industry."
+  },
+  {
+    "id": "20260325-slb-nvidia-expand-collaboration-on-ai-use-in-ene",
+    "date": "2026-03-25",
+    "title": "SLB, Nvidia Expand Collaboration on AI Use in Energy Industry",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/slb-nvidia-expand-collaboration-on-ai-use-in-energy-industry-a614cedf?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "markets",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "SLB and Nvidia have expanded the two companies’ collaboration aiming to design and deploy AI infrastructure and models for the energy industry.",
+    "thumbnail": "https://images.wsj.net/im-75590519",
+    "paywall": true
   },
   {
     "id": "20260325-the-inside-story-of-the-greatest-deal-google-eve",
@@ -25959,6 +26186,20 @@
     "backfill": true,
     "summary": "The Texas man, who also faces federal felony charges, allegedly had documents advocating for violence against AI executives.",
     "afterClose": true
+  },
+  {
+    "id": "20260414-palantir-defends-its-record-as-mps-demand-more-s",
+    "date": "2026-04-14",
+    "title": "Palantir defends its record as MPs demand more scrutiny of data use",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c393w38lv3mo?at_medium=RSS&at_campaign=rss",
+    "org": "palantir",
+    "category": "markets",
+    "tickers": [
+      "PLTR"
+    ],
+    "backfill": true,
+    "summary": "NHS guidance that all hospitals should be using Palantir software from this month has sparked a backlash."
   },
   {
     "id": "20260414-wegovy-maker-novo-nordisk-strikes-deal-with-open",
@@ -28282,6 +28523,25 @@
     "paywall": true
   },
   {
+    "id": "20260505-anthropic-releases-new-ai-agents-for-financial-s",
+    "date": "2026-05-05",
+    "title": "Anthropic Releases New AI Agents for Financial Services Firms",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/anthropic-releases-new-ai-agents-for-financial-services-firms-e2829b37?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "deals",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The AI company is pushing further into a sector critical to its enterprise business as it targets revenue growth and barrels toward an IPO.",
+    "thumbnail": "https://images.wsj.net/im-79279173",
+    "paywall": true
+  },
+  {
     "id": "20260505-elon-musk-wanted-openai-to-go-commercial-company",
     "date": "2026-05-05",
     "title": "Elon Musk Wanted OpenAI to Go Commercial, Company President Says",
@@ -28311,6 +28571,24 @@
     ],
     "summary": "Exclusive: Worker pointed to Iran war and Pentagon’s Anthropic feud as indications the department is ‘not a responsible partner’",
     "thumbnail": "https://media.guim.co.uk/f80f7c0faa77addae41acd9052268a4cf4515372/482_0_4822_3859/500.jpg"
+  },
+  {
+    "id": "20260505-google-microsoft-and-xai-agree-to-share-early-ai",
+    "date": "2026-05-05",
+    "title": "Google, Microsoft and xAI Agree to Share Early AI Models With U.S.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/google-microsoft-and-xai-agree-to-share-early-ai-models-with-u-s-f95a88d1?mod=rss_Technology",
+    "org": "xai",
+    "category": "markets",
+    "tickers": [
+      "NVDA",
+      "GOOGL",
+      "MSFT"
+    ],
+    "backfill": true,
+    "summary": "The agreement calls for AI developers to share models with reduced or removed safeguards to evaluate national security-related capabilities and risks.",
+    "thumbnail": "https://images.wsj.net/im-05256546",
+    "paywall": true
   },
   {
     "id": "20260505-i-asked-chatgpt-to-manage-a-stock-portfolio-here",
