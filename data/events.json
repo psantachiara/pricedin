@@ -59758,6 +59758,30 @@
     "paywall": true
   },
   {
+    "id": "20261010-rogue-anthropic-ai-agent-gave-police-fake-tip-in",
+    "date": "2026-10-10",
+    "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss",
+    "org": "anthropic",
+    "category": "moderation",
+    "relevance": 2,
+    "topics": [
+      "moderation"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Philadelphia police said the tip was \"flagged as spam\", but criticised the tech company for taking more than two months to detect and report the breach."
+  },
+  {
     "id": "20261010-the-u-s-army-s-desert-tech-test-shows-long-road",
     "date": "2026-10-10",
     "title": "The U.S. Army’s Desert Tech Test Shows Long Road to AI Warfare",
