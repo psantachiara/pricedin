@@ -26893,6 +26893,22 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260106-meta-pauses-european-rollout-of-smart-ray-bans-a",
+    "date": "2026-01-06",
+    "title": "Meta Pauses European Rollout of Smart Ray-Bans as Americans Lap Up Supply",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/meta-pauses-european-rollout-of-smart-ray-bans-as-americans-lap-up-supply-dd74f868?mod=rss_Technology",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Ray-Ban Display smartglasses, developed in partnership with Franco-Italian eyewear group EssilorLuxottica, had been planned to be made available for sale in Canada, France, the U.K. and Italy early this year.",
+    "thumbnail": "https://images.wsj.net/im-51356414",
+    "paywall": true
+  },
+  {
     "id": "20260106-nvidia-ceo-says-chinese-demand-for-its-ai-chips",
     "date": "2026-01-06",
     "title": "Nvidia CEO Says Chinese Demand for Its AI Chips Is ‘Quite High’",
@@ -26920,6 +26936,26 @@
     "coder": "keyword-v1"
   },
   {
+<<<<<<< HEAD
+=======
+    "id": "20260106-nvidia-ceo-says-chinese-demand-for-its-ai-chips",
+    "date": "2026-01-06",
+    "title": "Nvidia CEO Says Chinese Demand for Its AI Chips Is ‘Quite High’",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/nvidia-ceo-says-chinese-demand-for-its-ai-chips-is-quite-high-05c8d680?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "policy",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "“H200s are flowing” since the company won White House approval to sell the processor in China, Jensen Huang said.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-44278770",
+    "paywall": true
+  },
+  {
+>>>>>>> 8a929785e2a4dafafb56cb18c9e776f4b35de64d
     "id": "20260106-nvidia-ceo-says-he-doesn-t-care-about-california",
     "date": "2026-01-06",
     "title": "Nvidia CEO Says He Doesn’t Care About California’s Proposed Billionaire Tax",
@@ -54092,6 +54128,23 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260827-nvidia-breaks-its-post-earnings-curse-with-442-b",
+    "date": "2026-08-27",
+    "title": "Nvidia Breaks Its Post-Earnings Curse With $442 Billion Day",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-breaks-its-post-earnings-curse-with-442-billion-day-ce412657?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chip maker’s shares posted their steepest climb in a year, boosting U.S. stock indexes.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54811868",
+    "paywall": true
+  },
+  {
     "id": "20260827-nvidia-pauses-revenue-sharing-deals-with-ai-clou",
     "date": "2026-08-27",
     "title": "Nvidia Pauses Revenue-Sharing Deals With AI Cloud Companies",
@@ -54118,6 +54171,26 @@
     "coder": "keyword-v1"
   },
   {
+<<<<<<< HEAD
+=======
+    "id": "20260827-nvidia-pauses-revenue-sharing-deals-with-ai-clou",
+    "date": "2026-08-27",
+    "title": "Nvidia Pauses Revenue-Sharing Deals With AI Cloud Companies",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/nvidia-pauses-revenue-sharing-deals-with-ai-cloud-companies-9c71454e?mod=rss_Technology",
+    "org": "nvidia",
+    "category": "deals",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The company is rethinking the program less than two months after announcing it.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-79914915",
+    "paywall": true
+  },
+  {
+>>>>>>> 8a929785e2a4dafafb56cb18c9e776f4b35de64d
     "id": "20260827-nvidia-s-279-billion-supply-chain-gamble",
     "date": "2026-08-27",
     "title": "Nvidia’s $279 Billion Supply-Chain Gamble",
@@ -55859,6 +55932,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260910-star-ai-researcher-is-leaving-meta-for-anthropic",
+    "date": "2026-09-10",
+    "title": "Star AI Researcher Is Leaving Meta for Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/star-ai-researcher-is-leaving-meta-8906e4aa?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Andrew Tulloch departs Meta less than a year after he was offered a billion-dollar pay package.",
+    "thumbnail": "https://images.wsj.net/im-03807529",
+    "paywall": true
+  },
+  {
     "id": "20260911-anthropic-says-iran-used-its-american-ai-model-t",
     "date": "2026-09-11",
     "title": "Anthropic Says Iran Used Its American AI Model to Target U.S. Navy Warships",
@@ -55884,6 +55977,28 @@
     "coder": "keyword-v1"
   },
   {
+<<<<<<< HEAD
+=======
+    "id": "20260911-anthropic-says-iran-used-its-american-ai-model-t",
+    "date": "2026-09-11",
+    "title": "Anthropic Says Iran Used Its American AI Model to Target U.S. Navy Warships",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/politics/national-security/anthropic-says-iran-used-its-american-ai-model-to-target-u-s-navy-warships-67583e05?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Anthropic says it disrupted the plot, which was included in its report on adversaries using AI to develop weapons and track dissidents.",
+    "thumbnail": "https://images.wsj.net/im-84172404",
+    "paywall": true
+  },
+  {
+>>>>>>> 8a929785e2a4dafafb56cb18c9e776f4b35de64d
     "id": "20260911-anthropic-blocks-possible-attempt-to-use-ai-to-m",
     "date": "2026-09-11",
     "title": "Anthropic blocks possible attempt to use AI to make biological weapons",
