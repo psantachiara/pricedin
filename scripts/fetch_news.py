@@ -76,11 +76,21 @@ def slug(text, published, used):
 
 
 def compile_terms(terms):
-    """A term ending in * matches any word that starts with it: acquir* covers acquires."""
+    """A term ending in * matches any word that starts with it: acquir* covers acquires.
+
+    A space in a term matches a space OR a hyphen, because headlines hyphenate
+    freely and a vocabulary cannot carry both spellings of every phrase. Without
+    this, "Out-of-Control AI Fears" did not match "out of control" and the item
+    was recorded as neutral.
+    """
     out = []
+    gap = r"[\s-]+"
     for term in terms:
         stem = term.endswith("*")
-        body = re.escape(term[:-1] if stem else term).replace(r"\ ", r"\s+")
+        body = re.escape(term[:-1] if stem else term)
+        # a space or a hyphen in the term matches either in the text, so one
+        # spelling in the vocabulary covers "out of control" and "Out-of-Control"
+        body = body.replace(r"\ ", gap).replace(r"\-", gap)
         out.append(re.compile(r"(?<!\w)" + body + ("" if stem else r"(?!\w)"), re.I))
     return out
 
@@ -124,7 +134,8 @@ def parse_feed(feed, timeout=30):
             "source": feed.get("source") or feed.get("name"),
             "paywall": bool(feed.get("paywall")),
             "feed": feed.get("name"),
-            "allow": feed.get("categories"),
+            # optional per-feed allowlist, by TOPIC id (no feed sets one today)
+            "allow": feed.get("topics"),
         })
     return items
 
@@ -140,33 +151,115 @@ def merge(batch):
     return list(best.values())
 
 
-def classify(item, rules, entity_res, category_res):
-    """Return (org, tickers, category) or None when the item is not a market story."""
-    title, summary = item["title"], item["summary"]
+# Which coder produced an item's frames. Keyword matching is a weak instrument
+# for axis 2 because framing is semantic, not lexical: the first pass fired
+# `breach*` on a copyright suit and `drone*` on Amazon deliveries. So every row
+# records who coded it, and the keyword pass never presents itself as the
+# finished coding. Later passes overwrite frames and raise this to "llm-v1" or
+# "hand"; the validation sample is only meaningful if hand-coded rows are
+# distinguishable from machine-coded ones.
+CODER = "keyword-v1"
+
+
+def compile_axes(rules):
+    """Compile the three axes once. All four entry points build this the same way
+    so a rules change cannot drift between the live fetchers and the backfill."""
+    return {
+        "ai": compile_terms(rules.get("aiTerms", [])),
+        "topics": [(t["id"], compile_terms(t["match"]))
+                   for t in rules.get("topics", [])],
+        "frames": [(f["id"], compile_terms(f["match"]))
+                   for f in rules.get("frames", [])],
+    }
+
+
+def _hits(pats, text):
+    """How many distinct patterns of a list match. Distinct terms, not occurrences:
+    one word repeated is weaker evidence than two different words."""
+    return sum(1 for p in pats if p.search(text))
+
+
+def intensity(pats, title, summary):
+    """1 to 3, from where the frame's language sits and how much of it there is.
+
+    A proxy for the codebook's mentioned / substantial / dominant, and the part of
+    the machine pass most in need of validation: the threshold between the event
+    hypothesis and the discourse hypothesis rides on it.
+    """
+    in_title = _hits(pats, title)
+    if in_title >= 2:
+        return 3
+    if in_title == 1:
+        return 2
+    return 1 if _hits(pats, summary) else 0
+
+
+def classify(item, rules, entity_res, axes):
+    """Code one item on all three axes.
+
+    Returns a dict, or None when the item passes neither branch of the gate.
+    The gate admits an item when a tracked company appears in the title OR an AI
+    term appears anywhere in title or summary. Relevance is then recorded rather
+    than used to discard, so the analysis sets its own threshold.
+    """
+    title, summary = item["title"], item.get("summary") or ""
     haystack = f"{title} {summary}"
 
     in_title = [e for e, pats in entity_res if any(p.search(title) for p in pats)]
-    if not in_title:
-        if rules.get("requireEntityInTitle", True):
-            return None
-        in_title = [e for e, pats in entity_res if any(p.search(haystack) for p in pats)]
-        if not in_title:
-            return None
+    in_body = [e for e, pats in entity_res if any(p.search(haystack) for p in pats)]
+    company = in_title or in_body
+
+    ai_in_title = _hits(axes["ai"], title) > 0
+    ai_in_summary = _hits(axes["ai"], summary) > 0
+
+    if not in_title and not (ai_in_title or ai_in_summary):
+        return None
+
+    # ---- axis 0: relevance ------------------------------------------------
+    if ai_in_title:
+        relevance = 2
+    elif ai_in_summary:
+        relevance = 1
+    else:
+        relevance = 0
 
     tickers, seen = [], set()
-    for entity in in_title:
+    for entity in company:
         for symbol in entity["tickers"]:
             if symbol not in seen:
                 seen.add(symbol)
                 tickers.append(symbol)
 
-    category = rules.get("defaultCategory", "markets")
-    for cat, pats in category_res:
-        if any(p.search(haystack) for p in pats):
-            category = cat
-            break
+    # ---- axes 1 and 2: every label the item carries, not the first match ---
+    topics = [tid for tid, pats in axes["topics"] if _hits(pats, haystack)]
+    frames = {}
+    for fid, pats in axes["frames"]:
+        level = intensity(pats, title, summary)
+        if level:
+            frames[fid] = level
+    if not frames:
+        frames = {rules.get("neutralFrame", "neutral"): 2}
 
-    return in_title[0]["org"], tickers, category
+    return {
+        "org": company[0]["org"] if company else None,
+        "tickers": tickers,
+        "relevance": relevance,
+        "topics": topics,
+        "frames": frames,
+        "coder": CODER,
+        # legacy single label, kept so the current front end keeps rendering.
+        # Taken from the topic axis, so danger framing no longer displaces
+        # subject matter the way the old first-match-wins scheme did.
+        "category": topics[0] if topics else rules.get("defaultTopic", "other"),
+    }
+
+
+def normalise_source(name, rules):
+    """One spelling per outlet. The live path and the backfill had drifted apart,
+    which would have split an outlet in two under within-source normalisation."""
+    if not name:
+        return name
+    return rules.get("sourceAliases", {}).get(name.strip().lower(), name.strip())
 
 
 def main():
@@ -184,7 +277,7 @@ def main():
     seen = load("news_seen.json", {}) or {}
 
     entity_res = [(e, compile_terms(e["match"])) for e in rules.get("entities", [])]
-    category_res = [(c["id"], compile_terms(c["match"])) for c in rules.get("categories", [])]
+    axes = compile_axes(rules)
     excluded_paths = tuple(rules.get("excludePaths", []))
     excluded_prefixes = tuple(p.lower() for p in rules.get("excludeSummaryPrefixes", []))
     excluded_titles = compile_terms(rules.get("excludeTitlePatterns", []))
@@ -229,18 +322,18 @@ def main():
         elif now - item["published"] > max_age:
             reason = "older than the window"
         else:
-            tagged = classify(item, rules, entity_res, category_res)
+            tagged = classify(item, rules, entity_res, axes)
             if not tagged:
-                reason = "no tracked company in the headline"
-            elif item.get("allow") and tagged[2] not in item["allow"]:
-                reason = f"{tagged[2]} not carried by {item.get('feed') or 'this feed'}"
+                reason = "no tracked company and no AI term"
+            elif item.get("allow") and tagged["category"] not in item["allow"]:
+                reason = f"{tagged['category']} not carried by {item.get('feed') or 'this feed'}"
 
         if reason:
             dropped.append((reason, item))
             seen[key] = {"url": url, "dropped": reason}
             continue
 
-        org, tickers, category = tagged
+        tickers = tagged["tickers"]
         if valid_tickers:
             tickers = [t for t in tickers if t in valid_tickers]
 
@@ -248,10 +341,14 @@ def main():
             "id": slug(item["title"], item["published"], known_ids),
             "date": item["published"].strftime("%Y-%m-%d"),
             "title": item["title"],
-            "source": item["source"],
+            "source": normalise_source(item["source"], rules),
             "url": item["url"],
-            "org": org,
-            "category": category,
+            "org": tagged["org"],
+            "category": tagged["category"],
+            "relevance": tagged["relevance"],
+            "topics": tagged["topics"],
+            "frames": tagged["frames"],
+            "coder": tagged["coder"],
             "tickers": tickers,
         }
         if item.get("summary"):
@@ -272,7 +369,9 @@ def main():
 
     print(f"Read {len(batch)} feed items: {len(added)} added, {len(dropped)} filtered out.")
     for event in added:
-        print(f"  + {event['date']}  {event['category']:8s} {','.join(event['tickers']) or '-':22s} {event['title'][:72]}")
+        frames = ",".join(f"{k}{v}" for k, v in event["frames"].items())
+        print(f"  + {event['date']}  r{event['relevance']} {event['category']:8s} "
+              f"{frames[:30]:30s} {','.join(event['tickers']) or '-':14s} {event['title'][:58]}")
     if args.report:
         for reason, item in dropped:
             print(f"  - {item['published']:%Y-%m-%d}  {reason:32s} {item['title'][:72]}")

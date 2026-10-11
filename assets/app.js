@@ -125,11 +125,41 @@
     const benchmarks = config.benchmarks.filter((b) => Array.isArray(close[b.symbol]));
     const orgs = config.orgs;
     const orgBy = new Map(orgs.map((o) => [o.id, o]));
-    const cats = config.categories;
-    const catBy = new Map(cats.map((c) => [c.id, c]));
-    const catColor = (id) => {
-      const c = catBy.get(id);
-      return c ? `var(--cat-${c.id}, ${c.color})` : 'var(--muted)';
+    const topics = config.topics || [];
+    const topicBy = new Map(topics.map((t) => [t.id, t]));
+    const frames = config.frames || [];
+    const frameBy = new Map(frames.map((f) => [f.id, f]));
+    const families = config.frameFamilies || [];
+    const familyBy = new Map(families.map((f) => [f.id, f]));
+    const NO_TOPIC = '_none';
+
+    // Colour carries the frame FAMILY, not the frame. Nine hues would break the
+    // fixed-order categorical rule and no ordering of nine clears the
+    // colour-blind separation floors; two hues plus a recessive grey clear them
+    // on every pair in both themes. Individual frames are told apart by the
+    // chips, the tooltip and shift-click-to-isolate.
+    const FAMILY_RANK = { danger: 0, contrast: 1, neutral: 2 };
+    const familyOf = (id) => (frameBy.get(id) || {}).family || 'neutral';
+
+    // An item can carry several frames. The one that colours it is the most
+    // intense, and among equals the one from the danger family, because that is
+    // the distinction the project exists to look at.
+    const leadFrame = (e) => {
+      let best = null;
+      for (const [id, lvl] of Object.entries(e.frames || {})) {
+        const fam = familyOf(id);
+        if (!best || lvl > best.lvl
+            || (lvl === best.lvl && FAMILY_RANK[fam] < FAMILY_RANK[best.fam])) {
+          best = { id, lvl, fam };
+        }
+      }
+      return best;
+    };
+    const familyColor = (fam) =>
+      `var(--fam-${fam}, ${(familyBy.get(fam) || {}).color || 'var(--muted)'})`;
+    const eventColor = (e) => {
+      const lead = leadFrame(e);
+      return familyColor(lead ? lead.fam : 'neutral');
     };
 
     const events = rawEvents
@@ -357,7 +387,14 @@
       window: 3,
       hidden: new Set(),
       focus: null,
-      categories: new Set(cats.map((c) => c.id)),
+      topics: new Set([...topics.map((t) => t.id), NO_TOPIC]),
+      frames: new Set(frames.map((f) => f.id)),
+      // The site is about AI news, so items where a tracked company is merely
+      // named default to hidden. The control says so and can be turned down.
+      minRelevance: 1,
+      // The dial between the event hypothesis and the discourse hypothesis:
+      // at 3 only dominant framing counts, at 1 every passing mention does.
+      minIntensity: 1,
       sources: new Set(defaultSources()),
       domain: [dates[0], dates[N - 1]],
       pinned: null, // { key, ids, t }
@@ -469,9 +506,26 @@
       return vals.length ? d3.mean(vals) : null;
     }
 
+    // relevance is absent on hand-written entries, which are always shown
+    const passesRelevance = (e) =>
+      e.relevance == null || e.relevance >= state.minRelevance;
+    const passesTopic = (e) => {
+      const ts = e.topics || [];
+      return ts.length ? ts.some((t) => state.topics.has(t)) : state.topics.has(NO_TOPIC);
+    };
+    const passesFrame = (e) => {
+      const fr = e.frames || {};
+      const ids = Object.keys(fr);
+      if (!ids.length) return state.frames.has('neutral');
+      // neutral has no intensity to speak of, so the threshold does not gate it
+      return ids.some((id) => state.frames.has(id)
+        && (id === 'neutral' || fr[id] >= state.minIntensity));
+    };
+    const passesFilters = (e) =>
+      passesRelevance(e) && passesTopic(e) && passesFrame(e) && state.sources.has(sourceOf(e));
+
     const visibleEvents = () => events.filter((e) =>
-      state.categories.has(e.category)
-      && state.sources.has(sourceOf(e))
+      passesFilters(e)
       && (!state.focus || (e.tickers || []).includes(state.focus)));
 
     function setFocus(sym) {
@@ -479,7 +533,7 @@
       if (sym && state.pinned) {
         const stillShown = state.pinned.ids.some((id) => {
           const e = eventBy.get(id);
-          return e && (e.tickers || []).includes(sym) && state.categories.has(e.category);
+          return e && (e.tickers || []).includes(sym) && passesFilters(e);
         });
         if (!stillShown) state.pinned = null;
       }
@@ -594,26 +648,57 @@
       chipWrap.append(chip);
     }
 
-    const catWrap = $('#categories');
-    for (const c of cats) {
-      catWrap.append(el('button', {
-        type: 'button', class: 'cat', 'data-cat': c.id, style: `--c:${catColor(c.id)}`,
-        title: `Click to hide. Shift-click to show only ${c.name}.`,
-        onclick: (ev) => {
-          const only = ev.shiftKey || ev.altKey
-            || (state.categories.size === cats.length && ev.detail === 2);
-          if (only) {
-            // showing one type takes one action, rather than hiding the other five
-            state.categories = new Set(
-              state.categories.size === 1 && state.categories.has(c.id)
-                ? cats.map((x) => x.id) : [c.id]);
-          } else if (state.categories.has(c.id)) {
-            if (state.categories.size > 1) state.categories.delete(c.id);
-          } else state.categories.add(c.id);
-          if (state.pinned && !state.pinned.ids.some((id) => state.categories.has(eventBy.get(id).category))) state.pinned = null;
+    // Topics and frames are the same control twice over, so they are built by
+    // one function. Shift-click isolates, which is how the existential/
+    // unreliable comparison gets made now that both are the same colour.
+    function buildChips(wrap, items, key, colorFor) {
+      if (!wrap) return;
+      for (const it of items) {
+        const all = items.map((x) => x.id);
+        wrap.append(el('button', {
+          type: 'button', class: 'cat', 'data-chip': it.id, style: `--c:${colorFor(it)}`,
+          title: `Click to hide. Shift-click to show only ${it.name}.`,
+          onclick: (ev) => {
+            const set = state[key];
+            const only = ev.shiftKey || ev.altKey
+              || (set.size === all.length && ev.detail === 2);
+            if (only) {
+              state[key] = new Set(set.size === 1 && set.has(it.id) ? all : [it.id]);
+            } else if (set.has(it.id)) {
+              if (set.size > 1) set.delete(it.id);
+            } else set.add(it.id);
+            if (state.pinned
+                && !state.pinned.ids.some((id) => passesFilters(eventBy.get(id)))) {
+              state.pinned = null;
+            }
+            update();
+          },
+        }, el('span', { class: 'dot' }), el('span', { text: it.name })));
+      }
+    }
+
+    // "No topic" is a real coding outcome, not a gap: an item can carry framing
+    // and no subject matter. It gets a chip so those items can be reached.
+    const topicChips = [...topics, { id: NO_TOPIC, name: 'No topic' }];
+    const topicWrap = $('#topics');
+    const frameWrap = $('#frames');
+    buildChips(topicWrap, topicChips, 'topics', () => 'var(--muted)');
+    buildChips(frameWrap, frames, 'frames', (f) => familyColor(f.family));
+
+    // the two thresholds
+    for (const [sel, key] of [['#relevance-seg', 'minRelevance'], ['#intensity-seg', 'minIntensity']]) {
+      const seg = $(sel);
+      if (!seg) continue;
+      seg.querySelectorAll('button').forEach((b) => {
+        b.onclick = () => {
+          state[key] = Number(b.dataset.value);
+          if (state.pinned
+              && !state.pinned.ids.some((id) => passesFilters(eventBy.get(id)))) {
+            state.pinned = null;
+          }
           update();
-        },
-      }, el('span', { class: 'dot' }), el('span', { text: c.name })));
+        };
+      });
     }
 
     // Sources get checkboxes rather than the chips used for categories and
@@ -668,20 +753,30 @@
       }
     }
 
-    function syncCatNote() {
-      const note = $('#cat-note');
+    function syncOneNote(sel, items, key) {
+      const note = $(sel);
       if (!note) return;
       note.innerHTML = '';
-      const off = cats.filter((c) => !state.categories.has(c.id));
+      const off = items.filter((c) => !state[key].has(c.id));
       note.hidden = !off.length;
       if (!off.length) return;
-      const on = cats.filter((c) => state.categories.has(c.id));
+      const on = items.filter((c) => state[key].has(c.id));
       note.append(
         el('span', { text: on.length === 1 ? `Only ${on[0].name}` : `${off.length} hidden` }),
         el('button', {
           type: 'button', class: 'text-button', text: 'Show all',
-          onclick: () => { state.categories = new Set(cats.map((c) => c.id)); update(); },
+          onclick: () => { state[key] = new Set(items.map((x) => x.id)); update(); },
         }));
+    }
+
+    function syncCatNote() {
+      syncOneNote('#topic-note', topicChips, 'topics');
+      syncOneNote('#frame-note', frames, 'frames');
+      const n = $('#threshold-note');
+      if (n) {
+        const shown = visibleEvents().length;
+        n.textContent = `${shown.toLocaleString()} of ${events.length.toLocaleString()} announcements shown.`;
+      }
     }
 
     function syncChips() {
@@ -689,8 +784,16 @@
         b.setAttribute('aria-pressed', String(!state.hidden.has(b.dataset.sym)));
         b.classList.toggle('focused', state.view === 'detailed' && state.focus === b.dataset.sym);
       });
-      catWrap.querySelectorAll('.cat').forEach((b) =>
-        b.setAttribute('aria-pressed', String(state.categories.has(b.dataset.cat))));
+      if (topicWrap) topicWrap.querySelectorAll('.cat').forEach((b) =>
+        b.setAttribute('aria-pressed', String(state.topics.has(b.dataset.chip))));
+      if (frameWrap) frameWrap.querySelectorAll('.cat').forEach((b) =>
+        b.setAttribute('aria-pressed', String(state.frames.has(b.dataset.chip))));
+      for (const [sel, key] of [['#relevance-seg', 'minRelevance'], ['#intensity-seg', 'minIntensity']]) {
+        const seg = $(sel);
+        if (!seg) continue;
+        seg.querySelectorAll('button').forEach((b) =>
+          b.setAttribute('aria-pressed', String(Number(b.dataset.value) === state[key])));
+      }
     }
 
     const stage = $('#stage');
@@ -909,8 +1012,8 @@
         it.ids = it.evs.map((e) => e.id);
         it.key = 'c:' + it.ids.join('|');
         it.count = it.ids.length;
-        const kinds = new Set(it.evs.map((e) => e.category));
-        it.color = kinds.size === 1 ? catColor(it.evs[0].category) : 'var(--ink)';
+        const fams = new Set(it.evs.map((e) => (leadFrame(e) || { fam: 'neutral' }).fam));
+        it.color = fams.size === 1 ? eventColor(it.evs[0]) : 'var(--ink)';
       }
       for (const it of items) {
         const evs = it.ids.map((id) => eventBy.get(id));
@@ -1108,7 +1211,7 @@
     }
 
     function thumbEl(e, extra = '') {
-      const wrap = el('div', { class: `thumb ${extra}`.trim(), style: `--tint:${catColor(e.category)}` });
+      const wrap = el('div', { class: `thumb ${extra}`.trim(), style: `--tint:${eventColor(e)}` });
       const fallback = () => {
         wrap.innerHTML = '';
         wrap.classList.add('is-fallback');
@@ -1219,7 +1322,6 @@
       if (evs.length === 1) {
         const e = evs[0];
         const org = orgBy.get(e.org);
-        const cat = catBy.get(e.category);
         detail.append(el('a', {
           class: 'detail-media', href: e.url, target: '_blank', rel: 'noopener', tabindex: '-1', 'aria-hidden': 'true',
         }, thumbEl(e)));
@@ -1230,7 +1332,18 @@
             paywallTag(e)),
           el('p', { class: 'meta' },
             org ? el('span', { class: 'tag', text: org.name }) : null,
-            cat ? el('span', { class: 'tag', style: `--tint:${catColor(cat.id)}`, text: cat.name }) : null),
+            ...(e.topics || []).map((t) => el('span', {
+              class: 'tag', text: (topicBy.get(t) || { name: t }).name })),
+            ...Object.entries(e.frames || {})
+              .sort((a, b) => b[1] - a[1])
+              .map(([id, lvl]) => el('span', {
+                class: 'tag tag-frame', style: `--tint:${familyColor(familyOf(id))}`,
+                title: ['mentioned', 'substantial', 'dominant'][lvl - 1] || '',
+                text: `${(frameBy.get(id) || { name: id }).name}${id === 'neutral' ? '' : ' ' + '\u25CF'.repeat(lvl)}`,
+              })),
+            e.relevance != null && e.relevance < 2
+              ? el('span', { class: 'tag tag-quiet', text: e.relevance === 0 ? 'Not about AI' : 'AI incidental' })
+              : null),
           clear);
       } else {
         detail.classList.add('is-cluster');

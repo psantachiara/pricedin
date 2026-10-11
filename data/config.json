@@ -242,36 +242,127 @@
       "note": "Individual announcements added by hand, including company blogs. Not a systematic sample of anything."
     }
   ],
-  "categories": [
+  "relevance": [
     {
-      "id": "apocalyptic",
-      "name": "AI as danger",
-      "color": "#C2410C"
+      "id": 2,
+      "name": "AI is the subject"
     },
     {
-      "id": "model",
-      "name": "Model releases",
-      "color": "#2440C8"
+      "id": 1,
+      "name": "AI is incidental"
     },
+    {
+      "id": 0,
+      "name": "Not about AI"
+    }
+  ],
+  "topics": [
     {
       "id": "deals",
-      "name": "Deals, funding and IPOs",
-      "color": "#A66A00"
+      "name": "Deals, funding and IPOs"
     },
     {
       "id": "compute",
-      "name": "Chips and compute",
-      "color": "#6A45B5"
+      "name": "Chips and compute"
+    },
+    {
+      "id": "model",
+      "name": "Model releases"
     },
     {
       "id": "policy",
-      "name": "Policy and regulation",
-      "color": "#C02D6A"
+      "name": "Policy and regulation"
+    },
+    {
+      "id": "legal",
+      "name": "Lawsuits and liability"
     },
     {
       "id": "markets",
-      "name": "Earnings and market moves",
-      "color": "#56606B"
+      "name": "Earnings and market moves"
+    },
+    {
+      "id": "labour",
+      "name": "Jobs and work"
+    },
+    {
+      "id": "product",
+      "name": "Products and features"
+    },
+    {
+      "id": "governance",
+      "name": "Leadership and governance"
+    },
+    {
+      "id": "moderation",
+      "name": "Moderation and fact-checking"
+    }
+  ],
+  "frames": [
+    {
+      "id": "existential",
+      "family": "danger",
+      "name": "Existential risk"
+    },
+    {
+      "id": "unreliable",
+      "family": "danger",
+      "name": "Unreliable or erratic"
+    },
+    {
+      "id": "security",
+      "family": "danger",
+      "name": "Weapons, fraud, intrusion"
+    },
+    {
+      "id": "societal",
+      "family": "danger",
+      "name": "Misinformation, democracy"
+    },
+    {
+      "id": "individual",
+      "family": "danger",
+      "name": "Harm to individuals"
+    },
+    {
+      "id": "displacement",
+      "family": "danger",
+      "name": "Work displaced"
+    },
+    {
+      "id": "capability",
+      "family": "contrast",
+      "name": "Capability and power"
+    },
+    {
+      "id": "bubble",
+      "family": "contrast",
+      "name": "Bubble and overvaluation"
+    },
+    {
+      "id": "neutral",
+      "family": "neutral",
+      "name": "No evaluative stance"
+    }
+  ],
+  "frameFamilies": [
+    {
+      "id": "danger",
+      "name": "AI as danger",
+      "color": "#eb6834",
+      "colorDark": "#d95926"
+    },
+    {
+      "id": "contrast",
+      "name": "Capability or bubble",
+      "color": "#2a78d6",
+      "colorDark": "#3987e5"
+    },
+    {
+      "id": "neutral",
+      "name": "No stance",
+      "color": "#56606B",
+      "colorDark": "#9BA4AF"
     }
   ]
 }

@@ -11,12 +11,10 @@
   --band: rgba(36, 64, 200, 0.07);
   --shadow: 0 10px 28px rgba(22, 32, 44, 0.16);
 
-  --cat-apocalyptic: #C2410C;
-  --cat-model: #2440C8;
-  --cat-deals: #A66A00;
-  --cat-compute: #6A45B5;
-  --cat-policy: #C02D6A;
-  --cat-markets: #56606B;
+  --fam-danger: #eb6834;
+  --fam-contrast: #2a78d6;
+  --fam-neutral: #56606B;
+  --coverage-partial: #A66A00;
 
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: "Schibsted Grotesk", var(--font);
@@ -36,12 +34,10 @@
     --focus: #8FA3FF;
     --band: rgba(143, 163, 255, 0.11);
     --shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-    --cat-apocalyptic: #FF7A59;
-    --cat-model: #8FA3FF;
-    --cat-deals: #E3AE4C;
-    --cat-compute: #B89CF2;
-    --cat-policy: #F37DAF;
-    --cat-markets: #9BA4AF;
+    --fam-danger: #d95926;
+    --fam-contrast: #3987e5;
+    --fam-neutral: #9BA4AF;
+    --coverage-partial: #E3AE4C;
     color-scheme: dark;
   }
 }
@@ -58,12 +54,10 @@
   --focus: #8FA3FF;
   --band: rgba(143, 163, 255, 0.11);
   --shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-  --cat-apocalyptic: #FF7A59;
-  --cat-model: #8FA3FF;
-  --cat-deals: #E3AE4C;
-  --cat-compute: #B89CF2;
-  --cat-policy: #F37DAF;
-  --cat-markets: #9BA4AF;
+  --fam-danger: #d95926;
+  --fam-contrast: #3987e5;
+  --fam-neutral: #9BA4AF;
+  --coverage-partial: #E3AE4C;
   color-scheme: dark;
 }
 
@@ -341,7 +335,7 @@ select {
    covers completely, a week the best of them only partly reaches, and a week
    they were read for and reached nothing. */
 .coverage-week.full { fill: var(--up); }
-.coverage-week.partial { fill: var(--cat-deals); }
+.coverage-week.partial { fill: var(--coverage-partial); }
 .coverage-week.empty { fill: var(--down); }
 /* Never read here: an outline rather than a bar, because the honest claim is
    that nothing is known about this week, not that it was found empty. */
@@ -451,13 +445,31 @@ select {
 .overview .handle { fill: var(--focus); rx: 2; }
 
 .cats-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 14px;
+  display: grid;
+  gap: 8px;
   padding: 12px 0 10px;
   margin-top: 4px;
   border-top: 1px solid var(--grid);
+}
+.axis-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.axis-row .chips-label { flex: 0 0 auto; min-width: 8.5em; }
+/* Topic chips filter but carry no colour: the hue is reserved for framing,
+   which is the thing the chart is actually about. */
+.cats.topics .cat { --c: var(--muted); }
+.cats.topics .cat .dot { width: 6px; height: 6px; }
+.axis-row.thresholds { gap: 6px 20px; padding-top: 2px; }
+.axis-row.thresholds .control { flex-direction: row; align-items: center; gap: 8px; }
+.axis-row.thresholds .control-label { min-width: 0; white-space: nowrap; }
+#threshold-note { color: var(--muted); font-size: 0.8125rem; }
+@media (max-width: 620px) {
+  .axis-row .chips-label { min-width: 0; flex-basis: 100%; }
+  .axis-row.thresholds { gap: 10px; }
+  .axis-row.thresholds .control { flex-basis: 100%; }
 }
 
 .cats { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
@@ -586,6 +598,13 @@ select {
   font-size: 0.8125rem;
   background: color-mix(in srgb, var(--tint, var(--muted)) 14%, transparent);
   color: var(--ink);
+}
+
+.detail .tag-frame { font-variant-numeric: tabular-nums; }
+.detail .tag-quiet {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--rule);
+  color: var(--muted);
 }
 
 .cluster-list { list-style: none; margin: 10px 0 14px; padding: 0; display: grid; gap: 10px; }

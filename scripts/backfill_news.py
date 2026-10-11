@@ -33,8 +33,8 @@ from xml.etree import ElementTree
 import requests
 
 from fetch_news import (
-    after_close, canonical, clean_text, compile_terms, classify,
-    load, save, slug, warn, MEDIA_NS,
+    after_close, canonical, clean_text, compile_axes, compile_terms, classify,
+    load, normalise_source, save, slug, warn, MEDIA_NS,
 )
 
 LOOKBACK_DAYS = 14   # how far apart captures can be before the record has holes
@@ -211,7 +211,8 @@ def parse_snapshot(xml, feed):
             "source": feed.get("source") or feed.get("name"),
             "paywall": bool(feed.get("paywall")),
             "feed": feed.get("name"),
-            "allow": feed.get("categories"),
+            # optional per-feed allowlist, by TOPIC id (no feed sets one today)
+            "allow": feed.get("topics"),
         })
     return items
 
@@ -430,6 +431,12 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="report without writing files")
     parser.add_argument("--report", action="store_true", help="also list what was filtered out")
     parser.add_argument("--max-snapshots", type=int, default=0, help="stop after this many (0 = no limit)")
+    parser.add_argument("--reconsider-drops", metavar="REASON", nargs="?", const="all",
+                        help="forget why items were filtered out before, so a changed rule "
+                             "can reach them. Pass a reason to forget only that one, e.g. "
+                             "--reconsider-drops 'no tracked company in the headline'. "
+                             "Without this, widening a rule changes nothing for items "
+                             "already judged, because a seen item is never re-examined.")
     parser.add_argument("--undo", action="store_true", help="remove every event added by a backfill")
     parser.add_argument("--reset-coverage", action="store_true",
                         help="recompute coverage for this period from scratch instead of "
@@ -469,8 +476,24 @@ def main():
         return
 
     seen = load("news_seen.json", {}) or {}
+
+    if args.reconsider_drops:
+        wanted = args.reconsider_drops
+        forget = [k for k, v in seen.items()
+                  if isinstance(v, dict) and v.get("dropped")
+                  and (wanted == "all" or v["dropped"] == wanted)]
+        for key in forget:
+            del seen[key]
+        kept = sum(1 for v in seen.values() if isinstance(v, dict) and v.get("dropped"))
+        print(f"Reconsidering {len(forget)} items filtered out by an earlier run "
+              f"({'every reason' if wanted == 'all' else repr(wanted)}); "
+              f"{kept} drop records left in place.")
+        if not forget:
+            warn("No drop records matched, so nothing extra will be reconsidered. "
+                 "Check the reason string against what the run actually printed.")
+
     entity_res = [(e, compile_terms(e["match"])) for e in rules.get("entities", [])]
-    category_res = [(c["id"], compile_terms(c["match"])) for c in rules.get("categories", [])]
+    axes = compile_axes(rules)
     excluded_paths = tuple(rules.get("excludePaths", []))
     excluded_prefixes = tuple(p.lower() for p in rules.get("excludeSummaryPrefixes", []))
     excluded_titles = compile_terms(rules.get("excludeTitlePatterns", []))
@@ -601,18 +624,18 @@ def main():
         elif any(p.search(item["title"]) for p in excluded_titles):
             reason = "column or review"
         else:
-            tagged = classify(item, rules, entity_res, category_res)
+            tagged = classify(item, rules, entity_res, axes)
             if not tagged:
-                reason = "no tracked company in the headline"
-            elif item.get("allow") and tagged[2] not in item["allow"]:
-                reason = f"{tagged[2]} not carried by {item.get('feed') or 'this feed'}"
+                reason = "no tracked company and no AI term"
+            elif item.get("allow") and tagged["category"] not in item["allow"]:
+                reason = f"{tagged['category']} not carried by {item.get('feed') or 'this feed'}"
 
         if reason:
             dropped.append((reason, item))
             seen[key] = {"url": url, "dropped": reason, "backfill": True}
             continue
 
-        org, tickers, category = tagged
+        tickers = tagged["tickers"]
         if valid_tickers:
             tickers = [t for t in tickers if t in valid_tickers]
 
@@ -620,10 +643,14 @@ def main():
             "id": slug(item["title"], item["published"], known_ids),
             "date": item["published"].strftime("%Y-%m-%d"),
             "title": item["title"],
-            "source": item["source"],
+            "source": normalise_source(item["source"], rules),
             "url": item["url"],
-            "org": org,
-            "category": category,
+            "org": tagged["org"],
+            "category": tagged["category"],
+            "relevance": tagged["relevance"],
+            "topics": tagged["topics"],
+            "frames": tagged["frames"],
+            "coder": tagged["coder"],
             "tickers": tickers,
             "backfill": True,
         }

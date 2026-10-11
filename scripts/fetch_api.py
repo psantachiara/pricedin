@@ -40,8 +40,8 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 from fetch_news import (
-    after_close, canonical, clean_text, compile_terms, classify,
-    load, save, slug, warn,
+    after_close, canonical, clean_text, compile_axes, compile_terms, classify,
+    load, normalise_source, save, slug, warn,
 )
 
 NYT_ARCHIVE = "https://api.nytimes.com/svc/archive/v1/{year}/{month}.json"
@@ -261,7 +261,7 @@ def main():
     valid = {t["symbol"] for t in config.get("tickers", [])}
 
     entity_res = [(e, compile_terms(e["match"])) for e in rules.get("entities", [])]
-    category_res = [(c["id"], compile_terms(c["match"])) for c in rules.get("categories", [])]
+    axes = compile_axes(rules)
     terms = [t for e in rules.get("entities", []) for t in e["match"]]
 
     batch, used = [], []
@@ -298,16 +298,16 @@ def main():
         elif any(p.search(item["title"]) for p in excluded_titles):
             reason = "column or review"
         else:
-            tagged = classify(item, rules, entity_res, category_res)
+            tagged = classify(item, rules, entity_res, axes)
             if not tagged:
-                reason = "no tracked company in the headline"
+                reason = "no tracked company and no AI term"
 
         if reason:
             dropped.append((reason, item))
             seen[key] = {"url": url, "dropped": reason}
             continue
 
-        org, tickers, category = tagged
+        tickers = tagged["tickers"]
         if valid:
             tickers = [t for t in tickers if t in valid]
 
@@ -315,10 +315,14 @@ def main():
             "id": slug(item["title"], item["published"], known_ids),
             "date": item["published"].strftime("%Y-%m-%d"),
             "title": item["title"],
-            "source": item["source"],
+            "source": normalise_source(item["source"], rules),
             "url": item["url"],
-            "org": org,
-            "category": category,
+            "org": tagged["org"],
+            "category": tagged["category"],
+            "relevance": tagged["relevance"],
+            "topics": tagged["topics"],
+            "frames": tagged["frames"],
+            "coder": tagged["coder"],
             "tickers": tickers,
         }
         if item["summary"]:
