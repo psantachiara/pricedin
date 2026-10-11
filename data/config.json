@@ -210,7 +210,10 @@
       "id": "NYT",
       "name": "New York Times",
       "kind": "index",
-      "note": "Every article the paper published, read from its own archive."
+      "note": "Every article the paper published, read from its own archive.",
+      "hosts": [
+        "nytimes.com"
+      ]
     },
     {
       "id": "Guardian",
@@ -220,19 +223,31 @@
         "Guardian",
         "The Guardian"
       ],
-      "note": "Every article the paper published, read from its own archive."
+      "note": "Every article the paper published, read from its own archive.",
+      "hosts": [
+        "theguardian.com"
+      ]
     },
     {
       "id": "WSJ",
       "name": "WSJ",
       "kind": "archive",
-      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it."
+      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it.",
+      "hosts": [
+        "wsj.com",
+        "dowjones.io",
+        "dj.com"
+      ]
     },
     {
       "id": "BBC",
       "name": "BBC",
       "kind": "archive",
-      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it."
+      "note": "Rebuilt from archived copies of the feed, so the record is only as complete as the Internet Archive's crawl of it.",
+      "hosts": [
+        "bbc.com",
+        "bbc.co.uk"
+      ]
     },
     {
       "id": "curated",

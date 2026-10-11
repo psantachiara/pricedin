@@ -10,7 +10,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import pandas as pd
 import requests
@@ -205,6 +205,72 @@ def update_thumbnails(events: list[dict], recheck: bool) -> None:
     save("thumbnails.json", cache)
 
 
+def update_intake(config) -> None:
+    """Record, per source, how much was pulled and how much survived the filter.
+
+    The counts come from news_seen.json, which is the whole history rather than
+    the last run, and they answer the question the source control invites: when
+    a source says "every article the paper published", how much is that, and how
+    much of it reached the timeline? Without it the page states the reach of a
+    source without ever stating its cost.
+    """
+    seen = load("news_seen.json", {}) or {}
+    events = load("events.json", []) or []
+    coverage = load("coverage.json", {}) or {}
+    if not seen or not coverage:
+        return
+
+    hosts = [(s["id"], tuple(s.get("hosts") or [])) for s in config.get("sources", [])]
+
+    def source_of(url):
+        host = urlparse(url or "").netloc.lower()
+        for sid, hs in hosts:
+            if any(host == h or host.endswith("." + h) for h in hs):
+                return sid
+        return None
+
+    pulled, dropped = {}, {}
+    for entry in seen.values():
+        if not isinstance(entry, dict):
+            continue
+        sid = source_of(entry.get("url"))
+        if not sid:
+            continue
+        pulled[sid] = pulled.get(sid, 0) + 1
+        if entry.get("dropped"):
+            dropped[sid] = dropped.get(sid, 0) + 1
+
+    # bucket an event the way the page does: by configured source, with
+    # anything hand-written folded into the curated bucket rather than becoming
+    # a source of its own
+    lookup, curated = {}, None
+    for src in config.get("sources", []):
+        if src.get("manual") or src.get("kind") == "curated":
+            curated = src["id"]
+            continue
+        lookup[src["id"]] = src["id"]
+        for name in src.get("match") or []:
+            lookup[name] = src["id"]
+
+    retained = {}
+    for e in events:
+        sid = curated if e.get("manual") else lookup.get(e.get("source"), curated)
+        if sid:
+            retained[sid] = retained.get(sid, 0) + 1
+
+    known = {src["id"] for src in config.get("sources", [])}
+    out = coverage.setdefault("sources", {})
+    for sid in (pulled.keys() | retained.keys()) & known:
+        row = out.setdefault(sid, {})
+        # hand-picked entries were never "pulled", so report only what exists
+        if sid in pulled:
+            row["pulled"] = pulled[sid]
+            row["dropped"] = dropped.get(sid, 0)
+        row["retained"] = retained.get(sid, 0)
+    save("coverage.json", coverage)
+    print("intake tallies written for " + ", ".join(sorted(out)))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--prices", action="store_true", help="update prices only")
@@ -222,6 +288,7 @@ def main() -> None:
         update_prices(config)
     if both or args.thumbnails or args.recheck:
         update_thumbnails(events, args.recheck)
+    update_intake(config)
 
 
 if __name__ == "__main__":

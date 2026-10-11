@@ -24,6 +24,11 @@
       "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
       "source": "WSJ",
       "paywall": true
+    },
+    {
+      "name": "BBC Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "source": "BBC"
     }
   ],
   "sourceAliases": {

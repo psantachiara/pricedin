@@ -376,9 +376,10 @@
       focus: null,
       topics: new Set([...topics.map((t) => t.id), NO_TOPIC]),
       frames: new Set(frames.map((f) => f.id)),
-      // The site is about AI news, so items where a tracked company is merely
-      // named default to hidden. The control says so and can be turned down.
-      minRelevance: 1,
+      // Open on the whole corpus. Hiding the relevance-0 items by default would
+      // make the page quietly disagree with its own count, and the threshold is
+      // a judgement the reader should make rather than inherit.
+      minRelevance: 0,
       // The dial between the event hypothesis and the discourse hypothesis:
       // at 3 only dominant framing counts, at 1 every passing mention does.
       minIntensity: 1,
@@ -758,9 +759,20 @@
           update();
         },
       });
+      // The note says how far a source reaches; the tally says what that cost.
+      // A source that read 40,022 articles to keep 688 is making a different
+      // claim from one that read 2,309 to keep 284, and the control should say
+      // so rather than leaving both as "every article the paper published".
+      const tally = sourceCoverage[s.id] || {};
+      const intake = tally.pulled
+        ? `Pulled ${tally.pulled.toLocaleString()} articles; `
+          + `${(tally.dropped || 0).toLocaleString()} filtered out, `
+          + `${(tally.retained || 0).toLocaleString()} retained `
+          + `(${(100 * (tally.retained || 0) / tally.pulled).toFixed(1)}%).`
+        : (tally.retained ? `${tally.retained.toLocaleString()} announcements, each added by hand.` : '');
       sourceWrap.append(el('label', {
         class: 'src' + (archived ? ' archived' : ''),
-        title: s.note || '',
+        title: [s.note, intake].filter(Boolean).join('\n'),
       }, box, el('span', { class: 'name', text: s.name }),
          archived ? el('span', { class: 'via', text: '(Internet Archive)' }) : null));
     }
