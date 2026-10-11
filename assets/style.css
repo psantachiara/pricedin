@@ -482,8 +482,19 @@ select {
 /* Subject is the lens, so topic chips carry the hue and the framing chips
    recede. Framing keeps its danger / contrast / neutral grouping as labels
    instead, which costs no colour. */
-#frames .cat { --c: var(--muted); }
-#frames .cat .dot { width: 6px; height: 6px; }
+#frames .cat.chip { --c: var(--muted); }
+
+/* Topics are a set to be read across, like the companies, so one line that
+   scrolls rather than a block that reflows. */
+.cats.topics { flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; }
+.cats.topics::-webkit-scrollbar { height: 5px; }
+.cats.topics::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
+
+/* Framing stacks into three rows, one per family. */
+.axis-row #frames { display: grid; gap: 4px; flex: 1 1 100%; }
+.fam-row { display: flex; align-items: center; gap: 10px; }
+.fam-row .fam-label { flex: 0 0 auto; min-width: 11em; text-align: right; }
+.fam-chips { display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 0; min-width: 0; }
 .fam-label {
   font-size: 0.75rem;
   letter-spacing: 0.04em;
@@ -491,14 +502,10 @@ select {
   color: var(--muted);
   margin-left: 2px;
 }
-.fam-group {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-  margin-right: 12px;
+@media (max-width: 760px) {
+  .fam-row { align-items: flex-start; }
+  .fam-row .fam-label { min-width: 0; flex-basis: 100%; text-align: left; }
 }
-.fam-group .fam-label { margin-left: 0; margin-right: 1px; }
 .detail .tag-frame.fam-danger { box-shadow: inset 0 0 0 1px var(--rule); background: transparent; }
 .detail .tag-frame.fam-contrast,
 .detail .tag-frame.fam-neutral { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1px var(--rule); }
@@ -524,20 +531,11 @@ select {
 }
 .cat-note[hidden] { display: none; }
 .cat-note .text-button { margin-top: 0; }
-.cat {
-  font: inherit;
-  font-size: 0.8125rem;
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 3px 10px 3px 8px;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: var(--panel);
-  color: var(--ink);
-  cursor: pointer;
-}
-.cat .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
-.cat[aria-pressed="false"] { opacity: 0.45; }
-.cat[aria-pressed="false"] .dot { background: transparent; box-shadow: inset 0 0 0 1.5px var(--c); }
+/* Topic and framing chips borrow the company chip wholesale: short label over
+   a count, dot spanning both rows. That is what lets all ten topics sit on one
+   line, and it makes the three filter rows read as one family of control. */
+.cat.chip { font-size: 0.78125rem; }
+.cat.chip .sym { font-weight: 500; letter-spacing: 0; }
 
 .source-row {
   display: flex; flex-wrap: wrap; align-items: baseline;
@@ -567,15 +565,10 @@ select {
 }
 .src input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .src:has(input:not(:checked)) .name { color: var(--muted); }
-/* A source rebuilt from archived copies is ruled the way the chart rules a
-   thin stretch, so the mark on the control and the mark on the timeline are
-   recognisably the same claim. */
-.src.archived .via {
-  font-size: 0.6875rem; letter-spacing: 0.02em; color: var(--muted);
-  padding: 1px 5px; border-radius: 3px;
-  background: repeating-linear-gradient(45deg,
-    color-mix(in srgb, var(--muted) 22%, transparent) 0 2px, transparent 2px 5px);
-}
+/* Where a source was rebuilt from archived copies, say so in words. The
+   hatching that used to mark it here reads as a texture rather than a claim,
+   and the timeline already carries that mark where it means something. */
+.src.archived .via { font-size: 0.8125rem; color: var(--muted); margin-left: -2px; }
 .source-legend {
   margin: 0; font-size: 0.8125rem; color: var(--muted);
   flex: 1 1 24ch; min-width: 24ch; max-width: 70ch;

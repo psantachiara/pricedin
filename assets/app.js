@@ -641,13 +641,18 @@
     // `universe` is every id this control governs, which is not the same as the
     // items in this call: the frame chips are built one family at a time, and
     // "show only" has to mean all nine frames, not the three beside it.
+    // every chip's count element, so the numbers can be refreshed in place
+    const chipCounts = new Map();
+
     function buildChips(wrap, items, key, colorFor, universe) {
       if (!wrap) return;
       const all = (universe || items).map((x) => x.id);
       for (const it of items) {
+        const count = el('span', { class: 'val' });
+        chipCounts.set(`${key}:${it.id}`, count);
         wrap.append(el('button', {
-          type: 'button', class: 'cat', 'data-chip': it.id, style: `--c:${colorFor(it)}`,
-          title: `Click to hide. Shift-click to show only ${it.name}.`,
+          type: 'button', class: 'chip cat', 'data-chip': it.id, style: `--c:${colorFor(it)}`,
+          title: `${it.name}. Click to hide. Shift-click to show only this one.`,
           onclick: (ev) => {
             const set = state[key];
             const only = ev.shiftKey || ev.altKey
@@ -663,7 +668,37 @@
             }
             update();
           },
-        }, el('span', { class: 'dot' }), el('span', { text: it.name })));
+        }, el('span', { class: 'dot' }),
+           el('span', { class: 'sym', text: it.short || it.name }),
+           count));
+      }
+    }
+
+    // How many announcements each chip would bring in, judged against
+    // everything EXCEPT its own axis, so the numbers hold still while you
+    // toggle chips instead of collapsing to zero as you switch one off.
+    function refreshChipCounts() {
+      const base = events.filter((e) =>
+        passesRelevance(e) && state.sources.has(sourceOf(e))
+        && (!state.focus || (e.tickers || []).includes(state.focus)));
+      const topicN = new Map(), frameN = new Map();
+      for (const e of base) {
+        const ts = e.topics || [];
+        if (ts.length) for (const t of ts) topicN.set(t, (topicN.get(t) || 0) + 1);
+        else topicN.set(NO_TOPIC, (topicN.get(NO_TOPIC) || 0) + 1);
+        const fr = e.frames || {};
+        const ids = Object.keys(fr);
+        if (!ids.length) frameN.set('neutral', (frameN.get('neutral') || 0) + 1);
+        else for (const id of ids) {
+          if (id === 'neutral' || fr[id] >= state.minIntensity) {
+            frameN.set(id, (frameN.get(id) || 0) + 1);
+          }
+        }
+      }
+      for (const [k, elm] of chipCounts) {
+        const [key, id] = [k.slice(0, k.indexOf(':')), k.slice(k.indexOf(':') + 1)];
+        const n = (key === 'topics' ? topicN : frameN).get(id) || 0;
+        elm.textContent = n.toLocaleString();
       }
     }
 
@@ -678,10 +713,14 @@
       if (!members.length) continue;
       // label and chips travel together, so a wrapping row never strands a
       // family name at the end of the line above its own chips
-      const group = el('span', { class: 'fam-group' },
+      // one row per family, so danger / capability-or-bubble / no-stance reads
+      // down the rows rather than needing a colour of its own
+      const row = el('div', { class: 'fam-row' },
         el('span', { class: 'fam-label', text: fam.name }));
-      buildChips(group, members, 'frames', () => 'var(--muted)', frames);
-      frameWrap.append(group);
+      const inner = el('div', { class: 'cats fam-chips' });
+      buildChips(inner, members, 'frames', () => 'var(--muted)', frames);
+      row.append(inner);
+      frameWrap.append(row);
     }
 
     // the two thresholds
@@ -723,7 +762,7 @@
         class: 'src' + (archived ? ' archived' : ''),
         title: s.note || '',
       }, box, el('span', { class: 'name', text: s.name }),
-         archived ? el('span', { class: 'via', text: 'archived' }) : null));
+         archived ? el('span', { class: 'via', text: '(Internet Archive)' }) : null));
     }
 
     function syncSourceChips() {
@@ -779,6 +818,7 @@
     }
 
     function syncChips() {
+      refreshChipCounts();
       chipWrap.querySelectorAll('.chip').forEach((b) => {
         b.setAttribute('aria-pressed', String(!state.hidden.has(b.dataset.sym)));
         b.classList.toggle('focused', state.view === 'detailed' && state.focus === b.dataset.sym);

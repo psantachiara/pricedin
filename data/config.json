@@ -261,108 +261,127 @@
       "id": "deals",
       "name": "Deals, funding and IPOs",
       "color": "#A66A00",
-      "colorDark": "#E3AE4C"
+      "colorDark": "#E3AE4C",
+      "short": "Deals"
     },
     {
       "id": "compute",
       "name": "Chips and compute",
       "color": "#6A45B5",
-      "colorDark": "#B89CF2"
+      "colorDark": "#B89CF2",
+      "short": "Compute"
     },
     {
       "id": "model",
       "name": "Model releases",
       "color": "#2440C8",
-      "colorDark": "#8FA3FF"
+      "colorDark": "#8FA3FF",
+      "short": "Models"
     },
     {
       "id": "policy",
       "name": "Policy and regulation",
       "color": "#C02D6A",
-      "colorDark": "#F37DAF"
+      "colorDark": "#F37DAF",
+      "short": "Policy"
     },
     {
       "id": "legal",
       "name": "Lawsuits and liability",
       "color": "#C02D6A",
-      "colorDark": "#F37DAF"
+      "colorDark": "#F37DAF",
+      "short": "Legal"
     },
     {
       "id": "markets",
       "name": "Earnings and market moves",
       "color": "#56606B",
-      "colorDark": "#9BA4AF"
+      "colorDark": "#9BA4AF",
+      "short": "Markets"
     },
     {
       "id": "labour",
       "name": "Jobs and work",
       "color": "#15803D",
-      "colorDark": "#4FBF8B"
+      "colorDark": "#4FBF8B",
+      "short": "Jobs"
     },
     {
       "id": "product",
       "name": "Products and features",
       "color": "#C2410C",
-      "colorDark": "#FF7A59"
+      "colorDark": "#FF7A59",
+      "short": "Product"
     },
     {
       "id": "governance",
       "name": "Leadership and governance",
       "color": "#56606B",
-      "colorDark": "#9BA4AF"
+      "colorDark": "#9BA4AF",
+      "short": "Leadership"
     },
     {
       "id": "moderation",
       "name": "Moderation and fact-checking",
       "color": "#0891B2",
-      "colorDark": "#5BB8D4"
+      "colorDark": "#5BB8D4",
+      "short": "Moderation"
     }
   ],
   "frames": [
     {
       "id": "existential",
       "family": "danger",
-      "name": "Existential risk"
+      "name": "Existential risk",
+      "short": "Existential"
     },
     {
       "id": "unreliable",
       "family": "danger",
-      "name": "Unreliable or erratic"
+      "name": "Unreliable or erratic",
+      "short": "Unreliable"
     },
     {
       "id": "security",
       "family": "danger",
-      "name": "Cybersecurity and surveillance"
+      "name": "Cybersecurity and surveillance",
+      "short": "Cybersecurity"
     },
     {
       "id": "societal",
       "family": "danger",
-      "name": "Misinformation, democracy"
+      "name": "Misinformation, democracy",
+      "short": "Misinformation"
     },
     {
       "id": "individual",
       "family": "danger",
-      "name": "Harm to individuals"
+      "name": "Harm to individuals",
+      "short": "Individual"
     },
     {
       "id": "displacement",
       "family": "danger",
-      "name": "Work displaced"
+      "name": "Work displaced",
+      "short": "Displacement"
     },
     {
       "id": "capability",
       "family": "contrast",
-      "name": "Capability and power"
+      "name": "Capability and power",
+      "short": "Capability"
     },
     {
       "id": "bubble",
       "family": "contrast",
-      "name": "Bubble and overvaluation"
+      "name": "Bubble and overvaluation",
+      "short": "Bubble"
     },
     {
       "id": "neutral",
       "family": "neutral",
-      "name": "No evaluative stance"
+      "name": "No evaluative stance",
+      "short": "No stance"
     }
   ],
   "frameFamilies": [
