@@ -84,6 +84,24 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250103-apple-ai-alert-falsely-claimed-luke-littler-had",
+    "date": "2025-01-03",
+    "title": "Apple AI alert falsely claimed Luke Littler had already won darts final",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cx27zwp7jpxo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "individual": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "An AI-generated notification says the teen has won the tournament before the final is even played."
+  },
+  {
     "id": "20250103-at-the-intersection-of-a-i-and-spirituality",
     "date": "2025-01-03",
     "title": "At the Intersection of A.I. and Spirituality",
@@ -371,6 +389,29 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250106-data-centers-need-to-look-beyond-green-energy-si",
+    "date": "2025-01-06",
+    "title": "Data Centers Need to Look Beyond Green Energy, Siemens Says",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/data-centers-need-to-look-beyond-green-energy-siemens-executive-says-interview-9eb3f4f3?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "compute",
+    "relevance": 1,
+    "topics": [
+      "compute",
+      "governance"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Operators must find an alternative solution to the AI energy-consumption conundrum, Siemens’s Smart Infrastructure CEO said.",
+    "thumbnail": "https://images.wsj.net/im-48531443/medium",
+    "paywall": true
+  },
+  {
     "id": "20250106-the-next-chapter-in-the-amazon-trump-reset",
     "date": "2025-01-06",
     "title": "The Next Chapter in the Amazon-Trump Reset",
@@ -468,6 +509,27 @@
     "tickers": [],
     "summary": "One alert claimed BBC story said Luigi Mangione, alleged murderer of US healthcare CEO, had killed himself",
     "thumbnail": "https://media.guim.co.uk/567518006b90b9f92d5092057f2348b174230a86/0_224_6720_4032/500.jpg"
+  },
+  {
+    "id": "20250107-apple-urged-to-withdraw-out-of-control-ai-news-a",
+    "date": "2025-01-07",
+    "title": "Apple urged to withdraw 'out of control' AI news alerts",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cge93de21n0o",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "existential": 2,
+      "unreliable": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Apple has pledged improvements to its news summarising tool, but critics say it is dangerous and needs to be withdrawn."
   },
   {
     "id": "20250107-british-ai-startup-with-government-ties-is-devel",
@@ -1383,6 +1445,25 @@
     "paywall": true
   },
   {
+    "id": "20250110-how-ai-uncovers-new-ways-to-tackle-difficult-dis",
+    "date": "2025-01-10",
+    "title": "How AI uncovers new ways to tackle difficult diseases",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cz6lg44jwwno",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Pharmaceutical firms are turning to AI to find new molecules that might be able to tackle disease.",
+    "afterClose": true
+  },
+  {
     "id": "20250110-inside-mark-zuckerberg-s-sprint-to-remake-meta-f",
     "date": "2025-01-10",
     "title": "Inside Mark Zuckerberg’s Sprint to Remake Meta for the Trump Era",
@@ -1781,6 +1862,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250113-pm-plans-to-unleash-ai-across-uk-to-boost-growth",
+    "date": "2025-01-13",
+    "title": "PM plans to 'unleash AI' across UK to boost growth",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/crr05jykzkxo",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Leading tech firms are said to have committed £14bn towards the project, which could create more than 13,000 jobs."
+  },
+  {
     "id": "20250113-stay-on-top-of-tech-five-ways-to-take-back-contr",
     "date": "2025-01-13",
     "title": "Stay on top of tech: five ways to take back control, from emails to AI",
@@ -1929,6 +2031,27 @@
     "tickers": [],
     "summary": "Anne, 53, faces wave of online mockery for believing she was in relationship with actor and paying scammer €830k",
     "thumbnail": "https://media.guim.co.uk/64229f82fa6b14a5a3c21d60f1949ac72bafb72e/0_141_3500_2099/500.jpg"
+  },
+  {
+    "id": "20250114-gps-turn-to-ai-to-help-with-patient-workload",
+    "date": "2025-01-14",
+    "title": "GPs turn to AI to help with patient workload",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cdd026lgmdmo",
+    "org": null,
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Should more AI be used to help GPs with consultations and administrative work?",
+    "afterClose": true
   },
   {
     "id": "20250114-google-comes-under-u-k-investigation-over-search",
@@ -2178,6 +2301,26 @@
     "thumbnail": "https://media.guim.co.uk/7ea75de00d3cc53e25ad09cca23782b28787017e/90_272_4296_2578/500.jpg"
   },
   {
+    "id": "20250117-apple-suspends-error-strewn-ai-generated-news-al",
+    "date": "2025-01-17",
+    "title": "Apple suspends error-strewn AI generated news alerts",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cq5ggew08eyo",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "unreliable": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The tech giant was facing pressure to pull the feature after it made repeated mistakes summarising headlines."
+  },
+  {
     "id": "20250117-for-apple-and-google-complying-with-the-law-woul",
     "date": "2025-01-17",
     "title": "For Apple and Google, complying with the law would be easy.",
@@ -2264,6 +2407,52 @@
       "societal": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250117-suess-microtec-shares-soar-after-forecast-beatin",
+    "date": "2025-01-17",
+    "title": "Suess Microtec Shares Soar After Forecast-Beating Results",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/suess-microtec-shares-soar-after-forecast-beating-results-bb0f3db2?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "compute",
+    "relevance": 1,
+    "topics": [
+      "compute",
+      "legal",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Shares in the German chip-equipment supplier surged after it reported full-year results that exceeded guidance, boosted by AI’s growing momentum.",
+    "thumbnail": "https://images.wsj.net/im-36430177/medium",
+    "paywall": true
+  },
+  {
+    "id": "20250117-the-playlist-power-broker-who-makes-or-breaks-ne",
+    "date": "2025-01-17",
+    "title": "The Playlist Power Broker Who Makes or Breaks New Artists",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/spotify-playlist-sulinna-ong-algorithm-7835e0ac?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "product",
+    "relevance": 1,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Spotify is known for its algorithmic recommendations, but Sulinna Ong brings a human touch to finding new hits.",
+    "thumbnail": "https://images.wsj.net/im-13948820/medium",
+    "paywall": true
   },
   {
     "id": "20250117-weatherwatch-could-small-nuclear-reactors-help-c",
@@ -2585,6 +2774,77 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250122-south-carolina-to-reboot-giant-nuclear-project-t",
+    "date": "2025-01-22",
+    "title": "South Carolina to Reboot Giant Nuclear Project to Meet AI Demand",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/ai-nuclear-power-south-carolina-57b7ad2a?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Santee Cooper is working with bankers to solicit interest in V.C. Summer.",
+    "thumbnail": "https://images.wsj.net/im-64480712/medium",
+    "paywall": true
+  },
+  {
+    "id": "20250122-tech-leaders-pledge-up-to-500-billion-in-ai-inve",
+    "date": "2025-01-22",
+    "title": "Tech Leaders Pledge Up to $500 Billion in AI Investment in U.S.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/tech-leaders-pledge-up-to-500-billion-in-ai-investment-in-u-s-da506cd4?mod=rss_Technology",
+    "org": "openai",
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "model",
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "ORCL"
+    ],
+    "backfill": true,
+    "summary": "OpenAI, Oracle and SoftBank unveiled AI infrastructure plans at White House.",
+    "afterClose": true,
+    "paywall": true
+  },
+  {
+    "id": "20250122-tech-giants-are-putting-500bn-into-stargate-to-b",
+    "date": "2025-01-22",
+    "title": "Tech giants are putting $500bn into 'Stargate' to build up AI in US",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy4m84d2xz2o",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Trump has extolled the project as an important investment, but Elon Musk is throwing shade on it."
+  },
+  {
     "id": "20250122-tech-titans-bicker-over-500bn-ai-investment-anno",
     "date": "2025-01-22",
     "title": "Tech titans bicker over $500bn AI investment announced by Trump",
@@ -2608,6 +2868,29 @@
     "summary": "After unveiling of Stargate, Elon Musk, Sam Altman and Satya Nadella of Tesla, OpenAI and Microsoft trade barbs",
     "afterClose": true,
     "thumbnail": "https://media.guim.co.uk/9e6108d84053066c2479a0bde0182a2361a9e407/1_0_2998_1800/500.jpg"
+  },
+  {
+    "id": "20250122-tech-media-telecom-roundup-market-talk",
+    "date": "2025-01-22",
+    "title": "Tech, Media & Telecom Roundup: Market Talk",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/tech-media-telecom-roundup-market-talk-85899e83?mod=rss_Technology",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Find insight on Netflix, U.S. advertising spending, AI joint venture Stargate and more in the latest Market Talks covering Technology, Media and Telecom.",
+    "afterClose": true,
+    "paywall": true
   },
   {
     "id": "20250122-tell-us-how-are-you-using-ai-to-help-with-daily",
@@ -2723,6 +3006,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250123-china-is-helping-supply-chemicals-for-iran-s-bal",
+    "date": "2025-01-23",
+    "title": "China Is Helping Supply Chemicals for Iran's Ballistic-Missile Program",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/china-is-helping-supply-chemicals-for-irans-ballistic-missile-program-ab272ad7",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Tehran’s growing reliance on Beijing—a consequence of the battering its missile program has suffered from Israeli strikes—highlights the alignment of Iran and China with Russia and North Korea.",
+    "afterClose": true,
+    "paywall": true
+  },
+  {
     "id": "20250123-how-chinese-a-i-start-up-deepseek-is-competing-w",
     "date": "2025-01-23",
     "title": "How Chinese A.I. Start-Up DeepSeek Is Competing With Silicon Valley Giants",
@@ -2749,6 +3052,27 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250123-linkedin-accused-of-using-private-messages-to-tr",
+    "date": "2025-01-23",
+    "title": "LinkedIn accused of using private messages to train AI",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cdxevpzy3yko",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The lawsuit alleges LinkedIn tried to conceal its actions but the firm says the claims are false.",
+    "afterClose": true
   },
   {
     "id": "20250123-nvidia-supplier-sk-hynix-posts-record-profit-on",
@@ -3117,6 +3441,28 @@
     "thumbnail": "https://media.guim.co.uk/53ca31f7b341711957cf60610ebf4194dd2b7fef/0_115_4173_2504/500.jpg"
   },
   {
+    "id": "20250126-now-wanted-in-silicon-valley-ho-hum-businesses-w",
+    "date": "2025-01-26",
+    "title": "Now Wanted in Silicon Valley: Ho-Hum Businesses With Thin Profit Margins",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/now-wanted-in-silicon-valley-ho-hum-businesses-with-thin-profit-margins-ab07de5f?mod=rss_markets_main",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Venture-capital firms are bringing AI and dealmaking to accounting, property management and other unglamorous fields.",
+    "paywall": true
+  },
+  {
     "id": "20250127-a-chinese-a-i-company-rattled-the-tech-world",
     "date": "2025-01-27",
     "title": "A Chinese A.I. Company Rattled the Tech World",
@@ -3402,6 +3748,54 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250127-reid-hoffman-raises-24-6-million-for-ai-cancer-r",
+    "date": "2025-01-27",
+    "title": "Reid Hoffman Raises $24.6 Million for AI Cancer-Research Startup",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/manas-ai-drug-discovery-reid-hoffman-93a6c023?mod=rss_Technology",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "governance"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The LinkedIn co-founder is starting Manas AI with “The Emperor of All Maladies” author Siddhartha Mukherjee.",
+    "paywall": true
+  },
+  {
+    "id": "20250127-silicon-valley-is-raving-about-a-made-in-china-a",
+    "date": "2025-01-27",
+    "title": "Silicon Valley Is Raving About a Made-in-China AI Model",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/china-ai-deepseek-chatbot-6ac4ad33?mod=rss_Technology",
+    "org": "deepseek",
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "DeepSeek is called “amazing and impressive” despite working with less-advanced chips.",
+    "paywall": true
+  },
+  {
     "id": "20250127-stocks-sink-in-broad-ai-rout-sparked-by-china-s",
     "date": "2025-01-27",
     "title": "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
@@ -3452,6 +3846,30 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250127-tech-media-telecom-roundup-market-talk",
+    "date": "2025-01-27",
+    "title": "Tech, Media & Telecom Roundup: Market Talk",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/tech-media-telecom-roundup-market-talk-5908c510?mod=rss_Technology",
+    "org": "deepseek",
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "DeepSeek, SoFi and more in the latest Market Talks covering Technology, Media and Telecom.",
+    "paywall": true
   },
   {
     "id": "20250127-what-is-deepseek-and-why-did-us-tech-stocks-fall",
@@ -5067,6 +5485,25 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250131-how-an-ai-written-book-shows-why-the-tech-terrif",
+    "date": "2025-01-31",
+    "title": "How an AI-written book shows why the tech 'terrifies' creatives",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cp8k5gezykyo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The BBC's technology editor Zoe Kleinman is given an AI-made book that claims it was written by her.",
+    "afterClose": true
+  },
+  {
     "id": "20250131-meta-said-to-explore-incorporating-in-a-differen",
     "date": "2025-01-31",
     "title": "Meta Said to Explore Incorporating in a Different State",
@@ -5128,6 +5565,24 @@
     "summary": "The relative calm in the markets may not survive upheaval in the A.I. sector and a deluge of disruptive Trump policies, our columnist says.",
     "thumbnail": "https://static01.nyt.com/images/2025/02/02/business/31strategies-illo/31strategies-illo-articleLarge.jpg",
     "paywall": true
+  },
+  {
+    "id": "20250131-the-monthly-ai-or-real-quiz-february-2025",
+    "date": "2025-01-31",
+    "title": "The monthly AI or real quiz: February 2025",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/bitesize/articles/zfpt9ty",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Challenge yourself with this edition of our monthly AI or real quiz and see if you can get top marks!"
   },
   {
     "id": "20250201-a-man-stalked-a-professor-for-six-years-then-he",
@@ -5294,6 +5749,28 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250202-ai-is-wall-street-s-modern-gold-rush-here-s-how",
+    "date": "2025-02-02",
+    "title": "AI Is Wall Street’s Modern Gold Rush. Here’s How Investors Are Placing Their Bets.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-wall-street-investments-companies-0baba8d9?mod=rss_Technology",
+    "org": null,
+    "category": "markets",
+    "relevance": 2,
+    "topics": [
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The financing bonanza echoes previous booms around fiber-optic cable and fracking.",
+    "thumbnail": "https://images.wsj.net/im-06278369",
+    "paywall": true
+  },
+  {
     "id": "20250202-deepseek-is-a-win-for-china-in-the-a-i-race-will",
     "date": "2025-02-02",
     "title": "DeepSeek Is a Win for China in the A.I. Race. Will the Party Stifle It?",
@@ -5316,6 +5793,32 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250202-six-takeaways-from-a-monumental-week-for-ai",
+    "date": "2025-02-02",
+    "title": "Six Takeaways From a Monumental Week for AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/six-takeaways-from-a-monumental-week-for-ai-d8817808?mod=rss_Technology",
+    "org": "openai",
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT",
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "DeepSeek’s rise, Nvidia’s decline and a blockbuster bet on OpenAI were among the highlights.",
+    "thumbnail": "https://images.wsj.net/im-06535865",
+    "paywall": true
   },
   {
     "id": "20250202-why-is-this-c-e-o-bragging-about-replacing-human",
@@ -5731,6 +6234,27 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250204-why-employees-smuggle-ai-into-work",
+    "date": "2025-02-04",
+    "title": "Why employees smuggle AI into work",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cn7rx05xg2go",
+    "org": null,
+    "category": "labour",
+    "relevance": 2,
+    "topics": [
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Many staff are using AI at work without the permission of their employers.",
+    "afterClose": true
   },
   {
     "id": "20250205-ai-helps-researchers-read-ancient-scroll-burned",
@@ -6202,6 +6726,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250206-world-leaders-set-to-vie-for-ai-domination-at-pa",
+    "date": "2025-02-06",
+    "title": "World leaders set to vie for AI domination at Paris summit",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c17evw0k8g8o",
+    "org": null,
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Global politicians and AI bosses will next week attend a summit to debate the disruptive technology.",
+    "afterClose": true
+  },
+  {
     "id": "20250207-a-i-military-start-up-anduril-close-to-deal-that",
     "date": "2025-02-07",
     "title": "A.I. Military Start-Up Anduril Close to Deal That Would Value It at $28 Billion",
@@ -6263,6 +6808,27 @@
     "summary": "Experts say mandatory reporting on energy and water use is needed to avoid irreparable damage to environment",
     "afterClose": true,
     "thumbnail": "https://media.guim.co.uk/a34bc4d743ddb9ca1650f6cab36b43397b316619/0_365_5472_3283/500.jpg"
+  },
+  {
+    "id": "20250207-concern-uk-s-ai-ambitions-could-lead-to-water-sh",
+    "date": "2025-02-07",
+    "title": "Concern UK's AI ambitions could lead to water shortages",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ce85wx9jjndo",
+    "org": null,
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Data centres can use vast quantities of water to cool them - but it's not clear where it will come from.",
+    "afterClose": true
   },
   {
     "id": "20250207-is-artificial-intelligence-really-worth-the-hype",
@@ -6467,6 +7033,24 @@
     "thumbnail": "https://media.guim.co.uk/7a1053309ed90f82e4a29b6be57f9a6ebe541acb/0_524_11424_6854/500.jpg"
   },
   {
+    "id": "20250210-china-s-ex-uk-ambassador-clashes-with-ai-godfath",
+    "date": "2025-02-10",
+    "title": "China's ex-UK ambassador clashes with 'AI godfather' on panel",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cly7lneqj5xo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Fu Ying also expressed regret about the impact of US-China tensions on the progress of AI safety."
+  },
+  {
     "id": "20250210-elon-musk-leads-97-4-billion-bid-to-control-open",
     "date": "2025-02-10",
     "title": "Elon Musk Leads $97.4 Billion Bid to Control OpenAI",
@@ -6537,6 +7121,27 @@
     "summary": "But many attendees at a summit in Paris worry that the risks of A.I. will be overlooked as the continent rushes to keep up with the United States and China.",
     "thumbnail": "https://static01.nyt.com/images/2025/02/10/multimedia/10france-ai-vqzc/10france-ai-vqzc-articleLarge.jpg",
     "paywall": true
+  },
+  {
+    "id": "20250210-macron-shares-his-deepfakes-for-ai-summit-attent",
+    "date": "2025-02-10",
+    "title": "Macron shares his deepfakes for AI summit attention",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3e1kne7q1qo",
+    "org": null,
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The French president posted a montage of parodies featuring himself to promote an AI Summit in Paris."
   },
   {
     "id": "20250210-macron-takes-swipe-at-trump-with-plug-baby-plug",
@@ -6735,6 +7340,26 @@
     "thumbnail": "https://media.guim.co.uk/ab8bbf2afed9598f1abe7c8e8e58a60a2684f513/0_0_2500_1500/500.jpg"
   },
   {
+    "id": "20250211-ai-chatbots-unable-to-accurately-summarise-news",
+    "date": "2025-02-11",
+    "title": "AI chatbots unable to accurately summarise news, BBC finds",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0m17d8827ko",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The BBC's head of news and current affairs says the developers of the tools are \"playing with fire.\""
+  },
+  {
     "id": "20250211-britain-needs-to-protect-citizens-rights-in-the",
     "date": "2025-02-11",
     "title": "Britain needs to protect citizens’ rights in the race for AI | Letter",
@@ -6825,6 +7450,24 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250211-tech-life-decoding-the-brain",
+    "date": "2025-02-11",
+    "title": "Tech Life: Decoding the brain",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/sounds/play/w3ct5wnj",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Could AI help people with speech loss talk by interpreting signals in their brain ?"
+  },
+  {
     "id": "20250211-uk-and-us-fail-to-sign-declaration-on-making-ai",
     "date": "2025-02-11",
     "title": "UK and US fail to sign declaration on making AI ‘safe for all’ at Paris summit – as it happened",
@@ -6843,6 +7486,26 @@
     "tickers": [],
     "summary": "Countries have not immediately explained their reasons for not signing declaration",
     "thumbnail": "https://media.guim.co.uk/88e7d7696283594f849e1bc385853323bef94cbc/0_271_8118_4871/500.jpg"
+  },
+  {
+    "id": "20250211-uk-and-us-refuse-to-sign-international-ai-declar",
+    "date": "2025-02-11",
+    "title": "UK and US refuse to sign international AI declaration",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8edn0n58gwo",
+    "org": null,
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy"
+    ],
+    "frames": {
+      "capability": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "It follows a warning from US Vice-President JD Vance that excessive regulation could \"kill a transformative industry.\""
   },
   {
     "id": "20250211-uk-copyright-law-consultation-fixed-in-favour-of",
@@ -6973,6 +7636,28 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250212-european-defense-startups-drive-5-2-billion-fund",
+    "date": "2025-02-12",
+    "title": "European Defense Startups Drive $5.2 Billion Funding Spree in 2024",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/entrepreneurship/european-defense-startups-drive-5-2-billion-funding-spree-in-2024-d0f787b8?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "European defense startups were the main growth driver behind a record $5.2 billion in venture capital funding spent on tech companies such as AI software developer Helsing and drone maker Tekever, according to a report.",
+    "thumbnail": "https://images.wsj.net/im-94838",
+    "paywall": true
+  },
+  {
     "id": "20250212-google-calendar-deletes-women-s-history-month-an",
     "date": "2025-02-12",
     "title": "Google Calendar Deletes Women’s History Month and Other Cultural Events",
@@ -7042,6 +7727,52 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250212-law-firm-restricts-ai-after-significant-staff-us",
+    "date": "2025-02-12",
+    "title": "Law firm restricts AI after 'significant' staff use",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cglyjn7le2ko",
+    "org": null,
+    "category": "labour",
+    "relevance": 2,
+    "topics": [
+      "labour",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The chief technology officer of Hill Dickinson warned of the use of AI tools.",
+    "afterClose": true
+  },
+  {
+    "id": "20250212-office-technology-comes-to-the-movies-test-your",
+    "date": "2025-02-12",
+    "title": "Office Technology Comes to the Movies: Test Your Knowledge With Our Quiz",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/personal-tech/office-technology-quiz-f1713842?mod=rss_Technology",
+    "org": null,
+    "category": "model",
+    "relevance": 1,
+    "topics": [
+      "model",
+      "labour",
+      "product"
+    ],
+    "frames": {
+      "security": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Do you know which films featured AI or hacking or the introduction of job-killing computers?",
+    "thumbnail": "https://images.wsj.net/im-54740572",
+    "paywall": true
   },
   {
     "id": "20250212-openai-questions-rationale-of-elon-musk-s-bid-to",
@@ -7716,6 +8447,56 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250218-hopeless-to-potentially-handy-law-firm-puts-ai-t",
+    "date": "2025-02-18",
+    "title": "'Hopeless' to potentially handy: law firm puts AI to the test",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c743j83d8kzo",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Despite 'incredible' progress AI tools still aren't up to the level of even a junior lawyer, research suggests."
+  },
+  {
+    "id": "20250218-an-investing-riddle-stocks-are-in-turmoil-but-st",
+    "date": "2025-02-18",
+    "title": "An Investing Riddle: Stocks Are in Turmoil but Stock Markets Aren’t",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/an-investing-riddle-stocks-are-in-turmoil-but-stock-markets-arent-13fa23d2?mod=rss_markets_main",
+    "org": "deepseek",
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "policy",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "NVDA",
+      "AVGO",
+      "TSM",
+      "AMD"
+    ],
+    "backfill": true,
+    "summary": "While the S&P 500 has been mostly unruffled by DeepSeek and the tariff war, “dispersion” within the index keeps increasing.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-72769309",
+    "paywall": true
+  },
+  {
     "id": "20250218-deepseek-shared-user-data-with-tiktok-owner-byte",
     "date": "2025-02-18",
     "title": "DeepSeek 'shared user data' with TikTok owner ByteDance",
@@ -7858,6 +8639,28 @@
     "paywall": true
   },
   {
+    "id": "20250219-lumotive-bucks-ai-trend-by-raising-45-million-fo",
+    "date": "2025-02-19",
+    "title": "Lumotive Bucks AI Trend by Raising $45 Million for Optical Chips",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/lumotive-bucks-ai-trend-by-raising-45-million-for-optical-chips-a8db97d8?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "thumbnail": "https://images.wsj.net/im-52671363",
+    "paywall": true
+  },
+  {
     "id": "20250219-mark-zuckerberg-s-charity-guts-dei-after-assurin",
     "date": "2025-02-19",
     "title": "Mark Zuckerberg’s charity guts DEI after assuring staff it would continue",
@@ -7995,6 +8798,24 @@
     "paywall": true
   },
   {
+    "id": "20250220-ai-cracks-superbug-problem-in-two-days-that-took",
+    "date": "2025-02-20",
+    "title": "AI cracks superbug problem in two days that took scientists years",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyz6e9edy3o",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "security": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The lead researcher has told the BBC he was so astounded he assumed his computer had been hacked."
+  },
+  {
     "id": "20250220-amazon-gains-creative-control-over-the-james-bon",
     "date": "2025-02-20",
     "title": "Amazon Gains Creative Control Over the James Bond Franchise",
@@ -8014,6 +8835,27 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250220-apple-gambles-on-new-iphone-with-ai-features-at",
+    "date": "2025-02-20",
+    "title": "Apple gambles on new iPhone with AI features at lower cost",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cvgw30dr0w3o",
+    "org": null,
+    "category": "markets",
+    "relevance": 2,
+    "topics": [
+      "markets",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Apple is hoping its latest, lower cost iPhone model will boost sales of its flagship device."
   },
   {
     "id": "20250220-gold-hits-record-high-amid-geopolitical-worries",
@@ -8153,6 +8995,52 @@
     "thumbnail": "https://media.guim.co.uk/6f9b8564db7abfdcb3fa2d7c081e00fa8d5d4a0e/0_211_3500_2101/500.jpg"
   },
   {
+    "id": "20250222-when-there-s-no-school-counselor-there-s-a-bot",
+    "date": "2025-02-22",
+    "title": "When There’s No School Counselor, There’s a Bot",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/student-mental-health-ai-chat-bots-school-4eb1ba55?mod=rss_Technology",
+    "org": null,
+    "category": "product",
+    "relevance": 1,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "individual": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Is a human-AI texting service the future of mental-health care for students?",
+    "thumbnail": "https://images.wsj.net/im-37573191",
+    "paywall": true
+  },
+  {
+    "id": "20250222-why-ai-spending-isn-t-slowing-down",
+    "date": "2025-02-22",
+    "title": "Why AI Spending Isn’t Slowing Down",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-chatgpt-chips-infrastructure-openai-81cf4d40?mod=rss_Technology",
+    "org": null,
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Soaring demand for reasoning models will consume electricity, microchips and data-center real estate for the foreseeable future.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-98077685",
+    "paywall": true
+  },
+  {
     "id": "20250223-don-t-gift-our-work-to-ai-billionaires-mark-hadd",
     "date": "2025-02-23",
     "title": "Don’t gift our work to AI billionaires: Mark Haddon, Michael Rosen and other creatives urge government",
@@ -8169,6 +9057,48 @@
     "tickers": [],
     "summary": "More than 2,000 cultural figures challenge Whitehall’s eagerness ‘to ­wrap our lives ’ work in attractive paper for automated competitors’",
     "thumbnail": "https://media.guim.co.uk/06068ed84986917a096a6f55efde9fda9197e583/0_321_6720_4032/500.jpg"
+  },
+  {
+    "id": "20250223-how-porsche-volvo-and-rivian-are-injecting-uniqu",
+    "date": "2025-02-23",
+    "title": "How Porsche, Volvo and Rivian Are Injecting Unique Driving Styles Into Self-Driving Cars",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/autos/self-driving-cars-ai-tech-advances-d2af556c?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The automakers are using software and AI to make vehicles of tomorrow more collaborative, working alongside passengers.",
+    "thumbnail": "https://images.wsj.net/im-43568834",
+    "paywall": true
+  },
+  {
+    "id": "20250224-alibaba-to-spend-more-than-52-billion-in-ai-clou",
+    "date": "2025-02-24",
+    "title": "Alibaba to Spend More Than $52 Billion in AI, Cloud Over Next Three Years",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/alibaba-to-spend-more-than-52-billion-in-ai-cloud-over-next-three-years-167f46ea?mod=rss_Technology",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The Chinese technology giant first mentioned the plan last week when it reported results but didn’t provide a specific figure.",
+    "thumbnail": "https://images.wsj.net/im-29366662",
+    "paywall": true
   },
   {
     "id": "20250224-apple-vows-to-build-a-i-servers-in-houston-and-s",
@@ -8278,6 +9208,52 @@
     "paywall": true
   },
   {
+    "id": "20250224-the-rise-of-artificial-intelligence-at-jpmorgan",
+    "date": "2025-02-24",
+    "title": "The Rise of Artificial Intelligence at JPMorgan",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/jpmorgan-chase-artificial-intelligence-banking-939b1b32?mod=rss_Technology",
+    "org": null,
+    "category": "labour",
+    "relevance": 2,
+    "topics": [
+      "labour",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Teresa Heitsenrether, overseeing the AI rollout at America’s largest bank, on what it means for thousands of employees and millions of Chase Bank customers.",
+    "thumbnail": "https://images.wsj.net/im-66681068",
+    "paywall": true
+  },
+  {
+    "id": "20250224-u-s-dockworkers-vote-on-labor-deal-this-week",
+    "date": "2025-02-24",
+    "title": "U.S. Dockworkers Vote on Labor Deal This Week",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/us-dockworkers-union-labor-vote-3d2cf740?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The proposed six-year contract would give East Coast and Gulf Coast port workers a 62% pay raise, protections against full automation.",
+    "thumbnail": "https://images.wsj.net/im-56631191",
+    "paywall": true
+  },
+  {
     "id": "20250224-uk-delays-plans-to-regulate-ai-as-ministers-seek",
     "date": "2025-02-24",
     "title": "UK delays plans to regulate AI as ministers seek to align with Trump administration",
@@ -8345,6 +9321,26 @@
     "thumbnail": "https://media.guim.co.uk/656b16defbe95b0e77520b410ffac1188fa2f5b0/0_0_2150_1290/500.jpg"
   },
   {
+    "id": "20250225-major-asia-bank-to-cut-4-000-roles-as-ai-replace",
+    "date": "2025-02-25",
+    "title": "Major Asia bank to cut 4,000 roles as AI replaces humans",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4g7xn9y64po",
+    "org": null,
+    "category": "labour",
+    "relevance": 2,
+    "topics": [
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "It makes DBS one of the first major banks to offer details on how AI will affect its operations."
+  },
+  {
     "id": "20250225-nvidia-had-a-rough-start-to-2025-investors-still",
     "date": "2025-02-25",
     "title": "Nvidia Had a Rough Start to 2025. Investors Still Love the Stock.",
@@ -8368,6 +9364,26 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250225-tech-life-could-ai-pick-the-next-james-bond",
+    "date": "2025-02-25",
+    "title": "Tech Life: Could AI pick the next James Bond?",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/sounds/play/w3ct5wnl",
+    "org": "amazon",
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "AMZN"
+    ],
+    "backfill": true,
+    "summary": "With Amazon in charge of James Bond, could they use AI for scripts and casting?"
   },
   {
     "id": "20250225-their-album-is-wordless-will-their-protest-again",
@@ -8481,6 +9497,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250226-apple-ai-tool-transcribed-the-word-racist-as-tru",
+    "date": "2025-02-26",
+    "title": "Apple AI tool transcribed the word 'racist' as 'Trump'",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5ymvjjqzmeo",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "individual": 2,
+      "bubble": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Experts have questioned the company's explanation that it is due to the two words being similar."
+  },
+  {
     "id": "20250226-nvidia-beats-wall-street-expectations-in-first-e",
     "date": "2025-02-26",
     "title": "Nvidia beats Wall Street expectations in first earnings after DeepSeek’s AI debut",
@@ -8555,6 +9592,30 @@
     "thumbnail": "https://media.guim.co.uk/665981659e42280f39ac03967be2b6e7443817fb/0_271_5800_3480/500.jpg"
   },
   {
+    "id": "20250226-the-ai-data-center-boom-is-a-job-creation-bust",
+    "date": "2025-02-26",
+    "title": "The AI Data-Center Boom Is a Job-Creation Bust",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai-data-center-job-creation-48038b67?mod=rss_Technology",
+    "org": null,
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute",
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Tech and political leaders tout them as an employment bonanza, but data centers need very few workers in very large spaces.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-76006849",
+    "paywall": true
+  },
+  {
     "id": "20250226-trump-faces-truth-social-backlash-over-ai-video",
     "date": "2025-02-26",
     "title": "Trump faces Truth Social backlash over AI video of Gaza with topless Netanyahu and bearded bellydancers",
@@ -8573,6 +9634,24 @@
     "tickers": [],
     "summary": "Users of president’s own social media site criticise video showing reimagined Gaza featuring Trump and Israeli PM sipping cocktails",
     "thumbnail": "https://media.guim.co.uk/bbc87e4ed203199ddc9c27444c1b0b47f5cc84d0/60_0_1800_1080/500.jpg"
+  },
+  {
+    "id": "20250226-what-an-ai-generated-video-of-gaza-reveals-about",
+    "date": "2025-02-26",
+    "title": "What an AI-generated video of Gaza reveals about Trump tactics",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/videos/cj675j69gxgo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The US president sparked a social media frenzy when he posted a video of Gaza generated by artificial intelligence on his site Truth Social."
   },
   {
     "id": "20250226-fantasy-ai-video-shared-by-trump-of-gaza-as-luxu",
@@ -8810,6 +9889,93 @@
     "manual": true
   },
   {
+    "id": "20250227-the-spy-sheikh-taking-the-ai-world-by-storm",
+    "date": "2025-02-27",
+    "title": "The ‘Spy Sheikh’ Taking the AI World by Storm",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/abu-dhabi-spy-sheikh-ai-c4a9d48c?mod=rss_Technology",
+    "org": "meta",
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Abu Dhabi’s Tahnoon bin Zayed al Nahyan has more than $1.5 trillion to spend and he’s in a hurry; grappling with Mark Zuckerberg.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-56940857",
+    "paywall": true
+  },
+  {
+    "id": "20250227-want-to-be-a-better-listener-take-lessons-from-a",
+    "date": "2025-02-27",
+    "title": "Want to Be a Better Listener? Take Lessons From a Chatbot.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/dont-freak-out-about-empathic-chatbots-learn-from-them-7a976f75?mod=rss_Technology",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "unreliable": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The secret to becoming an empathetic confidant is avoiding some common human mistakes.",
+    "thumbnail": "https://images.wsj.net/im-34831663",
+    "paywall": true
+  },
+  {
+    "id": "20250227-what-s-ahead-for-ai",
+    "date": "2025-02-27",
+    "title": "What’s Ahead for AI",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/whats-ahead-for-ai-9f8df844?mod=rss_Technology",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "This special report explores the newest developments in artificial intelligence, from powering the brains of humanoid robots to a far-reaching strategy at America’s biggest bank, JPMorgan.",
+    "thumbnail": "https://images.wsj.net/im-06332644",
+    "paywall": true
+  },
+  {
+    "id": "20250228-can-ai-help-modernise-ireland-s-healthcare-syste",
+    "date": "2025-02-28",
+    "title": "Can AI help modernise Ireland's healthcare system?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cly7yxm3py5o",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Ireland is investing billions of euros to revamp its healthcare service - will AI help?",
+    "afterClose": true
+  },
+  {
     "id": "20250228-meta-apologises-over-flood-of-gore-violence-and",
     "date": "2025-02-28",
     "title": "Meta apologises over flood of gore, violence and dead bodies on Instagram",
@@ -9038,6 +10204,30 @@
     "tickers": [],
     "summary": "London and Washington aim to avoid obstacles and forge a narrower agreement, likely with a focus on tech and AI",
     "thumbnail": "https://media.guim.co.uk/d0764c6e8377633621af80696f7c870c44c0f9c9/0_0_7951_4770/500.jpg"
+  },
+  {
+    "id": "20250301-ai-fever-in-power-stocks-moves-from-nuclear-to-p",
+    "date": "2025-03-01",
+    "title": "AI Fever in Power Stocks Moves From Nuclear to Plain Natural Gas",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/ai-fever-in-power-stocks-moves-from-nuclear-to-plain-natural-gas-a77af88b?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute",
+      "policy",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Regulatory uncertainty could widen the scope of power stocks riding the AI wave.",
+    "thumbnail": "https://images.wsj.net/im-08310761",
+    "paywall": true
   },
   {
     "id": "20250301-warren-buffett-wants-you-to-know-the-unknown-ora",
@@ -9640,6 +10830,24 @@
     "thumbnail": "https://media.guim.co.uk/bbc87e4ed203199ddc9c27444c1b0b47f5cc84d0/60_0_1800_1080/500.jpg"
   },
   {
+    "id": "20250307-grandmother-gets-x-rated-message-after-apple-ai",
+    "date": "2025-03-07",
+    "title": "Grandmother gets X-rated message after Apple AI fail",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0l1kpz3w32o",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "unreliable": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Louise Littlejohn said she was shocked and then laughed when she received the error strewn voicemail transcription."
+  },
+  {
     "id": "20250307-justice-dept-doubles-down-on-request-to-break-up",
     "date": "2025-03-07",
     "title": "Justice Dept. Doubles Down on Request to Break Up Google",
@@ -9794,6 +11002,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250310-from-chatbots-to-intelligent-toys-how-ai-is-boom",
+    "date": "2025-03-10",
+    "title": "From chatbots to intelligent toys: How AI is booming in China",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ckg8jqj393eo",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "China plans to invest more than a trillion dollars as it races against the US to rule advanced tech.",
+    "afterClose": true
+  },
+  {
     "id": "20250310-the-quest-for-a-i-scientific-superintelligence",
     "date": "2025-03-10",
     "title": "The Quest for A.I. ‘Scientific Superintelligence’",
@@ -9861,6 +11090,27 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250311-why-people-are-cutting-back-their-online-profile",
+    "date": "2025-03-11",
+    "title": "Why people are cutting back their online profile",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ce8y2eez8y2o",
+    "org": null,
+    "category": "labour",
+    "relevance": 1,
+    "topics": [
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "A new wave of AI has spurred some to think more carefully about their online presence.",
+    "afterClose": true
   },
   {
     "id": "20250312-ai-should-replace-some-work-of-civil-servants-st",
@@ -10387,6 +11637,30 @@
     "paywall": true
   },
   {
+    "id": "20250319-uranium-bulls-get-spooked-by-unknowns-from-canad",
+    "date": "2025-03-19",
+    "title": "Uranium Bulls Get Spooked by Unknowns From Canada to Russia",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/commodities-futures/uranium-bulls-get-spooked-by-unknowns-from-canada-to-russia-5fc7b1de?mod=rss_markets_main",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "compute",
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Amid questions about AI power demand, tariffs and geopolitics, uranium investments have taken a hit.",
+    "thumbnail": "https://images.wsj.net/im-56943528",
+    "paywall": true
+  },
+  {
     "id": "20250320-ai-driven-weather-prediction-breakthrough-report",
     "date": "2025-03-20",
     "title": "AI-driven weather prediction breakthrough reported",
@@ -10477,6 +11751,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250321-chubby-filter-pulled-from-tiktok-after-user-back",
+    "date": "2025-03-21",
+    "title": "'Chubby filter' pulled from TikTok after user backlash",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c4gmvjvv6vjo",
+    "org": null,
+    "category": "product",
+    "relevance": 1,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "unreliable": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Critics say the AI tool - which made people look overweight - was a form of body-shaming."
+  },
+  {
     "id": "20250321-man-files-complaint-after-chatgpt-said-he-killed",
     "date": "2025-03-21",
     "title": "Man files complaint after ChatGPT said he killed his children",
@@ -10523,6 +11817,25 @@
       "individual": 3
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250322-click",
+    "date": "2025-03-22",
+    "title": "Click",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/iplayer/episode/m0029f7v",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "capability": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Lara Lewington explores how technology and AI are transforming what it means to be human.",
+    "afterClose": true
   },
   {
     "id": "20250322-did-ai-mania-rush-apple-into-making-a-rare-misst",
@@ -10648,6 +11961,29 @@
     "tickers": [],
     "summary": "After the president made A.I. dominance a top priority, tech companies changed course from a meeker approach under the Biden administration.",
     "thumbnail": "https://static01.nyt.com/images/2025/03/21/multimedia/00biz-AI-trump-qgvh/00biz-AI-trump-qgvh-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20250324-hoan-ton-that-pushed-facial-recognition-ai-to-ne",
+    "date": "2025-03-24",
+    "title": "Hoan Ton-That Pushed Facial-Recognition AI to New Limits. His Next Project? Private Credit",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/hoan-ton-that-pushed-facial-recognition-ai-to-new-limits-his-next-project-private-credit-34b72853?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "governance"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Co-founder of the controversial Clearview AI has joined Architect Capital as chief technology officer to develop a novel strategy to increase leverage.",
+    "thumbnail": "https://images.wsj.net/im-41582281",
     "paywall": true
   },
   {
@@ -11101,6 +12437,28 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250330-chatbot-confidential-how-to-protect-your-privacy",
+    "date": "2025-03-30",
+    "title": "Chatbot Confidential: How to Protect Your Privacy When Using AI Chatbots",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/chatbot-confidential-how-to-protect-your-privacy-when-using-ai-chatbots-b2e1b4d8?mod=rss_Technology",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "individual": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "A podcast series that examines the risks that come with using generative AI-powered chatbots and how to keep your data safe.",
+    "thumbnail": "https://images.wsj.net/im-09921849",
+    "paywall": true
+  },
+  {
     "id": "20250330-how-and-why-parents-and-teachers-are-introducing",
     "date": "2025-03-30",
     "title": "How and why parents and teachers are introducing young children to AI",
@@ -11367,6 +12725,29 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250401-this-financial-firm-can-give-investment-advice-i",
+    "date": "2025-04-01",
+    "title": "This Financial Firm Can Give Investment Advice in Gen Z Slang, No Cap",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/this-financial-firm-can-give-investment-advice-in-gen-z-slang-no-cap-eea745eb?mod=rss_Technology",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Arta, a wealth-management startup, is using mobile apps and AI tools to reach young millionaires.",
+    "thumbnail": "https://images.wsj.net/im-10927637",
+    "paywall": true
+  },
+  {
     "id": "20250401-uk-needs-to-relax-ai-laws-or-risk-transatlantic",
     "date": "2025-04-01",
     "title": "UK needs to relax AI laws or risk transatlantic ties, thinktank warns",
@@ -11387,6 +12768,28 @@
     "summary": "Tony Blair Institute says enforcing stricter licensing rules for copyright-protected material will threaten national security interests",
     "afterClose": true,
     "thumbnail": "https://media.guim.co.uk/fb69a07a6723b0d8f4affb4810b4c58a687ffe4e/0_0_8256_4954/500.jpg"
+  },
+  {
+    "id": "20250402-a-big-coal-plant-was-just-imploded-to-make-way-f",
+    "date": "2025-04-02",
+    "title": "A Big Coal Plant Was Just Imploded to Make Way for an AI Data Center",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/energy-oil/a-big-coal-plant-was-just-imploded-to-make-way-for-an-ai-data-center-cd4bbe32?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "compute",
+    "relevance": 2,
+    "topics": [
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The country’s largest natural-gas power plant is planned east of Pittsburgh.",
+    "thumbnail": "https://images.wsj.net/im-26963239",
+    "paywall": true
   },
   {
     "id": "20250402-amazon-said-to-make-a-bid-to-buy-tiktok-in-the-u",
@@ -11435,6 +12838,28 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250402-siemens-agrees-to-buy-dotmatics-for-5-1-billion",
+    "date": "2025-04-02",
+    "title": "Siemens Agrees to Buy Dotmatics for $5.1 Billion, Expanding AI Portfolio to Life Sciences",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/siemens-agrees-to-buy-software-company-dotmatics-for-5-1-billion-d7c86b56?mod=pls_whats_news_us_business_f",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The deal extends Siemens’s artificial-intelligence-powered product-lifecycle-management portfolio and increases the company’s total addressable market in industrial software by $11 billion.",
+    "thumbnail": "https://images.wsj.net/im-833096",
+    "paywall": true
   },
   {
     "id": "20250402-uk-government-tries-to-placate-opponents-of-ai-c",
@@ -11499,6 +12924,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250403-how-i-realized-ai-was-making-me-stupid-and-what",
+    "date": "2025-04-03",
+    "title": "How I Realized AI Was Making Me Stupid—and What I Do Now",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/how-i-realized-ai-was-making-me-stupidand-what-i-do-now-5862ac4d?mod=rss_Technology",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Backers of the new tech say it will free us to be creative, but studies show that avoiding mental effort can cause your brain to atrophy.",
+    "thumbnail": "https://images.wsj.net/im-42003208",
+    "paywall": true
+  },
+  {
     "id": "20250403-meta-faces-1-8bn-lawsuit-over-claims-it-inflamed",
     "date": "2025-04-03",
     "title": "Meta faces £1.8bn lawsuit over claims it inflamed violence in Ethiopia",
@@ -11540,6 +12985,54 @@
     "tickers": [],
     "summary": "The A.I. prediction world is torn between optimism and gloom. A report released on Thursday decidedly lands on the side of gloom.",
     "thumbnail": "https://static01.nyt.com/images/2025/04/01/multimedia/ROOSE-daniel-bgvl/ROOSE-daniel-bgvl-articleLarge.jpg",
+    "paywall": true
+  },
+  {
+    "id": "20250403-venture-market-notches-strong-quarter-thanks-mos",
+    "date": "2025-04-03",
+    "title": "Venture Market Notches Strong Quarter—Thanks Mostly to One Mammoth AI Deal",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/articles/venture-market-notches-strong-quarterthanks-mostly-to-one-mammoth-ai-deal-668f056c?mod=pls_whats_news_us_business_f",
+    "org": "openai",
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "Investors say competition for artificial intelligence startups is fierce, and OpenAI’s $40 billion fundraise proved it.",
+    "thumbnail": "https://images.wsj.net/im-84915051",
+    "paywall": true
+  },
+  {
+    "id": "20250403-wpp-buys-infosum-in-ai-push",
+    "date": "2025-04-03",
+    "title": "WPP Buys InfoSum in AI Push",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/wpp-buys-infosum-in-ai-push-e7afb6bc?mod=rss_Technology",
+    "org": null,
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The London-listed ad group said that InfoSum—which will join its media investment group GroupM—will help it create marketing solutions that are enhanced by AI.",
+    "thumbnail": "https://images.wsj.net/im-13741959",
     "paywall": true
   },
   {
@@ -12035,6 +13528,27 @@
     "thumbnail": "https://media.guim.co.uk/f44ed3cfa4dc44c22475decc128424262a42a702/0_0_2400_1440/500.jpg"
   },
   {
+    "id": "20250411-everyone-s-jumping-on-the-ai-doll-trend-but-what",
+    "date": "2025-04-11",
+    "title": "Everyone's jumping on the AI doll trend - but what are the concerns?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c5yg690e9eno",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "As online users create Barbie-like dolls of themselves, experts urge caution over AI's energy and data use.",
+    "afterClose": true
+  },
+  {
     "id": "20250411-how-tiktok-s-parent-bytedance-became-an-a-i-powe",
     "date": "2025-04-11",
     "title": "How TikTok’s Parent, ByteDance, Became an A.I. Powerhouse",
@@ -12382,6 +13896,24 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250415-tech-life",
+    "date": "2025-04-15",
+    "title": "Tech Life",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/sounds/play/w3ct6znk",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "What is AI discrimination, and can it be fixed ?"
+  },
+  {
     "id": "20250415-trump-s-ai-infrastructure-plans-could-face-delay",
     "date": "2025-04-15",
     "title": "Trump’s AI infrastructure plans could face delays due to Texas Republicans",
@@ -12520,6 +14052,24 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250416-the-monthly-ai-or-real-quiz-april-2025",
+    "date": "2025-04-16",
+    "title": "The monthly AI or real quiz: April 2025",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/bitesize/articles/z69jb7h",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Challenge yourself with this edition of our monthly AI or real quiz and see if you can get top marks!"
   },
   {
     "id": "20250416-they-built-a-business-and-a-life-on-amazon-tarif",
@@ -12847,6 +14397,25 @@
     "paywall": true
   },
   {
+    "id": "20250419-artists-push-back-against-ai-dolls-with-their-ow",
+    "date": "2025-04-19",
+    "title": "Artists push back against AI dolls with their own creations",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c3v9z45pe93o",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Artists hit back on social media to warn artificial intelligence may be endangering their livelihoods.",
+    "afterClose": true
+  },
+  {
     "id": "20250419-musk-and-ai-among-biggest-threats-to-brand-reput",
     "date": "2025-04-19",
     "title": "Musk and AI among biggest threats to brand reputation, global survey shows",
@@ -13043,6 +14612,42 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250422-films-made-with-ai-can-win-oscars-academy-says",
+    "date": "2025-04-22",
+    "title": "Films made with AI can win Oscars, Academy says",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cqx4y1lrz2vo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "But it said it would still consider human involvement when selecting winners."
+  },
+  {
+    "id": "20250422-tech-life",
+    "date": "2025-04-22",
+    "title": "Tech Life",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/sounds/play/w3ct6znl",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Artificial intelligence is being used to unlock the mysteries of dolphin communication."
+  },
+  {
     "id": "20250422-the-us-government-is-coming-for-google-and-meta",
     "date": "2025-04-22",
     "title": "The US government is coming for Google and Meta – but what will happen next?",
@@ -13229,6 +14834,28 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250423-whatsapp-defends-optional-ai-tool-that-cannot-be",
+    "date": "2025-04-23",
+    "title": "WhatsApp defends 'optional' AI tool that cannot be turned off",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cd7vzw78gz9o",
+    "org": "meta",
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "While Meta says the AI chatbot is a \"good thing\", some users have shared their frustrations."
   },
   {
     "id": "20250424-alphabet-reports-12-increase-in-revenue",
@@ -13487,6 +15114,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250428-call-for-ban-on-ai-apps-creating-naked-images-of",
+    "date": "2025-04-28",
+    "title": "Call for ban on AI apps creating naked images of children",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cr78pd7p42ro",
+    "org": null,
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy",
+      "product"
+    ],
+    "frames": {
+      "individual": 3
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Children fear anyone could create sexual deepfake images of them, the children's commissioner says."
+  },
+  {
     "id": "20250428-news-is-blocked-on-meta-s-feeds-in-canada-here-s",
     "date": "2025-04-28",
     "title": "News is blocked on Meta’s feeds in Canada. Here’s what fills the void.",
@@ -13527,6 +15175,27 @@
     "tickers": [],
     "summary": "Concerns over AI-based apps that can produce deepfake sexual images of children have prompted call for action",
     "thumbnail": "https://media.guim.co.uk/11efb3060d7f7300a989ec87f9617d2c32a80725/0_0_4240_2544/500.jpg"
+  },
+  {
+    "id": "20250428-what-is-bug-hunting-and-why-is-it-changing",
+    "date": "2025-04-28",
+    "title": "What is bug hunting and why is it changing?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c99n8r38rdlo",
+    "org": null,
+    "category": "deals",
+    "relevance": 1,
+    "topics": [
+      "deals"
+    ],
+    "frames": {
+      "unreliable": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Bug hunters make money by funding flaws in software, but AI is changing the way they work.",
+    "afterClose": true
   },
   {
     "id": "20250429-amazon-denies-planning-to-publish-tariff-costs-o",
@@ -14201,6 +15870,25 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250505-the-people-refusing-to-use-ai",
+    "date": "2025-05-05",
+    "title": "The people refusing to use AI",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c15q5qzdjqxo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Worried about the environment and the loss of skills, some people are resisting the rise of AI.",
+    "afterClose": true
+  },
+  {
     "id": "20250505-trump-denies-posting-image-of-himself-as-pope-la",
     "date": "2025-05-05",
     "title": "Trump Denies Posting Image of Himself as Pope, Laughing Off Critics",
@@ -14335,6 +16023,25 @@
       "capability": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250507-arizona-man-shot-to-death-in-road-rage-returns-t",
+    "date": "2025-05-07",
+    "title": "Arizona man shot to death in road rage 'returns' to address his killer",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cq808px90wxo",
+    "org": null,
+    "category": "other",
+    "relevance": 1,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "With the help of artificial intelligence, a man was 'brought back to life' at his killer's sentencing to deliver a victim's statement himself.",
+    "afterClose": true
   },
   {
     "id": "20250507-how-to-use-the-a-i-powered-writing-tools-on-your",
@@ -14669,6 +16376,27 @@
     "thumbnail": "https://media.guim.co.uk/1376ec31dd9d007ac038801337aa2b59daff2277/596_0_3799_3040/500.jpg"
   },
   {
+    "id": "20250510-elton-john-and-dua-lipa-seek-protection-from-ai",
+    "date": "2025-05-10",
+    "title": "Elton John and Dua Lipa seek protection from AI",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c071elp1rv1o",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "They are among 400 artists appealing to Sir Keir Starmer, saying creative industries are threatened.",
+    "afterClose": true
+  },
+  {
     "id": "20250510-google-agrees-to-pay-1-4-billion-to-settle-2-pri",
     "date": "2025-05-10",
     "title": "Google Agrees to Pay $1.4 Billion to Settle 2 Privacy Lawsuits",
@@ -14800,6 +16528,27 @@
     "tickers": [],
     "summary": "Dismissal of Shira Perlmutter follows firing of librarian of Congress, which oversees copyright office",
     "thumbnail": "https://media.guim.co.uk/3c9c16fad515fcb351f987eb3c014389a39abb06/334_0_3327_2663/500.jpg"
+  },
+  {
+    "id": "20250513-ai-tool-put-to-test-sifting-public-views-on-boto",
+    "date": "2025-05-13",
+    "title": "AI tool put to test sifting public views on botox and fillers",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cpd4nxvw9lyo",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The technology's success sorting comments on cosmetic surgery paves the way for its wider use, the government says.",
+    "afterClose": true
   },
   {
     "id": "20250513-chatgpt-may-be-polite-but-it-s-not-cooperating-w",
@@ -15173,6 +16922,24 @@
     "paywall": true
   },
   {
+    "id": "20250515-the-monthly-ai-or-real-quiz-may-2025",
+    "date": "2025-05-15",
+    "title": "The monthly AI or real quiz: May 2025",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/bitesize/articles/z2b7rmn",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Challenge yourself with this edition of our monthly AI or real quiz and see if you can get top marks!"
+  },
+  {
     "id": "20250515-top-priority-for-pope-leo-warn-the-world-of-the",
     "date": "2025-05-15",
     "title": "Top Priority for Pope Leo: Warn the World of the A.I. Threat",
@@ -15461,6 +17228,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250518-elton-john-brands-government-losers-over-ai-copy",
+    "date": "2025-05-18",
+    "title": "Elton John brands government 'losers' over AI copyright plans",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8jg0348yvxo",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The musician accuses the government of robbing young artists over its copyright law plans."
+  },
+  {
     "id": "20250518-musk-s-ai-bot-grok-blames-programming-error-for",
     "date": "2025-05-18",
     "title": "Musk’s AI bot Grok blames ‘programming error’ for its Holocaust denial",
@@ -15501,6 +17288,27 @@
     "tickers": [],
     "summary": "Study author warns of implications for elections and says ‘malicious actors’ are probably using LLM tools already",
     "thumbnail": "https://media.guim.co.uk/4d0597b47d33b35c33fc9483c57837ebf4891845/326_0_2841_2274/500.jpg"
+  },
+  {
+    "id": "20250519-can-ai-therapists-really-be-an-alternative-to-hu",
+    "date": "2025-05-19",
+    "title": "Can AI therapists really be an alternative to human help?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/ced2ywg7246o",
+    "org": null,
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "individual": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "With NHS mental health waitlists at record highs, are chatbots a possible solution?",
+    "afterClose": true
   },
   {
     "id": "20250519-how-miami-schools-are-leading-100-000-students-i",
@@ -15614,6 +17422,26 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250520-fortnite-faces-complaint-from-actors-union-over",
+    "date": "2025-05-20",
+    "title": "Fortnite faces complaint from actors' union over AI Darth Vader",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cn844l3eznqo",
+    "org": null,
+    "category": "labour",
+    "relevance": 2,
+    "topics": [
+      "labour"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Sag-Aftra says the hit video game has used tech to replace human performers."
   },
   {
     "id": "20250520-google-unveils-a-i-chatbot-signaling-a-new-era-f",
@@ -16081,6 +17909,24 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250523-ai-system-resorts-to-blackmail-if-told-it-will-b",
+    "date": "2025-05-23",
+    "title": "AI system resorts to blackmail if told it will be removed",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cpqeng9d20go",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "In a fictional scenario, the model was willing to expose that the engineer seeking to replace it was having an affair."
+  },
+  {
     "id": "20250523-sebasti-o-salgado-photographer-known-for-amazon",
     "date": "2025-05-23",
     "title": "Sebastião Salgado, photographer known for Amazon rainforest images, dies aged 81",
@@ -16228,6 +18074,24 @@
     "thumbnail": "https://media.guim.co.uk/b4a60fb59a988517de97b303ecda1983c415d637/197_0_3333_2667/500.jpg"
   },
   {
+    "id": "20250526-the-people-who-think-ai-might-become-conscious",
+    "date": "2025-05-26",
+    "title": "The people who think AI might become conscious",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c0k3700zljjo",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "capability": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "With a leap in the evolution of large language models, some leading thinkers are questioning whether AI might become sentient"
+  },
+  {
     "id": "20250527-apple-s-triple-threat-tariffs-ai-troubles-and-a",
     "date": "2025-05-27",
     "title": "Apple’s triple threat: tariffs, AI troubles and a Fortnite fail",
@@ -16275,6 +18139,26 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250527-tech-life",
+    "date": "2025-05-27",
+    "title": "Tech Life",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/sounds/play/w3ct6znr",
+    "org": null,
+    "category": "product",
+    "relevance": 1,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Using AI chatbots to recreate the voice or likeness of a loved one who has passed away."
   },
   {
     "id": "20250527-telstra-expects-to-shrink-workforce-as-it-leans",
@@ -16844,6 +18728,26 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250602-government-ai-copyright-plan-suffers-fourth-hous",
+    "date": "2025-06-02",
+    "title": "Government AI copyright plan suffers fourth House of Lords defeat",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/clyrgv2n190o",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The bitter row over how to protect artists in the artificial intelligence age returns to the Lords."
   },
   {
     "id": "20250602-magnetic-3d-printed-pen-could-help-diagnose-peop",
@@ -17921,6 +19825,47 @@
     "thumbnail": "https://media.guim.co.uk/f87554b0bab3914c13a262189ec48f7246b6fb97/420_0_4200_3360/500.jpg"
   },
   {
+    "id": "20250612-data-bill-opposed-by-sir-elton-john-and-dua-lipa",
+    "date": "2025-06-12",
+    "title": "Data bill opposed by Sir Elton John and Dua Lipa finally passes",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c8e6z590wweo",
+    "org": null,
+    "category": "policy",
+    "relevance": 1,
+    "topics": [
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "Leading artists said the bill needed to be changed to protect them from having their work copied by AI."
+  },
+  {
+    "id": "20250612-disney-and-universal-sue-ai-firm-midjourney-over",
+    "date": "2025-06-12",
+    "title": "Disney and Universal sue AI firm Midjourney over images",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cg5vjqdm1ypo",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The Hollywood studios allege Midjourney's image generator is a \"bottomless pit of plagiarism\".",
+    "afterClose": true
+  },
+  {
     "id": "20250612-google-and-u-s-experts-join-on-a-i-hurricane-for",
     "date": "2025-06-12",
     "title": "Google and U.S. Experts Join on A.I. Hurricane Forecasts",
@@ -18604,6 +20549,27 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20250619-tech-giants-unleash-ai-on-weather-forecasts-are",
+    "date": "2025-06-19",
+    "title": "Tech giants unleash AI on weather forecasts: are they any good?",
+    "source": "BBC",
+    "url": "https://www.bbc.com/weather/articles/cwy6ykp7049o",
+    "org": null,
+    "category": "markets",
+    "relevance": 2,
+    "topics": [
+      "markets"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "The biggest tech firms are using AI to forecast the weather but is that better than existing models?",
+    "afterClose": true
+  },
+  {
     "id": "20250620-amazon-under-uk-investigation-over-alleged-failu",
     "date": "2025-06-20",
     "title": "Amazon under UK investigation over alleged failure to pay suppliers on time",
@@ -18625,6 +20591,26 @@
       "unreliable": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250620-bbc-threatens-ai-firm-with-legal-action-over-una",
+    "date": "2025-06-20",
+    "title": "BBC threatens AI firm with legal action over unauthorised content use",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/cy7ndgylzzmo",
+    "org": null,
+    "category": "legal",
+    "relevance": 2,
+    "topics": [
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "backfill": true,
+    "summary": "It is first time that the BBC has taken such action regarding alleged scraping of its content for AI."
   },
   {
     "id": "20250620-uk-grocery-watchdog-investigating-amazon-over-al",
@@ -18885,6 +20871,33 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20250625-judge-backs-ai-firm-over-use-of-copyrighted-book",
+    "date": "2025-06-25",
+    "title": "Judge backs AI firm over use of copyrighted books",
+    "source": "BBC",
+    "url": "https://www.bbc.com/news/articles/c77vr00enzyo",
+    "org": "anthropic",
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "model",
+      "legal"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "A US court has ruled Anthropic was not breaching copyright rules when it trained its AI model on books."
   },
   {
     "id": "20250625-meta-boss-praises-new-us-army-division-enlisting",
