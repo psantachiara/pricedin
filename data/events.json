@@ -26893,6 +26893,22 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260106-meta-pauses-european-rollout-of-smart-ray-bans-a",
+    "date": "2026-01-06",
+    "title": "Meta Pauses European Rollout of Smart Ray-Bans as Americans Lap Up Supply",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/meta-pauses-european-rollout-of-smart-ray-bans-as-americans-lap-up-supply-dd74f868?mod=rss_Technology",
+    "org": "meta",
+    "category": "policy",
+    "tickers": [
+      "META"
+    ],
+    "backfill": true,
+    "summary": "The Ray-Ban Display smartglasses, developed in partnership with Franco-Italian eyewear group EssilorLuxottica, had been planned to be made available for sale in Canada, France, the U.K. and Italy early this year.",
+    "thumbnail": "https://images.wsj.net/im-51356414",
+    "paywall": true
+  },
+  {
     "id": "20260106-nvidia-ceo-says-chinese-demand-for-its-ai-chips",
     "date": "2026-01-06",
     "title": "Nvidia CEO Says Chinese Demand for Its AI Chips Is ‘Quite High’",
@@ -26918,22 +26934,6 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
-  },
-  {
-    "id": "20260106-meta-pauses-european-rollout-of-smart-ray-bans-a",
-    "date": "2026-01-06",
-    "title": "Meta Pauses European Rollout of Smart Ray-Bans as Americans Lap Up Supply",
-    "source": "WSJ",
-    "url": "https://www.wsj.com/tech/meta-pauses-european-rollout-of-smart-ray-bans-as-americans-lap-up-supply-dd74f868?mod=rss_Technology",
-    "org": "meta",
-    "category": "policy",
-    "tickers": [
-      "META"
-    ],
-    "backfill": true,
-    "summary": "The Ray-Ban Display smartglasses, developed in partnership with Franco-Italian eyewear group EssilorLuxottica, had been planned to be made available for sale in Canada, France, the U.K. and Italy early this year.",
-    "thumbnail": "https://images.wsj.net/im-51356414",
-    "paywall": true
   },
   {
     "id": "20260106-nvidia-ceo-says-chinese-demand-for-its-ai-chips",
@@ -54370,6 +54370,23 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260827-nvidia-breaks-its-post-earnings-curse-with-442-b",
+    "date": "2026-08-27",
+    "title": "Nvidia Breaks Its Post-Earnings Curse With $442 Billion Day",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/stocks/nvidia-breaks-its-post-earnings-curse-with-442-billion-day-ce412657?mod=rss_markets_main",
+    "org": "nvidia",
+    "category": "compute",
+    "tickers": [
+      "NVDA"
+    ],
+    "backfill": true,
+    "summary": "The chip maker’s shares posted their steepest climb in a year, boosting U.S. stock indexes.",
+    "afterClose": true,
+    "thumbnail": "https://images.wsj.net/im-54811868",
+    "paywall": true
+  },
+  {
     "id": "20260827-nvidia-pauses-revenue-sharing-deals-with-ai-clou",
     "date": "2026-08-27",
     "title": "Nvidia Pauses Revenue-Sharing Deals With AI Cloud Companies",
@@ -54394,23 +54411,6 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
-  },
-  {
-    "id": "20260827-nvidia-breaks-its-post-earnings-curse-with-442-b",
-    "date": "2026-08-27",
-    "title": "Nvidia Breaks Its Post-Earnings Curse With $442 Billion Day",
-    "source": "WSJ",
-    "url": "https://www.wsj.com/finance/stocks/nvidia-breaks-its-post-earnings-curse-with-442-billion-day-ce412657?mod=rss_markets_main",
-    "org": "nvidia",
-    "category": "compute",
-    "tickers": [
-      "NVDA"
-    ],
-    "backfill": true,
-    "summary": "The chip maker’s shares posted their steepest climb in a year, boosting U.S. stock indexes.",
-    "afterClose": true,
-    "thumbnail": "https://images.wsj.net/im-54811868",
-    "paywall": true
   },
   {
     "id": "20260827-nvidia-pauses-revenue-sharing-deals-with-ai-clou",
@@ -56258,6 +56258,26 @@
     "coder": "keyword-v1"
   },
   {
+    "id": "20260910-star-ai-researcher-is-leaving-meta-for-anthropic",
+    "date": "2026-09-10",
+    "title": "Star AI Researcher Is Leaving Meta for Anthropic",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/star-ai-researcher-is-leaving-meta-8906e4aa?mod=rss_Technology",
+    "org": "anthropic",
+    "category": "markets",
+    "tickers": [
+      "AMZN",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "META"
+    ],
+    "backfill": true,
+    "summary": "Andrew Tulloch departs Meta less than a year after he was offered a billion-dollar pay package.",
+    "thumbnail": "https://images.wsj.net/im-03807529",
+    "paywall": true
+  },
+  {
     "id": "20260911-anthropic-says-iran-used-its-american-ai-model-t",
     "date": "2026-09-11",
     "title": "Anthropic Says Iran Used Its American AI Model to Target U.S. Navy Warships",
@@ -56281,26 +56301,6 @@
       "security": 1
     },
     "coder": "keyword-v1"
-  },
-  {
-    "id": "20260910-star-ai-researcher-is-leaving-meta-for-anthropic",
-    "date": "2026-09-10",
-    "title": "Star AI Researcher Is Leaving Meta for Anthropic",
-    "source": "WSJ",
-    "url": "https://www.wsj.com/tech/ai/star-ai-researcher-is-leaving-meta-8906e4aa?mod=rss_Technology",
-    "org": "anthropic",
-    "category": "markets",
-    "tickers": [
-      "AMZN",
-      "GOOGL",
-      "MSFT",
-      "NVDA",
-      "META"
-    ],
-    "backfill": true,
-    "summary": "Andrew Tulloch departs Meta less than a year after he was offered a billion-dollar pay package.",
-    "thumbnail": "https://images.wsj.net/im-03807529",
-    "paywall": true
   },
   {
     "id": "20260911-anthropic-says-iran-used-its-american-ai-model-t",
@@ -60239,5 +60239,68 @@
       "neutral": 2
     },
     "coder": "keyword-v1"
+  },
+  {
+    "id": "20261010-openai-makes-progress-in-preventing-ai-driven-ch",
+    "date": "2026-10-10",
+    "title": "OpenAI Makes Progress in Preventing AI-Driven ChatGPT Delusions",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/chatgpt-gpt5-sycophancy-delusions-9b3506bf?mod=rss_Technology",
+    "org": "openai",
+    "category": "product",
+    "relevance": 2,
+    "topics": [
+      "product"
+    ],
+    "frames": {
+      "individual": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT",
+      "NVDA"
+    ],
+    "summary": "Mental-health experts offered advice on how the popular chatbot could ask better questions and distinguish among crises and other conditions.",
+    "thumbnail": "https://images.wsj.net/im-77039918",
+    "paywall": true
+  },
+  {
+    "id": "20261010-the-u-s-army-s-desert-tech-test-shows-long-road",
+    "date": "2026-10-10",
+    "title": "The U.S. Army’s Desert Tech Test Shows Long Road to AI Warfare",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/the-u-s-armys-desert-tech-test-shows-long-road-to-ai-warfare-2fc2ba1e?mod=rss_Technology",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "security": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "A desert trial exposed equipment limitations and institutional hurdles in the Army’s push to modernize and keep pace with an AI-savvy adversary.",
+    "thumbnail": "https://images.wsj.net/im-69150847",
+    "paywall": true
+  },
+  {
+    "id": "20261010-uk-must-not-be-beholden-to-foreign-ai-says-head",
+    "date": "2026-10-10",
+    "title": "UK must not be beholden to foreign AI, says head of Alan Turing Institute",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/10/uk-foreign-ai-head-alan-turing-institute-george-williamson",
+    "org": null,
+    "category": "governance",
+    "relevance": 2,
+    "topics": [
+      "governance"
+    ],
+    "frames": {
+      "existential": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "George Williamson says ‘national resilience’ is key focus of ATI amid US and China’s runaway leadership in field",
+    "thumbnail": "https://media.guim.co.uk/86f6ce436080552a980f816a4c5ba14072a37b86/545_213_5198_4158/500.jpg"
   }
 ]
