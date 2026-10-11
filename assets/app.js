@@ -130,36 +130,23 @@
     const frames = config.frames || [];
     const frameBy = new Map(frames.map((f) => [f.id, f]));
     const families = config.frameFamilies || [];
-    const familyBy = new Map(families.map((f) => [f.id, f]));
     const NO_TOPIC = '_none';
 
-    // Colour carries the frame FAMILY, not the frame. Nine hues would break the
-    // fixed-order categorical rule and no ordering of nine clears the
-    // colour-blind separation floors; two hues plus a recessive grey clear them
-    // on every pair in both themes. Individual frames are told apart by the
-    // chips, the tooltip and shift-click-to-isolate.
-    const FAMILY_RANK = { danger: 0, contrast: 1, neutral: 2 };
+    // Subject is the lens of the project, so colour belongs to the topic axis.
+    // Framing is still filterable and still tagged, but spends no hue: ten
+    // topics already exhaust the categorical budget, and splitting the budget
+    // across two axes would leave neither legible.
     const familyOf = (id) => (frameBy.get(id) || {}).family || 'neutral';
+    const topicColor = (id) =>
+      `var(--topic-${id}, ${(topicBy.get(id) || {}).color || 'var(--muted)'})`;
 
-    // An item can carry several frames. The one that colours it is the most
-    // intense, and among equals the one from the danger family, because that is
-    // the distinction the project exists to look at.
-    const leadFrame = (e) => {
-      let best = null;
-      for (const [id, lvl] of Object.entries(e.frames || {})) {
-        const fam = familyOf(id);
-        if (!best || lvl > best.lvl
-            || (lvl === best.lvl && FAMILY_RANK[fam] < FAMILY_RANK[best.fam])) {
-          best = { id, lvl, fam };
-        }
-      }
-      return best;
-    };
-    const familyColor = (fam) =>
-      `var(--fam-${fam}, ${(familyBy.get(fam) || {}).color || 'var(--muted)'})`;
+    // An item can carry several topics. The one that colours it is the first in
+    // the configured order, which is also the one the legacy `category` records,
+    // so the dot and the stored label never disagree.
+    const leadTopic = (e) => (e.topics || [])[0] || null;
     const eventColor = (e) => {
-      const lead = leadFrame(e);
-      return familyColor(lead ? lead.fam : 'neutral');
+      const t = leadTopic(e);
+      return t ? topicColor(t) : 'var(--muted)';
     };
 
     const events = rawEvents
@@ -651,10 +638,13 @@
     // Topics and frames are the same control twice over, so they are built by
     // one function. Shift-click isolates, which is how the existential/
     // unreliable comparison gets made now that both are the same colour.
-    function buildChips(wrap, items, key, colorFor) {
+    // `universe` is every id this control governs, which is not the same as the
+    // items in this call: the frame chips are built one family at a time, and
+    // "show only" has to mean all nine frames, not the three beside it.
+    function buildChips(wrap, items, key, colorFor, universe) {
       if (!wrap) return;
+      const all = (universe || items).map((x) => x.id);
       for (const it of items) {
-        const all = items.map((x) => x.id);
         wrap.append(el('button', {
           type: 'button', class: 'cat', 'data-chip': it.id, style: `--c:${colorFor(it)}`,
           title: `Click to hide. Shift-click to show only ${it.name}.`,
@@ -682,8 +672,17 @@
     const topicChips = [...topics, { id: NO_TOPIC, name: 'No topic' }];
     const topicWrap = $('#topics');
     const frameWrap = $('#frames');
-    buildChips(topicWrap, topicChips, 'topics', () => 'var(--muted)');
-    buildChips(frameWrap, frames, 'frames', (f) => familyColor(f.family));
+    buildChips(topicWrap, topicChips, 'topics', (t) => topicColor(t.id));
+    for (const fam of families) {
+      const members = frames.filter((f) => f.family === fam.id);
+      if (!members.length) continue;
+      // label and chips travel together, so a wrapping row never strands a
+      // family name at the end of the line above its own chips
+      const group = el('span', { class: 'fam-group' },
+        el('span', { class: 'fam-label', text: fam.name }));
+      buildChips(group, members, 'frames', () => 'var(--muted)', frames);
+      frameWrap.append(group);
+    }
 
     // the two thresholds
     for (const [sel, key] of [['#relevance-seg', 'minRelevance'], ['#intensity-seg', 'minIntensity']]) {
@@ -1012,8 +1011,8 @@
         it.ids = it.evs.map((e) => e.id);
         it.key = 'c:' + it.ids.join('|');
         it.count = it.ids.length;
-        const fams = new Set(it.evs.map((e) => (leadFrame(e) || { fam: 'neutral' }).fam));
-        it.color = fams.size === 1 ? eventColor(it.evs[0]) : 'var(--ink)';
+        const kinds = new Set(it.evs.map((e) => leadTopic(e)));
+        it.color = kinds.size === 1 ? eventColor(it.evs[0]) : 'var(--ink)';
       }
       for (const it of items) {
         const evs = it.ids.map((id) => eventBy.get(id));
@@ -1333,11 +1332,12 @@
           el('p', { class: 'meta' },
             org ? el('span', { class: 'tag', text: org.name }) : null,
             ...(e.topics || []).map((t) => el('span', {
-              class: 'tag', text: (topicBy.get(t) || { name: t }).name })),
+              class: 'tag', style: `--tint:${topicColor(t)}`,
+              text: (topicBy.get(t) || { name: t }).name })),
             ...Object.entries(e.frames || {})
               .sort((a, b) => b[1] - a[1])
               .map(([id, lvl]) => el('span', {
-                class: 'tag tag-frame', style: `--tint:${familyColor(familyOf(id))}`,
+                class: `tag tag-frame fam-${familyOf(id)}`,
                 title: ['mentioned', 'substantial', 'dominant'][lvl - 1] || '',
                 text: `${(frameBy.get(id) || { name: id }).name}${id === 'neutral' ? '' : ' ' + '\u25CF'.repeat(lvl)}`,
               })),

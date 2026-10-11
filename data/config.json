@@ -259,43 +259,63 @@
   "topics": [
     {
       "id": "deals",
-      "name": "Deals, funding and IPOs"
+      "name": "Deals, funding and IPOs",
+      "color": "#A66A00",
+      "colorDark": "#E3AE4C"
     },
     {
       "id": "compute",
-      "name": "Chips and compute"
+      "name": "Chips and compute",
+      "color": "#6A45B5",
+      "colorDark": "#B89CF2"
     },
     {
       "id": "model",
-      "name": "Model releases"
+      "name": "Model releases",
+      "color": "#2440C8",
+      "colorDark": "#8FA3FF"
     },
     {
       "id": "policy",
-      "name": "Policy and regulation"
+      "name": "Policy and regulation",
+      "color": "#C02D6A",
+      "colorDark": "#F37DAF"
     },
     {
       "id": "legal",
-      "name": "Lawsuits and liability"
+      "name": "Lawsuits and liability",
+      "color": "#C02D6A",
+      "colorDark": "#F37DAF"
     },
     {
       "id": "markets",
-      "name": "Earnings and market moves"
+      "name": "Earnings and market moves",
+      "color": "#56606B",
+      "colorDark": "#9BA4AF"
     },
     {
       "id": "labour",
-      "name": "Jobs and work"
+      "name": "Jobs and work",
+      "color": "#15803D",
+      "colorDark": "#4FBF8B"
     },
     {
       "id": "product",
-      "name": "Products and features"
+      "name": "Products and features",
+      "color": "#C2410C",
+      "colorDark": "#FF7A59"
     },
     {
       "id": "governance",
-      "name": "Leadership and governance"
+      "name": "Leadership and governance",
+      "color": "#56606B",
+      "colorDark": "#9BA4AF"
     },
     {
       "id": "moderation",
-      "name": "Moderation and fact-checking"
+      "name": "Moderation and fact-checking",
+      "color": "#0891B2",
+      "colorDark": "#5BB8D4"
     }
   ],
   "frames": [
@@ -312,7 +332,7 @@
     {
       "id": "security",
       "family": "danger",
-      "name": "Weapons, fraud, intrusion"
+      "name": "Cybersecurity and surveillance"
     },
     {
       "id": "societal",
@@ -348,21 +368,15 @@
   "frameFamilies": [
     {
       "id": "danger",
-      "name": "AI as danger",
-      "color": "#eb6834",
-      "colorDark": "#d95926"
+      "name": "Danger"
     },
     {
       "id": "contrast",
-      "name": "Capability or bubble",
-      "color": "#2a78d6",
-      "colorDark": "#3987e5"
+      "name": "Capability or bubble"
     },
     {
       "id": "neutral",
-      "name": "No stance",
-      "color": "#56606B",
-      "colorDark": "#9BA4AF"
+      "name": "No stance"
     }
   ]
 }
