@@ -244,6 +244,11 @@ def main():
     parser.add_argument("--source", choices=["nyt", "guardian", "both"], default="both")
     parser.add_argument("--dry-run", action="store_true", help="report without writing")
     parser.add_argument("--report", action="store_true", help="also list what was filtered out")
+    parser.add_argument("--reconsider-drops", metavar="REASON", nargs="?", const="all",
+                        help="forget why items were filtered out before, so a changed rule "
+                             "can reach them. Pass a reason to forget only that one. Without "
+                             "this, widening a rule changes nothing for items already judged, "
+                             "because a seen item is never re-examined.")
     args = parser.parse_args()
 
     start = datetime.strptime(args.start, "%Y-%m-%d").replace(tzinfo=timezone.utc)
@@ -257,6 +262,22 @@ def main():
         sys.exit("data/news_rules.json is missing.")
     events = load("events.json", []) or []
     seen = load("news_seen.json", {}) or {}
+
+    if args.reconsider_drops:
+        wanted = args.reconsider_drops
+        forget = [k for k, v in seen.items()
+                  if isinstance(v, dict) and v.get("dropped")
+                  and (wanted == "all" or v["dropped"] == wanted)]
+        for key in forget:
+            del seen[key]
+        kept = sum(1 for v in seen.values() if isinstance(v, dict) and v.get("dropped"))
+        print(f"Reconsidering {len(forget)} items filtered out by an earlier run "
+              f"({'every reason' if wanted == 'all' else repr(wanted)}); "
+              f"{kept} drop records left in place.", flush=True)
+        if not forget:
+            warn("No drop records matched, so nothing extra will be reconsidered. "
+                 "Check the reason string against what the run actually printed.")
+
     config = load("config.json", {}) or {}
     valid = {t["symbol"] for t in config.get("tickers", [])}
 
