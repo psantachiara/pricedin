@@ -25,6 +25,15 @@ on:
         required: false
         default: false
         type: boolean
+      reconsider_drops:
+        description: "Re-examine items a previous run filtered out (needed after widening a rule)"
+        required: false
+        default: "no"
+        type: choice
+        options:
+          - "no"
+          - "no tracked company in the headline"
+          - "all"
 
 permissions:
   contents: write
@@ -59,8 +68,11 @@ jobs:
           if [ -n "${{ inputs.to }}" ]; then TO='--to'; fi
           DRY=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then DRY='--dry-run'; fi
+          RECON=""
+          if [ "${{ inputs.reconsider_drops }}" != "no" ]; then RECON='--reconsider-drops'; fi
           python scripts/fetch_api.py --source "${{ inputs.source }}" \
-            --from "${{ inputs.from }}" $TO ${TO:+"${{ inputs.to }}"} --report $DRY
+            --from "${{ inputs.from }}" $TO ${TO:+"${{ inputs.to }}"} \
+            $RECON ${RECON:+"${{ inputs.reconsider_drops }}"} --report $DRY
 
       - name: Fetch prices and thumbnails
         if: inputs.dry_run != true
