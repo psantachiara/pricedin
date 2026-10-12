@@ -1093,18 +1093,27 @@
       let items;
       if (state.view === 'detailed') {
         const laneIndex = new Map(lanes.map((l, k) => [l.id, k]));
-        items = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org)).map((e) => ({
-          t: e.t,
-          cx: x(dates[e.t]),
-          cy: lanesTop + laneIndex.get(e.org) * laneH + laneH / 2,
-          evs: [e],
-        }));
-        const seen = new Map();
-        for (const it of items) {
-          const k = `${Math.round(it.cx / 6)}:${it.cy}`;
-          const n = seen.get(k) || 0;
-          it.cx += n * 7;
-          seen.set(k, n + 1);
+        // Crowded days collapse into one mark per lane, exactly as the
+        // industry total does, rather than being nudged sideways to make
+        // room. Nudging bought space by moving a dot off its own date: with
+        // every feed on, a busy lane pushed later items a hundred pixels
+        // right, so they sat under the wrong month and ran past the end of
+        // the chart. A cluster keeps every mark on the date it happened and
+        // carries the count in the dot and the tooltip, so nothing is hidden
+        // and nothing is misplaced.
+        items = [];
+        const inLane = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org));
+        for (const [org, evs] of d3.groups(inLane, (e) => e.org)) {
+          const cy = lanesTop + laneIndex.get(org) * laneH + laneH / 2;
+          const byT = d3.groups(evs, (e) => e.t).sort((a, b) => a[0] - b[0]);
+          const lane = [];
+          for (const [t, group] of byT) {
+            const px = x(dates[t]);
+            const last = lane[lane.length - 1];
+            if (last && px - last.cx < 12) last.evs.push(...group);
+            else lane.push({ t, cx: px, cy, evs: [...group] });
+          }
+          items.push(...lane);
         }
       } else {
         items = [];
@@ -1120,8 +1129,16 @@
         it.ids = it.evs.map((e) => e.id);
         it.key = 'c:' + it.ids.join('|');
         it.count = it.ids.length;
-        const kinds = new Set(it.evs.map((e) => leadTopic(e)));
-        it.color = kinds.size === 1 ? eventColor(it.evs[0]) : 'var(--ink)';
+        // A cluster takes the colour of the subject most of its items are
+        // about, and carries a ring when it is mixed. Painting every mixed
+        // cluster in ink was fine while clusters were rare, but at a wide
+        // range almost every mark is mixed, and the row went black — which
+        // spends the one axis that carries colour to say "more than one".
+        const tally = d3.rollup(it.evs, (v) => v.length, (e) => leadTopic(e));
+        const ranked = [...tally].sort((a, b) => b[1] - a[1]);
+        const lead = ranked.length ? ranked[0][0] : null;
+        it.color = lead ? topicColor(lead) : 'var(--muted)';
+        it.mixed = tally.size > 1;
       }
       for (const it of items) {
         const evs = it.ids.map((id) => eventBy.get(id));
@@ -1180,10 +1197,13 @@
       }
       state.animated = true;
 
-      gm.append('circle').attr('class', 'dot')
-        .attr('r', (d) => (d.count > 1 ? 6 + Math.min(4, Math.sqrt(d.count - 1) * 1.7) : 4.5))
+      gm.append('circle')
+        .attr('class', (d) => 'dot' + (d.mixed ? ' mixed' : ''))
+        .attr('r', (d) => (d.count > 1 ? 5.5 + Math.min(3.5, Math.sqrt(d.count - 1) * 1.5) : 4.5))
         .style('fill', (d) => d.color);
-      gm.filter((d) => d.count > 1).append('text').attr('class', 'count')
+      // The numeral only where the dot is big enough to hold it legibly;
+      // below that the larger disc already says "more than one".
+      gm.filter((d) => d.count >= 4).append('text').attr('class', 'count')
         .attr('text-anchor', 'middle').attr('dy', '0.35em').text((d) => d.count);
       gm.append('circle').attr('class', 'hit').attr('r', 11);
 
