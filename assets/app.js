@@ -238,6 +238,14 @@
         const ends = entry.to ? parseDate(entry.to) : null;
         if (begins && to < begins) return 0;
         if (ends && from > new Date(+ends + 864e5)) return 0;
+        // A publisher's own index is complete over the range it was read for,
+        // except where it is not: the NYT archive stops on 7 January 2026 and
+        // resumes in February. A recorded week overrides the blanket claim, so
+        // a hole in the source reads as a hole rather than as a quiet week.
+        if (entry.weeks) {
+          const recorded = entry.weeks[isoDay(from)];
+          if (recorded != null) return Math.max(0, Math.min(1, +recorded));
+        }
         return 1;
       }
       if (!entry || !entry.weeks) return null;
@@ -796,7 +804,8 @@
           + 'stretches below are where that record is thin rather than where the news was.';
       } else if (indexed.length) {
         legend.textContent = 'Read from the publishers’ own archives, so this is everything '
-          + 'they published on the subject — the record is even across the whole period.';
+          + 'they published on the subject. Where an archive has a hole of its own the strip '
+          + 'below marks it — the Times’ archive stops on 7 January 2026 and resumes in February.';
       } else {
         legend.textContent = 'Announcements added by hand, including from company blogs. '
           + 'A deliberate selection, not a sample of anything.';
