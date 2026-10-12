@@ -261,10 +261,15 @@ def extract_json(text: str):
 
 
 def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
+    # No `temperature`: the 5.x models reject it outright ("`temperature` is
+    # deprecated for this model"), so the sampling temperature cannot be
+    # pinned to 0. Coding is therefore not bit-for-bit reproducible — a
+    # re-run may differ on genuinely borderline items. Every row records the
+    # model and rubric version so a published figure can name the pass that
+    # produced it, which is what reproducibility means here.
     body = {
         "model": model,
         "max_tokens": 64 * len(batch) + 512,
-        "temperature": 0,
         "system": [{"type": "text", "text": rubric,
                     "cache_control": {"type": "ephemeral"}}],
         "messages": [{"role": "user", "content": render_items(batch)}],
@@ -634,19 +639,20 @@ def phase_probe(args) -> int:
     if workspace:
         headers["anthropic-workspace-id"] = workspace
 
-    # Smallest thing that still exercises the same shape as the real call.
+    # First attempt mirrors the real call, so a 200 here means the coding path
+    # will work. The rest are variants, to localise a refusal if it does not.
     attempts = [
-        ("plain, no cache_control", {
-            "model": args.model, "max_tokens": 64, "temperature": 0,
-            "system": "Reply with the single word: ok",
-            "messages": [{"role": "user", "content": "ping"}]}),
-        ("system as a block, cached", {
-            "model": args.model, "max_tokens": 64, "temperature": 0,
+        ("the real shape: cached system block, no temperature", {
+            "model": args.model, "max_tokens": 64,
             "system": [{"type": "text", "text": "Reply with the single word: ok",
                         "cache_control": {"type": "ephemeral"}}],
             "messages": [{"role": "user", "content": "ping"}]}),
-        ("no temperature", {
+        ("plain system string, no cache_control", {
             "model": args.model, "max_tokens": 64,
+            "system": "Reply with the single word: ok",
+            "messages": [{"role": "user", "content": "ping"}]}),
+        ("with temperature — 5.x models reject this", {
+            "model": args.model, "max_tokens": 64, "temperature": 0,
             "system": "Reply with the single word: ok",
             "messages": [{"role": "user", "content": "ping"}]}),
     ]
