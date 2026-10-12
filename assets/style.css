@@ -165,10 +165,27 @@ h1 {
   flex-wrap: wrap;
   gap: 14px 26px;
   align-items: flex-end;
-  /* right edge stops where the plot does, so the row does not overhang the
-     chart it governs */
-  padding: 18px var(--plot-right, 14px) 22px 0;
+  /* The row is set over the plotted area, not over the page: it starts where
+     the first company chip starts and stops where the plot stops, so the
+     controls that govern the chart line up with the chart and with every
+     other control row beneath it. The slack between them is shared out so
+     both ends actually meet those edges. */
+  justify-content: space-between;
+  padding: 18px var(--plot-right, 14px) 22px var(--plot-left, 104px);
 }
+/* Spread the slack only while the controls actually fit on one line. Once the
+   row wraps, space-between pulls the first line apart into wide gaps and
+   leaves the last control stranded alone at the left, which reads as a
+   mistake rather than as alignment. Below this width the row packs from the
+   left instead and simply keeps its new starting point. */
+@media (max-width: 1320px) {
+  .controls { justify-content: flex-start; }
+}
+/* The industry-total view shows one control more — combining companies — and
+   with it the row does not fit on one line at any width the page reaches, so
+   it is never spread. The weighting control carries `hidden` in the
+   per-company view, which is what distinguishes the two here. */
+.controls:not(:has(> .control[hidden])) { justify-content: flex-start; }
 
 .control { display: flex; flex-direction: column; gap: 6px; }
 .control[hidden] { display: none; }
