@@ -282,21 +282,35 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
     for attempt in range(max_attempts):
         try:
             r = session.post(API, headers=headers, json=body, timeout=180)
+
+            # Transient: worth another go.
             if r.status_code in (429, 500, 502, 503, 529):
-                raise requests.HTTPError(f"HTTP {r.status_code}: {r.text[:200]}")
-            if r.status_code == 401:
+                raise requests.HTTPError(f"HTTP {r.status_code}: {r.text[:300]}")
+
+            # Everything else in the 4xx range is a request the API will
+            # refuse identically however many times it is sent, so it stops
+            # the run at once and prints what the API actually said. Retrying
+            # these wastes minutes and tells you nothing.
+            if 400 <= r.status_code < 500:
+                hint = ""
+                low = r.text.lower()
+                if r.status_code == 401:
+                    hint = ("\nThe key was rejected. Check the "
+                            "ANTHROPIC_API_KEY secret; it starts 'sk-ant-'.")
+                elif "workspace" in low:
+                    hint = ("\nThis key reaches more than one workspace, so "
+                            "every request needs an anthropic-workspace-id "
+                            "header. Either set an ANTHROPIC_WORKSPACE_ID "
+                            "secret, or make a key scoped to one workspace.")
+                elif "credit" in low or "billing" in low:
+                    hint = ("\nThis looks like a billing problem. Check the "
+                            "credit balance at platform.claude.com.")
+                elif "model" in low:
+                    hint = ("\nThe model id may not be available to this "
+                            "account. Try claude-sonnet-5-5.")
                 raise SystemExit(
-                    "API key rejected (401). Check the ANTHROPIC_API_KEY "
-                    "secret — it should start with 'sk-ant-'.")
-            if r.status_code == 400 and "workspace" in r.text.lower():
-                raise SystemExit(
-                    "The API wants a workspace id (400). This key reaches "
-                    "more than one workspace, which needs an "
-                    "anthropic-workspace-id header on every request.\n"
-                    "Either set an ANTHROPIC_WORKSPACE_ID secret to the "
-                    "workspace id, or create a key scoped to a single "
-                    "workspace, which needs no header.\n"
-                    f"API said: {r.text[:300]}")
+                    f"HTTP {r.status_code} from the API, which will not "
+                    f"change on a retry.\n\nAPI said:\n{r.text[:1500]}{hint}")
             r.raise_for_status()
             payload = r.json()
             usage.add(payload.get("usage") or {})
@@ -456,7 +470,14 @@ def phase_code(args) -> int:
     session = requests.Session()
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    # A refusal the API will repeat identically — a bad key, a model this
+    # account cannot reach — would otherwise be discovered once per batch, so
+    # the first one stops the queue instead of running 238 more.
+    fatal = threading.Event()
+
     def work(bi: int, chunk: list[dict]):
+        if fatal.is_set():
+            return bi, 0
         numbered = list(enumerate(chunk))
         replies = call_model(session, key, args.model, rubric, numbered, usage)
         by_i = {}
@@ -488,13 +509,22 @@ def phase_code(args) -> int:
             counted.update(local)
         return bi, len(lines)
 
-    coded = 0
+    coded, stopped = 0, None
     try:
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             futures = {pool.submit(work, i, c): i for i, c in enumerate(batches)}
             for n, fut in enumerate(as_completed(futures), start=1):
                 try:
                     _, got = fut.result()
+                except SystemExit as exc:
+                    # Not retryable and not batch-specific: stop the queue,
+                    # keep what is already written, and report once.
+                    if not fatal.is_set():
+                        fatal.set()
+                        stopped = str(exc)
+                        for f in futures:
+                            f.cancel()
+                    continue
                 except Exception as exc:                 # noqa: BLE001
                     print(f"  batch failed permanently: {exc}", file=sys.stderr)
                     continue
@@ -508,6 +538,15 @@ def phase_code(args) -> int:
         print("\nInterrupted. Progress is on disk; dispatch again to resume.")
     finally:
         out.close()
+
+    if stopped:
+        print("\n" + "=" * 68, file=sys.stderr)
+        print("STOPPED — the API refused the request.", file=sys.stderr)
+        print("=" * 68, file=sys.stderr)
+        print(stopped, file=sys.stderr)
+        print(f"\n{coded} items were coded before stopping and are saved. "
+              f"Fix the cause and dispatch again to resume.", file=sys.stderr)
+        return 3
 
     secs = time.time() - started
     print(f"\nCoded {coded} items in {secs / 60:.1f} min "
@@ -578,10 +617,67 @@ def phase_apply(args) -> int:
     return 0
 
 
+def phase_probe(args) -> int:
+    """Send one small request and print everything, to diagnose a refusal."""
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    workspace = os.environ.get("ANTHROPIC_WORKSPACE_ID", "").strip()
+
+    key_note = (f"set, {len(key)} chars, starts {key[:7]}" if key else "NOT SET")
+    print("environment")
+    print(f"  ANTHROPIC_API_KEY      {key_note}")
+    print(f"  ANTHROPIC_WORKSPACE_ID {workspace or '(not set)'}")
+    if not key:
+        return 2
+
+    headers = {"x-api-key": key, "anthropic-version": API_VERSION,
+               "content-type": "application/json"}
+    if workspace:
+        headers["anthropic-workspace-id"] = workspace
+
+    # Smallest thing that still exercises the same shape as the real call.
+    attempts = [
+        ("plain, no cache_control", {
+            "model": args.model, "max_tokens": 64, "temperature": 0,
+            "system": "Reply with the single word: ok",
+            "messages": [{"role": "user", "content": "ping"}]}),
+        ("system as a block, cached", {
+            "model": args.model, "max_tokens": 64, "temperature": 0,
+            "system": [{"type": "text", "text": "Reply with the single word: ok",
+                        "cache_control": {"type": "ephemeral"}}],
+            "messages": [{"role": "user", "content": "ping"}]}),
+        ("no temperature", {
+            "model": args.model, "max_tokens": 64,
+            "system": "Reply with the single word: ok",
+            "messages": [{"role": "user", "content": "ping"}]}),
+    ]
+
+    session = requests.Session()
+    for label, body in attempts:
+        print(f"\n--- {label} ---")
+        print("  sending:", json.dumps(
+            {k: v for k, v in body.items() if k != "system"}))
+        try:
+            r = session.post(API, headers=headers, json=body, timeout=60)
+        except Exception as exc:                          # noqa: BLE001
+            print(f"  network error: {type(exc).__name__}: {exc}")
+            continue
+        print(f"  HTTP {r.status_code}")
+        for h in ("request-id", "anthropic-workspace-id",
+                  "anthropic-ratelimit-requests-limit"):
+            if h in r.headers:
+                print(f"  {h}: {r.headers[h]}")
+        print(f"  body: {r.text[:900]}")
+        if r.status_code == 200:
+            print("\n  ^ this shape works. "
+                  "If an earlier shape failed, that feature is the cause.")
+    print("\nProbe done. Send this whole output back.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("phase", choices=("code", "apply"))
+    ap.add_argument("phase", choices=("code", "apply", "probe"))
     ap.add_argument("--model", default=DEFAULT_MODEL,
                     help=f"model id (default {DEFAULT_MODEL})")
     ap.add_argument("--scope", choices=("all", "sample"), default="all")
@@ -594,6 +690,8 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    if args.phase == "probe":
+        return phase_probe(args)
     if args.phase == "code":
         return phase_code(args)
     return phase_apply(args)
