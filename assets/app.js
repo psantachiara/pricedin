@@ -725,19 +725,21 @@
     const topicWrap = $('#topics');
     const frameWrap = $('#frames');
     buildChips(topicWrap, topicChips, 'topics', (t) => topicColor(t.id));
+    // The three families sit side by side on one line, each as a group with
+    // its name above its own chips. Stacked rows cost three lines of height
+    // for what is really one axis; grouping keeps the families legible — the
+    // thing colour no longer carries — without spending that height. The
+    // label sits above rather than beside so the groups can butt up against
+    // each other and still read as separate.
     for (const fam of families) {
       const members = frames.filter((f) => f.family === fam.id);
       if (!members.length) continue;
-      // label and chips travel together, so a wrapping row never strands a
-      // family name at the end of the line above its own chips
-      // one row per family, so danger / capability-or-bubble / no-stance reads
-      // down the rows rather than needing a colour of its own
-      const row = el('div', { class: 'fam-row' },
+      const group = el('div', { class: 'fam-group' },
         el('span', { class: 'fam-label', text: fam.name }));
       const inner = el('div', { class: 'cats fam-chips' });
       buildChips(inner, members, 'frames', () => 'var(--muted)', frames);
-      row.append(inner);
-      frameWrap.append(row);
+      group.append(inner);
+      frameWrap.append(group);
     }
 
     // the two thresholds
@@ -882,6 +884,16 @@
       const W = Math.max(300, Math.floor(stage.clientWidth));
       const mobile = W < 640;
       const M = { l: mobile ? 70 : 104, r: mobile ? 8 : 14, t: 12 };
+
+      // The controls above and below the chart line up with the plotted area,
+      // not with the page, so the axis gutter and the right inset are
+      // published for the stylesheet to use. Set from the same numbers that
+      // draw the chart, so the two cannot drift apart — including across the
+      // mobile breakpoint, where both insets change.
+      const root = document.documentElement.style;
+      root.setProperty('--plot-left', `${M.l}px`);
+      root.setProperty('--plot-right', `${M.r}px`);
+
       const chartH = mobile ? 230 : 330;
       const top = M.t;
       const bottom = top + chartH;
