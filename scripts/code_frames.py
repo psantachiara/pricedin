@@ -248,7 +248,7 @@ def render_items(batch: list[tuple[int, dict]]) -> str:
     return "\n".join(lines)
 
 
-def extract_json(text: str, prefilled: bool = True):
+def extract_json(text: str, prefilled: bool = False):
     """Pull every complete record out of a reply, tolerating a truncated tail.
 
     A whole-array json.loads throws away 24 good records because the 25th was
@@ -264,12 +264,13 @@ def extract_json(text: str, prefilled: bool = True):
         text = re.sub(r"^```[a-z]*\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
 
-    start = text.find("[")
-    if start < 0:
-        raise ValueError(f"no JSON array in reply (reply began {text[:120]!r})")
-
+    # Scan the whole reply for balanced {...} objects rather than looking for
+    # the array's opening bracket. Locating "[" is unreliable: the first one
+    # in the text is usually the inner "topics":[...] of the first record, and
+    # starting there lands mid-object and finds nothing. Brace depth needs no
+    # such anchor, and it skips any preamble for free.
     out, depth, buf, in_str, esc = [], 0, [], False, False
-    for ch in text[start + 1:]:
+    for ch in text:
         if in_str:
             buf.append(ch)
             if esc:
@@ -313,17 +314,15 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
     # produced it, which is what reproducibility means here.
     # max_tokens is generous because a reply cut off at the ceiling is billed
     # in full and yields nothing: the cheap failure is a budget that is never
-    # reached. The assistant turn is primed with "[" so the reply starts
-    # inside the array and cannot spend tokens on a preamble.
+    # reached. Priming the assistant turn with "[" would suppress a preamble,
+    # but these models refuse a trailing assistant message, so the budget
+    # absorbs any preamble instead and the parser skips past it.
     body = {
         "model": model,
         "max_tokens": 160 * len(batch) + 1024,
         "system": [{"type": "text", "text": rubric,
                     "cache_control": {"type": "ephemeral"}}],
-        "messages": [
-            {"role": "user", "content": render_items(batch)},
-            {"role": "assistant", "content": "["},
-        ],
+        "messages": [{"role": "user", "content": render_items(batch)}],
     }
     headers = {"x-api-key": key, "anthropic-version": API_VERSION,
                "content-type": "application/json"}
@@ -348,9 +347,12 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
             # the run at once and prints what the API actually said. Retrying
             # these wastes minutes and tells you nothing.
             if 400 <= r.status_code < 500:
+                # Keyed on distinctive phrases, most specific first. A loose
+                # match (any mention of "model", say) prints a confidently
+                # wrong diagnosis, which is worse than printing none.
                 hint = ""
                 low = r.text.lower()
-                if r.status_code == 401:
+                if r.status_code == 401 or "x-api-key" in low:
                     hint = ("\nThe key was rejected. Check the "
                             "ANTHROPIC_API_KEY secret; it starts 'sk-ant-'.")
                 elif "workspace" in low:
@@ -358,12 +360,16 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
                             "every request needs an anthropic-workspace-id "
                             "header. Either set an ANTHROPIC_WORKSPACE_ID "
                             "secret, or make a key scoped to one workspace.")
-                elif "credit" in low or "billing" in low:
+                elif "credit" in low or "billing" in low or "quota" in low:
                     hint = ("\nThis looks like a billing problem. Check the "
                             "credit balance at platform.claude.com.")
-                elif "model" in low:
-                    hint = ("\nThe model id may not be available to this "
-                            "account. Try claude-sonnet-5-5.")
+                elif "not found" in low or "does not exist" in low:
+                    hint = (f"\nThe model id {model!r} may not be available "
+                            "to this account. Try claude-sonnet-5-5.")
+                elif "deprecated" in low or "does not support" in low:
+                    hint = ("\nThis model rejects one of the request's "
+                            "options. The message above names which; remove "
+                            "it rather than retrying.")
                 raise SystemExit(
                     f"HTTP {r.status_code} from the API, which will not "
                     f"change on a retry.\n\nAPI said:\n{r.text[:1500]}{hint}")
