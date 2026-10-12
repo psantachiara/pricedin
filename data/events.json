@@ -133456,5 +133456,124 @@
     "tickers": [],
     "summary": "George Williamson says ‘national resilience’ is key focus of ATI amid US and China’s runaway leadership in field",
     "thumbnail": "https://media.guim.co.uk/86f6ce436080552a980f816a4c5ba14072a37b86/545_213_5198_4158/500.jpg"
+  },
+  {
+    "id": "20261011-ai-has-a-god-problem-stretching-from-the-vatican",
+    "date": "2026-10-11",
+    "title": "AI Has a God Problem Stretching From the Vatican to the Baptist Pulpit",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/tech/ai/ai-has-a-god-problem-stretching-from-the-vatican-to-the-baptist-pulpit-f417b2fd?mod=rss_Technology",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "Religious leaders are weighing in, creating a new political risk for the creators of the technology.",
+    "thumbnail": "https://images.wsj.net/im-80369362",
+    "paywall": true
+  },
+  {
+    "id": "20261011-ai-is-less-regulated-than-milk-says-microsoft-pr",
+    "date": "2026-10-11",
+    "title": "AI is less regulated than milk, says Microsoft president",
+    "source": "BBC",
+    "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo?at_medium=RSS&at_campaign=rss",
+    "org": "microsoft",
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT"
+    ],
+    "summary": "Brad Smith calls for global rules on AI, and says the UK is in the \"best position\" to lead the charge."
+  },
+  {
+    "id": "20261011-amazon-in-talks-to-buy-ai-startup-decart-for-aro",
+    "date": "2026-10-11",
+    "title": "Amazon in Talks to Buy AI Startup Decart for Around $7 Billion",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad?mod=rss_Technology",
+    "org": "amazon",
+    "category": "deals",
+    "relevance": 2,
+    "topics": [
+      "deals",
+      "compute"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "AMZN"
+    ],
+    "summary": "The San Francisco company’s software makes it easier for developers to switch between different AI chips.",
+    "thumbnail": "https://images.wsj.net/im-92736782",
+    "paywall": true
+  },
+  {
+    "id": "20261011-uk-to-strengthen-cyber-defences-as-minister-call",
+    "date": "2026-10-11",
+    "title": "UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/12/uk-strengthen-cyber-defences-minister-ai-firms-safety",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "Kanishka Narayan to say Britain cannot rely entirely on tech companies amid rising global concern over AI dangers",
+    "thumbnail": "https://media.guim.co.uk/9f8f14e2a01ec8c9a4d21b8b65ed45042405e31d/820_0_5862_4690/500.jpg"
+  },
+  {
+    "id": "20261011-us-s-reagan-era-economic-promises-return-as-trum",
+    "date": "2026-10-11",
+    "title": "US’s Reagan-era economic promises return as Trump’s AI-fueled growth fantasy",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/business/2026/oct/11/trump-ai-economy-reagan",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "‘Even if AI supercharged the economy, its impact on the government’s finances would be muted’",
+    "thumbnail": "https://media.guim.co.uk/c01cee88362c0355e50eac343016f771811f0cd2/355_0_3701_2960/500.jpg"
+  },
+  {
+    "id": "20261012-ftx-s-old-bitcoin-mining-assets-are-now-part-of",
+    "date": "2026-10-12",
+    "title": "FTX’s Old Bitcoin-Mining Assets Are Now Part of the AI Boom",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/finance/currencies/ftxs-old-bitcoin-mining-assets-are-now-part-of-the-ai-boom-76fe9037?mod=rss_markets_main",
+    "org": null,
+    "category": "other",
+    "relevance": 2,
+    "topics": [],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "A bitcoin-mining business that appeared left for dead after the collapse of Sam Bankman-Fried’s crypto empire is being resuscitated to serve the artificial-intelligence build-out.",
+    "thumbnail": "https://images.wsj.net/im-91327820",
+    "paywall": true
   }
 ]
