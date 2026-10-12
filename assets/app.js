@@ -1042,6 +1042,17 @@
       const say = (...kids) => note.append(el('p', {}, ...kids));
       const b = (text) => el('b', { text });
 
+      // What the percentages are measured against governs how all three read,
+      // but a reader needs it once rather than every time they glance at the
+      // row, so it hangs off the label instead of taking a line of its own.
+      const label = $('#lbl-compare');
+      if (label) {
+        label.title = `Each percentage already has ${state.benchmark}’s own move over the same `
+          + 'days taken out of it, so it says whether those stocks did better or worse than '
+          + 'the market — not how much they rose. A gap is what followed an announcement, '
+          + 'not what it caused.';
+      }
+
       // In the industry total every announcement on a day carries the same
       // move, so counting announcements would claim far more evidence than
       // there is. The comparison belongs to the per-company view.
@@ -1095,12 +1106,6 @@
       // explained in plain words, with the subtraction that makes them
       // comparable stated first because everything else depends on it.
       const days = `${state.window} trading ${state.window === 1 ? 'day' : 'days'}`;
-      note.append(el('p', { class: 'compare-lead' },
-        'Each percentage already has ', b(state.benchmark), '’s own move over the same days '
-        + 'taken out of it, so it says whether those stocks did better or worse than the '
-        + 'market — not how much they rose. A gap is what followed an announcement, not what '
-        + 'it caused.'));
-
       const move = (v) => (Math.abs(v) < 5e-5
         ? `matched ${state.benchmark}`
         : `${v > 0 ? 'beat' : 'lagged'} ${state.benchmark} by `
@@ -1145,11 +1150,14 @@
               + 'zero is weak evidence on its own.'));
       note.append(key);
 
+      // Not a caption but an invitation: the one move that shows the figure
+      // above depends on what it is being compared against rather than on
+      // danger framing alone. Kept short, since its job is to be acted on.
       if (s.bubbleInB > 0 && state.frames.has('bubble')) {
-        say('Bubble-framed announcements are counted among everything else. Switching ',
-          b('Bubble'), ' off takes those ', b(s.bubbleInB.toLocaleString()),
-          ' out of the comparison, which is the quickest way to see how much of this gap '
-          + 'depends on them.');
+        note.append(el('p', { class: 'compare-try' },
+          'Try: switching ', b('Bubble'), ' off takes ', b(s.bubbleInB.toLocaleString()),
+          ' bubble-framed announcements out of everything else, and shows how much of this '
+          + 'gap depends on them.'));
       }
     }
 

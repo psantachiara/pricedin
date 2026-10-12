@@ -775,10 +775,23 @@ select {
   color: var(--muted);
 }
 .compare-note b { color: var(--ink); font-weight: 600; }
-/* The subtraction that makes the three figures comparable is what a reader
-   has to hold to read any of them, so it is stated once above the three
-   rather than repeated inside each. No measure cap, so it runs the width of
-   the chart like every other statement in this column. */
+/* What the percentages are measured against is carried by the row's label
+   rather than by a line of body text, so the dotted rule marks the label as
+   holding something to read and the focus style keeps it reachable without a
+   mouse. */
+.compare > .chips-label {
+  cursor: help;
+  text-decoration: underline dotted var(--rule);
+  text-underline-offset: 3px;
+}
+.compare > .chips-label:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+/* An invitation to act, not a caption: set apart from the definitions above
+   so it does not read as a fourth one. */
+.compare-note p.compare-try { margin-top: 8px; }
 /* One column per figure, in the same order, so each explanation sits under
    the thing it explains instead of in a list the reader has to map back. */
 .compare-key {
