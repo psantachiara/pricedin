@@ -953,15 +953,11 @@
         if (e.t < i0 || e.t > i1 || !e.tickers.length) continue;
         const abn = eventAbn(e);
         if (abn == null) continue;
-        items.push({
-          t: e.t, abn,
-          danger: isDangerFramed(e),
-          bubble: (e.frames || {}).bubble != null,
-        });
+        items.push({ t: e.t, abn, danger: isDangerFramed(e) });
       }
       const A = items.filter((d) => d.danger);
       const B = items.filter((d) => !d.danger);
-      const out = { nA: A.length, nB: B.length, bubbleInB: B.filter((d) => d.bubble).length };
+      const out = { nA: A.length, nB: B.length };
       if (A.length < DANGER_MIN_N || B.length < DANGER_MIN_N) return out;
 
       const mA = d3.mean(A, (d) => d.abn);
@@ -1149,16 +1145,6 @@
               '. Each combination of chips is a fresh comparison, so one selection clearing '
               + 'zero is weak evidence on its own.'));
       note.append(key);
-
-      // Not a caption but an invitation: the one move that shows the figure
-      // above depends on what it is being compared against rather than on
-      // danger framing alone. Kept short, since its job is to be acted on.
-      if (s.bubbleInB > 0 && state.frames.has('bubble')) {
-        note.append(el('p', { class: 'compare-try' },
-          'Try: switching ', b('Bubble'), ' off takes ', b(s.bubbleInB.toLocaleString()),
-          ' bubble-framed announcements out of everything else, and shows how much of this '
-          + 'gap depends on them.'));
-      }
     }
 
     const stage = $('#stage');
