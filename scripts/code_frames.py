@@ -248,16 +248,60 @@ def render_items(batch: list[tuple[int, dict]]) -> str:
     return "\n".join(lines)
 
 
-def extract_json(text: str):
-    """The model is told to return bare JSON; tolerate a fence anyway."""
+def extract_json(text: str, prefilled: bool = True):
+    """Pull every complete record out of a reply, tolerating a truncated tail.
+
+    A whole-array json.loads throws away 24 good records because the 25th was
+    cut off at max_tokens. This instead scans for top-level {...} objects and
+    parses them one at a time, so a truncated reply yields everything that did
+    arrive and only the unfinished record is lost. The items it could not
+    account for are reported by the caller and retried on the next dispatch.
+    """
+    if prefilled:
+        text = "[" + text          # the assistant turn was primed with "["
     text = text.strip()
     if text.startswith("```"):
         text = re.sub(r"^```[a-z]*\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
-    start, end = text.find("["), text.rfind("]")
-    if start < 0 or end < 0:
-        raise ValueError("no JSON array in reply")
-    return json.loads(text[start:end + 1])
+
+    start = text.find("[")
+    if start < 0:
+        raise ValueError(f"no JSON array in reply (reply began {text[:120]!r})")
+
+    out, depth, buf, in_str, esc = [], 0, [], False, False
+    for ch in text[start + 1:]:
+        if in_str:
+            buf.append(ch)
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+            buf.append(ch)
+            continue
+        if ch == "{":
+            depth += 1
+            buf.append(ch)
+            continue
+        if ch == "}":
+            depth -= 1
+            buf.append(ch)
+            if depth == 0:
+                try:
+                    out.append(json.loads("".join(buf)))
+                except json.JSONDecodeError:
+                    pass
+                buf = []
+            continue
+        if depth:
+            buf.append(ch)
+    if not out:
+        raise ValueError(f"no complete records in reply (began {text[:120]!r})")
+    return out
 
 
 def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
@@ -267,12 +311,19 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
     # re-run may differ on genuinely borderline items. Every row records the
     # model and rubric version so a published figure can name the pass that
     # produced it, which is what reproducibility means here.
+    # max_tokens is generous because a reply cut off at the ceiling is billed
+    # in full and yields nothing: the cheap failure is a budget that is never
+    # reached. The assistant turn is primed with "[" so the reply starts
+    # inside the array and cannot spend tokens on a preamble.
     body = {
         "model": model,
-        "max_tokens": 64 * len(batch) + 512,
+        "max_tokens": 160 * len(batch) + 1024,
         "system": [{"type": "text", "text": rubric,
                     "cache_control": {"type": "ephemeral"}}],
-        "messages": [{"role": "user", "content": render_items(batch)}],
+        "messages": [
+            {"role": "user", "content": render_items(batch)},
+            {"role": "assistant", "content": "["},
+        ],
     }
     headers = {"x-api-key": key, "anthropic-version": API_VERSION,
                "content-type": "application/json"}
@@ -320,6 +371,14 @@ def call_model(session, key, model, rubric, batch, usage, max_attempts=6):
             payload = r.json()
             usage.add(payload.get("usage") or {})
             text = "".join(b.get("text", "") for b in payload.get("content", []))
+
+            # Truncation is the one failure worth naming out loud: it means
+            # max_tokens is too low for this batch size, which no amount of
+            # retrying fixes, and the partial records are still usable.
+            if payload.get("stop_reason") == "max_tokens":
+                print(f"  reply hit max_tokens ({body['max_tokens']}) for a "
+                      f"batch of {len(batch)} — salvaging what parsed; lower "
+                      f"--batch or raise the ceiling", file=sys.stderr)
             return extract_json(text)
         except SystemExit:
             raise
@@ -688,7 +747,7 @@ def main() -> int:
                     help=f"model id (default {DEFAULT_MODEL})")
     ap.add_argument("--scope", choices=("all", "sample"), default="all")
     ap.add_argument("--sample-file", help="JSON list or {items:[…]} of sampled rows")
-    ap.add_argument("--batch", type=int, default=25, help="items per request")
+    ap.add_argument("--batch", type=int, default=15, help="items per request")
     ap.add_argument("--workers", type=int, default=4, help="requests in flight")
     ap.add_argument("--limit", type=int, help="stop after this many items")
     ap.add_argument("--redo", action="store_true",
