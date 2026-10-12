@@ -213,7 +213,14 @@
       "note": "Every article the paper published, read from its own archive.",
       "hosts": [
         "nytimes.com"
-      ]
+      ],
+      "gaps": {
+        "2026-01-05": 0.429,
+        "2026-01-12": 0.0,
+        "2026-01-19": 0.0,
+        "2026-01-26": 0.143
+      },
+      "gapNote": "The Archive API returns 694 documents for January 2026 against ~4,000 in neighbouring months, running 2026-01-01 to 2026-01-07 then stopping. Median output is unchanged at 101/day, so the month is truncated rather than thin. Three requests on separate days agree."
     },
     {
       "id": "Guardian",
