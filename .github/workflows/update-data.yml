@@ -58,6 +58,26 @@ jobs:
           python scripts/fetch_api.py --source "$SOURCE" \
             --from "$(date -u -d '10 days ago' +%Y-%m-%d)"
 
+      # The fetchers code new arrivals with keyword-v1, which is a weak
+      # instrument for something semantic. Re-coding them with the model keeps
+      # the corpus on one coder instead of letting a keyword-coded tail grow
+      # at the recent end of the series, where the analysis is most sensitive.
+      # Items already in llm_codes.jsonl are skipped, so this only touches the
+      # day's new rows: a few dozen items, a fraction of a cent.
+      - name: Code new arrivals with the model
+        env:
+          PYTHONUNBUFFERED: "1"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No ANTHROPIC_API_KEY configured; new items keep their"
+            echo "keyword-v1 codes. Add the secret to close this gap."
+            exit 0
+          fi
+          python scripts/prepare_codes.py
+          python scripts/code_frames.py code --model claude-sonnet-5-5
+          python scripts/code_frames.py apply
+
       - name: Fetch prices and thumbnails
         env:
           PYTHONUNBUFFERED: "1"
@@ -68,7 +88,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/prices.json data/thumbnails.json data/events.json \
-                  data/news_seen.json data/coverage.json
+                  data/news_seen.json data/coverage.json \
+                  data/llm_codes.jsonl data/keyword_codes.jsonl
           if git diff --cached --quiet; then
             echo "No data changes."
           else
