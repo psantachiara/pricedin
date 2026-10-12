@@ -687,6 +687,108 @@ select {
 .record-note.gap-note { opacity: 0.85; }
 .record-note[hidden] { display: none; }
 
+/* The comparison readout. It is a statement about the strip above it and the
+   prices above that, so it is set over the plotted area like the controls and
+   the provenance note, not as a page-wide aside. The rule across the top is
+   the only heavy line below the chart: this is the one place on the page that
+   answers the question the page is asking, and it should read as a result
+   rather than as another caption. */
+.compare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: 16px;
+  padding-right: var(--plot-right, 14px);
+  min-width: 0;
+}
+.compare > .chips-label {
+  flex: 0 0 auto;
+  width: calc(var(--plot-left, 104px) - 14px);
+  min-width: 0;
+}
+/* Basis 0, not auto: flex decides whether to wrap from the hypothetical size,
+   which for `auto` is the max-content width of the prose below — wide enough
+   to push the body onto its own line and out of alignment with the gutter.
+   min-width alone does not help, because it governs shrinking within a line
+   and not the decision to break one. */
+.compare-body {
+  flex: 1 1 0;
+  min-width: 0;
+  border-top: 2px solid var(--ink);
+  padding-top: 10px;
+}
+.compare-figures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 0;
+  font-variant-numeric: tabular-nums;
+}
+.compare-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid var(--rule);
+}
+.compare-cell:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+.compare-cell .ck,
+.compare-cell .cn,
+.compare-cell .cpm { font-size: 0.8125rem; color: var(--muted); }
+.compare-cell .cv {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+/* Colour is spent only where the sign is the point. The difference stays ink
+   while its range reaches across zero, so a gap that has not been
+   established never arrives already tinted as a result. */
+.compare-cell .cv.up { color: var(--up); }
+.compare-cell .cv.down { color: var(--down); }
+.compare-interval {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-top: 6px;
+}
+.compare-interval[hidden] { display: none; }
+/* No measure cap, matching the provenance lines directly below: these sit in
+   the same column and would otherwise wrap at a different width from the
+   statements they are read alongside. */
+.compare-note {
+  display: grid;
+  gap: 2px;
+  margin-top: 8px;
+}
+.compare-note p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.compare-note b { color: var(--ink); font-weight: 600; }
+@media (max-width: 620px) {
+  .compare > .chips-label { flex-basis: 100%; width: auto; }
+  .compare-cell {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 18px;
+  }
+  /* The drawing scales with its box, and below this width its end labels
+     scale down past reading size. They repeat the ± figure stated just above,
+     so dropping them loses nothing: what the drawing is for here is showing
+     at a glance whether the range reaches across zero. */
+  .compare-interval .end { display: none; }
+}
+
 .legend-note {
   margin: 0;
   display: flex;

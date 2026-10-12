@@ -28,6 +28,14 @@
     const sign = v > 0 ? '+' : v < 0 ? '−' : '';
     return sign + Math.abs(v * 100).toFixed(digits) + '%';
   }
+  // A gap between two percentage returns is a difference in percentage
+  // points, not a percentage, and saying so keeps it from being read as a
+  // return in its own right.
+  function fmtPP(v, digits = 2) {
+    if (v == null || !isFinite(v)) return '–';
+    const sign = v > 0 ? '+' : v < 0 ? '−' : '';
+    return sign + Math.abs(v * 100).toFixed(digits) + 'pp';
+  }
   function fmtTrillions(v) {
     if (v == null || !isFinite(v)) return '–';
     return '$' + v.toFixed(v >= 10 ? 1 : 2) + 'T';
@@ -165,6 +173,15 @@
           date,
           t,
           tickers: (e.tickers || []).filter((s) => tickerBy.has(s)),
+          // A topic id with no entry in config has no chip, so an item
+          // carrying only such ids passes no topic filter and cannot be
+          // shown by any combination of controls — it simply disappears,
+          // while still being counted in the corpus total. Dropping the
+          // unknown id instead sends the item to "No topic", where it is at
+          // least reachable. This is a guard, not a substitute for adding
+          // the topic to config: 971 items were lost this way to an `other`
+          // id that the coding rubric used and config never declared.
+          topics: (e.topics || []).filter((t) => topicBy.has(t)),
         };
       })
       .filter(Boolean)
@@ -894,6 +911,209 @@
       }
     }
 
+    // ---- Framing against reaction -------------------------------------
+    // The page exists to ask whether how AI is characterised relates to what
+    // the market does next. This states what the selected slice actually
+    // shows, so the question is testable by the reader instead of taken on
+    // trust.
+    //
+    // Two groups, both drawn from the announcements currently visible: those
+    // carrying a danger-family frame at or above the intensity threshold, and
+    // those carrying none. Both come through the same filters, so switching a
+    // frame chip off removes those items from the comparison group too. That
+    // is deliberate and it is the most useful thing here: most of the
+    // apparent danger effect in this corpus comes from bubble-framed items
+    // sitting among "everything else", and the honest way to show that is to
+    // let the reader take them out and watch the gap close.
+    const DANGER_MIN_N = 30;      // per group, below which the estimate is noise
+    const DANGER_MIN_DAYS = 20;   // clusters needed before an interval means much
+
+    const isDangerFramed = (e) => {
+      const fr = e.frames || {};
+      return Object.keys(fr).some((id) =>
+        familyOf(id) === 'danger' && fr[id] >= state.minIntensity);
+    };
+
+    // One announcement's abnormal return: the mean across the stocks it is
+    // tagged to, each measured the way the stems above measure it. Incomplete
+    // windows at the right edge are dropped rather than shown short.
+    function eventAbn(e) {
+      const vals = [];
+      for (const s of e.tickers) {
+        const R = reaction(close[s], e.t);
+        if (R && R.abn != null && !R.partial) vals.push(R.abn);
+      }
+      return vals.length ? d3.mean(vals) : null;
+    }
+
+    function compareStats() {
+      const [i0, i1] = domainIdx();
+      const items = [];
+      for (const e of visibleEvents()) {
+        if (e.t < i0 || e.t > i1 || !e.tickers.length) continue;
+        const abn = eventAbn(e);
+        if (abn == null) continue;
+        items.push({
+          t: e.t, abn,
+          danger: isDangerFramed(e),
+          bubble: (e.frames || {}).bubble != null,
+        });
+      }
+      const A = items.filter((d) => d.danger);
+      const B = items.filter((d) => !d.danger);
+      const out = { nA: A.length, nB: B.length, bubbleInB: B.filter((d) => d.bubble).length };
+      if (A.length < DANGER_MIN_N || B.length < DANGER_MIN_N) return out;
+
+      const mA = d3.mean(A, (d) => d.abn);
+      const mB = d3.mean(B, (d) => d.abn);
+      Object.assign(out, { mA, mB, diff: mA - mB });
+
+      // Spread clustered on the trading day. Announcements landing on one day
+      // share that day's market move, and three- and five-day windows overlap
+      // into their neighbours, so treating each announcement as an
+      // independent observation understates the spread by about half again —
+      // enough to turn an interval that includes zero into one that does not.
+      // Clustering is a single pass and lands within 0.01pp of a
+      // 3,000-replication block bootstrap on this corpus, which is why it is
+      // done this way rather than by resampling in the browser.
+      const byDay = new Map();
+      for (const it of items) {
+        const x = it.danger ? 1 / A.length : -1 / B.length;
+        const resid = it.abn - (it.danger ? mA : mB);
+        byDay.set(it.t, (byDay.get(it.t) || 0) + x * resid);
+      }
+      const G = byDay.size;
+      out.days = G;
+      if (G < DANGER_MIN_DAYS) return out;
+      let ss = 0;
+      for (const v of byDay.values()) ss += v * v;
+      // Finite-cluster correction. With G in the hundreds it is close to 1,
+      // and it can only widen the interval.
+      const se = Math.sqrt(ss * (G / (G - 1)));
+      if (!isFinite(se) || se <= 0) return out;
+      out.se = se;
+      out.half = 1.96 * se;
+      out.lo = out.diff - out.half;
+      out.hi = out.diff + out.half;
+      return out;
+    }
+
+    // Zero sits in the middle of the scale, so whether the interval reaches
+    // across it is the first thing visible and needs no reading.
+    function drawInterval(bar, s) {
+      // The viewBox is in real pixels at the drawing's natural width, so the
+      // labels render at the size they are written rather than at whatever
+      // the scale factor leaves of them.
+      const W = 560, H = 50, pad = 48, mid = W / 2;
+      const span = Math.max(Math.abs(s.lo), Math.abs(s.hi), 0.002) * 1.3;
+      const x = (v) => mid + (v / span) * (mid - pad);
+      const crosses = s.lo <= 0 && s.hi >= 0;
+      const tone = crosses ? 'var(--muted)' : (s.diff > 0 ? 'var(--up)' : 'var(--down)');
+      bar.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      bar.setAttribute('role', 'img');
+      bar.setAttribute('aria-label',
+        `The 95% interval for the difference runs from ${fmtPP(s.lo)} to ${fmtPP(s.hi)}, `
+        + `and ${crosses ? 'includes' : 'does not include'} no difference.`);
+      bar.innerHTML = `
+        <text x="${x(0) + 6}" y="13" font-size="11" fill="var(--muted)">no difference</text>
+        <line x1="${pad - 14}" y1="29" x2="${W - pad + 14}" y2="29" stroke="var(--grid)" stroke-width="1"/>
+        <line x1="${x(0)}" y1="17" x2="${x(0)}" y2="40" stroke="var(--ink)" stroke-width="1"/>
+        <line x1="${x(s.lo)}" y1="29" x2="${x(s.hi)}" y2="29" stroke="${tone}"
+              stroke-width="7" stroke-linecap="round" opacity="0.3"/>
+        <circle cx="${x(s.diff)}" cy="29" r="5" fill="${tone}"/>
+        <text class="end" x="${x(s.lo)}" y="46" font-size="11" fill="var(--muted)" text-anchor="middle">${fmtPP(s.lo)}</text>
+        <text class="end" x="${x(s.hi)}" y="46" font-size="11" fill="var(--muted)" text-anchor="middle">${fmtPP(s.hi)}</text>`;
+      // `hidden` is a property of HTMLElement, not of SVGElement: assigning to
+      // it here would set a stray expando and leave the attribute in place,
+      // so the bar would stay invisible. The attribute is the only handle.
+      bar.removeAttribute('hidden');
+    }
+
+    function renderCompare() {
+      const box = $('#compare');
+      if (!box) return;
+      const figs = $('#compare-figures');
+      const note = $('#compare-note');
+      const bar = $('#compare-interval');
+      figs.innerHTML = '';
+      note.innerHTML = '';
+      bar.innerHTML = '';
+      bar.setAttribute('hidden', '');
+      const say = (...kids) => note.append(el('p', {}, ...kids));
+      const b = (text) => el('b', { text });
+
+      // In the industry total every announcement on a day carries the same
+      // move, so counting announcements would claim far more evidence than
+      // there is. The comparison belongs to the per-company view.
+      if (state.view !== 'detailed') {
+        say('Every announcement on one day shares the same industry move, so counting them '
+          + 'separately would overstate the evidence. Switch to ', b('By company'),
+          ' to compare framings.');
+        return;
+      }
+
+      const s = compareStats();
+
+      if (s.mA == null) {
+        say('Too few announcements in this selection to compare: ',
+          b(`${s.nA.toLocaleString()} shown as danger`), ' and ',
+          b(`${s.nB.toLocaleString()} others`),
+          `, against a minimum of ${DANGER_MIN_N} each. Widen the date range, or switch more `
+          + 'framings and feeds back on.');
+        return;
+      }
+
+      const cell = (label, n, value, cls) => el('span', { class: 'compare-cell' },
+        el('span', { class: 'ck', text: label }),
+        n == null ? null : el('span', { class: 'cn', text: n.toLocaleString() }),
+        el('span', { class: `cv${cls ? ' ' + cls : ''}`, text: value }));
+
+      // A figure that rounds to zero is shown as zero, so it should not also
+      // be tinted as a gain or a loss.
+      const sign = (v) => (Math.abs(v) < 5e-5 ? '' : v > 0 ? 'up' : 'down');
+      figs.append(
+        cell('Shown as danger', s.nA, fmtPct(s.mA, 2), sign(s.mA)),
+        cell('Everything else', s.nB, fmtPct(s.mB, 2), sign(s.mB)));
+
+      if (s.half == null) {
+        figs.append(cell('Difference', null, fmtPP(s.diff)));
+        say(`Only ${s.days} trading days carry an announcement in this selection, too few to put `
+          + 'a range on the difference. Widen the date range.');
+        return;
+      }
+
+      const crosses = s.lo <= 0 && s.hi >= 0;
+      figs.append(el('span', { class: 'compare-cell' },
+        el('span', { class: 'ck', text: 'Difference' }),
+        el('span', { class: `cv${crosses ? '' : ' ' + sign(s.diff)}`, text: fmtPP(s.diff) }),
+        el('span', { class: 'cpm', text: `± ${(s.half * 100).toFixed(2)}` })));
+      drawInterval(bar, s);
+
+      // What the interval means, in the one sentence a reader needs, followed
+      // by the move that tests it. The direction is never stated as a finding
+      // while the range reaches across zero.
+      if (crosses) {
+        say('The range reaches across no difference, so this selection does not show '
+          + 'danger-framed announcements being followed by a different move.');
+      } else {
+        say('The range stays ', b(s.diff > 0 ? 'above' : 'below'), ' no difference for this '
+          + 'selection. Each combination of chips is a fresh comparison, so one selection '
+          + 'clearing zero is weak evidence on its own.');
+      }
+
+      if (s.bubbleInB > 0 && state.frames.has('bubble')) {
+        say('Bubble-framed announcements are counted among everything else. Switching ',
+          b('Bubble'), ' off takes those ', b(s.bubbleInB.toLocaleString()),
+          ' out of the comparison, which is the quickest way to see how much of this gap '
+          + 'depends on them.');
+      }
+
+      say(`Mean abnormal return over ${state.window} trading `
+        + `${state.window === 1 ? 'day' : 'days'} against ${state.benchmark}, for the `
+        + 'announcements shown above. The range allows for several landing on one day. '
+        + 'A gap is what followed an announcement, not what it caused.');
+    }
+
     const stage = $('#stage');
     const svg = d3.select('#chart');
     const lanesSvg = d3.select('#lanes');
@@ -1619,6 +1839,7 @@
       state.hover = null;
       render();
       updateReadout(null);
+      renderCompare();
       renderFocusNote();
       renderDetail();
       renderRanking();

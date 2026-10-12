@@ -349,6 +349,11 @@
       "color": "#0891B2",
       "colorDark": "#5BB8D4",
       "short": "Moderation"
+    },
+    {
+      "id": "other",
+      "name": "Other or unclassified",
+      "short": "Other"
     }
   ],
   "frames": [
