@@ -380,16 +380,7 @@ select {
 .marker.down .stem { stroke: var(--down); }
 .marker .dot { stroke: var(--paper); stroke-width: 1.5; }
 .marker .hit { fill: transparent; }
-#lanes .marker .count {
-  fill: var(--paper); font-size: 10px; font-weight: 600; pointer-events: none;
-  /* the numeral sits on whatever hue the cluster's leading subject is, so it
-     carries its own contrast rather than relying on the fill being dark */
-  paint-order: stroke; stroke: rgba(0, 0, 0, 0.45); stroke-width: 2.5px;
-  stroke-linejoin: round;
-}
-/* A cluster of more than one subject keeps its leading subject's colour and
-   says "mixed" with a ring, which costs no hue. */
-#lanes .marker .dot.mixed { stroke: var(--ink); stroke-width: 1.5; stroke-opacity: 0.55; }
+#lanes .marker .count { fill: var(--paper); font-size: 10px; font-weight: 600; pointer-events: none; }
 .marker.active .dot,
 .marker:focus-visible .dot { stroke: var(--ink); stroke-width: 2; }
 .marker.pinned .dot { stroke: var(--focus); stroke-width: 3; }

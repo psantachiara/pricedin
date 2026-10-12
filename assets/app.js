@@ -872,7 +872,10 @@
       const n = $('#threshold-note');
       if (n) {
         const shown = visibleEvents().length;
-        n.textContent = `${shown.toLocaleString()} of ${events.length.toLocaleString()} announcements shown.`;
+        // The base sentence; render() appends a clause when a crowded range
+        // has had to leave announcements out, and reads it back from here.
+        n.dataset.base = `${shown.toLocaleString()} of ${events.length.toLocaleString()} announcements shown.`;
+        n.textContent = n.dataset.base;
       }
     }
 
@@ -1091,29 +1094,72 @@
 
       const inRange = (t) => t >= i0 && t <= i1;
       let items;
+      let crowdedOut = 0;
       if (state.view === 'detailed') {
         const laneIndex = new Map(lanes.map((l, k) => [l.id, k]));
-        // Crowded days collapse into one mark per lane, exactly as the
-        // industry total does, rather than being nudged sideways to make
-        // room. Nudging bought space by moving a dot off its own date: with
-        // every feed on, a busy lane pushed later items a hundred pixels
-        // right, so they sat under the wrong month and ran past the end of
-        // the chart. A cluster keeps every mark on the date it happened and
-        // carries the count in the dot and the tooltip, so nothing is hidden
-        // and nothing is misplaced.
+        // One announcement, one dot, one stem, at its own date. Where a lane
+        // holds more than the range has room for, the extras are left out
+        // rather than nudged aside or merged: nudging drew a dot under the
+        // wrong month, and merging replaced the stems — the reason the lane
+        // exists — with a count. Narrowing the range gives every dot room,
+        // so what is dropped here comes back on the way in.
+        //
+        // What survives a crowded stretch is what moved the market most,
+        // since that is what the chart is for; the number left out is
+        // reported under the filters rather than passed over in silence.
+        const MIN_PX = 9;
+        // How much room one day owns on the axis. Two announcements on the
+        // same day share an x exactly, so zooming alone never separates
+        // them; once a day is wide enough to hold several dots they are
+        // spread inside its own band, which keeps each one within its date
+        // rather than drifting into the next.
+        const dayWidth = (t) => {
+          const here = x(dates[t]);
+          const after = t + 1 < dates.length ? x(dates[t + 1]) - here : Infinity;
+          const before = t > 0 ? here - x(dates[t - 1]) : Infinity;
+          const gap = Math.min(after, before);
+          return Number.isFinite(gap) ? gap : MIN_PX;
+        };
+
         items = [];
         const inLane = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org));
         for (const [org, evs] of d3.groups(inLane, (e) => e.org)) {
           const cy = lanesTop + laneIndex.get(org) * laneH + laneH / 2;
-          const byT = d3.groups(evs, (e) => e.t).sort((a, b) => a[0] - b[0]);
-          const lane = [];
-          for (const [t, group] of byT) {
-            const px = x(dates[t]);
-            const last = lane[lane.length - 1];
-            if (last && px - last.cx < 12) last.evs.push(...group);
-            else lane.push({ t, cx: px, cy, evs: [...group] });
+          const cand = [];
+          for (const [t, sameDay] of d3.groups(evs, (e) => e.t)) {
+            const scored = sameDay
+              .map((e) => ({ e, score: scoreForIds([e.id], e.t) }))
+              .sort((a, b) => Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0));
+            const room = Math.max(1, Math.floor(dayWidth(t) / MIN_PX));
+            const take = Math.min(room, scored.length);
+            crowdedOut += scored.length - take;
+            const mid = (take - 1) / 2;
+            for (let i = 0; i < take; i += 1) {
+              cand.push({
+                t,
+                cx: x(dates[t]) + (i - mid) * MIN_PX,
+                cy,
+                evs: [scored[i].e],
+                score: scored[i].score,
+              });
+            }
           }
-          items.push(...lane);
+          cand.sort((a, b) =>
+            (Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0)) || (a.t - b.t));
+          // One accepted dot per MIN_PX slot, so a candidate need only be
+          // checked against the slot it falls in and its two neighbours.
+          const slot = new Map();
+          for (const c of cand) {
+            const b = Math.floor(c.cx / MIN_PX);
+            let clear = true;
+            for (let k = b - 1; k <= b + 1 && clear; k += 1) {
+              const o = slot.get(k);
+              if (o != null && Math.abs(o - c.cx) < MIN_PX) clear = false;
+            }
+            if (!clear) { crowdedOut += 1; continue; }
+            slot.set(b, c.cx);
+            items.push(c);
+          }
         }
       } else {
         items = [];
@@ -1125,20 +1171,25 @@
           else items.push({ t, cx: px, cy: lanesTop + laneH / 2, evs: [...evs] });
         }
       }
+
+      // Say how many a crowded range left out, rather than letting the lane
+      // quietly show fewer announcements than the count above it claims.
+      const tn = $('#threshold-note');
+      if (tn) {
+        const base = tn.dataset.base || tn.textContent || '';
+        tn.dataset.base = base;
+        tn.textContent = crowdedOut
+          ? `${base} ${crowdedOut.toLocaleString()} more are too close together to `
+            + 'draw at this range — zoom in to see them.'
+          : base;
+      }
+
       for (const it of items) {
         it.ids = it.evs.map((e) => e.id);
         it.key = 'c:' + it.ids.join('|');
         it.count = it.ids.length;
-        // A cluster takes the colour of the subject most of its items are
-        // about, and carries a ring when it is mixed. Painting every mixed
-        // cluster in ink was fine while clusters were rare, but at a wide
-        // range almost every mark is mixed, and the row went black — which
-        // spends the one axis that carries colour to say "more than one".
-        const tally = d3.rollup(it.evs, (v) => v.length, (e) => leadTopic(e));
-        const ranked = [...tally].sort((a, b) => b[1] - a[1]);
-        const lead = ranked.length ? ranked[0][0] : null;
-        it.color = lead ? topicColor(lead) : 'var(--muted)';
-        it.mixed = tally.size > 1;
+        const kinds = new Set(it.evs.map((e) => leadTopic(e)));
+        it.color = kinds.size === 1 ? eventColor(it.evs[0]) : 'var(--ink)';
       }
       for (const it of items) {
         const evs = it.ids.map((id) => eventBy.get(id));
@@ -1197,13 +1248,10 @@
       }
       state.animated = true;
 
-      gm.append('circle')
-        .attr('class', (d) => 'dot' + (d.mixed ? ' mixed' : ''))
-        .attr('r', (d) => (d.count > 1 ? 5.5 + Math.min(3.5, Math.sqrt(d.count - 1) * 1.5) : 4.5))
+      gm.append('circle').attr('class', 'dot')
+        .attr('r', (d) => (d.count > 1 ? 6 + Math.min(4, Math.sqrt(d.count - 1) * 1.7) : 4.5))
         .style('fill', (d) => d.color);
-      // The numeral only where the dot is big enough to hold it legibly;
-      // below that the larger disc already says "more than one".
-      gm.filter((d) => d.count >= 4).append('text').attr('class', 'count')
+      gm.filter((d) => d.count > 1).append('text').attr('class', 'count')
         .attr('text-anchor', 'middle').attr('dy', '0.35em').text((d) => d.count);
       gm.append('circle').attr('class', 'hit').attr('r', 11);
 
