@@ -272,7 +272,11 @@ select {
   align-items: center;
   justify-items: start;
   column-gap: 6px;
-  flex: none;
+  /* Grow to share the slack, so the ten of them span the plotted width rather
+     than clumping at the left with the row trailing off into empty space.
+     Shrink stays off: at widths where they no longer fit, the row keeps each
+     chip at its floor and scrolls, as it did before. */
+  flex: 1 0 auto;
   padding: 4px 9px 4px 7px;
   border: 1px solid var(--rule);
   border-radius: 7px;
