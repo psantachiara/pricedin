@@ -736,6 +736,10 @@
       if (!members.length) continue;
       const group = el('div', { class: 'fam-group' },
         el('span', { class: 'fam-label', text: fam.name }));
+      // Each group takes slack in proportion to how many chips it holds, so
+      // the row fills the width of the chart without the single "no stance"
+      // chip growing as wide as the eight danger ones.
+      group.style.flexGrow = String(members.length);
       const inner = el('div', { class: 'cats fam-chips' });
       buildChips(inner, members, 'frames', () => 'var(--muted)', frames);
       group.append(inner);

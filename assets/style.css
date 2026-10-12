@@ -499,7 +499,9 @@ select {
   gap: 6px 10px;
   padding-right: var(--plot-right, 14px);
 }
-.axis-row .chips-label { flex: 0 0 auto; min-width: 8.5em; }
+/* The label column is as narrow as the longer of the two labels needs, so the
+   width it reserves goes to the chips instead. */
+.axis-row .chips-label { flex: 0 0 auto; min-width: 7em; }
 /* Subject is the lens, so topic chips carry the hue and the framing chips
    recede. Framing keeps its danger / contrast / neutral grouping as labels
    instead, which costs no colour. */
@@ -508,11 +510,17 @@ select {
    columns, which the 7em minimum buys; the framing row is already divided
    into three labelled groups, so the even-column effect is doing no work and
    the width it costs is what pushes the eleventh chip off the line. */
-#frames .cat.chip { min-width: 6em; padding-left: 6px; padding-right: 7px; }
+#frames .cat.chip { min-width: 6em; padding-left: 5px; padding-right: 5px; flex: 1 1 auto; }
 
 /* Topics are a set to be read across, like the companies, so one line that
-   scrolls rather than a block that reflows. */
-.cats.topics { flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; }
+   scrolls rather than a block that reflows. The row takes the full width of
+   the axis and the chips share it, so the block ends where the chart does
+   instead of stopping wherever the labels happen to run out. */
+.cats.topics {
+  flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px;
+  flex: 1 1 0; min-width: 0;
+}
+.cats.topics .cat.chip { flex: 1 1 auto; }
 .cats.topics::-webkit-scrollbar { height: 5px; }
 .cats.topics::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 
@@ -527,7 +535,7 @@ select {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 0 10px;
+  gap: 0 8px;
   flex: 1 1 0;
   min-width: 0;
   overflow-x: auto;
@@ -542,11 +550,15 @@ select {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 0 0 auto;
+  /* grow is set per group by the renderer, in proportion to its chip count;
+     never shrink, so a row too wide to fit scrolls instead of compressing */
+  flex-shrink: 0;
+  flex-basis: auto;
+  min-width: 0;
 }
 /* A rule does the separating that three stacked rows used to do. */
 .fam-group + .fam-group {
-  padding-left: 10px;
+  padding-left: 8px;
   border-left: 1px solid var(--rule);
 }
 .fam-chips { display: flex; flex-wrap: nowrap; gap: 4px; }
