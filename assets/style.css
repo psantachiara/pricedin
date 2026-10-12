@@ -356,7 +356,6 @@ select {
 #lanes .lane-label.explained:focus-visible { fill: var(--focus); }
 #lanes .band-label, #lanes .count { pointer-events: none; }
 
-.caption.gap-note { font-size: 0.8125rem; margin: 2px 0 0; max-width: 78ch; }
 .gap-hatch-line { stroke: var(--muted); stroke-width: 1; opacity: 0.26; }
 .gap-hatch-line.dense { stroke-width: 1; opacity: 0.38; }
 .gap-span { fill: url(#gap-hatch); }
@@ -666,12 +665,24 @@ select {
    hatching that used to mark it here reads as a texture rather than a claim,
    and the timeline already carries that mark where it means something. */
 .src.archived .via { font-size: 0.8125rem; color: var(--muted); margin-left: -2px; }
-.source-legend {
-  margin: 0; font-size: 0.8125rem; color: var(--muted);
-  /* basis, not a floor: a 24ch minimum kept the caption on the same line as
-     the sources at any width, overflowing rather than dropping below them */
-  flex: 1 1 24ch; min-width: 0; max-width: 70ch;
+/* Provenance belongs to the coverage strip, not to the checkboxes: every
+   wording of it describes what the strip shows, and read beside the controls
+   it was a four-line column of grey text in the widest part of the page whose
+   height changed as sources were toggled. Under the strip it is one quiet
+   line the width of the chart, next to the thing it is about. */
+.record-note {
+  padding-left: var(--plot-left, 104px);
+  padding-right: var(--plot-right, 14px);
+  margin-top: 6px;
+  display: grid;
+  gap: 2px;
 }
+.record-note p {
+  margin: 0; font-size: 0.8125rem; line-height: 1.45; color: var(--muted);
+  max-width: 96ch;
+}
+.record-note .gap-note { color: var(--muted); opacity: 0.85; }
+.record-note p[hidden] { display: none; }
 
 .legend-note {
   margin: 0;

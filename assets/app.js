@@ -813,13 +813,15 @@
         const list = names.length > 1
           ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
           : names[0];
+        // The note sits under the strip it describes, so it points at it
+        // rather than forward to it.
         legend.textContent = `${list} ${names.length > 1 ? 'were' : 'was'} rebuilt from `
-          + `archived copies of ${names.length > 1 ? 'their feeds' : 'its feed'}, so hatched `
-          + 'stretches below are where that record is thin rather than where the news was.';
+          + `archived copies of ${names.length > 1 ? 'their feeds' : 'its feed'}: the hatched `
+          + 'stretches above are where that record is thin, not where the news was.';
       } else if (indexed.length) {
         legend.textContent = 'Read from the publishers’ own archives, so this is everything '
           + 'they published on the subject. Where an archive has a hole of its own the strip '
-          + 'below marks it — the Times’ archive stops on 7 January 2026 and resumes in February.';
+          + 'marks it — the Times’ archive stops on 7 January 2026 and resumes in February.';
       } else {
         legend.textContent = 'Announcements added by hand, including from company blogs. '
           + 'A deliberate selection, not a sample of anything.';
