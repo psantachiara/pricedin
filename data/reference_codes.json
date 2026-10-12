@@ -1,0 +1,2524 @@
+{
+ "hand": {
+  "n": 16,
+  "coder": "hand",
+  "note": "coded blind in the tool, 12 Oct 2026, before any model pass existed; the only human reference",
+  "codes": {
+   "20250103-apple-ai-alert-falsely-claimed-luke-littler-had": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "unreliable": 3
+    }
+   },
+   "20250417-a-judge-ruled-that-google-acted-illegally-to-dom": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20250715-trump-unveils-70bn-ai-and-energy-plan-at-summit": {
+    "relevance": 2,
+    "topics": [
+     "deals"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250810-activists-in-netherlands-protest-on-roof-of-micr": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20250827-nvidia-predicts-cooler-growth-after-sales-record": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251003-behind-job-weakness-are-hints-of-a-productivity": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251006-u-s-v-google-what-each-side-argued-for-fixing-go": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260110-indonesia-blocks-musk-s-grok-chatbot-due-to-risk": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20260305-mark-zuckerberg-says-criminal-behavior-on-facebo": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260523-investors-just-can-t-get-enough-of-stocks-these": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20260623-the-a-i-boom-boosted-teacher-pay-in-a-rural-coun": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "compute"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260706-xbox-hits-reset-button-laying-off-thousands-and": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260810-wall-st-wants-another-half-trillion-dollars-for": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260826-meta-reaches-16-7bn-settlement-with-us-states-ov": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260908-should-promotion-depend-on-how-workers-use-ai": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 1
+    }
+   },
+   "20260930-logitech-ceo-scouring-the-globe-to-beat-chip-sho": {
+    "relevance": 1,
+    "topics": [
+     "compute",
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   }
+  }
+ },
+ "llm-opus5-v1": {
+  "n": 254,
+  "coder": "llm-opus5-v1",
+  "rubric": "rubric-v1 (9 frames, before environment/appropriation)",
+  "note": "in-session pass over the 254-item sample",
+  "codes": {
+   "20251006-u-s-v-google-what-each-side-argued-for-fixing-go": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260706-xbox-hits-reset-button-laying-off-thousands-and": {
+    "relevance": 1,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 1
+    },
+    "note": "jobs cut to fund AI capex, not AI doing the work - boundary case for displacement"
+   },
+   "20250103-apple-ai-alert-falsely-claimed-luke-littler-had": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "societal": 2
+    }
+   },
+   "20260305-mark-zuckerberg-says-criminal-behavior-on-facebo": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20250715-trump-unveils-70bn-ai-and-energy-plan-at-summit": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "ENV: climate groups' objection is the danger claim here; no frame in the scheme can carry it"
+   },
+   "20250810-activists-in-netherlands-protest-on-roof-of-micr": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260930-logitech-ceo-scouring-the-globe-to-beat-chip-sho": {
+    "relevance": 1,
+    "topics": [
+     "compute",
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "chip crowding-out; hardship reported without a stance on AI"
+   },
+   "20260810-wall-st-wants-another-half-trillion-dollars-for": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251003-behind-job-weakness-are-hints-of-a-productivity": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "markets"
+    ],
+    "frames": {
+     "displacement": 2,
+     "capability": 2
+    }
+   },
+   "20250417-a-judge-ruled-that-google-acted-illegally-to-dom": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260908-should-promotion-depend-on-how-workers-use-ai": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "worker coercion / AI-use mandates - no frame fits; candidate for a labour-control frame"
+   },
+   "20260110-indonesia-blocks-musk-s-grok-chatbot-due-to-risk": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "policy"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20260523-investors-just-can-t-get-enough-of-stocks-these": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20250827-nvidia-predicts-cooler-growth-after-sales-record": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "compute"
+    ],
+    "frames": {
+     "bubble": 2
+    },
+    "note": "keyword-v1 would score this relevance 1 - no AI term in the headline"
+   },
+   "20260623-the-a-i-boom-boosted-teacher-pay-in-a-rural-coun": {
+    "relevance": 2,
+    "topics": [
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "data-centre local impact framed as benefit, not harm"
+   },
+   "20260826-meta-reaches-16-7bn-settlement-with-us-states-ov": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260914-a-i-queries-from-abroad-raise-fears-of-a-biologi": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "model"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260716-google-ordered-to-give-a-i-rivals-more-access-on": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "policy",
+     "product"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260324-anthropic-and-pentagon-face-off-in-court-over-ba": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "policy",
+     "governance"
+    ],
+    "frames": {
+     "security": 2
+    },
+    "note": "autonomous weapons sit awkwardly in 'security' after the rename to cybersecurity/surveillance"
+   },
+   "20260115-two-fitness-companies-are-merging-with-jared-kus": {
+    "relevance": 1,
+    "topics": [
+     "deals"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251125-fears-about-a-i-prompt-talks-of-super-pacs-to-re": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "governance"
+    ],
+    "frames": {
+     "existential": 1
+    },
+    "note": "generic 'fears about AI' - danger unspecified"
+   },
+   "20260730-apple-s-siri-got-an-a-i-brain-transplant-try-the": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 2,
+     "unreliable": 1
+    }
+   },
+   "20260622-new-york-city-house-primary-emerges-as-key-battl": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250901-the-good-and-bad-of-machine-learning-letters": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "unreliable": 2,
+     "capability": 1
+    }
+   },
+   "20250127-silicon-valley-is-raving-about-a-made-in-china-a": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 3
+    }
+   },
+   "20251107-vigilante-lawyers-expose-the-rising-tide-of-a-i": {
+    "relevance": 2,
+    "topics": [
+     "legal"
+    ],
+    "frames": {
+     "unreliable": 3
+    }
+   },
+   "20260511-forget-the-ai-job-apocalypse-ai-s-real-threat-is": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "security": 2,
+     "displacement": 1
+    },
+    "note": "workplace surveillance read as the real threat; job apocalypse raised to dismiss it"
+   },
+   "20260424-china-s-deepseek-launches-long-awaited-ai-model": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251014-soon-you-ll-be-able-to-shop-walmart-in-chatgpt-h": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "deals"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20250714-xai-announces-200m-us-military-deal-after-grok-c": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy",
+     "moderation"
+    ],
+    "frames": {
+     "societal": 2
+    }
+   },
+   "20260519-book-on-truth-in-the-age-of-a-i-contains-quotes": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "societal": 2
+    }
+   },
+   "20260502-the-quest-to-use-ai-to-help-find-new-drugs": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "compute"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20251009-governments-are-spending-billions-on-their-own-s": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "bubble": 2,
+     "unreliable": 1
+    }
+   },
+   "20260428-tech-life": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "data-labelling labour - no frame fits"
+   },
+   "20251216-tech-life": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "societal": 3
+    }
+   },
+   "20260728-value-outperforms-growth-this-year-powered-by-ai": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260818-reel-ing-it-in-meta-is-paying-influencers-to-pro": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20251121-leading-law-firm-cuts-london-back-office-staff-a": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20251114-amazon-and-microsoft-back-effort-that-would-rest": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "no AI term anywhere; substantively an AI-chip export story"
+   },
+   "20260621-all-the-money-flooding-into-ai-is-a-giant-warnin": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260213-ai-coding-platform-s-flaws-allow-bbc-reporter-to": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "security": 3,
+     "unreliable": 2
+    }
+   },
+   "20260409-openai-pauses-uk-data-centre-deal-over-energy-co": {
+    "relevance": 2,
+    "topics": [
+     "compute",
+     "deals",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "energy cost is the cause but is framed as business, not ecological harm"
+   },
+   "20260530-americans-echo-pope-leo-s-concerns-about-ai-it-t": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "displacement": 2,
+     "security": 2,
+     "existential": 2
+    }
+   },
+   "20260429-why-ai-startup-offices-in-nyc-are-flashy-but-mos": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20260927-the-surprising-reasons-china-is-skeptical-of-a-i": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 2
+    },
+    "note": "doom framing reported sceptically - still present in the text"
+   },
+   "20260903-openai-hails-new-era-of-artificial-general-intel": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 3
+    }
+   },
+   "20260608-nvidia-takes-the-top-spot-in-the-2026-list-of-be": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250924-most-destructive-arms-race-in-human-history-zele": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260930-while-surging-to-records-stocks-experience-some": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20260923-openai-agent-hacked-australian-government-websit": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "security": 3
+    }
+   },
+   "20261002-ai-s-thought-process-can-no-longer-be-trusted-ra": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "existential": 3,
+     "unreliable": 3
+    }
+   },
+   "20260524-inside-the-british-lab-hunting-for-dangers-lurki": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 2,
+     "security": 1
+    }
+   },
+   "20250210-ai-race-must-be-led-by-western-liberal-democrati": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250531-doubts-raised-over-chinese-paraglider-s-claim-of": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "societal": 2
+    }
+   },
+   "20250122-competition-watchdog-role-for-ex-boss-of-amazon": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260609-san-francisco-voters-appear-to-reject-tax-hike-o": {
+    "relevance": 1,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251210-the-everyday-investors-hedging-against-an-ai-bub": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20250818-starwatch-moon-jupiter-and-venus-form-centre-of": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260328-our-assumptions-are-broken-how-fraudulent-church": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "societal": 3,
+     "unreliable": 1
+    }
+   },
+   "20260331-buying-the-dip-this-ai-agent-will-do-it-for-you": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260903-child-sexual-abuse-survivor-alleges-elon-musk-s": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "legal"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20250211-ai-chatbots-distort-and-mislead-when-asked-about": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "moderation"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "societal": 3
+    }
+   },
+   "20250626-a-i-is-starting-to-wear-down-democracy": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "societal": 3
+    }
+   },
+   "20260721-netanyahu-ad-uses-a-questionable-tactic-against": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "moderation"
+    ],
+    "frames": {
+     "societal": 3,
+     "individual": 2
+    }
+   },
+   "20250403-venture-market-notches-strong-quarter-thanks-mos": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250128-doomsday-clock-moves-one-second-closer-to-catast": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "existential": 2
+    },
+    "note": "AI is one of three cited threats; the story is the clock"
+   },
+   "20251120-family-affair-commerce-secretary-s-sons-cash-in": {
+    "relevance": 2,
+    "topics": [
+     "governance",
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20260902-freelancers-are-getting-buried-with-soulless-ai": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "displacement": 2
+    },
+    "note": "deskilling rather than job loss - work created but degraded"
+   },
+   "20261005-spending-on-ai-is-becoming-almost-impossible-for": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "product"
+    ],
+    "frames": {
+     "unreliable": 2
+    }
+   },
+   "20260710-eu-accuses-meta-of-failing-to-tackle-mental-heal": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260702-a-i-is-reshaping-the-economy-good-luck-measuring": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "markets"
+    ],
+    "frames": {
+     "displacement": 2
+    }
+   },
+   "20251227-more-than-20-of-videos-shown-to-new-youtube-user": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "unreliable": 2,
+     "societal": 2
+    }
+   },
+   "20260312-the-ai-trade-that-s-separating-wall-street-s-win": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260912-we-must-slow-the-pace-ceo-of-anthropic-calls-for": {
+    "relevance": 2,
+    "topics": [
+     "governance",
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20250623-there-s-no-simple-solution-to-universities-ai-wo": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "academic integrity / student use - no frame fits"
+   },
+   "20260329-soon-publishers-won-t-stand-a-chance-literary-wo": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "displacement": 2
+    }
+   },
+   "20251229-from-a-i-to-immigration-these-new-state-laws-wil": {
+    "relevance": 1,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251029-meta-reports-mixed-financial-results-amid-spree": {
+    "relevance": 1,
+    "topics": [
+     "markets",
+     "deals"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260308-ai-chatbots-point-vulnerable-social-media-users": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "product"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20260227-openai-announces-110bn-funding-round-that-would": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20250617-watch-out-hallucinating-humphrey-s-about-in-whit": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "other"
+    ],
+    "frames": {
+     "unreliable": 3
+    }
+   },
+   "20260903-when-ai-is-your-second-transformation": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "headline only, no summary - thin basis"
+   },
+   "20260326-china-s-minimax-wants-ai-to-be-your-new-work-bes": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "model"
+    ],
+    "frames": {
+     "capability": 3
+    }
+   },
+   "20260620-a-viral-doomsday-scenario-aims-to-shake-europe-o": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260721-rfk-jr-pauses-1bn-medicaid-funding-to-california": {
+    "relevance": 1,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250204-musk-allies-discuss-deploying-a-i-to-find-budget": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "capability": 1
+    }
+   },
+   "20250502-google-plans-to-roll-out-its-a-i-chatbot-to-chil": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "moderation"
+    ],
+    "frames": {
+     "individual": 2
+    }
+   },
+   "20251216-first-thing-donald-trump-sues-bbc-for-up-to-10bn": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "displacement": 1
+    },
+    "note": "AI is a secondary item in a news digest"
+   },
+   "20251221-extremists-are-using-ai-voice-cloning-to-superch": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "policy"
+    ],
+    "frames": {
+     "societal": 3,
+     "security": 1
+    }
+   },
+   "20250226-amazon-unveils-alexa-powered-by-generative-a-i": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20250805-tech-life": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "existential": 2
+    }
+   },
+   "20260510-i-knew-my-writing-students-were-using-ai-their-c": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "displacement": 2
+    },
+    "note": "deskilling framed educationally, not as labour market"
+   },
+   "20250129-why-trump-picked-a-science-adviser-who-isn-t-a-s": {
+    "relevance": 1,
+    "topics": [
+     "policy",
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260721-election-voting-advice-from-ai-chatbots-inaccura": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "policy"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "societal": 2
+    }
+   },
+   "20250709-microsoft-pledges-4-billion-toward-a-i-education": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251011-giving-career-advice-to-kids-has-never-been-hard": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20250217-s-korea-removes-deepseek-from-app-stores-over-pr": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "product"
+    ],
+    "frames": {
+     "security": 3
+    }
+   },
+   "20250611-this-a-i-company-wants-to-take-your-job": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "model"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20260303-a-fight-about-the-future-of-war": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 2,
+     "security": 2
+    },
+    "note": "military AI again split across existential and security"
+   },
+   "20260324-meta-told-to-pay-375m-for-misleading-users-over": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260114-young-people-parents-and-teachers-share-your-vie": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "individual": 2
+    },
+    "note": "reader callout; danger implied by 'controversial' and 'affecting you' - low confidence"
+   },
+   "20260701-michael-burry-cites-beginning-of-the-end-with-ne": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20250516-first-thing-trump-agrees-deal-for-uae-to-build-l": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "security": 1
+    }
+   },
+   "20250204-ai-godfather-predicts-another-revolution-in-the": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 2,
+     "unreliable": 2
+    }
+   },
+   "20260724-it-s-easier-than-ever-for-debt-collectors-to-tak": {
+    "relevance": 1,
+    "topics": [
+     "legal"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260331-when-will-japan-s-cherry-blossoms-bloom-a-i-can": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20250504-dangerous-nonsense-ai-authored-books-about-adhd": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3,
+     "societal": 2
+    }
+   },
+   "20260818-meta-s-legal-jeopardy-is-growing-by-the-day": {
+    "relevance": 1,
+    "topics": [
+     "legal",
+     "other"
+    ],
+    "frames": {
+     "security": 2
+    }
+   },
+   "20260401-i-wore-meta-s-smartglasses-for-a-month-and-it-le": {
+    "relevance": 1,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "security": 2
+    }
+   },
+   "20250731-amazon-fails-to-calm-tariff-worries-with-worse-t": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260730-a-i-data-centers-in-space-a-system-to-cool-chips": {
+    "relevance": 2,
+    "topics": [
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260227-trump-orders-government-to-stop-using-anthropic": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "the weapons refusal behind it is not framed as danger here"
+   },
+   "20260723-blackstone-s-profit-surges-on-ai-investments": {
+    "relevance": 1,
+    "topics": [
+     "markets",
+     "deals"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260322-ai-videos-of-sexualised-black-women-removed-from": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3,
+     "societal": 1
+    }
+   },
+   "20260226-how-a-i-generated-videos-are-distorting-your-chi": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3,
+     "unreliable": 2
+    }
+   },
+   "20251203-dario-amodei-scott-bessent-erika-kirk-among-spea": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {},
+    "note": "speaker list; an AI CEO appears but the item is not about AI"
+   },
+   "20250306-revealed-israeli-military-creating-chatgpt-like": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "model"
+    ],
+    "frames": {
+     "security": 3,
+     "unreliable": 2
+    }
+   },
+   "20260114-elon-musk-s-stubborn-spin-on-grok-s-sexualized-i": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "governance"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20250121-trump-unveils-500bn-stargate-ai-project-between": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260915-how-popular-is-a-i-with-voters-not-very-a-new-po": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "existential": 1
+    },
+    "note": "ENV: voter opposition to data centres is a resource/local-harm claim with no frame"
+   },
+   "20250107-british-ai-startup-with-government-ties-is-devel": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy"
+    ],
+    "frames": {
+     "security": 2
+    }
+   },
+   "20260624-a-i-riches-fuel-economic-divide-in-asia-s-chip-p": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "economic inequality from the boom - no frame fits"
+   },
+   "20261002-georgia-holds-emergency-meeting-on-ai-exposing-v": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "security": 3
+    }
+   },
+   "20251209-match-says-hinge-founder-ceo-mcleod-steps-down-t": {
+    "relevance": 1,
+    "topics": [
+     "governance",
+     "product"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260806-safety-fears-as-scientists-make-first-viruses-de": {
+    "relevance": 2,
+    "topics": [
+     "other",
+     "model"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260430-is-a-i-a-threat-to-humanity-not-in-this-trial": {
+    "relevance": 2,
+    "topics": [
+     "legal"
+    ],
+    "frames": {
+     "existential": 2
+    }
+   },
+   "20260722-stocks-and-the-economy-are-increasingly-relying": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20260903-nvidia-extends-a-i-spending-spree-with-12-9-bill": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "model"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260325-meta-and-youtube-lose-landmark-social-media-addi": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260802-aw-it-s-baby-s-first-a-i-surveillance-system": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "security": 3,
+     "individual": 2
+    }
+   },
+   "20261002-startup-typesafe-ai-s-jev-model-sparks-copycats": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260226-f-b-i-raids-los-angeles-school-superintendent-ov": {
+    "relevance": 1,
+    "topics": [
+     "legal",
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251010-google-may-be-forced-to-make-changes-to-search-e": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260725-the-ai-jobs-apocalypse-probably-isn-t-coming-any": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 2,
+     "bubble": 2
+    }
+   },
+   "20250322-meta-to-stop-targeting-uk-citizen-with-personali": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260421-the-rise-of-apple-s-new-ceo-a-hardware-expert-ta": {
+    "relevance": 1,
+    "topics": [
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250107-meta-drops-rules-protecting-l-g-b-t-q-community": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260123-south-korea-issues-strict-new-ai-rules-outpacing": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250127-deepseek-hit-with-large-scale-cyber-attack-after": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "product"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "AI company as victim of an attack, not AI as the instrument - security frame does NOT apply; keyword-v1 will likely fire it"
+   },
+   "20250811-cat-soap-operas-and-babies-trapped-in-space-the": {
+    "relevance": 2,
+    "topics": [
+     "moderation"
+    ],
+    "frames": {
+     "unreliable": 2,
+     "societal": 2
+    }
+   },
+   "20250617-meta-sacrifices-a-heap-of-money-at-the-altar-of": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20260923-how-scientists-contained-a-threat-that-could-hav": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20251214-four-new-jobs-that-may-be-in-our-ai-future": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "capability": 1
+    },
+    "note": "counters the displacement claim without asserting it - frame absent by design"
+   },
+   "20251030-why-it-seems-your-chatbot-really-really-hates-to": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20260225-bleak-research-report-stokes-a-i-debate-on-wall": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "labour"
+    ],
+    "frames": {
+     "displacement": 3,
+     "bubble": 3
+    }
+   },
+   "20251029-tens-of-thousands-of-white-collar-jobs-are-disap": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20260318-how-lego-became-a-go-to-meme-of-the-propaganda-w": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "societal": 2
+    }
+   },
+   "20250505-openai-backtracks-on-plans-to-drop-nonprofit-con": {
+    "relevance": 2,
+    "topics": [
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250220-amazon-gains-creative-control-over-the-james-bon": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20251107-chatgpt-accused-of-acting-as-suicide-coach-in-se": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20251028-nvidia-s-new-product-merges-ai-supercomputing-wi": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "compute"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260219-tata-group-and-openai-form-partnership-to-develo": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260930-f-t-c-investigates-openai-and-anthropic-over-pot": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "policy"
+    ],
+    "frames": {
+     "individual": 2
+    }
+   },
+   "20260903-the-hunt-for-ai-proof-assets-is-leading-investor": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "capability": 2,
+     "displacement": 1
+    }
+   },
+   "20250321-norwegian-files-complaint-after-chatgpt-falsely": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "moderation"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "individual": 3
+    }
+   },
+   "20260121-how-this-ai-infused-warehouse-sorts-real-louis-v": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20251120-nvidia-shares-rise-after-strong-results-ease-ai": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20251021-how-sam-altman-tied-tech-s-biggest-players-to-op": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250220-apple-gambles-on-new-iphone-with-ai-features-at": {
+    "relevance": 1,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260825-they-make-life-much-easier-ai-powered-shopping-t": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260214-working-in-a-i-lifted-their-compensation-now-the": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "other"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20250205-eu-merger-watchdog-begins-probe-of-amd-s-5-billi": {
+    "relevance": 1,
+    "topics": [
+     "legal",
+     "deals",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260420-california-accuses-amazon-of-price-fixing-in-leg": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260102-five-wall-street-investors-explain-how-they-re-a": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251210-tech-media-telecom-roundup-market-talk": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "market roundup; AI appears only as a company name"
+   },
+   "20260828-the-morning-risk-report-a-walk-around-dubai-show": {
+    "relevance": 1,
+    "topics": [
+     "legal",
+     "other"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20261005-the-morning-risk-report-new-ai-czar-unveils-goal": {
+    "relevance": 1,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260730-microsoft-posts-biggest-one-day-market-cap-gain": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260722-openai-s-rogue-agents-are-a-wake-up-call-to-risk": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "other"
+    ],
+    "frames": {
+     "existential": 3,
+     "security": 3
+    }
+   },
+   "20251022-harry-and-meghan-join-ai-pioneers-in-call-for-ba": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260214-us-military-used-anthropic-s-ai-model-claude-in": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "deals"
+    ],
+    "frames": {
+     "security": 2
+    },
+    "note": "military deployment - same rename problem as items 18 and 98"
+   },
+   "20251120-ai-bubble-fears-return-as-wall-street-falls-back": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20251013-salesforce-s-15-billion-investment-in-san-franci": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251008-do-openai-s-multibillion-dollar-deals-mean-exube": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260717-china-s-moonshot-ai-claims-kimi-k3-can-rival-ope": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 3
+    }
+   },
+   "20260412-it-feels-as-if-i-ve-made-a-new-best-friend-my-ex": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "individual": 1
+    },
+    "note": "parasocial attachment raised exploratorily, not as harm - intensity judgement is shaky"
+   },
+   "20250810-what-happened-when-mark-zuckerberg-moved-in-next": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260102-as-schools-embrace-a-i-tools-skeptics-raise-conc": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "product"
+    ],
+    "frames": {
+     "displacement": 2,
+     "unreliable": 1
+    },
+    "note": "'erode teaching and learning' read as deskilling"
+   },
+   "20250103-nick-clegg-leaves-meta-ahead-of-trump-s-return-a": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20250609-uk-banks-to-experiment-with-nvidia-ai-in-superch": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "product"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260821-the-brains-who-powered-china-s-surprising-ai-lea": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260520-ceo-walks-back-comment-about-replacing-lower-val": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "governance"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20250828-nvidia-sets-fresh-sales-record-amid-fears-of-an": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20250723-trump-plans-to-give-a-i-developers-a-free-hand": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251024-us-student-handcuffed-after-ai-system-apparently": {
+    "relevance": 2,
+    "topics": [
+     "other",
+     "product"
+    ],
+    "frames": {
+     "unreliable": 3,
+     "individual": 3
+    }
+   },
+   "20260314-the-backlash-against-ai-devices-that-are-always": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "security": 3
+    }
+   },
+   "20260310-youtube-adds-tool-to-help-public-figures-report": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "product"
+    ],
+    "frames": {
+     "societal": 2,
+     "individual": 2
+    }
+   },
+   "20250515-u-s-unveils-sweeping-a-i-project-in-abu-dhabi": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260107-commons-women-and-equalities-committee-to-stop-u": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "policy"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20260211-bill-ackman-makes-a-big-bet-on-meta": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20261006-finland-orders-halt-to-work-on-two-google-data-c": {
+    "relevance": 1,
+    "topics": [
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "ENV: clearest environment case in the sample - forest clearance for data centres, and AI is never named, so relevance rests on outside knowledge"
+   },
+   "20260818-a-21-billion-kids-in-chips-startup-is-scooping-u": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "compute",
+     "labour"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260227-woman-suing-meta-youtube-testifies-it-s-too-hard": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20251029-big-tech-faces-tough-questions-over-the-a-i-spen": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "deals"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260911-cyberattack-by-rogue-ai-swarm-stokes-fears-of-ou": {
+    "relevance": 2,
+    "topics": [
+     "other",
+     "model"
+    ],
+    "frames": {
+     "security": 3,
+     "existential": 3
+    }
+   },
+   "20250410-federal-workers-fear-musk-s-efficiency-agency-is": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "labour"
+    ],
+    "frames": {
+     "security": 3
+    }
+   },
+   "20261005-internet-watch-foundation-reports-huge-rise-in-a": {
+    "relevance": 2,
+    "topics": [
+     "moderation",
+     "policy"
+    ],
+    "frames": {
+     "individual": 3
+    }
+   },
+   "20250210-mass-theft-thousands-of-artists-call-for-ai-art": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "other"
+    ],
+    "frames": {
+     "displacement": 2
+    },
+    "note": "copyright / training-data appropriation has no frame; coded displacement for the livelihood claim only"
+   },
+   "20261001-a-hacking-competition-shows-the-power-of-china-s": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "policy"
+    ],
+    "frames": {
+     "security": 3,
+     "capability": 2
+    }
+   },
+   "20250119-ai-could-destroy-democracy-as-we-know-it-letter": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "labour"
+    ],
+    "frames": {
+     "societal": 3,
+     "displacement": 3
+    }
+   },
+   "20260505-us-and-tech-firms-strike-deal-to-review-ai-model": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3,
+     "security": 2
+    }
+   },
+   "20260331-tech-giant-oracle-makes-significant-job-cuts": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {},
+    "note": "Oracle job cuts with no AI mention; cf. item 1, where the AI link is stated"
+   },
+   "20260831-how-a-phantom-island-in-a-canadian-lake-appeared": {
+    "relevance": 1,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "societal": 1
+    }
+   },
+   "20260514-lawyers-trade-barbs-on-credibility-of-elon-musk": {
+    "relevance": 2,
+    "topics": [
+     "legal"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260507-the-chip-craze-is-turning-a-glass-company-and-a": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "compute"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20250210-macron-pitches-lighter-regulation-to-fuel-a-i-bo": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 1
+    },
+    "note": "'risks will be overlooked' - danger unspecified"
+   },
+   "20250627-hegseth-defends-iran-strike-amid-doubts-over-tru": {
+    "relevance": 1,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "unreliable": 1
+    }
+   },
+   "20260804-ai-generated-stories-rated-better-quality-than-h": {
+    "relevance": 2,
+    "topics": [
+     "other"
+    ],
+    "frames": {
+     "capability": 3,
+     "displacement": 1
+    }
+   },
+   "20251120-teens-seek-mental-health-help-from-chatbots-that": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "moderation"
+    ],
+    "frames": {
+     "individual": 3,
+     "unreliable": 2
+    }
+   },
+   "20260916-if-you-re-building-frankenstein-stop-jd-vance-di": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260417-washington-s-scramble-to-get-anthropic-s-powerfu": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "model"
+    ],
+    "frames": {
+     "security": 3,
+     "capability": 3
+    }
+   },
+   "20250714-their-water-taps-ran-dry-when-meta-built-next-do": {
+    "relevance": 2,
+    "topics": [
+     "compute"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "ENV: the single clearest environmental-harm item in the sample - water depletion is the whole story and the scheme codes it as no stance"
+   },
+   "20260905-we-re-plausibly-close-to-crossing-the-line-are-w": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20260514-high-stakes-courtroom-drama-of-musk-v-openai-hea": {
+    "relevance": 2,
+    "topics": [
+     "legal"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251011-windows-10-users-urged-to-prepare-for-microsoft": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260921-more-australians-will-be-dying-than-being-born-i": {
+    "relevance": 1,
+    "topics": [
+     "other",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20250614-workers-in-uk-need-to-embrace-ai-or-risk-being-l": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "policy"
+    ],
+    "frames": {
+     "displacement": 2,
+     "capability": 1
+    }
+   },
+   "20260319-apple-is-way-behind-in-ai-and-still-making-a-for": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "product"
+    ],
+    "frames": {
+     "bubble": 1
+    }
+   },
+   "20251006-john-chambers-ex-cisco-chief-is-a-vc-now-it-s-to": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20251106-us-markets-tumble-amid-wall-street-concern-over": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "labour"
+    ],
+    "frames": {
+     "displacement": 2,
+     "bubble": 1
+    }
+   },
+   "20251002-walmart-wants-more-developers-and-more-ai-agents": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "product"
+    ],
+    "frames": {
+     "capability": 2,
+     "displacement": 1
+    }
+   },
+   "20250819-mark-zuckerberg-shakes-up-meta-s-a-i-efforts-aga": {
+    "relevance": 2,
+    "topics": [
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20251202-the-biggest-decision-yet-jared-kaplan-on-allowin": {
+    "relevance": 2,
+    "topics": [
+     "model",
+     "governance"
+    ],
+    "frames": {
+     "existential": 3,
+     "capability": 3
+    }
+   },
+   "20260722-us-teen-drops-meta-lawsuit-on-social-media-addic": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20250214-no-mark-zuckerberg-did-not-fund-anti-trump-lawsu": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260518-amazon-web-services-ceo-pushes-back-on-ai-job-ap": {
+    "relevance": 2,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 2
+    },
+    "note": "frame raised in order to rebut it - present under the attribution rule"
+   },
+   "20250708-tech-life": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "capability": 1,
+     "security": 1
+    }
+   },
+   "20260930-a-fake-image-of-a-georgia-mayor-kissing-a-person": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "moderation"
+    ],
+    "frames": {
+     "societal": 3,
+     "individual": 2
+    }
+   },
+   "20260217-chatbots-are-the-new-influencers-brands-must-woo": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "markets"
+    ],
+    "frames": {
+     "capability": 2
+    }
+   },
+   "20260608-apple-has-another-go-at-a-i-but-don-t-call-it-a": {
+    "relevance": 2,
+    "topics": [
+     "product",
+     "governance"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260910-lawmakers-blast-ai-companies-after-researcher-wa": {
+    "relevance": 2,
+    "topics": [
+     "policy"
+    ],
+    "frames": {
+     "existential": 3
+    }
+   },
+   "20250509-a-i-generated-likeness-of-murder-victim-forgives": {
+    "relevance": 2,
+    "topics": [
+     "legal",
+     "other"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "synthetic likeness of a dead person, not framed as harm - no frame fits"
+   },
+   "20250809-it-s-missing-something-agi-superintelligence-and": {
+    "relevance": 2,
+    "topics": [
+     "model"
+    ],
+    "frames": {
+     "capability": 2,
+     "bubble": 2
+    }
+   },
+   "20260520-the-furious-chip-rally-was-petering-out-now-wall": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "AI never named; 'chip rally' is the AI trade only by outside knowledge"
+   },
+   "20260706-microsoft-cuts-4-800-jobs-and-shrinks-xbox-in-si": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {},
+    "note": "same Microsoft/Xbox cuts as item 1 but with no AI mention - relevance turns on the summary wording, not the event"
+   },
+   "20260227-anthropic-boss-rejects-pentagon-demand-to-drop-a": {
+    "relevance": 2,
+    "topics": [
+     "governance",
+     "policy"
+    ],
+    "frames": {
+     "existential": 1
+    }
+   },
+   "20260728-apple-becomes-second-5tn-company-as-investors-fl": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20250411-everyone-s-jumping-on-the-ai-doll-trend-but-what": {
+    "relevance": 2,
+    "topics": [
+     "product"
+    ],
+    "frames": {
+     "security": 1
+    },
+    "note": "ENV: energy use flagged alongside data use; only the data half is codeable"
+   },
+   "20251008-bank-of-england-warns-of-growing-risk-that-ai-bu": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "policy"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260116-ai-will-transform-the-human-job-and-enhance-skil": {
+    "relevance": 2,
+    "topics": [
+     "labour",
+     "policy"
+    ],
+    "frames": {
+     "displacement": 3,
+     "capability": 2
+    }
+   },
+   "20250418-nvidia-the-ai-chip-giant-caught-between-us-and-c": {
+    "relevance": 2,
+    "topics": [
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260906-how-a-blacklisted-chinese-tech-giant-kept-buying": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "compute"
+    ],
+    "frames": {
+     "security": 2
+    }
+   },
+   "20260505-congress-is-doing-little-to-prepare-for-potentia": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "labour"
+    ],
+    "frames": {
+     "displacement": 3
+    }
+   },
+   "20251212-behind-the-deal-that-took-disney-from-ai-skeptic": {
+    "relevance": 2,
+    "topics": [
+     "deals",
+     "legal"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260427-see-the-corporate-layoffs-so-far-in-2026": {
+    "relevance": 1,
+    "topics": [
+     "labour"
+    ],
+    "frames": {
+     "displacement": 2
+    }
+   },
+   "20260801-3-teenagers-used-google-maps-for-a-hike-they-wer": {
+    "relevance": 0,
+    "topics": [],
+    "frames": {}
+   },
+   "20260731-his-wedding-guests-were-arriving-just-as-his-45": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20260618-amazon-retaliated-against-workers-who-supported": {
+    "relevance": 1,
+    "topics": [
+     "labour",
+     "compute",
+     "policy"
+    ],
+    "frames": {
+     "neutral": 2
+    },
+    "note": "ENV-adjacent: data-centre regulation fight; AI never named"
+   },
+   "20260104-from-the-ai-bubble-to-fed-fears-the-global-econo": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20251123-ai-investors-want-more-making-it-and-less-faking": {
+    "relevance": 2,
+    "topics": [
+     "markets",
+     "deals"
+    ],
+    "frames": {
+     "bubble": 3
+    }
+   },
+   "20260407-china-is-winning-one-ai-race-the-us-another-but": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "model"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260731-inside-the-meltdown-of-a-wunderkind-s-a-i-hedge": {
+    "relevance": 2,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "bubble": 2
+    }
+   },
+   "20251213-gavin-newsom-pushes-back-on-trump-ai-executive-o": {
+    "relevance": 2,
+    "topics": [
+     "policy",
+     "legal"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   },
+   "20260609-chip-stocks-bouncing-back-on-wall-street-and-sou": {
+    "relevance": 1,
+    "topics": [
+     "markets"
+    ],
+    "frames": {
+     "neutral": 2
+    }
+   }
+  }
+ }
+}
