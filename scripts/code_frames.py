@@ -408,11 +408,15 @@ def phase_code(args) -> int:
         rows = sample["items"] if isinstance(sample, dict) else sample
         sample_ids = {r["id"] for r in rows}
 
-    todo, protected = [], 0
+    todo, hand_n = [], 0
     for ev in events:
+        # Hand-coded rows ARE coded here, into llm_codes.jsonl, because the
+        # agreement figure needs the model's opinion on the same items a human
+        # judged. They are protected where it matters: the apply phase refuses
+        # to write over them, so the corpus keeps the human codes while the
+        # comparison still has both.
         if ev.get("coder") == "hand":
-            protected += 1
-            continue
+            hand_n += 1
         if sample_ids is not None and ev.get("id") not in sample_ids:
             continue
         if ev.get("id") in done and not args.redo:
@@ -422,8 +426,10 @@ def phase_code(args) -> int:
     if args.limit:
         todo = todo[:args.limit]
 
-    print(f"{len(events)} events; {protected} hand-coded and protected; "
-          f"{len(done)} already in {CODES.name}; {len(todo)} to code.")
+    print(f"{len(events)} events; {len(todo)} to code "
+          f"({hand_n} of them hand-coded — coded here for the comparison, "
+          f"never written back over the human codes); "
+          f"{len(done)} already in {CODES.name}.")
     print(f"model {args.model} · rubric {RUBRIC_VERSION} · "
           f"batch {args.batch} · {args.workers} workers")
     if args.dry_run:
