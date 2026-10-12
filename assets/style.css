@@ -234,9 +234,14 @@ select {
 .swatch-line.dashed { border-top-style: dashed; border-top-width: 2px; }
 
 .chips-row {
-  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px;
   margin: 8px 0 6px;
   padding-right: var(--plot-right, 14px);
+}
+.chips-row > .chips-label {
+  flex: 0 0 auto;
+  width: calc(var(--plot-left, 104px) - 10px);
+  min-width: 0;
 }
 /* One row, always. The ten companies are a set to be read across, and wrapping
    them onto a second line breaks that reading; below the width where they fit,
@@ -499,9 +504,16 @@ select {
   gap: 6px 10px;
   padding-right: var(--plot-right, 14px);
 }
-/* The label column is as narrow as the longer of the two labels needs, so the
-   width it reserves goes to the chips instead. */
-.axis-row .chips-label { flex: 0 0 auto; min-width: 7em; }
+/* Every control row that belongs to the chart puts its label in the axis
+   gutter, so that the controls themselves begin exactly where the plotted
+   area does. The width is the gutter less that row's own column gap, derived
+   from the same margin the renderer draws the chart with, so a label can
+   never push its controls out of line with the dots they filter. */
+.axis-row > .chips-label {
+  flex: 0 0 auto;
+  width: calc(var(--plot-left, 104px) - 10px);
+  min-width: 0;
+}
 /* Subject is the lens, so topic chips carry the hue and the framing chips
    recede. Framing keeps its danger / contrast / neutral grouping as labels
    instead, which costs no colour. */
@@ -574,8 +586,14 @@ select {
 .detail .tag-frame.fam-contrast,
 .detail .tag-frame.fam-neutral { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1px var(--rule); }
 .axis-row.thresholds { gap: 6px 20px; padding-top: 2px; }
-.axis-row.thresholds .control { flex-direction: row; align-items: center; gap: 8px; }
+.axis-row.thresholds .control { flex-direction: row; align-items: center; gap: 10px; }
 .axis-row.thresholds .control-label { min-width: 0; white-space: nowrap; }
+/* The first control's label sits in the gutter like the rows above it, so the
+   segmented buttons line up with the chips rather than with their own label. */
+.axis-row.thresholds .control:first-child > .control-label {
+  flex: 0 0 auto;
+  width: calc(var(--plot-left, 104px) - 10px);
+}
 #threshold-note { color: var(--muted); font-size: 0.8125rem; }
 @media (max-width: 620px) {
   .axis-row .chips-label { min-width: 0; flex-basis: 100%; }
@@ -607,8 +625,14 @@ select {
 .source-row {
   display: flex; flex-wrap: wrap; align-items: baseline;
   gap: 8px 14px; margin-top: 8px;
-  padding-left: var(--plot-left, 104px);
   padding-right: var(--plot-right, 14px);
+  min-width: 0;
+}
+/* The label takes the gutter the padding used to, so the checkboxes still
+   start at the plotted area and the row is named like the others. */
+.source-row > .chips-label {
+  flex: 0 0 auto;
+  width: calc(var(--plot-left, 104px) - 14px);
   min-width: 0;
 }
 /* Both children have to be allowed to shrink, or the row is held open at its
