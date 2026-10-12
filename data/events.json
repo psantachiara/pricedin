@@ -133558,6 +133558,51 @@
     "thumbnail": "https://media.guim.co.uk/c01cee88362c0355e50eac343016f771811f0cd2/355_0_3701_2960/500.jpg"
   },
   {
+    "id": "20261012-ai-agents-are-a-threat-to-travel-businesses-airb",
+    "date": "2026-10-12",
+    "title": "AI Agents Are a Threat to Travel Businesses. Airbnb Could Still Be a Winner.",
+    "source": "WSJ",
+    "url": "https://www.wsj.com/business/hospitality/ai-agents-are-a-threat-to-travel-businesses-airbnb-could-still-be-a-winner-3ad37351?mod=rss_markets_main",
+    "org": null,
+    "category": "markets",
+    "relevance": 2,
+    "topics": [
+      "markets",
+      "product"
+    ],
+    "frames": {
+      "neutral": 2
+    },
+    "coder": "keyword-v1",
+    "tickers": [],
+    "summary": "For the lodging platform’s stock to thrive in the age of bots, it has to turn repeat customers into loyal ones.",
+    "thumbnail": "https://images.wsj.net/im-45825563",
+    "paywall": true
+  },
+  {
+    "id": "20261012-ai-less-regulated-than-milk-microsoft-president",
+    "date": "2026-10-12",
+    "title": "AI less regulated than milk, Microsoft president says in warning over safety",
+    "source": "Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+    "org": "microsoft",
+    "category": "policy",
+    "relevance": 2,
+    "topics": [
+      "policy",
+      "product"
+    ],
+    "frames": {
+      "existential": 1
+    },
+    "coder": "keyword-v1",
+    "tickers": [
+      "MSFT"
+    ],
+    "summary": "Brad Smith adds to calls for tougher rules for AI, including ‘kill switches’ and legal obligation to victims of rogue agents",
+    "thumbnail": "https://media.guim.co.uk/d1ca432dc28121d525a75920de232524abe78efc/0_0_3421_2737/500.jpg"
+  },
+  {
     "id": "20261012-ftx-s-old-bitcoin-mining-assets-are-now-part-of",
     "date": "2026-10-12",
     "title": "FTX’s Old Bitcoin-Mining Assets Are Now Part of the AI Boom",
