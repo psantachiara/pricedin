@@ -5969,3 +5969,4 @@
 {"id": "20261012-cyber-attack-like-openai-medicare-breach-seems-l", "relevance": 2, "topics": ["policy"], "frames": {"security": 3, "capability": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-12T14:30:44Z"}
 {"id": "20261012-the-morning-risk-report-courts-grapple-with-prob", "relevance": 1, "topics": ["other"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-12T14:30:44Z"}
 {"id": "20261012-i-ve-become-significantly-more-cautious-six-pare", "relevance": 2, "topics": ["other"], "frames": {"individual": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-12T14:30:44Z"}
+{"id": "20261012-meta-says-new-ai-model-is-state-of-the-art-will", "relevance": 2, "topics": ["model", "product"], "frames": {"capability": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-12T18:08:18Z"}
