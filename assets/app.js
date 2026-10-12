@@ -1011,7 +1011,7 @@
         `The 95% interval for the difference runs from ${fmtPP(s.lo)} to ${fmtPP(s.hi)}, `
         + `and ${crosses ? 'includes' : 'does not include'} no difference.`);
       bar.innerHTML = `
-        <text x="${x(0) + 6}" y="13" font-size="11" fill="var(--muted)">no difference</text>
+        <text x="${x(0)}" y="13" font-size="11" fill="var(--muted)" text-anchor="middle">no difference</text>
         <line x1="${pad - 14}" y1="29" x2="${W - pad + 14}" y2="29" stroke="var(--grid)" stroke-width="1"/>
         <line x1="${x(0)}" y1="17" x2="${x(0)}" y2="40" stroke="var(--ink)" stroke-width="1"/>
         <line x1="${x(s.lo)}" y1="29" x2="${x(s.hi)}" y2="29" stroke="${tone}"
@@ -1124,7 +1124,7 @@
         ...rest));
 
       entry('Shown as danger', `${s.nA.toLocaleString()} · ${fmtPct(s.mA, 2)}`,
-        `${s.nA.toLocaleString()} of the announcements now shown characterise AI as a `
+        `${s.nA.toLocaleString()} of the announcements now shown characterize AI as a `
         + `danger${named}. Averaged across them, the stocks they are tagged to `
         + `${move(s.mA)} over the following ${days}.`);
 
@@ -1134,7 +1134,7 @@
 
       entry('Difference', `${fmtPP(s.diff)} ± ${(s.half * 100).toFixed(2)}`,
         'The first minus the second. A positive difference means that announcements '
-        + 'characterising AI as dangerous were followed by better relative stock performance. '
+        + 'characterizing AI as dangerous were followed by better relative stock performance. '
         + '“pp” because it is a gap between two percentages, not a return of its own. '
         + 'The ± is the margin of error: the honest range runs from ',
         b(fmtPP(s.lo)), ' to ', b(fmtPP(s.hi)),
