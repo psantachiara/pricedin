@@ -1039,14 +1039,14 @@
       const b = (text) => el('b', { text });
 
       // What the percentages are measured against governs how all three read,
-      // but a reader needs it once rather than every time they glance at the
-      // row, so it hangs off the label instead of taking a line of its own.
-      const label = $('#lbl-compare');
-      if (label) {
-        label.title = `Each percentage already has ${state.benchmark}’s own move over the same `
-          + 'days taken out of it, so it says whether those stocks did better or worse than '
-          + 'the market — not how much they rose. A gap is what followed an announcement, '
-          + 'not what it caused.';
+      // so it stands under the heading as the section's subtitle, named for
+      // whichever benchmark is selected.
+      const subtitle = $('#compare-subtitle');
+      if (subtitle) {
+        subtitle.textContent = `Each percentage already has ${state.benchmark}’s own move over `
+          + 'the same days taken out of it, so it says whether those stocks did better or '
+          + 'worse than the market — not how much they rose. A gap is what followed an '
+          + 'announcement, not what it caused.';
       }
 
       // In the industry total every announcement on a day carries the same

@@ -140,14 +140,6 @@
             <span class="hint">Drag across the strip below to zoom into a period.</span>
           </div>
           <svg id="overview" class="overview" aria-label="Date range selector"></svg>
-          <section class="compare" id="compare" aria-label="Framing compared with market reaction">
-            <span class="chips-label" id="lbl-compare" tabindex="0">Reaction</span>
-            <div class="compare-body">
-              <div class="compare-figures" id="compare-figures"></div>
-              <svg class="compare-interval" id="compare-interval" hidden></svg>
-              <div class="compare-note" id="compare-note"></div>
-            </div>
-          </section>
           <div class="tooltip" id="tooltip" hidden></div>
           <div class="stage-message" id="stage-message" hidden></div>
         </div>
@@ -157,20 +149,32 @@
       </section>
 
     <section class="ranking" aria-labelledby="ranking-heading">
-      <h2 id="ranking-heading">Largest moves after news</h2>
-      <p class="caption" id="ranking-caption"></p>
-      <div class="table-scroll">
-        <table class="ranking-table" id="ranking">
-          <thead>
-            <tr><th scope="col">Date</th><th scope="col">Announcement</th><th scope="col">Stocks</th><th scope="col" class="num">Move</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+      <details class="collapsible" open>
+        <summary><h2 id="ranking-heading">Largest moves after news</h2></summary>
+        <p class="caption" id="ranking-caption"></p>
+        <div class="table-scroll">
+          <table class="ranking-table" id="ranking">
+            <thead>
+              <tr><th scope="col">Date</th><th scope="col">Announcement</th><th scope="col">Stocks</th><th scope="col" class="num">Move</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section class="compare" id="compare" aria-labelledby="compare-heading">
+      <h2 id="compare-heading">Reaction by framing</h2>
+      <p class="caption" id="compare-subtitle"></p>
+      <div class="compare-body">
+        <div class="compare-figures" id="compare-figures"></div>
+        <svg class="compare-interval" id="compare-interval" hidden></svg>
+        <div class="compare-note" id="compare-note"></div>
       </div>
     </section>
 
     <footer class="notes">
-      <details class="notes-details">
+      <details class="collapsible">
         <summary><h2>How to read this</h2></summary>
         <div class="notes-cols">
         <p>Prices are daily closes adjusted for splits and dividends, updated each weekday evening from Yahoo Finance. Market value multiplies each close by today’s share count, so older values are approximate.</p>

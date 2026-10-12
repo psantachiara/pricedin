@@ -714,36 +714,16 @@ select {
   text-align: right;
 }
 
-/* The comparison readout. It is a statement about the strip above it and the
-   prices above that, so it is set over the plotted area like the controls and
-   the provenance note, not as a page-wide aside. The rule across the top is
-   the only heavy line below the chart: this is the one place on the page that
-   answers the question the page is asking, and it should read as a result
-   rather than as another caption. */
-.compare {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 6px 14px;
-  margin-top: 16px;
-  padding-right: var(--plot-right, 14px);
-  min-width: 0;
-}
-.compare > .chips-label {
-  flex: 0 0 auto;
-  width: calc(var(--plot-left, 104px) - 14px);
-  min-width: 0;
-}
-/* Basis 0, not auto: flex decides whether to wrap from the hypothetical size,
-   which for `auto` is the max-content width of the prose below — wide enough
-   to push the body onto its own line and out of alignment with the gutter.
-   min-width alone does not help, because it governs shrinking within a line
-   and not the decision to break one. */
+/* A section of its own, below the table, rather than a strip tucked under the
+   chart: it is the page's own answer to the question the page asks, and a
+   reader arriving at it after selecting an announcement should find it
+   titled rather than labelled. */
+.compare { margin-top: 48px; }
+/* The rule echoes the head of the table above, so the two sections read as
+   the same kind of thing. */
 .compare-body {
-  flex: 1 1 0;
-  min-width: 0;
   border-top: 2px solid var(--ink);
-  padding-top: 10px;
+  padding-top: 12px;
 }
 /* The same three-column track as the descriptions below, so each figure sits
    directly above the paragraph that explains it. The dividing rules the cells
@@ -803,20 +783,6 @@ select {
   color: var(--muted);
 }
 .compare-note b { color: var(--ink); font-weight: 600; }
-/* What the percentages are measured against is carried by the row's label
-   rather than by a line of body text, so the dotted rule marks the label as
-   holding something to read and the focus style keeps it reachable without a
-   mouse. */
-.compare > .chips-label {
-  cursor: help;
-  text-decoration: underline dotted var(--rule);
-  text-underline-offset: 3px;
-}
-.compare > .chips-label:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
 /* One column per figure, in the same order, so each explanation sits under
    the thing it explains instead of in a list the reader has to map back. */
 .compare-key {
@@ -846,7 +812,6 @@ select {
   .compare-key p { max-width: 76ch; }
 }
 @media (max-width: 620px) {
-  .compare > .chips-label { flex-basis: 100%; width: auto; }
   /* The drawing scales with its box, and below this width its end labels
      scale down past reading size. They repeat the ± figure stated just above,
      so dropping them loses nothing: what the drawing is for here is showing
@@ -961,7 +926,7 @@ select {
 .text-button:hover { color: var(--ink); }
 
 .ranking { margin-top: 48px; }
-.ranking h2, .notes h2 {
+.ranking h2, .notes h2, .compare h2 {
   margin: 0 0 4px;
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -1009,10 +974,12 @@ select {
 
 .notes { margin-top: 56px; padding-top: 18px; border-top: 2px solid var(--ink); }
 
-/* Closed by default: the notes are reference, wanted once and then in the way.
-   The heading stays visible as the control, so the section still announces
-   itself. */
-.notes-details > summary {
+/* A section that can be folded away, its heading left visible as the control
+   so the section still announces itself when shut. Used by the notes, which
+   are reference and start closed, and by the table of largest moves, which
+   starts open but can be put away by a reader who is working with the
+   framing comparison below it. */
+.collapsible > summary {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1021,10 +988,10 @@ select {
   padding: 2px 0;
   border-radius: 4px;
 }
-.notes-details > summary::-webkit-details-marker { display: none; }
-.notes-details > summary > h2 { display: inline; }
+.collapsible > summary::-webkit-details-marker { display: none; }
+.collapsible > summary > h2 { display: inline; }
 /* Own marker, so it can sit after the heading and turn with the state. */
-.notes-details > summary::after {
+.collapsible > summary::after {
   content: "";
   width: 9px; height: 9px;
   border-right: 2px solid var(--muted);
@@ -1032,9 +999,9 @@ select {
   transform: rotate(-45deg) translateY(-2px);
   transition: transform 160ms ease;
 }
-.notes-details[open] > summary::after { transform: rotate(45deg) translateY(-1px); }
-.notes-details > summary:hover::after { border-color: var(--ink); }
-.notes-details > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.collapsible[open] > summary::after { transform: rotate(45deg) translateY(-1px); }
+.collapsible > summary:hover::after { border-color: var(--ink); }
+.collapsible > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 
 .notes-cols {
   display: grid;
