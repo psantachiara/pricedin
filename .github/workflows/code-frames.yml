@@ -43,6 +43,11 @@ on:
         required: false
         default: false
         type: boolean
+      probe:
+        description: "Diagnose only: send three tiny test requests and print the replies"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -80,10 +85,20 @@ jobs:
           fi
           echo "Key present (${#ANTHROPIC_API_KEY} characters)."
 
+      - name: Probe the API
+        if: inputs.probe == true
+        env:
+          PYTHONUNBUFFERED: "1"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python scripts/code_frames.py probe --model "${{ inputs.model }}"
+
       - name: Snapshot the keyword baseline and stamp the hand codes
+        if: inputs.probe != true
         run: python scripts/prepare_codes.py
 
       - name: Code
+        if: inputs.probe != true
         env:
           PYTHONUNBUFFERED: "1"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -101,19 +116,19 @@ jobs:
           python scripts/code_frames.py code $ARGS
 
       - name: Apply to events.json
-        if: inputs.dry_run != true && inputs.apply == true
+        if: inputs.dry_run != true && inputs.apply == true && inputs.probe != true
         run: python scripts/code_frames.py apply
 
       - name: Compare against the reference codes
-        if: inputs.dry_run != true
+        if: inputs.dry_run != true && inputs.probe != true
         run: python scripts/compare_coders.py || true
 
       - name: Rebuild coverage and derived data
-        if: inputs.dry_run != true && inputs.apply == true
+        if: inputs.dry_run != true && inputs.apply == true && inputs.probe != true
         run: python scripts/update_data.py
 
       - name: Commit
-        if: inputs.dry_run != true
+        if: inputs.dry_run != true && inputs.probe != true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
