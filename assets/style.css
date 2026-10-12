@@ -745,24 +745,25 @@ select {
   border-top: 2px solid var(--ink);
   padding-top: 10px;
 }
-/* The same three-column track as the descriptions below, so each figure sits
-   directly above the paragraph that explains it. The dividing rules the cells
-   used to carry are gone with it: a rule can sit either at the column edge or
-   inside the padding that would shift the content off the column, and once
-   each figure is paired with its own description underneath, the columns are
-   already told apart without one. */
 .compare-figures {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 4px 30px;
+  gap: 4px 0;
   font-variant-numeric: tabular-nums;
 }
 .compare-cell {
   display: flex;
   align-items: baseline;
   gap: 7px;
-  min-width: 0;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid var(--rule);
+}
+.compare-cell:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
 }
 .compare-cell .ck,
 .compare-cell .cn,
@@ -778,14 +779,12 @@ select {
    established never arrives already tinted as a result. */
 .compare-cell .cv.up { color: var(--up); }
 .compare-cell .cv.down { color: var(--down); }
-/* Centred, because it belongs to the row as a whole rather than to the
-   figure it happens to sit nearest. */
 .compare-interval {
   display: block;
   width: 100%;
   max-width: 560px;
   height: auto;
-  margin: 8px auto 0;
+  margin-top: 6px;
 }
 .compare-interval[hidden] { display: none; }
 /* No measure cap, matching the provenance lines directly below: these sit in
@@ -838,15 +837,17 @@ select {
   font-variant-numeric: tabular-nums;
   opacity: 0.8;
 }
-/* Figures and descriptions share one breakpoint: if they ever disagreed about
-   how many columns they have, nothing would sit above its own explanation. */
 @media (max-width: 900px) {
-  .compare-figures { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .compare-key { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .compare-key p { max-width: 76ch; }
 }
 @media (max-width: 620px) {
   .compare > .chips-label { flex-basis: 100%; width: auto; }
+  .compare-cell {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 18px;
+  }
   /* The drawing scales with its box, and below this width its end labels
      scale down past reading size. They repeat the ± figure stated just above,
      so dropping them loses nothing: what the drawing is for here is showing
