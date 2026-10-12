@@ -388,6 +388,18 @@
       "short": "Displacement"
     },
     {
+      "id": "environment",
+      "family": "danger",
+      "name": "Environmental and resource cost",
+      "short": "Environment"
+    },
+    {
+      "id": "appropriation",
+      "family": "danger",
+      "name": "Appropriation of work",
+      "short": "Appropriation"
+    },
+    {
       "id": "capability",
       "family": "contrast",
       "name": "Capability and power",

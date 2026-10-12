@@ -955,6 +955,58 @@
       ]
     },
     {
+      "id": "environment",
+      "family": "danger",
+      "match": [
+        "water use",
+        "water usage",
+        "water consumption",
+        "guzzl*",
+        "aquifer*",
+        "groundwater",
+        "drought",
+        "taps ran dry",
+        "ratepayer*",
+        "rate payers",
+        "strain* the grid",
+        "grid strain",
+        "energy use",
+        "power use",
+        "electricity use",
+        "carbon footprint",
+        "climate cost*",
+        "climate impact",
+        "environmental impact",
+        "environmental cost*",
+        "environmental concern*",
+        "forest clearance",
+        "deforest*"
+      ]
+    },
+    {
+      "id": "appropriation",
+      "family": "danger",
+      "match": [
+        "copyright*",
+        "infring*",
+        "without permission",
+        "without a licence",
+        "without a license",
+        "unlicensed",
+        "without consent",
+        "plagiar*",
+        "mass theft",
+        "stolen work",
+        "scraped",
+        "scraping",
+        "opt out",
+        "opt-out",
+        "royalt*",
+        "likeness rights",
+        "their own work"
+      ]
+    },
+    {
       "id": "capability",
       "family": "contrast",
       "match": [
