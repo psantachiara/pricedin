@@ -1089,17 +1089,61 @@
         el('span', { class: 'cpm', text: `± ${(s.half * 100).toFixed(2)}` })));
       drawInterval(bar, s);
 
-      // What the interval means, in the one sentence a reader needs, followed
-      // by the move that tests it. The direction is never stated as a finding
-      // while the range reaches across zero.
-      if (crosses) {
-        say('The range reaches across no difference, so this selection does not show '
-          + 'danger-framed announcements being followed by a different move.');
-      } else {
-        say('The range stays ', b(s.diff > 0 ? 'above' : 'below'), ' no difference for this '
-          + 'selection. Each combination of chips is a fresh comparison, so one selection '
-          + 'clearing zero is weak evidence on its own.');
-      }
+      // A reader who does not already know what an abnormal return is cannot
+      // read any of the three figures, and the figures are the whole point of
+      // the row. So each one is named, restated with its own numbers, and
+      // explained in plain words, with the subtraction that makes them
+      // comparable stated first because everything else depends on it.
+      const days = `${state.window} trading ${state.window === 1 ? 'day' : 'days'}`;
+      note.append(el('p', { class: 'compare-lead' },
+        'Each percentage already has ', b(state.benchmark), '’s own move over the same days '
+        + 'taken out of it, so it says whether those stocks did better or worse than the '
+        + 'market — not how much they rose. A gap is what followed an announcement, not what '
+        + 'it caused.'));
+
+      const move = (v) => (Math.abs(v) < 5e-5
+        ? `matched ${state.benchmark}`
+        : `${v > 0 ? 'beat' : 'lagged'} ${state.benchmark} by `
+          + fmtPct(Math.abs(v), 2).replace('+', ''));
+
+      // Naming all eight danger framings every time is noise, since by default
+      // they are all counted. Named only once the reader has narrowed them,
+      // which is when which ones are in play stops being obvious.
+      const allDanger = frames.filter((f) => f.family === 'danger');
+      const onDanger = allDanger.filter((f) => state.frames.has(f.id));
+      const named = onDanger.length && onDanger.length < allDanger.length
+        ? ' — ' + onDanger.map((f) => (f.short || f.name).toLowerCase())
+            .join(', ').replace(/, ([^,]*)$/, onDanger.length > 1 ? ' or $1' : '$1')
+        : '';
+
+      const key = el('div', { class: 'compare-key' });
+      const entry = (label, figure, ...rest) => key.append(el('p', {},
+        el('b', { text: label }),
+        el('span', { class: 'kf', text: figure }),
+        ...rest));
+
+      entry('Shown as danger', `${s.nA.toLocaleString()} · ${fmtPct(s.mA, 2)}`,
+        `${s.nA.toLocaleString()} of the announcements now shown characterise AI as a `
+        + `danger${named}. Averaged across them, the stocks they are tagged to `
+        + `${move(s.mA)} over the following ${days}.`);
+
+      entry('Everything else', `${s.nB.toLocaleString()} · ${fmtPct(s.mB, 2)}`,
+        `The other ${s.nB.toLocaleString()} announcements now shown, which carry no danger `
+        + `framing. Averaged across them, the tagged stocks ${move(s.mB)}.`);
+
+      entry('Difference', `${fmtPP(s.diff)} ± ${(s.half * 100).toFixed(2)}`,
+        'The first minus the second. A positive difference means that announcements '
+        + 'characterising AI as dangerous were followed by better relative stock performance. '
+        + '“pp” because it is a gap between two percentages, not a return of its own. '
+        + 'The ± is the margin of error: the honest range runs from ',
+        b(fmtPP(s.lo)), ' to ', b(fmtPP(s.hi)),
+        crosses
+          ? el('span', {}, ', and because that range crosses zero, ',
+              b('no difference has been shown'), '.')
+          : el('span', {}, ', which stays ', b(s.diff > 0 ? 'above zero' : 'below zero'),
+              '. Each combination of chips is a fresh comparison, so one selection clearing '
+              + 'zero is weak evidence on its own.'));
+      note.append(key);
 
       if (s.bubbleInB > 0 && state.frames.has('bubble')) {
         say('Bubble-framed announcements are counted among everything else. Switching ',
@@ -1107,11 +1151,6 @@
           ' out of the comparison, which is the quickest way to see how much of this gap '
           + 'depends on them.');
       }
-
-      say(`Mean abnormal return over ${state.window} trading `
-        + `${state.window === 1 ? 'day' : 'days'} against ${state.benchmark}, for the `
-        + 'announcements shown above. The range allows for several landing on one day. '
-        + 'A gap is what followed an announcement, not what it caused.');
     }
 
     const stage = $('#stage');

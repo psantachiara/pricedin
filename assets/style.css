@@ -775,6 +775,35 @@ select {
   color: var(--muted);
 }
 .compare-note b { color: var(--ink); font-weight: 600; }
+/* The subtraction that makes the three figures comparable is what a reader
+   has to hold to read any of them, so it is stated once above the three
+   rather than repeated inside each. No measure cap, so it runs the width of
+   the chart like every other statement in this column. */
+/* One column per figure, in the same order, so each explanation sits under
+   the thing it explains instead of in a list the reader has to map back. */
+.compare-key {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 30px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--grid);
+}
+/* Only the leading name is a block: the rule has to be scoped to it, or the
+   emphasised figures inside the prose below break onto lines of their own. */
+.compare-key p > b:first-child { display: block; }
+/* The figures are echoed beside each name so the explanation is anchored to
+   the numbers above it, in tabular figures so they read as the same values. */
+.compare-key .kf {
+  display: block;
+  margin-bottom: 3px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.8;
+}
+@media (max-width: 900px) {
+  .compare-key { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .compare-key p { max-width: 76ch; }
+}
 @media (max-width: 620px) {
   .compare > .chips-label { flex-basis: 100%; width: auto; }
   .compare-cell {
