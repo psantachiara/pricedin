@@ -475,7 +475,6 @@ select {
   padding-left: var(--plot-left, 104px);
   padding-right: var(--plot-right, 14px);
 }
-.range-row .legend-note { margin-left: auto; text-align: right; }
 .hint { font-size: 0.8125rem; color: var(--muted); }
 
 .overview { display: block; margin-top: 6px; }
@@ -687,6 +686,34 @@ select {
 .record-note.gap-note { opacity: 0.85; }
 .record-note[hidden] { display: none; }
 
+/* The stems legend describes the marks on the chart, so it reads best beside
+   the first statement about the record rather than a strip away beneath the
+   range buttons. The row carries the gutter padding and the note inside it
+   gives its own up, so both edges still meet the plotted area. Top-aligned
+   rather than baseline-aligned: the note's glyph is the legend's first flex
+   item and has no baseline of its own, so baseline alignment would hang the
+   whole legend off the glyph's bottom edge. */
+.record-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px 24px;
+  margin-top: 6px;
+  padding-left: var(--plot-left, 104px);
+  padding-right: var(--plot-right, 14px);
+}
+.record-row > .record-note {
+  flex: 1 1 0;
+  min-width: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.record-row > .legend-note {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+}
+
 /* The comparison readout. It is a statement about the strip above it and the
    prices above that, so it is set over the plotted area like the controls and
    the provenance note, not as a page-wide aside. The rule across the top is
@@ -789,9 +816,6 @@ select {
   outline-offset: 3px;
   border-radius: 2px;
 }
-/* An invitation to act, not a caption: set apart from the definitions above
-   so it does not read as a fourth one. */
-.compare-note p.compare-try { margin-top: 8px; }
 /* One column per figure, in the same order, so each explanation sits under
    the thing it explains instead of in a list the reader has to map back. */
 .compare-key {
@@ -842,7 +866,18 @@ select {
 }
 
 @media (max-width: 900px) {
-  .range-row .legend-note { margin-left: 0; white-space: normal; }
+  .record-row { flex-wrap: wrap; }
+  /* Once it wraps to its own line the legend has to be allowed to shrink and
+     break: left at `flex: 0 0 auto` its base size stays the full unwrapped
+     sentence, which pushes the row wider than the page and scrolls the whole
+     document sideways. */
+  .record-row > .legend-note {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin-left: 0;
+    white-space: normal;
+    text-align: left;
+  }
 }
 .legend-glyph { flex: none; }
 .legend-glyph .g-up { stroke: var(--up); stroke-width: 3; stroke-linecap: round; }
