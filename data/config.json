@@ -220,6 +220,7 @@
         "2026-01-19": 0.0,
         "2026-01-26": 0.143
       },
+      "gapLabel": "The New York Times archive is missing 8–31 January 2026, marked on the strip.",
       "gapNote": "The Archive API returns 694 documents for January 2026 against ~4,000 in neighbouring months, running 2026-01-01 to 2026-01-07 then stopping. Median output is unchanged at 101/day, so the month is truncated rather than thin. Three requests on separate days agree."
     },
     {

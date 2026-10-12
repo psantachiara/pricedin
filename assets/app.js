@@ -808,24 +808,46 @@
       const chosen = sources.filter((s) => present.has(s.id) && state.sources.has(s.id));
       const archived = chosen.filter((s) => s.kind === 'archive');
       const indexed = chosen.filter((s) => s.kind === 'index');
-      if (archived.length) {
-        const names = archived.map((s) => s.name);
-        const list = names.length > 1
+      const byHand = chosen.filter((s) => s.kind === 'curated');
+
+      const list = (items) => {
+        const names = items.map((s) => s.name);
+        return names.length > 1
           ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
           : names[0];
-        // The note sits under the strip it describes, so it points at it
-        // rather than forward to it.
-        legend.textContent = `${list} ${names.length > 1 ? 'were' : 'was'} rebuilt from `
-          + `archived copies of ${names.length > 1 ? 'their feeds' : 'its feed'}: the hatched `
-          + 'stretches above are where that record is thin, not where the news was.';
-      } else if (indexed.length) {
-        legend.textContent = 'Read from the publishers’ own archives, so this is everything '
-          + 'they published on the subject. Where an archive has a hole of its own the strip '
-          + 'marks it — the Times’ archive stops on 7 January 2026 and resumes in February.';
-      } else {
-        legend.textContent = 'Announcements added by hand, including from company blogs. '
-          + 'A deliberate selection, not a sample of anything.';
+      };
+
+      // The note describes the sources actually ticked, nothing else: a
+      // caveat about a source you have switched off is noise at best, and
+      // read as a caveat about the source you did switch on it is wrong.
+      // One clause per kind, so a mixed selection says so rather than
+      // reporting only whichever kind happened to be tested first.
+      const parts = [];
+      if (indexed.length) {
+        parts.push(`${list(indexed)} read from the publishers’ own archives: everything `
+          + 'they published on the subject.');
       }
+      if (archived.length) {
+        parts.push(`${list(archived)} rebuilt from archived copies of `
+          + `${archived.length > 1 ? 'their feeds' : 'its feed'}: the hatched stretches above `
+          + 'are a thin record rather than quiet news.');
+      }
+      if (byHand.length) {
+        parts.push(`${list(byHand)} added by hand: a deliberate selection, not a sample.`);
+      }
+
+      // A declared hole belongs to one source, so it is named only while that
+      // source is on, and its wording lives in config beside the gap itself
+      // rather than in a sentence here that cannot know what is selected.
+      for (const s of chosen) {
+        if (s.gapLabel) parts.push(s.gapLabel);
+      }
+
+      // One statement per line. Joined into a paragraph they run past the
+      // width of the chart and wrap mid-sentence; a line each is both shorter
+      // to read and stable as sources are toggled.
+      legend.innerHTML = '';
+      for (const text of parts) legend.append(el('p', { text }));
     }
 
     function syncOneNote(sel, items, key) {

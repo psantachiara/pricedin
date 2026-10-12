@@ -677,12 +677,15 @@ select {
   display: grid;
   gap: 2px;
 }
+/* No measure cap: each statement runs the full width of the chart before it
+   wraps at all, so one claim sits on one line instead of breaking mid-sentence
+   at an arbitrary column. */
+.record-note,
 .record-note p {
   margin: 0; font-size: 0.8125rem; line-height: 1.45; color: var(--muted);
-  max-width: 96ch;
 }
-.record-note .gap-note { color: var(--muted); opacity: 0.85; }
-.record-note p[hidden] { display: none; }
+.record-note.gap-note { opacity: 0.85; }
+.record-note[hidden] { display: none; }
 
 .legend-note {
   margin: 0;
