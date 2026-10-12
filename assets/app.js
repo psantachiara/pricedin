@@ -872,10 +872,7 @@
       const n = $('#threshold-note');
       if (n) {
         const shown = visibleEvents().length;
-        // The base sentence; render() appends a clause when a crowded range
-        // has had to leave announcements out, and reads it back from here.
-        n.dataset.base = `${shown.toLocaleString()} of ${events.length.toLocaleString()} announcements shown.`;
-        n.textContent = n.dataset.base;
+        n.textContent = `${shown.toLocaleString()} of ${events.length.toLocaleString()} announcements shown.`;
       }
     }
 
@@ -1094,72 +1091,26 @@
 
       const inRange = (t) => t >= i0 && t <= i1;
       let items;
-      let crowdedOut = 0;
       if (state.view === 'detailed') {
         const laneIndex = new Map(lanes.map((l, k) => [l.id, k]));
-        // One announcement, one dot, one stem, at its own date. Where a lane
-        // holds more than the range has room for, the extras are left out
-        // rather than nudged aside or merged: nudging drew a dot under the
-        // wrong month, and merging replaced the stems — the reason the lane
-        // exists — with a count. Narrowing the range gives every dot room,
-        // so what is dropped here comes back on the way in.
-        //
-        // What survives a crowded stretch is what moved the market most,
-        // since that is what the chart is for; the number left out is
-        // reported under the filters rather than passed over in silence.
-        const MIN_PX = 9;
-        // How much room one day owns on the axis. Two announcements on the
-        // same day share an x exactly, so zooming alone never separates
-        // them; once a day is wide enough to hold several dots they are
-        // spread inside its own band, which keeps each one within its date
-        // rather than drifting into the next.
-        const dayWidth = (t) => {
-          const here = x(dates[t]);
-          const after = t + 1 < dates.length ? x(dates[t + 1]) - here : Infinity;
-          const before = t > 0 ? here - x(dates[t - 1]) : Infinity;
-          const gap = Math.min(after, before);
-          return Number.isFinite(gap) ? gap : MIN_PX;
-        };
-
-        items = [];
-        const inLane = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org));
-        for (const [org, evs] of d3.groups(inLane, (e) => e.org)) {
-          const cy = lanesTop + laneIndex.get(org) * laneH + laneH / 2;
-          const cand = [];
-          for (const [t, sameDay] of d3.groups(evs, (e) => e.t)) {
-            const scored = sameDay
-              .map((e) => ({ e, score: scoreForIds([e.id], e.t) }))
-              .sort((a, b) => Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0));
-            const room = Math.max(1, Math.floor(dayWidth(t) / MIN_PX));
-            const take = Math.min(room, scored.length);
-            crowdedOut += scored.length - take;
-            const mid = (take - 1) / 2;
-            for (let i = 0; i < take; i += 1) {
-              cand.push({
-                t,
-                cx: x(dates[t]) + (i - mid) * MIN_PX,
-                cy,
-                evs: [scored[i].e],
-                score: scored[i].score,
-              });
-            }
-          }
-          cand.sort((a, b) =>
-            (Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0)) || (a.t - b.t));
-          // One accepted dot per MIN_PX slot, so a candidate need only be
-          // checked against the slot it falls in and its two neighbours.
-          const slot = new Map();
-          for (const c of cand) {
-            const b = Math.floor(c.cx / MIN_PX);
-            let clear = true;
-            for (let k = b - 1; k <= b + 1 && clear; k += 1) {
-              const o = slot.get(k);
-              if (o != null && Math.abs(o - c.cx) < MIN_PX) clear = false;
-            }
-            if (!clear) { crowdedOut += 1; continue; }
-            slot.set(b, c.cx);
-            items.push(c);
-          }
+        items = vis.filter((e) => inRange(e.t) && laneIndex.has(e.org)).map((e) => ({
+          t: e.t,
+          cx: x(dates[e.t]),
+          cy: lanesTop + laneIndex.get(e.org) * laneH + laneH / 2,
+          evs: [e],
+        }));
+        const seen = new Map();
+        for (const it of items) {
+          const k = `${Math.round(it.cx / 6)}:${it.cy}`;
+          const n = seen.get(k) || 0;
+          // Crowded marks step sideways to stay apart, but never off the
+          // chart: at the right-hand end the step goes the other way, so a
+          // busy stretch near the last date stays inside the plotted area
+          // instead of running past it.
+          const step = n * 7;
+          const right = it.cx + step;
+          it.cx = right <= W - M.r ? right : Math.max(M.l, it.cx - step);
+          seen.set(k, n + 1);
         }
       } else {
         items = [];
@@ -1170,18 +1121,6 @@
           if (last && px - last.cx < 12) last.evs.push(...evs);
           else items.push({ t, cx: px, cy: lanesTop + laneH / 2, evs: [...evs] });
         }
-      }
-
-      // Say how many a crowded range left out, rather than letting the lane
-      // quietly show fewer announcements than the count above it claims.
-      const tn = $('#threshold-note');
-      if (tn) {
-        const base = tn.dataset.base || tn.textContent || '';
-        tn.dataset.base = base;
-        tn.textContent = crowdedOut
-          ? `${base} ${crowdedOut.toLocaleString()} more are too close together to `
-            + 'draw at this range — zoom in to see them.'
-          : base;
       }
 
       for (const it of items) {
