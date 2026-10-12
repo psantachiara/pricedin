@@ -71,6 +71,7 @@ jobs:
         if: inputs.dry_run != true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY is not set. Add it under"
@@ -86,6 +87,7 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
         run: |
           ARGS="--model ${{ inputs.model }} --scope ${{ inputs.scope }}"
           if [ "${{ inputs.scope }}" = "sample" ]; then
