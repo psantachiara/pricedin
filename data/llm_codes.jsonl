@@ -6026,3 +6026,5 @@
 {"id": "20261015-the-morning-risk-report-debanking-probe-finds-jp", "relevance": 1, "topics": ["legal"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-15T17:23:09Z"}
 {"id": "20261015-u-k-economy-defies-gloomy-predictions-with-help", "relevance": 2, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-15T17:23:09Z"}
 {"id": "20261015-university-endowments-land-biggest-returns-since", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-15T17:23:09Z"}
+{"id": "20261015-tesla-s-energy-boss-leaves-the-company", "relevance": 1, "topics": ["governance"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-16T00:33:46Z"}
+{"id": "20261015-the-riskiest-corner-of-the-ai-trade-is-crashing", "relevance": 2, "topics": ["markets", "compute"], "frames": {"bubble": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-16T00:33:46Z"}
