@@ -6037,3 +6037,6 @@
 {"id": "20261016-michael-dell-a-dot-com-era-survivor-has-tips-to", "relevance": 2, "topics": ["markets", "deals"], "frames": {"bubble": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-16T16:58:47Z"}
 {"id": "20261016-tech-stocks-slump-as-nasdaq-faces-weekly-loss", "relevance": 2, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-16T16:58:47Z"}
 {"id": "20261016-the-morning-risk-report-ai-runs-into-its-next-bi", "relevance": 2, "topics": ["legal", "compute"], "frames": {"unreliable": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-16T16:58:47Z"}
+{"id": "20261015-proofpoint-to-acquire-varonis-in-6-3-billion-cyb", "relevance": 1, "topics": ["deals"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-17T00:40:54Z"}
+{"id": "20261016-new-cracks-in-ai-trade-push-wall-street-to-worst", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-17T00:40:54Z"}
+{"id": "20261016-u-s-stocks-fall-as-credit-fears-haunt-tech-secto", "relevance": 2, "topics": ["markets", "compute"], "frames": {"bubble": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-17T00:40:54Z"}
