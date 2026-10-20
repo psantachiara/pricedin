@@ -6066,3 +6066,6 @@
 {"id": "20261019-ai-firm-anthropic-to-commit-5-of-shares-to-fund", "relevance": 2, "topics": ["governance", "deals"], "frames": {"displacement": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-19T18:51:09Z"}
 {"id": "20261019-calls-to-strengthen-workplace-privacy-in-austral", "relevance": 2, "topics": ["labour", "policy"], "frames": {"security": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-19T18:51:09Z"}
 {"id": "20261019-china-s-growth-accelerates-as-ai-boom-helps-boos", "relevance": 1, "topics": ["markets"], "frames": {"bubble": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-19T18:51:09Z"}
+{"id": "20261019-new-ai-tool-can-predict-cancer-survival-by-a-sin", "relevance": 2, "topics": ["product"], "frames": {"capability": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T01:09:15Z"}
+{"id": "20261019-u-s-stocks-mostly-higher-as-ai-credit-worries-ab", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T01:09:15Z"}
+{"id": "20261020-nikkei-falls-amid-lingering-worry-over-ai-boom-a", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T01:09:15Z"}
