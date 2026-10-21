@@ -6087,3 +6087,9 @@
 {"id": "20261020-google-says-services-recovering-after-cloud-outa", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T17:33:00Z"}
 {"id": "20261020-is-this-the-beginning-of-the-end-of-the-ai-stock", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T17:33:00Z"}
 {"id": "20261020-ray-ban-maker-essilorluxottica-s-sales-rise-buoy", "relevance": 1, "topics": ["product", "markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-20T17:33:00Z"}
+{"id": "20261019-dhs-orders-deepseek-technology-removed-from-fede", "relevance": 2, "topics": ["policy"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
+{"id": "20261020-anthropic-s-1-shows-red-hot-growth-risks-and-mas", "relevance": 2, "topics": ["deals", "compute"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
+{"id": "20261020-meta-policy-chief-joel-kaplan-to-leave-company", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
+{"id": "20261020-openai-ceo-sam-altman-wins-dismissal-of-sister-s", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
+{"id": "20261020-spacex-s-revenue-jumps-in-second-ever-earnings-r", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
+{"id": "20261020-u-s-stocks-mixed-as-strong-earnings-offset-ai-cr", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T00:45:32Z"}
