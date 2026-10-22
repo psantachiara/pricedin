@@ -6108,3 +6108,9 @@
 {"id": "20261021-u-s-stocks-rise-as-spacex-earnings-boost-ai-trad", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T17:41:04Z"}
 {"id": "20261021-websites-taken-down-worldwide-as-critical-cyber", "relevance": 2, "topics": ["other"], "frames": {"security": 2, "capability": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T17:41:04Z"}
 {"id": "20261021-why-ai-s-deepest-mind-believes-the-world-is-abou", "relevance": 2, "topics": ["other"], "frames": {"capability": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-21T17:41:04Z"}
+{"id": "20261021-mark-zuckerberg-discussed-leaving-california-ove", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
+{"id": "20261021-meta-ordered-to-pay-25-billion-to-new-mexico-in", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
+{"id": "20261021-spacex-anthropic-and-nvidia-help-snap-tech-stock", "relevance": 2, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
+{"id": "20261021-u-s-stocks-rise-as-spacex-spurs-ai-relief-rally", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
+{"id": "20261021-want-to-short-the-ai-boom-she-wants-to-give-you", "relevance": 2, "topics": ["compute", "markets"], "frames": {"bubble": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
+{"id": "20261022-meta-will-split-stock-create-new-class-to-fund-a", "relevance": 2, "topics": ["deals", "markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-22T00:47:44Z"}
