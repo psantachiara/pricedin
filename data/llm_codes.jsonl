@@ -6142,3 +6142,7 @@
 {"id": "20261023-the-morning-risk-report-the-signal-chats-that-co", "relevance": 2, "topics": ["governance", "other"], "frames": {"security": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-23T17:28:43Z"}
 {"id": "20261023-the-signal-chats-that-cost-openai-researchers-th", "relevance": 2, "topics": ["governance"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-23T17:28:43Z"}
 {"id": "20261023-this-is-a-lethal-threat-indigenous-groups-fear-b", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-23T17:28:43Z"}
+{"id": "20261023-stocks-pulled-in-two-directions-fall-to-end-vola", "relevance": 1, "topics": ["markets"], "frames": {"bubble": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-24T00:55:39Z"}
+{"id": "20261023-black-october-cybersecurity-experts-sound-the-al", "relevance": 2, "topics": ["other"], "frames": {"security": 3, "capability": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-24T00:55:39Z"}
+{"id": "20261024-ai-hacks-are-coming-thick-and-fast-and-overwhelm", "relevance": 2, "topics": ["other"], "frames": {"security": 3, "capability": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-24T00:55:39Z"}
+{"id": "20261024-uk-to-invest-100m-in-world-first-ai-biosecurity", "relevance": 2, "topics": ["policy"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-24T00:55:39Z"}
