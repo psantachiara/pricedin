@@ -6187,3 +6187,7 @@
 {"id": "20261027-tech-stocks-extend-gains-after-yesterday-s-anthr", "relevance": 2, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-27T18:19:20Z"}
 {"id": "20261027-the-morning-risk-report-the-biggest-takeaways-fr", "relevance": 2, "topics": ["deals", "markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-27T18:19:20Z"}
 {"id": "20261027-meaningless-as-a-laptop-screensaver-reviewers-sl", "relevance": 2, "topics": ["product"], "frames": {"unreliable": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-27T18:19:20Z"}
+{"id": "20261027-san-francisco-estate-sells-for-record-10m-above", "relevance": 1, "topics": ["other"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T01:32:21Z"}
+{"id": "20261027-u-s-stocks-add-to-gains-ahead-of-earnings-fed-st", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T01:32:21Z"}
+{"id": "20261028-nikkei-rises-1-3-led-by-chip-stocks", "relevance": 1, "topics": ["markets", "compute"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T01:32:21Z"}
+{"id": "20261028-see-how-anthropic-arrived-at-its-mind-boggling-4", "relevance": 2, "topics": ["markets", "labour"], "frames": {"capability": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T01:32:21Z"}
