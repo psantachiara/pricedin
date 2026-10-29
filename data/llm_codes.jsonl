@@ -6196,3 +6196,9 @@
 {"id": "20261028-nasdaq-edges-lower-as-tech-rally-stalls-out", "relevance": 2, "topics": ["markets", "deals"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T18:30:35Z"}
 {"id": "20261028-tech-media-telecom-roundup-market-talk", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T18:30:35Z"}
 {"id": "20261028-elonville-us-residents-say-musk-s-xai-offered-to", "relevance": 2, "topics": ["compute", "legal"], "frames": {"environment": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-28T18:30:35Z"}
+{"id": "20261028-google-shares-fall-10-as-growth-in-search-revenu", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
+{"id": "20261028-microsoft-quarterly-profit-soars-as-cloud-growth", "relevance": 1, "topics": ["markets"], "frames": {"bubble": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
+{"id": "20261029-microsoft-profits-soar-days-after-announcing-tho", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
+{"id": "20261029-nikkei-rises-0-6-led-by-ai-related-stocks", "relevance": 1, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
+{"id": "20261029-the-beleaguered-chip-sellers-getting-their-reven", "relevance": 2, "topics": ["compute", "markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
+{"id": "20261029-the-fed-s-ai-puzzle-will-high-rates-slow-the-boo", "relevance": 2, "topics": ["markets"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-10-29T01:54:51Z"}
