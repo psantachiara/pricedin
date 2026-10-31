@@ -244,6 +244,20 @@
     // carries a range rather than weekly shares; one rebuilt from archived
     // copies carries what was measured.
     const sourceCoverage = (coverage && coverage.sources) || {};
+
+    // When the coverage file was measured. A week that had not finished by
+    // then was read in flight, which matters for the archived sources: the
+    // Internet Archive cannot have crawled days that had not happened, so the
+    // reading comes out near zero and then stays frozen at zero until the next
+    // backfill. The stamp is written as YYYY-MM-DDTHH:MMZ, and not every
+    // engine parses that without seconds.
+    const measuredAt = (() => {
+      const raw = coverage && coverage.generated;
+      if (!raw) return null;
+      const t = Date.parse(/\dT\d{2}:\d{2}Z$/.test(raw) ? raw.replace(/Z$/, ':00Z') : raw);
+      return isNaN(t) ? null : new Date(t);
+    })();
+
     function sourceShare(id, from, to) {
       const entry = sourceCoverage[id];
       const declared = sourceById.get(id) || {};
@@ -275,7 +289,15 @@
       }
       if (!entry || !entry.weeks) return null;
       const value = entry.weeks[isoDay(from)];
-      return value == null ? null : Math.max(0, Math.min(1, +value));
+      if (value == null) return null;
+      // A week measured before it had ended is an undercount, not a reading:
+      // the week in progress is always short of archived copies simply
+      // because it has not finished happening. Left as a number it reports a
+      // hole in the record that is really a gap in the measurement, and says
+      // so every week, for ever. Answering "not read for this week" is both
+      // true and already a state the rest of the page knows how to show.
+      if (measuredAt && to > measuredAt) return null;
+      return Math.max(0, Math.min(1, +value));
     }
 
     const isoDay = (d) => `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1)
