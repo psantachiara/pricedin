@@ -251,6 +251,7 @@
     // reading comes out near zero and then stays frozen at zero until the next
     // backfill. The stamp is written as YYYY-MM-DDTHH:MMZ, and not every
     // engine parses that without seconds.
+    const HALF_WEEK = 3.5 * 864e5;
     const measuredAt = (() => {
       const raw = coverage && coverage.generated;
       if (!raw) return null;
@@ -290,13 +291,16 @@
       if (!entry || !entry.weeks) return null;
       const value = entry.weeks[isoDay(from)];
       if (value == null) return null;
-      // A week measured before it had ended is an undercount, not a reading:
-      // the week in progress is always short of archived copies simply
-      // because it has not finished happening. Left as a number it reports a
-      // hole in the record that is really a gap in the measurement, and says
-      // so every week, for ever. Answering "not read for this week" is both
-      // true and already a state the rest of the page knows how to show.
-      if (measuredAt && to > measuredAt) return null;
+      // A share is measured across the days of the week that had happened by
+      // the time it was taken, so a partly elapsed week still reports a real
+      // figure: five days covered out of the six so far is a reading, not an
+      // undercount. What is not a reading is a week measured in its opening
+      // hours — one day's sample standing for seven, which then sits frozen
+      // until the next backfill and says the feed reached nothing all week.
+      // Half the week is the line: past it the number is about the week,
+      // before it it is about a day or two. Such a week answers "not read for
+      // this week", a state the rest of the page already knows how to show.
+      if (measuredAt && +to - +measuredAt > HALF_WEEK) return null;
       return Math.max(0, Math.min(1, +value));
     }
 
