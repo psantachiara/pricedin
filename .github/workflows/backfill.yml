@@ -1,6 +1,18 @@
 name: Backfill announcements
 
 on:
+  # Weekly, so the coverage strip keeps up without anyone remembering to run
+  # it. Monday 06:00 UTC: the week being measured closed six hours earlier,
+  # and nothing else is scheduled then -- the data job runs 12:45 and 22:30 on
+  # weekdays and shares this concurrency group.
+  #
+  # Each run re-reads a trailing three weeks rather than just the week that
+  # ended, because the Internet Archive crawls on its own schedule and a week
+  # is usually thinly captured the moment it closes. write_coverage keeps the
+  # better of the readings it already has, so measuring a week three times
+  # can only improve it.
+  schedule:
+    - cron: "0 6 * * 1"
   workflow_dispatch:
     inputs:
       mode:
@@ -72,40 +84,106 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      # A scheduled run has no inputs, so it carries its own, and they are the
+      # gentle ones: two workers three seconds apart took the share of
+      # snapshots the archive refused from 28% to 6%. Four workers at 1.5s are
+      # faster only on paper, because every refusal costs six retries at a
+      # sixty-second timeout. Settings are resolved once here rather than
+      # guarded at each use, and reach the shell through the environment
+      # instead of being pasted into it.
+      - name: Settings
+        id: cfg
+        env:
+          IN_MODE: ${{ inputs.mode }}
+          IN_FROM: ${{ inputs.from }}
+          IN_TO: ${{ inputs.to }}
+          IN_PER_DAY: ${{ inputs.per_day }}
+          IN_FEEDS: ${{ inputs.feeds }}
+          IN_WORKERS: ${{ inputs.workers }}
+          IN_PAUSE: ${{ inputs.pause }}
+          IN_RECON: ${{ inputs.reconsider_drops }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            MODE=run
+            FROM=$(date -u -d '21 days ago' +%Y-%m-%d)
+            TO=""
+            PER_DAY=2
+            FEEDS=""
+            WORKERS=2
+            PAUSE=3
+            RECON=no
+          else
+            MODE="$IN_MODE"
+            FROM="$IN_FROM"
+            TO="$IN_TO"
+            PER_DAY="$IN_PER_DAY"
+            FEEDS="$IN_FEEDS"
+            WORKERS="$IN_WORKERS"
+            PAUSE="$IN_PAUSE"
+            RECON="$IN_RECON"
+          fi
+          {
+            echo "mode=$MODE"
+            echo "from=$FROM"
+            echo "to=$TO"
+            echo "per_day=$PER_DAY"
+            echo "feeds=$FEEDS"
+            echo "workers=$WORKERS"
+            echo "pause=$PAUSE"
+            echo "recon=$RECON"
+          } >> "$GITHUB_OUTPUT"
+          echo "Triggered by $GITHUB_EVENT_NAME: mode=$MODE from=$FROM to=${TO:-today}" \
+               "per_day=$PER_DAY workers=$WORKERS pause=$PAUSE"
+
       - name: Backfill
         env:
           PYTHONUNBUFFERED: "1"
+          MODE: ${{ steps.cfg.outputs.mode }}
+          FROM: ${{ steps.cfg.outputs.from }}
+          TO: ${{ steps.cfg.outputs.to }}
+          PER_DAY: ${{ steps.cfg.outputs.per_day }}
+          FEEDS: ${{ steps.cfg.outputs.feeds }}
+          WORKERS: ${{ steps.cfg.outputs.workers }}
+          PAUSE: ${{ steps.cfg.outputs.pause }}
+          RECON: ${{ steps.cfg.outputs.recon }}
         run: |
-          FEEDS=""
-          if [ -n "${{ inputs.feeds }}" ]; then FEEDS='--feeds'; fi
-          TO=""
-          if [ -n "${{ inputs.to }}" ]; then TO='--to'; fi
-          RECON=""
-          if [ "${{ inputs.reconsider_drops }}" != "no" ]; then RECON='--reconsider-drops'; fi
-          case "${{ inputs.mode }}" in
-            probe)   python scripts/backfill_news.py --probe --from "${{ inputs.from }}" \
-                       --per-day "${{ inputs.per_day }}" $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
-            dry-run) python scripts/backfill_news.py --dry-run --report --from "${{ inputs.from }}" \
-                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
-                       --pause "${{ inputs.pause }}" \
-                       $RECON ${RECON:+"${{ inputs.reconsider_drops }}"} \
-                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
-            run)     python scripts/backfill_news.py --from "${{ inputs.from }}" \
-                       --per-day "${{ inputs.per_day }}" --workers "${{ inputs.workers }}" \
-                       --pause "${{ inputs.pause }}" \
-                       $RECON ${RECON:+"${{ inputs.reconsider_drops }}"} \
-                       $FEEDS ${FEEDS:+"${{ inputs.feeds }}"} $TO ${TO:+"${{ inputs.to }}"} ;;
+          # Built as arrays, and with `if` rather than `&&`: a trailing false
+          # test would end the step, because the runner's shell exits on error.
+          FEED_ARG=()
+          if [ -n "$FEEDS" ]; then FEED_ARG=(--feeds "$FEEDS"); fi
+          TO_ARG=()
+          if [ -n "$TO" ]; then TO_ARG=(--to "$TO"); fi
+          RECON_ARG=()
+          if [ "$RECON" != "no" ]; then RECON_ARG=(--reconsider-drops "$RECON"); fi
+          case "$MODE" in
+            probe)   python scripts/backfill_news.py --probe --from "$FROM" \
+                       --per-day "$PER_DAY" \
+                       "${FEED_ARG[@]}" "${TO_ARG[@]}" ;;
+            dry-run) python scripts/backfill_news.py --dry-run --report --from "$FROM" \
+                       --per-day "$PER_DAY" --workers "$WORKERS" --pause "$PAUSE" \
+                       "${RECON_ARG[@]}" "${FEED_ARG[@]}" "${TO_ARG[@]}" ;;
+            run)     python scripts/backfill_news.py --from "$FROM" \
+                       --per-day "$PER_DAY" --workers "$WORKERS" --pause "$PAUSE" \
+                       "${RECON_ARG[@]}" "${FEED_ARG[@]}" "${TO_ARG[@]}" ;;
             undo)    python scripts/backfill_news.py --undo ;;
             reclassify)         python scripts/reclassify.py --report ;;
             reclassify-dry-run) python scripts/reclassify.py --dry-run --report ;;
           esac
 
       - name: Fetch prices and thumbnails
-        if: inputs.mode == 'run' || inputs.mode == 'undo' || inputs.mode == 'reclassify'
+        if: >-
+          steps.cfg.outputs.mode == 'run' ||
+          steps.cfg.outputs.mode == 'undo' ||
+          steps.cfg.outputs.mode == 'reclassify'
         run: python scripts/update_data.py
 
       - name: Commit updated data
-        if: inputs.mode == 'run' || inputs.mode == 'undo' || inputs.mode == 'reclassify'
+        if: >-
+          steps.cfg.outputs.mode == 'run' ||
+          steps.cfg.outputs.mode == 'undo' ||
+          steps.cfg.outputs.mode == 'reclassify'
+        env:
+          MODE: ${{ steps.cfg.outputs.mode }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -114,7 +192,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes."
           else
-            git commit -m "Update data: ${{ inputs.mode }} ($(date -u +%Y-%m-%d))"
+            git commit -m "Update data: $MODE ($(date -u +%Y-%m-%d))"
             git pull --rebase
             git push
           fi
