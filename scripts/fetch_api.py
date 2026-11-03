@@ -86,9 +86,18 @@ def get(url, params, pause, tries=5):
                 response.raise_for_status()
             continue
         if response.status_code in (401, 403):
+            # The Times answers 403 for a key it will not accept, for a key
+            # over its quota, and for a month it is not serving yet. Only the
+            # body tells them apart, so retry first -- a refusal that clears
+            # on a later attempt was never about the key -- and quote what the
+            # service actually said when it does not clear.
+            if attempt < tries - 1:
+                continue
+            detail = " ".join((response.text or "").split())[:300]
             raise SystemExit(
                 f"{url} refused the key ({response.status_code}). Check the key is "
                 f"right and, for the Times, that the Archive API is enabled for it."
+                + (f"\nThe service said: {detail}" if detail else "")
             )
         response.raise_for_status()
         return response.json()
@@ -117,9 +126,25 @@ def from_nyt(start, end, key):
     items = []
     months = month_starts(start, end)
     print(f"NYT: {len(months)} month(s) to read, one request each.", flush=True)
+    now = datetime.now(timezone.utc)
     for n, (year, month) in enumerate(months, 1):
-        payload = get(NYT_ARCHIVE.format(year=year, month=month),
-                      {"api-key": key}, NYT_PAUSE)
+        # The month in progress is the one the archive may not have built
+        # yet, and a month it has not built is refused rather than returned
+        # empty. That is not a reason to fail the run and take the prices and
+        # everything else down with it: the range is recomputed every run, so
+        # a month skipped today is read in full as soon as it exists. A past
+        # month refused is a different matter and still stops the run, since
+        # that really does mean the key or its access has gone.
+        in_progress = (year, month) == (now.year, now.month)
+        try:
+            payload = get(NYT_ARCHIVE.format(year=year, month=month),
+                          {"api-key": key}, NYT_PAUSE)
+        except SystemExit:
+            if not in_progress:
+                raise
+            print(f" [{n}/{len(months)}] {year}-{month:02d} not served yet; "
+                  f"skipping the month in progress.", flush=True)
+            continue
         docs = (payload.get("response") or {}).get("docs") or []
         kept = 0
         for doc in docs:
