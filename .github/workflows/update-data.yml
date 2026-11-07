@@ -75,9 +75,37 @@ jobs:
             echo "keyword-v1 codes. Add the secret to close this gap."
             exit 0
           fi
-          python scripts/prepare_codes.py
-          python scripts/code_frames.py code --model claude-sonnet-5-5
-          python scripts/code_frames.py apply
+          # Coding enriches data that is already on disk, so a refusal from
+          # the API must not take the prices and the commit down with it --
+          # those steps come after this one in the same job, and a key that
+          # expires overnight would otherwise stop the whole pipeline rather
+          # than one pass of it. The guard above only catches a secret that is
+          # missing; an expired key is present, answers 401, and
+          # code_frames.py rightly treats 4xx as final and returns 3.
+          #
+          # Nothing is lost by carrying on. New arrivals keep the keyword-v1
+          # codes the fetchers gave them, and because code_frames skips items
+          # already in llm_codes.jsonl, the next run that gets through codes
+          # exactly what this one missed. Warned rather than swallowed, so a
+          # key that has genuinely died shows up on every run until it is
+          # replaced instead of going quiet.
+          status=0
+          if ! python scripts/prepare_codes.py; then
+            echo "::warning title=Framing not coded::prepare_codes.py failed, so"\
+                 "the day's new announcements keep their keyword-v1 codes."
+            exit 0
+          fi
+          # Whatever the coding pass wrote before stopping is already saved,
+          # so apply runs either way and partial progress lands now rather
+          # than waiting for a clean run.
+          python scripts/code_frames.py code --model claude-sonnet-5-5 || status=$?
+          python scripts/code_frames.py apply || status=$?
+          if [ "$status" -ne 0 ]; then
+            echo "::warning title=Framing not fully coded::The model pass exited"\
+                 "$status. New announcements keep their keyword-v1 codes and will"\
+                 "be re-coded by the next run that succeeds. If this repeats,"\
+                 "check the ANTHROPIC_API_KEY secret and the credit balance."
+          fi
 
       - name: Fetch prices and thumbnails
         env:
