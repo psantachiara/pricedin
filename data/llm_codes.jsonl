@@ -6543,3 +6543,7 @@
 {"id": "20261113-meta-testing-new-prediction-market-app-with-empl", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-13T20:04:31Z"}
 {"id": "20261113-microsoft-outage-stark-reminder-of-how-much-we-r", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-13T20:04:31Z"}
 {"id": "20261113-microsoft-outage-hits-hospitals-gps-schools-and", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-13T20:04:31Z"}
+{"id": "20261113-microsoft-deeply-sorry-for-global-outage-after-a", "relevance": 0, "topics": [], "frames": {}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-14T02:36:51Z"}
+{"id": "20261113-u-s-stocks-mixed-on-nvidia-fallout-fears", "relevance": 2, "topics": ["markets", "compute"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-14T02:36:51Z"}
+{"id": "20261114-behind-the-nvidia-affair-sits-a-vast-chinese-spy", "relevance": 1, "topics": ["compute"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-14T02:36:51Z"}
+{"id": "20261114-tech-now", "relevance": 2, "topics": ["product"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-14T02:36:51Z"}
