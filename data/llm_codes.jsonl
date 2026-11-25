@@ -6794,3 +6794,7 @@
 {"id": "20261124-south-korea-offers-375-000-reward-to-catch-test", "relevance": 2, "topics": ["policy", "other"], "frames": {"societal": 1}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-24T22:47:11Z"}
 {"id": "20261124-tech-life", "relevance": 2, "topics": ["other"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-24T22:47:11Z"}
 {"id": "20261124-tech-sell-off-resumes-as-nvidia-shares-drop-5-an", "relevance": 2, "topics": ["markets", "deals", "governance"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-24T22:47:11Z"}
+{"id": "20261124-kate-bush-and-grace-jones-urge-australian-govern", "relevance": 2, "topics": ["policy", "legal"], "frames": {"appropriation": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-25T04:58:43Z"}
+{"id": "20261125-asian-stocks-mostly-lower-on-ai-doubts-tariff-ji", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-25T04:58:43Z"}
+{"id": "20261125-jensen-huang-s-vision-for-the-new-nvidia-is-a-lo", "relevance": 2, "topics": ["governance", "compute"], "frames": {"neutral": 2}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-25T04:58:43Z"}
+{"id": "20261125-worse-than-the-dot-com-crash-what-an-ai-bust-cou", "relevance": 2, "topics": ["markets"], "frames": {"bubble": 3}, "coder": "llm-claude-sonnet-5-5", "rubric": "rubric-v2", "at": "2026-11-25T04:58:43Z"}
